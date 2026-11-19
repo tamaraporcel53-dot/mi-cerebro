@@ -10,6 +10,7 @@
 | Qué | Lo pide |
 |---|---|
 | **Decidir el precio o el nicho** (Investigación, 2026-11-19): en 5 búsquedas no apareció **ningún** ebook de repostería en español a USD 17-27. Precios reales vistos en las landings: USD 9,97 (Trompe-l'œil), USD 7 (Mini Postres), AR$ 9.900 (recetas navideñas). Con la regla "si la competencia vende más barato, otro nicho", **toda la repostería queda afuera**, salvo los nichos sin ningún competidor en AR (pan dulce relleno, chupetines de chocolate). Opciones: (A) mantener USD 19,90 en un nicho sin competidor directo, (B) probar un precio menor, (C) salir de repostería. Detalle en `RAW/cazas.md` | Investigación |
+| **Bot Escala IU:** decidir si su regla (×2 con 1 venta y ROAS ≥ 2, cada 15 min) reemplaza a la tabla F6 de imperioproducto (+30% con 3 ventas y ROAS > 1,8, a las 23:30) y si aprobás que mueva presupuesto solo. No se construye hasta tener una campaña vendiendo (2026-11-19) | Sistemas |
 | Crear la **fanpage y el Instagram** de la marca de ebooks (en español) y conectarlos al portfolio comercial. Hoy el portfolio no tiene ninguna página (2026-11-19) | Meta |
 
 ## El negocio hoy
