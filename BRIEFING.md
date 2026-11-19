@@ -9,7 +9,7 @@
 
 | Qué | Lo pide |
 |---|---|
-| Tamy eligió pan dulce (2026-11-19). Falta **confirmar el ángulo "pan dulce relleno / trufado"** (no encontré competencia en AR), decidir si queda en USD 19,90 (la competencia vende a ARS 1.600-1.900) y aceptar que hay que salir antes de Navidad (2026-12-24). Detalle en `RAW/cazas.md` | Investigación |
+| Tamy eligió pan dulce (2026-11-19); Investigación lo recomienda como el de menos competencia en AR, y chupetines como plan B si no se puede lanzar antes de ~2026-12-01. Falta **confirmar el ángulo "pan dulce relleno / trufado"** (no encontré competencia en AR), decidir si queda en USD 19,90 (la competencia vende a ARS 1.600-1.900) y aceptar que hay que salir antes de Navidad (2026-12-24). Detalle en `RAW/cazas.md` | Investigación |
 | Crear la **fanpage y el Instagram** de la marca de ebooks (en español) y conectarlos al portfolio comercial. Hoy el portfolio no tiene ninguna página (2026-11-19) | Meta |
 
 ## El negocio hoy
