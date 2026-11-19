@@ -19,3 +19,4 @@
 - 2026-11-19 · Prueba nube: git en la nube firma commits como "Claude", no como Tamy · no es un problema, pero el historial va a mostrar los dos nombres.
 - 2026-11-19 · Prueba nube: git push a main → anda (commit 39dfdb6 subido a main desde la nube) · lo que se hace en la nube queda guardado en GitHub, siempre que se suba a main y no solo a la rama de la sesión.
 - 2026-11-19 · tools/autosync.sh ahora sube siempre a main (pull --rebase origin main + push HEAD:main). Probado desde una rama claude/prueba-rama en un clon: el cambio llegó a main. Por qué: las sesiones en la nube trabajan en ramas claude/... y antes su guardado no llegaba a main.
+- 2026-11-19 · Energía verificada con powercfg: con cargador, suspensión = Nunca y hibernación = Nunca. La acción de la tapa no se puede leer con powercfg en esta compu (configuración oculta): si la notebook se duerme al cerrarla, revisar eso primero.
