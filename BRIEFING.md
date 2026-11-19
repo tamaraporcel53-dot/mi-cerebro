@@ -9,7 +9,8 @@
 
 | Qué | Lo pide |
 |---|---|
-| Aprobar la **oferta de chupetines decorados**: el ángulo (recomendado: chocolate personalizado para cumpleaños y souvenirs, 0 competidores en AR), el precio (propuesto: **ARS 9.900**, tachado ARS 39.900, porque la competencia cobra ARS 1.600-1.900 y USD 19,90 serían ≈ ARS 31.000) y los 4 bonos. Detalle en `OUTPUTS/lanzamientos/chupetines-decorados.md` | Productos |
+| ⚠️ **CAMBIO 2026-11-19: Tamy dejó los chupetines y vuelve al PAN DULCE RELLENO** (se lo dijo al agente Meta: "vamos con los ebooks… pan dulce relleno para vender en Argentina, pero que no tenga competencia"). Productos: la oferta de chupetines queda en pausa. Falta que Tamy apruebe el ángulo (recomendado: **"Pan dulce relleno para vender"**, con dulce de leche, pistacho, chocolate y helado; 0 competidores de pan dulce relleno en AR) y el precio. Hay que lanzar antes del **2026-12-01** porque Navidad es el 2026-12-24. Detalle en `RAW/cazas.md` | Investigación |
+| ~~Aprobar la **oferta de chupetines decorados**~~ (en pausa por el cambio de arriba): el ángulo (recomendado: chocolate personalizado para cumpleaños y souvenirs, 0 competidores en AR), el precio (propuesto: **ARS 9.900**, tachado ARS 39.900, porque la competencia cobra ARS 1.600-1.900 y USD 19,90 serían ≈ ARS 31.000) y los 4 bonos. Detalle en `OUTPUTS/lanzamientos/chupetines-decorados.md` | Productos |
 | Crear la **fanpage y el Instagram** de la marca de ebooks (en español) y conectarlos al portfolio comercial. Hoy el portfolio no tiene ninguna página (2026-11-19) | Meta |
 
 ## El negocio hoy
@@ -25,7 +26,7 @@
 
 | Qué | Quién | Estado | Fecha |
 |---|---|---|---|
-| Ebook de chupetines decorados | Productos | 10%: la oferta está propuesta y espera a Tamy | 2026-11-19 |
+| Ebook de chupetines decorados | Productos | **En pausa**: Tamy cambió a pan dulce relleno | 2026-11-19 |
 
 ## Próximos pasos
 

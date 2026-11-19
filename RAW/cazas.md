@@ -45,3 +45,17 @@ Consultas: pirulito de chocolate · pirulitos personalizados · lollipops · pal
 | — | 259 + 217 resultados, todos físicos | docerías chicas de Brasil | 🟢 como objeto | Brasil | — | Pirulitos de chocolate personalizados para cumpleaños: la demanda de vender está probada en Brasil |
 
 Hueco (hipótesis): **chupetines de chocolate personalizados para cumpleaños y souvenirs**. En AR no apareció ningún infoproducto; en Brasil es un rubro de emprendedoras. Falta buscar "chupetines con foto" y "chupetines personalizados" con filtro AR.
+
+## 2026-11-19 (cuarta vuelta) · pan dulce relleno en Argentina (Tamy volvió al pan dulce)
+
+Consultas: pan dulce de pistacho (AR) · pan dulce casero (AR) · panetón relleno · pan dulce para vender (AR).
+
+| Días | Ads | Anunciante | Evidencia | Mercado | Link | Qué vende |
+|---|---|---|---|---|---|---|
+| ~8 (desde ~2026-11-11) | 1+ | Fabulandia | ⚪ | AR (ARS) | https://www.facebook.com/ads/library/?id=1674346414400666 | "PAN DULCE ESPONJOSO · +30 RECETAS · $2.500": pan dulce común |
+| ~7 | 1+ | Conocimiento y Salud | ⚪ | llega a AR | https://www.facebook.com/ads/library/?id=2036988443677887 | "Pan dulce gourmet sin TACC y común" |
+| 1 | 1+ | Cocina fácil en casa | ⚪ | AR (ARS) | https://www.facebook.com/ads/library/?id=1104060342459163 | "Prepará dulces navideños para vender por $9.900": hay quien cobra ARS 9.900 |
+| — | — | Freddo | — | AR | https://www.facebook.com/ads/library/?id=1603538104398298 | **"Pan Dulce Helado"** como producto físico: una marca grande ya instala el pan dulce relleno de helado |
+| — | — | Havanna, Avellana Bakery | — | AR | — | Productos de pistacho físicos: el pistacho es sabor del momento (sin confirmar) |
+
+Competencia de pan dulce **común** en AR: ~5 infoproductos (Piolín, Ana Costa, Fabulandia, Conocimiento y Salud, Cocina fácil en casa). Pan dulce **relleno**: 0 en todas las búsquedas (relleno, dulce de leche, pistacho, trufado). El panetón relleno de Perú y Bolivia aparece solo como producto físico.
