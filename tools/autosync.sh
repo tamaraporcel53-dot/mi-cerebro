@@ -25,13 +25,17 @@ git add -A 2>/dev/null
 
 MSG="Guardado automatico: $N archivo(s) en $AREAS"
 
+# Siempre se sube a main, aunque la sesión trabaje en otra rama
+# (las sesiones en la nube arrancan en una rama propia claude/...).
+DESTINO="main"
+
 if git commit -q -m "$MSG" 2>>"$LOG"; then
   # Si otra sesión (por ejemplo en la nube) guardó algo, se trae antes de subir
-  if ! git pull -q --rebase --autostash origin "$(git rev-parse --abbrev-ref HEAD)" 2>>"$LOG"; then
+  if ! git pull -q --rebase --autostash origin "$DESTINO" 2>>"$LOG"; then
     git rebase --abort 2>/dev/null
     echo "$(date -u +%FT%TZ) CONFLICTO  pull --rebase fallo, el cambio queda guardado local" >> "$LOG"
   fi
-  if git push -q origin HEAD 2>>"$LOG"; then
+  if git push -q origin "HEAD:$DESTINO" 2>>"$LOG"; then
     echo "$(date -u +%FT%TZ) OK  guardado y subido  $N archivo(s): $AREAS" >> "$LOG"
   else
     echo "$(date -u +%FT%TZ) PARCIAL  guardado local, no se pudo subir  $N archivo(s): $AREAS" >> "$LOG"
