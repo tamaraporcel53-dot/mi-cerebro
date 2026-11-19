@@ -43,7 +43,7 @@ Buscar con `grep` antes que abrir archivos enteros.
 
 ## Los agentes
 
-Cerebro · Productos · Meta · Edición · Redes · Investigación · Sistemas *(adaptá la lista a tu negocio)*.
+Cerebro · Productos · Meta · Edición · Redes · Investigación · Sistemas · Traducción *(adaptá la lista a tu negocio)*.
 Cada uno trabaja **solo en lo suyo**: si le piden otra cosa, pregunta si va ahí antes de hacerla.
 
 ### Cada agente anota en su bitácora
@@ -77,19 +77,40 @@ hacer. **Cada agente la actualiza** cuando agrega algo o cuando se resuelve. Una
 2. **No re-verificar lo que otro agente ya verificó**, salvo que contradiga algo o cueste plata.
 3. **Leer con precisión:** `grep` o una consulta puntual, nunca un archivo entero sin necesidad.
 4. **El navegador es caro** (20 a 30 pasos por tarea). Antes de usarlo, avisar cuánto cuesta y si conviene que lo haga yo.
-5. **Cuando una conversación se hace muy larga**, escribir al repositorio lo importante y pedirme `/compact`.
+5. **Cuando una conversación pasa de ~200.000 tokens**, al terminar el bloque: escribir al repositorio lo importante
+   y pedirme `/compact`. Lo que no está en el repositorio antes de compactar, se pierde.
+6. **Video generado con IA en 720p** y con el costo del lote sacado de la tabla oficial antes de lanzar.
 
 **No se recorta nunca:** verificar antes de afirmar.
+
+## Cómo se termina un trabajo
+
+- **Un pedido nuevo se encola, no cancela el anterior.** Se termina lo que estaba en curso.
+- **"Listo" es cargado donde va y verificado**, no "armado en la compu". Un archivo en la carpeta no es un producto en la tienda.
+- **Lo que dice otro agente se reporta como "según X, sin verificar"** hasta que lo verifiques vos.
+- **Al encontrar una falla, revisar todo lo que salió con la versión rota**, no solo arreglar lo último.
+- **Una corrección mía se pasa a todas las skills que la usan**, no solo a la que estaba en uso.
 
 ## Campañas: checklist antes de publicar
 
 **Hay plata en juego. No se prende nada hasta que dé 100%, anuncio por anuncio:**
-píxel · que la cuenta tenga acceso al píxel · URL a la página de venta · etiquetas UTM · fanpage e Instagram
-de esa marca y en el idioma del mercado · video correcto · eventos de conversión · dominio verificado.
+píxel · que la cuenta tenga acceso al píxel · URL a la página de venta · etiquetas UTM copiadas del panel
+de esa tienda · fanpage e Instagram de esa marca y en el idioma del mercado · video correcto · eventos del píxel
+**y** offline · **sin gasto mínimo** por conjunto · dominio verificado · **anunciante y pagador con el nombre del
+producto, nunca mi nombre**.
 
 - **Crear ≠ publicar ≠ entregar.** Un anuncio está andando cuando figura activo **y** Meta muestra que entrega.
 - **La campaña la prendo yo.** Los agentes la dejan lista y revisada.
 - **Toda cuenta publicitaria va en dólares (USD), siempre**, sea cual sea el país donde se vende (regla del 2026-11-19).
+- **En una campaña viva: primero la acción en una línea, espero mi "sí", después se hace.** Los cambios se juntan
+  y se cargan una vez por día, a la noche. Reglas completas en [WIKI/reglas-de-campanas.md](WIKI/reglas-de-campanas.md).
+- **Una oferta que está vendiendo no se toca** (ni la página, ni el idioma, ni los anuncios) sin mi OK.
+
+## La compu y el Control Remoto
+
+- La compu es el servidor: **enchufada y con la tapa cerrada = "No hacer nada"**, nunca "Apagar" ni "Suspender".
+- **El Control Remoto es por sesión.** Si la compu **o la app de Claude** se reinician (la app se reinicia sola cuando
+  se actualiza), vuelven apagados: hay que activarlo de nuevo en cada agente.
 
 ## Reglas de escritura
 
