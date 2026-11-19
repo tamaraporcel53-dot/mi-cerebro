@@ -9,8 +9,7 @@
 
 | Qué | Lo pide |
 |---|---|
-| ⚠️ **CAMBIO 2026-11-19: Tamy dejó los chupetines y vuelve al PAN DULCE RELLENO** (se lo dijo al agente Meta: "vamos con los ebooks… pan dulce relleno para vender en Argentina, pero que no tenga competencia"). Productos: la oferta de chupetines queda en pausa. Falta que Tamy apruebe el ángulo (recomendado: **"Pan dulce relleno para vender"**, con dulce de leche, pistacho, chocolate y helado; 0 competidores de pan dulce relleno en AR) y el precio. Hay que lanzar antes del **2026-12-01** porque Navidad es el 2026-12-24. Detalle en `RAW/cazas.md` | Investigación |
-| Aprobar la **oferta de pan dulce relleno** (es la misma decisión de la fila de arriba): ángulo "Pan dulce relleno que se vende solo", y 4 bonos. El precio ya lo decidió Tamy el 2026-11-19: **USD 19,90, menos no** (≈ ARS 31.000 en pesos con Mercado Pago, sin confirmar el dólar). Detalle en `OUTPUTS/lanzamientos/pan-dulce-relleno.md` | Productos |
+| Elegir el **nuevo nicho de repostería** cuando Investigación traiga las opciones. Desde el 2026-11-19 el pan dulce relleno y los chupetines están en pausa: la competencia en AR vende más barato y el precio es **USD 19,90, menos no** (≈ ARS 31.000, dólar sin confirmar). Investigación ya está buscando | Productos |
 | Crear la **fanpage y el Instagram** de la marca de ebooks (en español) y conectarlos al portfolio comercial. Hoy el portfolio no tiene ninguna página (2026-11-19) | Meta |
 
 ## El negocio hoy
@@ -26,7 +25,8 @@
 
 | Qué | Quién | Estado | Fecha |
 |---|---|---|---|
-| Ebook de pan dulce relleno | Productos | 10%: la oferta está propuesta y espera a Tamy. Hay que lanzar antes del 2026-12-01 | 2026-11-19 |
+| Caza de otro nicho de repostería que se pueda vender a USD 19,90 en AR | Investigación | Buscando (pedido de Tamy) | 2026-11-19 |
+| Ebook de pan dulce relleno | Productos | **En pausa**: la competencia en AR vende más barato que USD 19,90 | 2026-11-19 |
 | Ebook de chupetines decorados | Productos | **En pausa**: Tamy cambió a pan dulce relleno | 2026-11-19 |
 
 ## Próximos pasos
