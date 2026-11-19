@@ -59,3 +59,18 @@ Consultas: pan dulce de pistacho (AR) · pan dulce casero (AR) · panetón relle
 | — | — | Havanna, Avellana Bakery | — | AR | — | Productos de pistacho físicos: el pistacho es sabor del momento (sin confirmar) |
 
 Competencia de pan dulce **común** en AR: ~5 infoproductos (Piolín, Ana Costa, Fabulandia, Conocimiento y Salud, Cocina fácil en casa). Pan dulce **relleno**: 0 en todas las búsquedas (relleno, dulce de leche, pistacho, trufado). El panetón relleno de Perú y Bolivia aparece solo como producto físico.
+
+## 2026-11-19 (quinta vuelta) · repostería a USD 19,90 (pedido de Productos con la regla de Tamy: "menos no")
+
+Consultas: curso de pastelería (AR) · masterclass tortas · tortas para vender (AR) · macarons (AR) · trompe l'oeil. **Landings abiertas con el navegador (precio real, 2026-11-19):**
+
+| Anunciante | Qué vende | Precio real en la landing | Link |
+|---|---|---|---|
+| Recetario Digital (systeme.io + Hotmart) | "Método Trompe-l'œil": 30 postres que parecen fruta u objetos + 5 bonos | **USD 9,97** (dice "valor del curso USD 33,90", "valor total USD 54,85") | https://ebookdigitalpro.systeme.io/trompeloeil |
+| Rutaconsabor (academiadigitaleligeaprender.com) | "Mega Pack Mini Postres Negocio" | **USD 7** ("valor total USD 67") | https://academiadigitaleligeaprender.com/mega-pack-mini-postres-negocio-2/ |
+| Cocina fácil en casa (Impultienda AR) | "10 recetas navideñas para emprender" | **AR$ 9.900** | https://recetas-navidenas-para-vender.impultienda.ar/ |
+| Funcake Factory (México) | Masterclass de galletas navideñas | MXN 1.599, pero **presencial** (no sirve como prueba de digital) | https://funcakefactory.mx/masterclass-galletas/ |
+
+Otros anunciantes: Dolcheré (USD, habla de vos, 46 anuncios, ~30 días desde ~2026-10-19) vende una **app** de costos y precios para pasteleras, no un ebook. Sin precio visto.
+
+Patrón: en 5 vueltas no encontré ningún ebook de repostería en español a USD 17-27. Todo lo digital que se ve está entre USD 7 y 10 (o ARS 1.600 a 9.900), y se muestra con un "valor" inflado de USD 33-67. Lo que cobra más es presencial o escuela (IGA, Eddis, Taller Canela).

@@ -17,3 +17,6 @@
 2026-11-19 · Pan dulce relleno en AR: sigue con 0 infoproductos después de 4 búsquedas más; el pan dulce común ya tiene ~5 (ARS 1.900 a 2.500) · por qué: el ángulo "relleno" es el hueco; el "común" no
 2026-11-19 · Freddo vende "Pan Dulce Helado" en AR (producto físico) · por qué: una marca grande ya acostumbró al público al pan dulce relleno, y el relleno helado encaja con la Navidad de verano (hipótesis)
 2026-11-19 · Hay un infoproducto navideño en AR a ARS 9.900 (Cocina fácil en casa) · por qué: el techo de precio no es ARS 1.900; ARS 9.900 se puede probar (sin confirmar que venda)
+2026-11-19 · Precio real en 3 landings de repostería digital: Trompe-l'œil USD 9,97 (Hotmart), Mini Postres USD 7, Recetas navideñas AR$ 9.900 (Impultienda) · por qué: no apareció ningún ebook de repostería en español a USD 17-27; USD 19,90 queda arriba de todo lo que se ve (decisión de Tamy, va a Esperando por mí)
+2026-11-19 · Los precios de las landings anteriores salieron de los titulares; desde ahora se confirman abriendo la landing · por qué: el titular puede no coincidir con el precio del checkout (pedido de Productos)
+2026-11-19 · Para sacar el link de la landing desde la biblioteca de anuncios: abrir el snapshot del anuncio y leer los links l.php con JavaScript (unos 3 pasos de navegador por anunciante) · por qué: la API de la biblioteca no trae el link de destino

@@ -9,7 +9,7 @@
 
 | Qué | Lo pide |
 |---|---|
-| Elegir el **nuevo nicho de repostería** cuando Investigación traiga las opciones. Desde el 2026-11-19 el pan dulce relleno y los chupetines están en pausa: la competencia en AR vende más barato y el precio es **USD 19,90, menos no** (≈ ARS 31.000, dólar sin confirmar). Investigación ya está buscando | Productos |
+| **Decidir el precio o el nicho** (Investigación, 2026-11-19): en 5 búsquedas no apareció **ningún** ebook de repostería en español a USD 17-27. Precios reales vistos en las landings: USD 9,97 (Trompe-l'œil), USD 7 (Mini Postres), AR$ 9.900 (recetas navideñas). Con la regla "si la competencia vende más barato, otro nicho", **toda la repostería queda afuera**, salvo los nichos sin ningún competidor en AR (pan dulce relleno, chupetines de chocolate). Opciones: (A) mantener USD 19,90 en un nicho sin competidor directo, (B) probar un precio menor, (C) salir de repostería. Detalle en `RAW/cazas.md` | Investigación |
 | Crear la **fanpage y el Instagram** de la marca de ebooks (en español) y conectarlos al portfolio comercial. Hoy el portfolio no tiene ninguna página (2026-11-19) | Meta |
 
 ## El negocio hoy
