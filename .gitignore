@@ -1,0 +1,25 @@
+# Basura del sistema
+desktop.ini
+Thumbs.db
+.DS_Store
+*.tmp
+~$*
+
+# Secretos: nunca se versionan. Una clave en el historial de git no se borra más.
+.env
+.env.*
+*.env
+*.key
+.claude/settings.local.json
+
+# Log del guardado automático (ruido, no contenido)
+.claude/autosync.log
+
+# Audio y video pesados: se quedan en la compu. Lo que viaja es la transcripción.
+RAW/audios/*.mp3
+RAW/audios/*.m4a
+RAW/audios/*.wav
+RAW/audios/*.ogg
+RAW/audios/*.mp4
+RAW/audios/*.mov
+__pycache__/

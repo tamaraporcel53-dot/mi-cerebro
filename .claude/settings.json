@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PROJECT_DIR:-.}/tools/autosync.sh\" 2>/dev/null || true",
+            "timeout": 60,
+            "statusMessage": "Guardando el cerebro en GitHub..."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,2 @@
+# Los scripts siempre con fin de linea Unix, para que corran en Windows, Mac y Linux
+*.sh text eol=lf
