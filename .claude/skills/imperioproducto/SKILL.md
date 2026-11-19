@@ -6,12 +6,13 @@ description: Lleva un producto digital del 0 al 100% y después maneja sus campa
 # ImperioProducto — del 0 al 100%, y después manejarlo
 
 Esta skill **no hace el trabajo de las otras: las llama en orden** y no deja que se
-saltee nada. Es el director de orquesta de tus productos digitales.
+saltee nada. Es el director de orquesta de los productos digitales.
 
-**El canon está en `WIKI/metodo-producto-digital.md`.** Leelo antes de arrancar. Si otra
-nota dice distinto, manda esa página, salvo que el usuario diga otra cosa en la conversación.
+Se le habla al usuario en español, claro y directo.
 
-Hablale al usuario en español rioplatense, con voseo.
+**Antes de arrancar**, si tenés a mano el material del curso sobre productos digitales
+(el canon del método), leelo. Si algo de ahí contradice esta skill, manda lo que el
+usuario diga en la conversación y después el material del curso.
 
 ---
 
@@ -28,13 +29,15 @@ Hablale al usuario en español rioplatense, con voseo.
 5. **Todo se anota en la ficha** del producto, en el momento. Si no está en la ficha,
    no pasó.
 6. **Se pide todo junto, una sola vez por fase.** Nunca ir pidiendo de a una cosa.
-7. 🔴 **Un producto a la vez:** primero optimizado en **tu mercado principal**, después
-   **la región** (otros países del mismo idioma), después otros idiomas. No se abre el siguiente
-   mercado hasta que el anterior está optimizado.
-8. 🔴 **Nunca mostrar tus productos reales en piezas públicas que no sean su propio anuncio**
-   (contenido educativo, anuncios de otra oferta, ejemplos de "lo que hace Claude"). Ni landings,
-   ni ebooks, ni anuncios, ni bonos, ni tiendas: **te los copian**. Se arma un ejemplo inventado o
-   se pregunta antes. El anuncio de un producto muestra solo ese producto.
+7. 🔴 **Un producto a la vez.** Primero optimizado en el **mercado principal** (tu país),
+   después los **países cercanos del mismo idioma**, después otros idiomas. No se abre el
+   siguiente mercado hasta que el anterior está optimizado.
+8. 🔴 **Nunca mostrar tus otros productos reales en anuncios ni en piezas públicas.**
+   Si hacés una pieza para mostrar "lo que hace Claude" (un anuncio de un curso, una
+   publicación, una clase abierta), no van tus landings, ebooks, anuncios, bonos ni tiendas
+   reales: se arma un ejemplo inventado o se pregunta antes. Pasó que se descartó una tanda
+   entera de anuncios porque exponían todos los productos: la competencia los copia. El
+   anuncio de un producto propio muestra solo ese producto.
 
 ---
 
@@ -48,11 +51,11 @@ Hablale al usuario en español rioplatense, con voseo.
 
 ### La ficha
 
-Vive en `OUTPUTS/lanzamientos/<producto-en-kebab-case>.md`. Si no existe, se crea con
-la plantilla de `references/ficha.md`. **Primero se busca** (`ls OUTPUTS/lanzamientos/`):
+Vive en `lanzamientos/<producto-en-kebab-case>.md`, dentro de tu carpeta de trabajo. Si no
+existe, se crea con la plantilla de `references/ficha.md`. **Primero se busca** (`ls lanzamientos/`):
 nunca crear una segunda ficha del mismo producto.
 
-Al abrir la sesión, mostrar siempre el tablero así (ejemplo):
+Al abrir la sesión, mostrar siempre el tablero así:
 
 ```
 MI PRODUCTO ES — 55%
@@ -60,9 +63,6 @@ MI PRODUCTO ES — 55%
 ⬜ F4 Creativos  ⬜ F5 Campaña  ⬜ F6 Validar  ⬜ F7 Escalera
 Sigue: F4. Falta de vos: nada todavía.
 ```
-
-Si algo necesita una decisión o una acción que solo puede hacer el usuario, agregalo a la
-lista **"Esperando por mí"** de `BRIEFING.md`, una línea por ítem, y sacalo cuando se resuelva.
 
 ---
 
@@ -86,10 +86,10 @@ Proponer en **un solo mensaje**:
 |---|---|
 | Nombre y promesa | el atajo, no el conocimiento. "Número grande + y vendelo" si aplica |
 | Precio del front | **fijo: 19,90 en habla española, 27 en habla inglesa.** No se propone otro |
-| 2-4 bonos | la fricción convertida en bono. Bonos estándar del canon |
+| 2-4 bonos | la fricción convertida en bono. Bonos estándar del método |
 | Anclaje | valor tachado, "5X1", licencia de reventa en el FAQ |
 | 10 ángulos | uno por anuncio. Se segmenta en el anuncio, no en la landing |
-| Neto y CPA de equilibrio | neto = precio − comisión de la pasarela − 0,30 |
+| Neto y CPA de equilibrio | neto = precio − comisión − 0,30 (ver la tabla de comisiones del curso) |
 | Escalera de OTOs | **fija** (español 47/27/17/12 · inglés 97/47/27/17). Solo el plan: no se construye hasta F7 |
 | Garantía | **SIEMPRE 120 días** |
 | Formato | **oferta única** (no catálogo) |
@@ -113,19 +113,18 @@ Proponer en **un solo mensaje**:
 
 Ejecutar en este orden:
 
-1. Tienda **con la zona horaria de tu mercado** → **moneda primero, idioma después**
+1. Tienda **con el huso horario de tu mercado** → **moneda primero, idioma después**
 2. Producto → entregable (`impultienda_cargar_entregable`) → bonos con valor 0
 3. Precio y tachado (`impultienda_fijar_precio`)
 4. Pasarela: `impultienda_conectar_pasarela` devuelve el link → **👤 el usuario** carga las credenciales
-   (Claude nunca las tipea)
 5. Sitio de negocio (`impultienda_guardar_sitio_negocio` + verificar): evita los bloqueos de Stripe
 6. Dominio → `impultienda_verificar_dominio`
-7. Landing: llamar a **`/imperiolanding`**. Se arma **completa**; donde todavía no hay reseñas
-   o cifras reales, van **marcadores visibles** que el usuario reemplaza por los datos reales
-   antes de publicar. Nada se publica sin que el usuario la revise.
+7. Landing: llamar a **`/imperiolanding`**. Se arma **completa, con reseñas y cifras de relleno**:
+   nada se publica sin que el usuario la revise, y él las acomoda a mano. **No sacarlas.**
 8. Título de pestaña y meta descripción
 9. Checkout con teléfono y apellido activados
 10. **Píxel y CAPI** (`impultienda_configurar_tracking`), después del dominio final
+11. 🔴 **Microsoft Clarity desde el día uno** (Clarity graba cómo navega la gente y muestra dónde se traba: con eso se mejora la página): proyecto en clarity.microsoft.com (gratis, con la cuenta del alumno) → Nuevo proyecto (nombre = tienda, URL = dominio, sector "Comercio") → copiar el ID de 10 caracteres → `impultienda_configurar_tracking` con `clarity_id` (queda **pendiente** con un link de aprobación que vence en 30 min; más rápido: el alumno pega el ID en Configuración → Tracking → Microsoft Clarity → Project ID → Guardar cambios) → verificar `clarityId = "<ID>"` en el HTML publicado
 
 🔴 **Sin order bump ni post-compra en el día 0.**
 
@@ -136,16 +135,15 @@ Ejecutar en este orden:
 
 ## F4 · Creativos (→ 70%)
 
-- Preguntar si conviene pasar al modelo más potente disponible antes de llamar a la skill de reels.
-- **Antes de editar, leer lo aprendido** en `RAW/bitacora/productos.md` y `RAW/bitacora/edicion.md`
-  (y en la WIKI, si el Cerebro ya lo destiló) y pasarle a la skill de edición lo que aplique.
-  Lo que ya se aprendió no se vuelve a pagar.
-- **10 anuncios, un ángulo cada uno**, de los 10 de F1, con **`/imperioreelscorto`** (perfil **B**
-  para infoproducto), con la paleta **del producto**.
-  - Si querés un **test A/B de edición**, partilos 5 y 5 entre dos estilos (por ejemplo
-    `/imperioreelscorto` y `/imperioreels`), con los mismos ángulos repartidos en los dos grupos
-    y una sigla del estilo en el nombre del anuncio para poder separarlos al medir
-  - Cuando un estilo gane en 2 lanzamientos seguidos, pasa a hacer los 10
+- **Antes de editar, leer tu registro de aprendizajes creativos** (`notas.md`, sección creativos) y pasarle a la skill de edición
+  lo que aplique. Lo que ya se aprendió no se vuelve a pagar.
+- **10 anuncios, un ángulo cada uno**, de los 10 de F1, partidos en un **test A/B de edición**:
+  - **5 con `/imperioeditor`** en sus formatos sin cara (cine, ilustrada, chat, libreta),
+    con la paleta **del producto**. **Sin cierre ni marca Imperio**
+  - **5 con `/imperioreelscorto`**, perfil **B** para infoproducto
+  - Mismos ángulos repartidos en los dos grupos. En el nombre del anuncio va `ED` o `KR`
+    para poder separarlos al medir
+  - Cuando un grupo gane en 2 lanzamientos seguidos, pasa a hacer los 10
 - Copy de cada anuncio: cuerpo con emojis · titular · descripción · botón `DOWNLOAD`.
 - 🤝 **Puerta:** el usuario aprueba los textos. **El creativo es inmutable**: después no se cambia.
 - ✅ **Verificación:** `ffprobe` uno por uno (duración, 1080x1920, audio). Miniatura propia por anuncio.
@@ -154,7 +152,6 @@ Ejecutar en este orden:
 
 - Llamar a **`/imperiocampana`**. Ella hace la fase 0 de los videos en paralelo, el
   presupuesto (ticket × 3, hacia arriba al múltiplo de 5), las UTMs y la checklist.
-  Detalle y errores conocidos: `WIKI/montaje-de-campanas.md`.
 - Después, **`/imperioauditoria`** sobre la cuenta y la tienda. Tiene que volver sin errores.
 - 👤 **Puerta: ACTIVAR.** Se pide con un resumen de una línea: cuenta, presupuesto, 10 anuncios, landing.
 - ✅ **Verificación doble:** cada anuncio leído por id vuelve `ACTIVE` **y** la columna
@@ -166,8 +163,7 @@ Ejecutar en este orden:
 
 # MODO MANEJAR (F6 → 95%)
 
-Se corre **todos los días**. Si ya escalaste a una cuenta horizontal, ahí cada 2 h en horario
-de actividad (por ejemplo, de 07:00 a 20:00).
+Se corre **todos los días**, y cada 2 h durante el día (de 07:00 a 20:00) si la campaña está escalando.
 
 ## 1. Leer
 
@@ -175,16 +171,24 @@ Por cada campaña viva de la ficha:
 
 - `ads_get_ad_entities` con `fields` explícitos: gasto (`amount_spent`), compras, ROAS, CPM, CTR, costo por visita
 - En tres ventanas: **hoy, 3 días, 7 días**
-- `impultienda_listar_ventas` del mismo período, para cruzar. Meta puede subestimar algunos
-  medios de pago (por ejemplo, Mercado Pago) durante horas
+- `impultienda_listar_ventas` del mismo período, para cruzar. Meta subestima las ventas de algunos medios de pago locales durante horas
 
 ## 2. Decidir con la tabla
+
+🔴 **Campaña que vende: no se toca de a pedacitos.** Pasó que una campaña ganadora perdió
+mucho dinero por día después de duplicarla, mover el presupuesto tres veces, cambiar el público, sacar el
+gasto mínimo y hacer pausas, todo en menos de 24 horas.
+1. **La estructura que definiste, exacta.** Si la herramienta no deja, se pregunta; no se improvisa.
+2. **Un solo paquete de cambios por noche.** El público no se toca salvo que sea imprescindible. Después de
+   un día movido, **48 horas sin tocar** (salvo un anuncio rechazado).
+3. **Cada cambio a una campaña ganadora se avisa con su riesgo ANTES de hacerlo**, no después.
+
 
 | Situación | Acción | Permiso |
 |---|---|---|
 | **3 ventas o más Y ROAS > 1,8** | **+30%**, sin redondear. **Se carga a las 23:30** para que arranque al día siguiente | 🤖 **automático**, sin preguntar |
 | 🔔 **Es el primer escalado** | **Preguntar "¿vamos con los OTOs?"** | — |
-| ROAS < 2 | **−20%** | 🤖 ejecutar |
+| ROAS < 1 | **−20%** | 🤖 ejecutar |
 | Sigue bajando 2 h después | Otro −20% | 🤖 ejecutar |
 | Sigue bajando | Apagar el anuncio que más gasta sin vender | 🤖 ejecutar |
 | Día 3 | Proponer renovación: 10 anuncios en conjunto nuevo | 🤝 |
@@ -213,24 +217,23 @@ Una vez por día, por cada anuncio que gastó:
 
 1. Pedir a Meta impresiones, vistas de 3 s, ThruPlay, clics al link, visitas, checkouts,
    compras, gasto y ventas
-2. Agregar una fila a `OUTPUTS/lanzamientos/metricas-anuncios.csv` con hook rate,
+2. Agregar una fila a `lanzamientos/metricas-anuncios.csv` con hook rate,
    hold rate, CTR, costo por visita, CPA y ROAS
 3. Comparar contra los demás anuncios del mismo lanzamiento y contra los anteriores
 4. Si aparece un patrón (gastó 1 ticket o más y se repite en 2 anuncios), anotarlo en
-   **`RAW/bitacora/productos.md`**. Con un solo caso va como `(hipótesis)`.
-   🔴 **Nunca escribir en `WIKI/`**: la WIKI la escribe solo el agente Cerebro, después
-   de analizar la bitácora con el usuario (ver `CLAUDE.md`)
+   **`notas.md`** (tu registro de aprendizajes). Con un solo caso va como `(hipótesis)`.
+   Un aprendizaje es un patrón confirmado, no una corazonada: no lo trates como regla hasta que se repita.
 5. Si un aprendizaje se confirma 3 veces, proponer el cambio en la skill de edición
-   que corresponda (`imperioreelscorto` o `imperioreels`), con la regla de las 3 copias
+   que corresponda (`imperioeditor` o `imperioreelscorto`)
 
 ## 5. Reportar
 
-Una línea por campaña, siempre con este formato (los números son de ejemplo):
+Una línea por campaña, siempre con este formato:
 
 ```
-MI PRODUCTO ES · Campaña 1 · día 3
-Gasto 120 · 7 compras · ROAS 2,3 (hoy) / 2,0 (3d) / 1,9 (7d)
-→ +30%: 60 → 78. ¿DALE o NO?
+MI PRODUCTO ES · Cuenta 1 · día 3
+Gasto 142 · 9 compras · ROAS 2,4 (hoy) / 2,1 (3d) / 1,9 (7d)
+→ +30%: 78 → 101. ¿DALE o NO?
 ```
 
 Y anotar la decisión en la ficha, con fecha y hora.
@@ -259,9 +262,6 @@ Solo cuando el usuario dijo que sí a los OTOs.
 ## Cierre de cada sesión
 
 1. Ficha actualizada con el tablero y el porcentaje
-2. Todo lo aprendido → **`RAW/bitacora/productos.md`**, al final, con fecha absoluta: lo que
-   falló, números reales, decisiones del usuario y su motivo, limitaciones, contradicciones
-   con el cerebro. Crudo y corto. **Nunca en `WIKI/` ni en `changelog.md`**: eso lo
-   escribe el agente Cerebro
-3. `BRIEFING.md` → lista "Esperando por mí" al día
-4. Decirle al usuario **qué sigue y qué falta de él**, en dos líneas
+2. Todo lo aprendido → **`notas.md`**, al final, con fecha absoluta: lo que
+   falló, números reales, decisiones y su motivo, limitaciones. Crudo y corto
+3. Decirle al usuario **qué sigue y qué falta de él**, en dos líneas

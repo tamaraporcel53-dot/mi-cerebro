@@ -53,7 +53,7 @@ de la tabla, distintos a los de la corrida anterior (mirar el final de `cazas.md
 
 El tipo de idea (ejemplos para captar el estilo, **no para buscarlos ni para limitar el nicho**): joyería en resina,
 pedrería, plaquetas de yeso aromáticas recargables, patchwork sin aguja, lámparas de PVC calado,
-técnica japonesa, cuadros texturizados, velas geoda, atrapasoles, tejer sin agujas.
+técnica japonesa, cuadros texturizados, atrapasoles, tejer sin agujas.
 
 ### 🔴 Todos los nichos, no solo manualidades
 
@@ -160,6 +160,16 @@ Para cada idea candidata, `ads_library_search` con `page_ids` del anunciante: tr
 
 ⚠️ **Tope de 50 por llamada.** Si los 50 devueltos son todos nuevos, la antigüedad no se puede
 confirmar: se dice, no se asume.
+
+🔴 **La herramienta NO ve los duplicados ni el historial completo.**
+`ads_library_search` no devuelve "N anuncios usan este contenido" (la señal de ganador) y trae como mucho 50, de los más
+nuevos a los más viejos. Pasó: con la API parecía que un anunciante "todavía buscaba ganador" y en la biblioteca tenía **86 días y un creativo
+duplicado 25 veces**. Por eso:
+- **Nunca afirmar "no tiene ganador", "está testeando" ni una fecha de inicio** con lo que da la API. Eso se dice como
+  "no verificable con la API".
+- Antes de opinar si hay chance de entrar contra un anunciante, abrir su página en la biblioteca (navegador, orden por
+  impresiones) y leer **"N anuncios usan este contenido"** y la fecha del más viejo, o pedirle a la persona la captura.
+- Que todos los anuncios activos sean nuevos **no** prueba que no haya ganador: los ganadores se relanzan como IDs nuevos.
 
 **Escalera de evidencia** (para ordenar):
 - 🟢 **Validada:** 45+ días al aire, o 50+ anuncios de la misma oferta sostenidos 3+ días. Varios

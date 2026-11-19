@@ -8,9 +8,9 @@ USO
 POR QUE HACE FALTA
 
 HeyGen, al animar una imagen fija, le agrega un temblor de camara en mano
-simulado. Con expressiveness="high" es fuerte y el comprador lo percibe como si
-alguien golpeara la mesa y la camara vibrara todo el tiempo. Medido sobre el
-fondo (que deberia estar quieto):
+simulado. Con expressiveness="high" es fuerte y el comprador lo percibe como
+"parece que le esta pegando a la mesa y vibra la camara". Medido sobre el
+fondo del taller (que deberia estar quieto):
 
     render crudo de HeyGen ....... 3,0 / 3,8 px de temblor por cuadro
     tramos de imagen del montaje . 0,8 / 1,4 px
@@ -42,8 +42,12 @@ Si aun asi se corta, lanzalo en segundo plano:
 
     nohup python3 estabilizar.py crudo.mp4 render.mp4 > estab.log 2>&1 &
 
-y revisa el log hasta que diga SINCRONIA OK. El .trf de la pasada 1 queda cacheado
-en la carpeta temporal del sistema, asi que si se corta la pasada 2 no hay que rehacer la 1.
+y revisa el log hasta que diga SINCRONIA OK. El .trf de la pasada 1 queda en la
+carpeta de la salida, asi que si se corta la pasada 2 no hay que rehacer la 1.
+
+WINDOWS Y FFMPEG 9 (arreglado 2026-10-28): la "C:" de una ruta absoluta rompe el
+filtro vidstab (los ":" separan opciones), por eso el .trf va con nombre relativo;
+y -vsync ya no existe en ffmpeg 9: se usa -fps_mode cfr.
 """
 
 import os, subprocess, sys, tempfile
@@ -100,7 +104,11 @@ def main(entrada, salida):
     if antes:
         print(f"temblor ANTES:  x={antes[0]:.2f}  y={antes[1]:.2f} px/cuadro")
 
-    trf = os.path.join(tempfile.gettempdir(), "vsl_vidstab.trf")
+    # Windows: una ruta con "C:" rompe el filtro (los ":" separan opciones). Se trabaja con un nombre relativo,
+    # en la carpeta de la salida y único por archivo (dos estabilizaciones en paralelo no se pisan).
+    entrada, salida = os.path.abspath(entrada), os.path.abspath(salida)
+    os.chdir(os.path.dirname(salida))
+    trf = os.path.splitext(os.path.basename(salida))[0] + "_vidstab.trf"
 
     print("pasada 1 de 2: detectando el movimiento...")
     subprocess.run(
@@ -119,7 +127,7 @@ def main(entrada, salida):
                 f"zoomspeed=0.1:interpol=bicubic:crop=black,"
                 f"unsharp=5:5:0.6:3:3:0.4",
          "-c:v", "libx264", "-crf", "17", "-preset", "veryfast",
-         "-pix_fmt", "yuv420p", "-vsync", "cfr",
+         "-pix_fmt", "yuv420p", "-fps_mode", "cfr",
          "-c:a", "copy", salida, "-y"], check=True)
 
     n_fin = cuadros_de(salida)

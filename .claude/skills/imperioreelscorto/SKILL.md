@@ -1,27 +1,22 @@
 ---
 name: imperioreelscorto
-description: Arma anuncios verticales de venta directa para Meta con parámetros medidos sobre anuncios que ya vendieron. Tres perfiles — A corto (15-22s, producto físico, cierre con landing), B testeo de formación (30-37s, captions karaoke blanco/gris, audio sin silencios, sin placa) y C híbrido (esqueleto de un ganador corto + terminación de B). Incluye minado de fuentes 4K propias a una biblioteca de b-rolls, elección de voz por ritmo, control de velocidad y masterizado a −12 LUFS. Edita con el Estándar Imperio (elegante, minimalista, fluido). Usar cuando el usuario dice "imperioreelscorto" o pide "un reel corto", "un anuncio corto", "un ad para Meta", "otro ángulo", "variaciones", o cuando pasa clips y quiere que se los edite. Complementa a la skill imperioreels (formatos largos y cierres con pack de producto).
+description: Arma anuncios verticales de venta directa para Meta con parámetros medidos sobre anuncios que ya facturaron. Tres perfiles — A corto (15-22s, producto físico, cierre con landing), B TESTEO 1 (30-37s, formación, captions karaoke blanco/gris, audio sin silencios, sin placa) y C híbrido (esqueleto validado corto + terminación de B). Incluye minado de fuentes 4K propias a biblioteca de b-rolls, elección de voz por ritmo, control de velocidad y masterizado a −12 LUFS. Edita con el Estándar Imperio (elegante, minimalista, fluido). Usar cuando el usuario dice "imperioreelscorto" o pide "un reel corto", "un anuncio corto", "un ad para Meta", "otro ángulo", "variaciones", o cuando pasa clips y quiere que se los edite. Complementa a la skill imperioreels (formatos largos y cierres con pack de producto).
 ---
 
 # Imperio Reels Corto — anuncios de venta directa con perfiles medidos
 
-> **🔴 Antes de cualquier otra cosa:** si la sesión NO está corriendo en el modelo más capaz que
-> tengas disponible (Opus), lo PRIMERO es preguntarte si querés cambiarlo (se cambia desde el
-> selector de modelo de la app). Una sola pregunta; si ya está en ese modelo, no preguntar.
+> **🔴 Antes de cualquier otra cosa:** si la sesión NO está corriendo en **Opus 5.5**, lo PRIMERO
+> es preguntarle al usuario si quiere pasar a Opus 5.5 (se cambia desde el selector de modelo de
+> la app). Una sola pregunta; si ya está en Opus 5.5, no preguntar.
 
 > **⭐ Estándar Imperio de edición:** esta skill aplica el estándar completo de `imperioreels`
-> (leer su sección *Estándar Imperio*): elegante, minimalista, prolijo y fluido; escenas nunca
-> sobre negro, CTA minimalista, música sin copyright que se escuche, sin barra de progreso y
-> masterizado a −12 LUFS. Cuando un perfil de acá dice algo distinto (por ejemplo: cortes secos,
-> o B sin placa final), manda el perfil.
-
-> **Prerrequisitos:** los mismos de `imperioreels` §0 — Node, ffmpeg, las API keys en `.env` y el
-> **kit de reels** instalado (se instala con la **clase 12 "Edición automática con Claude"** del
-> módulo **Impultienda + Claude**). `$MOTOR` es la carpeta del motor de edición, dentro de la
-> carpeta donde instalaste el kit de reels (`[CARPETA_DEL_KIT]`).
+> (leer su sección *Estándar Imperio*): video base con `cine-base.mjs` y transiciones, escenas
+> nunca sobre negro, CTA minimalista, cierre con mockups reales en la escena `bundle`, música
+> sin copyright que se escuche, sin barra de progreso y masterizado a −12 LUFS. Cuando un perfil
+> de acá dice algo distinto (por ejemplo B: sin placa final), manda el perfil.
 
 Convierte un ángulo de venta en un anuncio vertical listo para Meta. Los números **no son
-criterio estético**: salen de medir anuncios que ya vendieron.
+criterio estético**: salen de medir anuncios que ya facturaron.
 
 > **Las dos reglas de oro**
 >
@@ -38,7 +33,7 @@ criterio estético**: salen de medir anuncios que ya vendieron.
 Los tres comparten el pipeline (material → guion → voz → jumpcut → tomas → props → render).
 Cambian los números, el estilo de captions y el cierre. **Preguntar cuál usar si no está claro.**
 
-| | **A — corto** | **B — testeo de formación** | **C — híbrido** |
+| | **A — corto** | **B — TESTEO 1** | **C — híbrido** |
 |---|---|---|---|
 | Para qué | Producto físico, oferta directa | Venta de formación / infoproducto | Variar un ganador corto ya validado |
 | Duración | **15-22s** (objetivo 17s) | **30-37s** (objetivo 33s) | **15-20s** |
@@ -52,43 +47,41 @@ Cambian los números, el estilo de captions y el cierre. **Preguntar cuál usar 
 | Música | 10%, fade out 3,4s | 10%, entra a los 8-18s | 10%, entra a los 2-6s |
 
 ### De dónde sale cada perfil
-- **A:** promedio de ~17s medido sobre 10 anuncios reales de producto físico.
-- **B:** desarme cuadro a cuadro de 5 anuncios ganadores de un infoproducto: detección de cortes,
-  muestreo de píxeles en los captions, medición EBU R128.
-- **C:** producido sobre un anuncio ganador validado de un ebook. Nace de una regla: **cuando
-  variás un ganador, se conserva su esqueleto y su largo.** Estirar un guion de ~50 palabras a
-  33 segundos rompe justo lo que lo hizo ganar (una sola idea). Lo que sí se actualiza es la
-  terminación: captions karaoke y audio masterizado.
+- **A:** promedio de 16,7s medido sobre 10 anuncios reales de producto físico.
+- **B:** desarme cuadro a cuadro de 5 anuncios ganadores de un infoproducto visual de manualidades: detección
+  de cortes, muestreo de píxeles en los captions, medición EBU R128.
+- **C:** producido sobre un anuncio ganador validado de un ebook de manualidades. Nace de una
+  regla: **cuando variás un ganador, se conserva su esqueleto y su largo.** Estirar un guion de
+  49 palabras a 33 segundos rompe justo lo que lo hizo ganar (una sola idea). Lo que sí se
+  actualiza es la terminación: captions karaoke y audio masterizado.
 
 ---
 
 ## 0-bis. Reglas de montaje (valen para los tres)
 
 - **Cortes 100% secos.** Cero disolvencias, cortinillas, zooms de transición o desenfoques. En
-  los 5 anuncios ganadores medidos no hay **ni una sola** transición.
+  los 5 anuncios ganadores no hay **ni una sola** transición en 163 segundos.
 - **El caption NO se corta con la imagen.** Una misma frase se sostiene fija mientras abajo
   cambian dos o tres planos. Imagen y texto corren en pistas independientes: eso evita que el
   corte rápido se lea como caótico. **Nunca sincronizar caption con cambio de plano.**
 - **Racimo rápido en el medio.** Ráfaga de 0,13 a 0,4s donde se muestran los resultados
   terminados. Funciona como catálogo comprimido.
-- **Ningún plano pasa de 5s.**
+- **Ningún plano pasa de 5s.** El más largo medido fue 4,88s.
 - **Sin SFX en los cortes.** Se buscaron transitorios alineados a los cambios de plano y no
   existen. El montaje es rápido; el audio no lo subraya.
-- **Cenital, manos, sin cara.** En los ganadores medidos no aparece un solo rostro.
+- **Cenital, manos, sin cara.** En los 5 ganadores no aparece un solo rostro.
 
 ---
 
 ## 1. Material PRIMERO, guion DESPUÉS
 
-🚫 **Tramos bloqueados.** Si en tu material hay tramos que no se pueden usar nunca (dicen algo
-que te expone, prometen plata fácil o rozan las políticas de Meta), anotalos en
-`RAW/bitacora/edicion.md` como BLOQUEADO y no van a ninguna pieza ni anuncio.
+Este orden no es una preferencia: se invirtió dos veces y las dos veces salió mal.
 
-Este orden no es una preferencia: invertirlo sale mal.
-
-- Si escribís el guion primero, es fácil nombrar un objeto o un resultado (por ejemplo, la pieza
-  ya terminada) y después descubrir que en todo el banco solo existe la toma del objeto sin
-  terminar. Resultado: guion tirado y voz regenerada, o peor, un anuncio entregado roto.
+- Se escribió un guion sobre **un objeto** y después se descubrió que no existe ninguna toma del
+  objeto terminado: solo del proceso. Guion tirado, voz regenerada.
+- Se escribió *"este reloj y este plato"* y en pantalla había materiales y piezas
+  **sin trabajar**. **El plato terminado no existía en todo el banco.** Anuncio entregado roto y
+  corregido después.
 
 **Regla dura: no nombrar un objeto que no esté verificado en pantalla.** Si el material no lo
 sostiene, se cambia el guion — no se estira la interpretación de la imagen.
@@ -102,16 +95,16 @@ mitad de toma.
 URLs · subtítulos quemados de otro video · patentes · datos personales.
 **Solo se ve:** las manos (o guantes) y el objeto.
 
-Lo que suele aparecer, para saber qué buscar:
+Casos reales encontrados, para saber qué buscar:
 
-| Qué aparece | Dónde |
+| Qué apareció | Dónde |
 |---|---|
 | Marca de agua de **TikTok** + @usuario de otro creador | clips sueltos y sets ya usados en producciones viejas |
 | Logo de **otra empresa** | sobre el final del clip, invisible en el primer cuadro |
-| Cartel con el **dominio de otra marca** de fondo | en todo el metraje, a veces con una cara |
-| **Torso** con ropa visible arriba del cuadro | el objeto está bien; la persona entra por el borde |
-| Overlay de **precio** del anuncio original | texto grande que el recorte no saca |
-| Placas finales del anuncio fuente | casi siempre en los últimos 3-4s |
+| Cartel con el **dominio de otra marca** de fondo | en todo el metraje, más una cara |
+| **Torso** con camisa visible arriba del cuadro | el objeto estaba bien; la persona entraba por el borde |
+| Overlay **"$2.000"** del anuncio original | texto grande que el recorte no saca |
+| Placas finales del anuncio fuente | siempre en los últimos 3-4s |
 
 ⚠️ **Compliance de producto.** Además del filtro visual, respetar lo que el producto prohíbe.
 Ejemplo: si el ebook **prohíbe usar la técnica sobre cierto objeto** (por seguridad), toda toma
@@ -119,8 +112,8 @@ de ese objeto queda fuera aunque sea limpia. Revisar el `config.md` del proyecto
 
 ### 1b. Verificar de a UN clip, nunca por grilla
 
-Leer una grilla de contactos de 50+ clips y mapear posición → nombre de archivo **falla**: se
-termina identificando mal el clip.
+Leer una grilla de contactos de 50+ clips y mapear posición → nombre de archivo **falla**. Se
+hizo dos veces y las dos veces se identificó mal el clip.
 
 - ✅ **Un frame, un clip, mirado solo**, cuando la decisión importa (el plano del hook, el que
   nombra un objeto).
@@ -131,8 +124,8 @@ termina identificando mal el clip.
 
 ### 1c. Minar fuentes propias 4K a una biblioteca
 
-Tus anuncios ya publicados son la mejor fuente: material propio, sin riesgo de copyright, en 4K.
-Este flujo convierte 10 anuncios en una biblioteca de ~50 planos limpios.
+Los anuncios ya publicados del propio cliente son la mejor fuente: material propio, sin riesgo
+de copyright, en 4K. Este flujo convierte 10 anuncios en una biblioteca de ~50 planos limpios.
 
 ```bash
 LIB="<proyecto>/B-Rolls/LIB"; mkdir -p "$LIB"
@@ -165,9 +158,9 @@ Después **cull manual**: una grilla para descartar placas, caras y overlays (§
 un `CATALOGO.md` en `LIB/` agrupando por familia de objeto. Ese catálogo es lo que hace rápida
 la próxima tanda.
 
-⚠️ **Una fuente larga no vale por ser larga.** Un archivo de muchos minutos puede parecer la mina
-del banco y ser una grabación de pantalla de alguien hablando, con marca de agua. Escanearla
-antes de contar con ella.
+⚠️ **Una fuente larga no vale por ser larga.** Un archivo de 13,7 minutos parecía la mina del
+banco y resultó ser una grabación de pantalla de una persona hablando al micrófono, con marca
+de agua. Escanearla antes de contar con ella.
 
 ### 1d. El recorte de subtítulos quemados
 
@@ -180,7 +173,7 @@ mitad que sobra se usa para **recortar la franja de subtítulos** sin perder cal
 ffmpeg -ss 8 -i fuente.mp4 -frames:v 1 -vf "scale=540:-1" -y probe.png   # y mirarlo
 ```
 
-Recortes de referencia (para fuentes 2160x3840):
+Recortes ya medidos:
 ```bash
 CROP_ABAJO="crop=1339:2380:410:0"    # subtítulos al 65-70% -> me quedo el 62% de arriba
 CROP_ARRIBA="crop=1685:2995:237:845" # subtítulos arriba -> me quedo del 22% para abajo
@@ -189,21 +182,21 @@ CROP_ARRIBA="crop=1685:2995:237:845" # subtítulos arriba -> me quedo del 22% pa
 El recorte cierra el encuadre (queda más cerrado que el original). En la práctica **lee mejor**
 para producto, pero conviene elegir ventanas donde el objeto esté en la mitad superior.
 
-Para fuentes **más chicas que 1080x1920**, agregar `unsharp=5:5:0.7`. Tenelo en cuenta: por
+Para fuentes **más chicas que 1080x1920**, agregar `unsharp=5:5:0.7`. Avisar al usuario: por
 debajo de 720x1280 se nota blando y en un anuncio pago eso lee como "barato".
 
 ---
 
 ## 2. Guion
 
-🔴 **Políticas de Meta ANTES del guion.** Si la pieza va a un anuncio: nada de **promesas de
-ingresos ni de resultados en un plazo** ("en 7 días…"), ni **antes/después**, ni **montos** de
-ganancia, ni nombres de terceros. Un anuncio rechazado le pega a **toda la cuenta publicitaria**
-(se ve en Calidad de la cuenta). Con duda, se cambia la frase antes de editar, no después.
+🔴 **Políticas de Meta ANTES del guion.** Si la pieza va a un anuncio: nada de
+**promesas de ingresos ni de resultados en un plazo** ("sprint de 7 días"), ni **antes/después**, ni **montos**
+de ganancia. Un anuncio rechazado le pega a **toda la cuenta publicitaria**. Con duda, se
+cambia la frase antes de editar, no después.
 
-🔴 **No muestres tus otros productos reales en piezas públicas.** Si la pieza tiene que mostrar
-un ejemplo de trabajo, no van tus landings, ebooks, anuncios, bonos ni tiendas reales: te los
-copian. Se arma un ejemplo inventado. El anuncio de un producto muestra solo ese producto.
+🔴 **Un anuncio muestra solo el producto que promociona.** No mostrar en piezas públicas las landings, ebooks,
+anuncios, bonos ni tiendas reales de tus otros productos: te los copian. Si hace falta mostrar "cómo se ve" algo,
+se arma un ejemplo inventado o se pregunta antes.
 
 - **Registro: el del mercado.** Voseo para Argentina, "tú" para pan-LATAM. El neutro llega a
   más gente pero suena a doblaje cuando el producto es local.
@@ -213,25 +206,25 @@ copian. Se arma un ejemplo inventado. El anuncio de un producto muestra solo ese
 ### Perfil A — 4 bloques para 17s
 `hook = el resultado ya logrado (0-3s) → qué es (3-8s) → cómo/prueba (8-13s) → cierre (13-17s)`
 
-El hook es **la solución, nunca el dolor**. Arrancar con el resultado ("esto entró liso y
+El hook es **la solución, nunca el dolor**. Arrancar con el resultado ("esto entró blanco y
 salió así"), no con el problema.
 
 ### Perfil B — 6 tiempos para 33s
 
-| # | Tiempo | Qué hace | Ejemplo |
+| # | Tiempo | Qué hace | Ejemplo medido |
 |---|---|---|---|
 | 1 | 0-3s | **Imperativo que frena el pulgar.** Verbo en modo orden en la PRIMERA palabra, antes de cualquier contexto. Nunca una pregunta, nunca una presentación. | "Pará" · "Escuchame" · "Mirá esto" |
-| 2 | 3-9s | **Reencuadre.** Un objeto que la persona ya tiene y considera sin valor, renombrado como materia prima. | "Lo que para el resto no sirve… es tu próximo producto estrella" |
-| 3 | 9-13s | **Negación de categoría.** Negarle al oficio su etiqueta menor y subirlo de estatus. | "El [oficio] no es un pasatiempo, es una técnica" |
-| 4 | 13-22s | **Prueba visual.** Acá va el racimo de cortes. La idea en dos frases separadas. | "El material: lo que ya tenés. El resultado: otra cosa." |
-| 5 | 22-28s | **Derribo de la objeción.** Nombrar la excusa que ya está pensando y desarmarla. | "Dejá de pensar que necesitás máquinas caras" |
-| 6 | 28-33s | **Llamado con riesgo cero.** Instrucción física + frase que elimina la barrera. | "Tocá abajo y aprendé a hacerlo desde cero" |
+| 2 | 3-9s | **Reencuadre.** Un objeto que la persona ya tiene y considera sin valor, renombrado como materia prima. | "Lo que para el resto es basura… es tu próximo producto estrella" |
+| 3 | 9-13s | **Negación de categoría.** Negarle al oficio su etiqueta menor y subirlo de estatus. | "El [oficio] no es manualidades, es ingeniería simple" |
+| 4 | 13-22s | **Prueba visual + aritmética.** Acá va el racimo de cortes. La cuenta en dos frases separadas. | "El costo del material: cero. El valor de venta: altísimo." |
+| 5 | 22-28s | **Derribo de la objeción.** Nombrar la excusa que ya está pensando y desarmarla. | "Dejá de pensar que necesitás máquinas importadas" |
+| 6 | 28-33s | **Llamado con riesgo cero.** Instrucción física + frase que elimina la barrera. | "Tocá abajo y aprendé a crear valor con cero inversión" |
 
 > Ojo con el tiempo 1: el Perfil A dice "arrancar con el resultado" y el B arranca con un
 > **imperativo seco** que no es ni resultado ni dolor. Los dos funcionan; son hooks distintos.
 > No mezclarlos en el mismo guion.
 
-### Perfil C — 5 bloques del ganador (~50 palabras)
+### Perfil C — 5 bloques del ganador (~49 palabras)
 
 Molde extraído del anuncio con mejor CPA. **Una sola idea, nada más.**
 
@@ -249,10 +242,10 @@ Al hacer variantes, **cambiar el hook, no solo el objeto.** Cuatro variantes del
 
 | variante | hook |
 |---|---|
-| comparativo | "Mirá estos dos X. Se hicieron con lo mismo y no se parecen en nada." |
+| comparativo | "Mirá estas dos X. Salieron del mismo proceso y no se parecen en nada." |
 | resultado primero | "Esta X entró lisa y salió así." |
-| temporal | "Este X estaba liso hace tres segundos." |
-| proceso | "Mirá cómo queda esta X al terminar." |
+| temporal | "Este X era blanco hace tres segundos." |
+| proceso | "Mirá cómo se termina esta X." |
 
 ### Compliance Meta (revisar antes de generar la voz)
 - ❌ **Nunca prometer ingresos** ("ganá plata con esto", "X pesos por pieza"). Causa número uno
@@ -260,14 +253,15 @@ Al hacer variantes, **cambiar el hook, no solo el objeto.** Cuatro variantes del
 - ❌ Nada que no se pueda sostener. Datos duros solo si son verificables.
 - ✅ Mencionar qué incluye el producto sin prometer un resultado económico.
 
-> ⚠️ **Tensión conocida con el Perfil B.** Hay anuncios de formación que insinúan ingresos
-> ("te pagarían muy buena plata", "el valor de venta: altísimo") y aun así corren. Eso **no**
-> vuelve segura la práctica. Al escribir los tiempos 4 y 6, usá la versión sin promesa económica:
+> ⚠️ **Tensión conocida con el Perfil B.** Los anuncios de TESTEO 1 sí insinúan ingresos
+> ("te pagarían muy buena plata", "el valor de venta: altísimo") y aun así corrieron. Eso **no**
+> vuelve segura la práctica. Al escribir los tiempos 4 y 6, avisar al usuario y ofrecer la
+> versión sin promesa económica:
 > - *"por el que te pagarían muy buena plata"* → *"que la gente busca y encarga"*
 > - *"el valor de venta: altísimo"* → *"lo que vale terminado: otra cosa"*
 >
-> Si igual decidís la versión con promesa, es tu llamada — anotalo en `config.md` para saber qué
-> versión corrió si después hay un rechazo.
+> Si el usuario decide igual la versión con promesa, es su llamada — anotarlo en `config.md`
+> para saber qué versión corrió si después hay un rechazo.
 
 ---
 
@@ -280,7 +274,7 @@ Al hacer variantes, **cambiar el hook, no solo el objeto.** Cuatro variantes del
   (Subir `style` a 0.35 sube la actuación y suena más a publicidad.)
 
 ```bash
-curl -s -X POST "https://api.elevenlabs.io/v1/text-to-speech/[ID_DE_TU_VOZ]?output_format=mp3_44100_128" \
+curl -s -X POST "https://api.elevenlabs.io/v1/text-to-speech/<VOICE_ID>?output_format=mp3_44100_128" \
   -H "xi-api-key: $ELEVENLABS_API_KEY" -H "Content-Type: application/json" \
   -d '{"text":"<guion>","model_id":"eleven_multilingual_v2","voice_settings":{"stability":0.45,"similarity_boost":0.8,"style":0.25}}' \
   -o audios/NN-raw.mp3
@@ -294,33 +288,31 @@ duración.** Cuesta centavos y revela el ritmo natural de cada una.
 ```bash
 T="<una frase del guion, ~15 palabras>"
 node -e 'require("fs").writeFileSync("pl.json",JSON.stringify({text:process.argv[1],model_id:"eleven_multilingual_v2",voice_settings:{stability:0.45,similarity_boost:0.8,style:0.25}}))' "$T"
-mkdir -p audios/muestras-voz
 while IFS='|' read -r id name; do
   curl -s -X POST "https://api.elevenlabs.io/v1/text-to-speech/$id?output_format=mp3_44100_128" \
     -H "xi-api-key: $ELEVENLABS_API_KEY" -H "Content-Type: application/json" \
     --data-binary @pl.json -o "audios/muestras-voz/$name.mp3"
   printf "%-24s %ss\n" "$name" "$(ffprobe -v quiet -show_entries format=duration -of csv=p=0 "audios/muestras-voz/$name.mp3")"
 done <<'EOF'
-[ID_DE_VOZ_1]|voz-1
-[ID_DE_VOZ_2]|voz-2
+<voice_id>|<nombre>
 EOF
 ```
 
-Ejemplo de medición sobre 8 voces argentinas, misma frase y mismos ajustes:
+Medición real sobre 8 voces argentinas, misma frase y mismos ajustes:
 
 | voz | duración | ritmo |
 |---|---|---|
-| Voz 1 | **4,37s** | la más rápida |
-| Voz 2 (varón) | 4,97s | |
-| Voz 3 (varón) | 5,02s | |
-| Voz 4 | 5,15s | |
-| Voz 5 | 5,48s | |
-| Voz 6 | 5,62s | |
-| Voz 7 | 5,76s | |
-| Voz 8 | **6,04s** | la más lenta |
+| AR-Malena | **4,37s** | la más rápida |
+| AR-Agustin (varón) | 4,97s | |
+| Franco (varón, Córdoba) | 5,02s | |
+| AR-Lore | 5,15s | |
+| AR-Argie | 5,48s | |
+| AR-Agustina | 5,62s | |
+| AR-Marina | 5,76s | |
+| Valeria | **6,04s** | la más lenta |
 
-**La más rápida fue ~38% más rápida que la más lenta sin acelerar nada.** Si la voz suena
-lenta, **la primera opción es cambiar de voz, no aplicar `speed`**: el time-stretch mete
+**Malena es 38% más rápida que Valeria sin acelerar nada.** Si el usuario dice que la voz
+suena lenta, **la primera opción es cambiar de voz, no aplicar `speed`**: el time-stretch mete
 artefacto y se nota en frases largas.
 
 Buscar y agregar voces nuevas del mercado:
@@ -352,8 +344,8 @@ curl -s https://api.elevenlabs.io/v1/speech-to-text -H "xi-api-key: $ELEVENLABS_
 ```
 
 `0.12 0.04` es el ajuste apretado (Perfil B y C). El `0.18 0.05` del Perfil A deja algo más de
-aire. En los ganadores medidos del Perfil B **no hay una sola pausa de más de 0,2s**. En un feed
-el silencio es justo el momento donde el dedo se mueve.
+aire. En los 5 anuncios de TESTEO 1 **no hay una sola pausa de más de 0,2s** en 163 segundos.
+En un feed el silencio es justo el momento donde el dedo se mueve.
 
 ```bash
 # verificar que no quedaron huecos
@@ -381,8 +373,8 @@ w.forEach((x,i)=>{ if(start===null)start=x.start; line+=x.text+" ";
 ### El Perfil B va a 1.0, no a 1.15
 
 El 1.15x es convención del Perfil A. En el B **el jumpcut solo ya deja el ritmo objetivo**:
-~95 palabras en ~32s ≈ **179 ppm**, y el target medido es ~176. Aplicarle 1.15 lo llevaría a
-~206 ppm, fuera de perfil. Medir siempre antes de asumir:
+95 palabras en 31,8s = **179 ppm**, y el target medido es 176. Aplicarle 1.15 lo llevaría a
+206 ppm, fuera de perfil. Medir siempre antes de asumir:
 
 ```
 ppm = palabras / (duración_final − duración_del_cierre) × 60
@@ -390,14 +382,14 @@ ppm = palabras / (duración_final − duración_del_cierre) × 60
 
 ### Rango sano: 190-240 ppm
 
-El ganador validado corre a ~200 ppm. Ejemplo de medición al subir de 1.0 a 1.2:
+El ganador validado corre a ~200 ppm. Medición real al subir de 1.0 a 1.2:
 
 | reel | ppm 1.0 | ppm 1.2 | veredicto |
 |---|---|---|---|
-| reel 1 | 199 | 238 | ok |
-| reel 2 | 180 | 216 | ok |
-| reel 3 | 225 | **267** | demasiado rápido |
-| reel 4 | 222 | **266** | demasiado rápido |
+| jarrones | 199 | 238 | ok |
+| deco | 180 | 216 | ok |
+| macetas | 225 | **267** | demasiado rápido |
+| termos | 222 | **266** | demasiado rápido |
 
 **Los que ya venían rápidos no aguantan el 1.2.** Antes de aplicar un `speed` global, calcular
 el ppm resultante de cada uno; los que pasen de 240 van a 1.1 o quedan en 1.0.
@@ -417,7 +409,7 @@ Los tiempos de los props van en **segundos del timeline original**; la composici
 `speed` internamente. El `start` del cierre (última palabra + 0,1) no se toca.
 
 ⚠️ Al acelerar, el anuncio se acorta. Verificar que no caiga por debajo del piso del perfil
-(15s en A y C): a 1.2 es fácil quedar en 13-14s.
+(15s en A y C). A 1.2 dos de cuatro quedaron en 13,4s y 13,9s.
 
 ---
 
@@ -439,7 +431,7 @@ parámetros**: `scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1
 
 ### Repartir los planos para llegar justo al target
 
-Acumular y recortar el último. Trampas conocidas:
+Acumular y recortar el último. Dos trampas ya pisadas:
 
 - ⚠️ **El último plano se clampea** si al clip fuente no le queda margen (`-ss 4.9 -t 2.7` sobre
   un clip de 6,2s da 1,3s, no 2,7s). Elegir para el final un clip con margen y **verificar que
@@ -472,8 +464,8 @@ tiempo exacto del JSON de captions (§4).
 
 ## 7. Música
 
-- Generar original con ElevenLabs Music (`POST /v1/music`, `music_length_ms`): cuesta centavos
-  por tema, con licencia comercial (revisá el precio vigente en tu plan).
+- Generar original con ElevenLabs Music (`POST /v1/music`, `music_length_ms`): **USD 0,15 por
+  minuto**, licencia comercial. Un tema de 20s sale ~5 centavos.
 - Direcciones que funcionan: **trap urbano**, **minimal satisfying**, **upbeat DIY**.
 - Prompt: pedir *"no vocals, steady groove, no big drops, sits under a voiceover"*.
 - Pasar `--music assets/music.mp3`: `make-props` mide la música y la voz y deja la música **8 dB
@@ -483,8 +475,9 @@ tiempo exacto del JSON de captions (§4).
 
 ### La música NO arranca a tope
 
-En los ganadores del Perfil B la cama entra o engorda recién entre los **8 y los 18 segundos**
-(~+3 dB en la banda alta). Los primeros segundos son casi voz sola: el hook no compite con nada.
+En TESTEO 1 la cama entra o engorda recién entre los **8 y los 18 segundos** (+3 dB medidos en
+la banda alta a partir de los 8,4s en ADS 1; a los 17,8s en ADS 5). Los primeros segundos son
+casi voz sola: el hook no compite con nada.
 
 ```bash
 DUR=33; COLA=3.4      # COLA = 3.4 × speed si se acelera (§5)
@@ -519,7 +512,7 @@ node "$MOTOR/scripts/make-props.mjs" --slug <proyecto>-NN \
 
 ### Captions karaoke — la especificación exacta
 
-Es el elemento más consistente de los ganadores medidos y probablemente el más determinante. Los
+Es el elemento más consistente de los 5 anuncios y probablemente el más determinante. Los
 valores salen de muestrear los píxeles, no de mirar a ojo.
 
 | Qué | Valor | Nota |
@@ -568,7 +561,7 @@ trabajo, en seco; el CTA es la voz + el caption. El base dura exactamente lo que
 
 - ❌ **Nada de tarjeta de CTA con botón** — se percibe tosca.
 - ❌ **Nada de placas generadas con IA.** Estampa todos los objetos con el mismo patrón y no
-  respeta la línea gráfica.
+  respeta la línea gráfica. Se probó y se descartó.
 - ⚠️ **La escena arranca DESPUÉS de la última palabra.** Si arranca antes, el caption karaoke
   se monta sobre el título del cierre.
 - Sacar la barra de progreso: sobre la placa molesta.
@@ -577,8 +570,8 @@ Copiar la captura larga de la landing a `$MOTOR/public/assets/landing.png`. El c
 `$MOTOR/src/reels/scenes/Cierre.tsx`. Props: `image` · `scrollTo` (px, 0 = fijo con zoom) ·
 `titulo` · `sub` · `flecha` · `oscurecer` (0-1).
 
-> Vale la pena testear el cierre contra la ausencia de cierre. Que los ganadores del Perfil B
-> hayan ganado sin placa no prueba que la placa reste; prueba que **no es imprescindible**.
+> Vale la pena testear el cierre contra la ausencia de cierre. Que los 5 de TESTEO 1 hayan
+> ganado sin placa no prueba que la placa reste; prueba que **no es imprescindible**.
 
 ---
 
@@ -607,8 +600,8 @@ node "$MOTOR/scripts/verify.mjs" --video <ruta>/edited/NN-FINAL.mp4
 
 ### Masterizar el audio
 
-El hallazgo más fuerte de los ganadores medidos y el que menos se ve: **−11,7 a −13,0 LUFS con
-un rango dinámico de solo 1,6 a 2,0 LU** y picos a 0,0 dB. Es una pared de sonido.
+El hallazgo más fuerte de TESTEO 1 y el que menos se ve: **−11,7 a −13,0 LUFS con un rango
+dinámico de solo 1,6 a 2,0 LU** y picos a 0,0 dB. Es una pared de sonido.
 
 ```bash
 ffmpeg -nostdin -y -i NN-FINAL.mp4 \
@@ -625,9 +618,9 @@ que suene más fuerte en el feed. Compra *densidad*: al aplastar el rango no que
 bajo donde el oído afloje. Con el jumpcut sin huecos, el anuncio no da un instante de descanso.
 
 > ⚠️ **Con placa de cierre el LRA no baja de ~2,5, y está bien.** En esos 3,3s la voz para y
-> solo queda música: ese tramo bajo ensancha el rango. No es falla del masterizado, es la forma
-> del formato. Bajarlo exigiría subir la música durante la placa, lo que cambia un elemento
-> validado. Sin placa (Perfil B) sí cierra en ~1,5 LU.
+> solo queda música: ese tramo bajo ensancha el rango (se midió 5,7-7,1 LU). No es falla del
+> masterizado, es la forma del formato. Bajarlo exigiría subir la música durante la placa, lo
+> que cambia un elemento validado. Sin placa (Perfil B) sí cierra en 1,5 LU.
 
 ### Comprimir SIEMPRE antes de entregar
 
@@ -637,11 +630,10 @@ ffmpeg -nostdin -y -i NN-MASTER.mp4 -c:v libx264 -preset slow -crf 21 -maxrate 9
   -pix_fmt yuv420p -c:a aac -b:a 128k -movflags +faststart NN-WEB.mp4
 ```
 
-Deja 17s en ~12 MB y 32s en ~28 MB. **Nunca entregar el FINAL.** Y antes de entregar, **mirá el
-WEB entero** (un cuadro por segundo alcanza para detectar huecos, textos tapados o planos negros).
+Deja 17s en ~12 MB y 32s en ~28 MB. **Nunca entregar el FINAL.**
 
-> Referencia: los ganadores medidos están en **1080×1920, 30 fps, ~9,8 Mbps** y pesan 36-45 MB
-> para 30-37s. Meta traga bastante más de lo que sugiere un CRF 24 — con detalle fino (papel,
+> Referencia: los 5 ganadores están en **1080×1920, 30 fps, ~9,8 Mbps** y pesan 36-45 MB para
+> 30-37s. Meta traga bastante más de lo que sugiere un CRF 24 — con detalle fino (papel,
 > texturas, cerámica) usar `-crf 21`.
 
 ---
@@ -666,15 +658,9 @@ variantes con paletas y objetos distintos no parecen el mismo anuncio en el feed
 Anotar en `config.md`: voz usada, speed, color, qué toma salió de qué fuente y con qué recorte,
 qué material se descartó y por qué. Eso hace repetible la próxima tanda.
 
-Al cerrar el bloque:
-- Lo que aprendiste (lo que falló, un número real, una decisión y su motivo) va en una línea a
-  `RAW/bitacora/edicion.md` de tu segundo cerebro, con fecha absoluta.
-- Si el pedido vino de otro agente (Meta, Redes o Productos), avisale con `SendMessage` que los
-  anuncios están listos y dónde quedaron. Subirlos a Meta lo hace el agente Meta, no Edición.
-
 ---
 
-## 11. Gotchas del entorno (ya conocidos, no volver a pisarlos)
+## 11. Gotchas del entorno (ya pisados, no volver a pisarlos)
 
 | Síntoma | Causa | Solución |
 |---|---|---|
@@ -686,6 +672,6 @@ Al cerrar el bloque:
 | `-frames:v N` con `tile` → "Cannot write more than one file" | `tile` produce 1 frame de salida | `-t <dur> -i ... -vf "...,tile=1xN" -frames:v 1` |
 | El último plano sale más corto de lo pedido | `-ss` + `-t` se pasa del final del clip fuente | verificar `base` contra `target` y elegir un clip con margen |
 
-**Y la regla de trabajo que más tiempo ahorra:** cuando una medición no cierra, revisarla antes
-de reportarla. Un número llamativo (un archivo "roto" de 0,2 MB, una correlación entre cortes y
-audio) muchas veces es un error de medición propio, no un hallazgo.
+**Y la regla de trabajo que más tiempo ahorró:** cuando una medición no cierra, revisarla antes
+de reportarla. Dos veces un número llamativo (un archivo "roto" de 0,2 MB, una correlación entre
+cortes y audio) resultó ser un error de medición propio, no un hallazgo.

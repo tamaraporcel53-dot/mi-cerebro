@@ -1,47 +1,64 @@
 ---
 name: imperiocampana
-description: Monta una campaña de Meta de punta a punta y la deja ENTREGANDO, no creada — videos en paralelo, campaña, conjunto, creativos, anuncios con UTMs, y la checklist obligatoria de 10 puntos anuncio por anuncio antes de prender nada. Usar cuando el usuario diga "imperiocampana", "montar una campaña", "armar una campaña", "subir los anuncios", "cargar los 10 videos", "relanzar esto", "montala en tal cuenta", "nueva campaña de tal producto", o cuando pida poner un producto a vender en Meta.
+description: Monta una campaña de Meta de punta a punta y la deja ENTREGANDO, no creada — videos en paralelo, campaña, conjunto, creativos, anuncios con UTMs, y la checklist obligatoria de 10 puntos anuncio por anuncio antes de prender nada. Usar cuando el usuario diga "imperiocampana", "montar una campaña", "armar una campaña", "subir los anuncios", "cargar los 10 videos", "relanzar esto", "montala en mi cuenta", "nueva campaña de tal producto", o cuando pida poner un producto a vender en Meta.
 ---
 
 # ImperioCampana — montar una campaña sin que quede en borrador
 
 **Crear ≠ publicar ≠ entregar.** Son tres estados distintos y el MCP no los
-distingue solo. Esta skill existe porque es fácil confirmar una campaña como activa
-con **todos los anuncios en borrador**: un día entero de cero entrega.
+distingue solo. Esta skill existe porque una vez se confirmaron dos campañas
+como activas y **los 20 anuncios estaban en borrador**: un día entero de cero
+entrega.
 
-El detalle completo y las trampas conocidas: [[montaje-de-campanas]].
-Las reglas de plata (presupuestos, umbrales, cuándo cortar): [[metodo-producto-digital]].
+Se le habla al usuario en español, claro y directo.
 
 ---
 
 ## 🔴 REGLA 0 — No se prende nada hasta que la checklist dé 100%
 
+**Regla literal:** *"no prendas nada hasta que la checklist no esté 100% ok. Y si el 5 es
+por navegador, usá el navegador pero hacelo bien."*
+
 1. **Ningún anuncio se activa con un ítem en rojo.** Ni "después lo arreglo", ni
    "igual entrega". Si falta uno, la campaña queda en pausa hasta que esté.
 2. **"La herramienta no lo permite" NO es excusa.** Lo que no se pueda por API se
    hace **por el navegador**, en el Administrador, a mano y bien.
-3. **Nunca decirte que algo está prendido sin el doble control** de la FASE 5.
+3. **Nunca decirle al usuario que algo está prendido sin el doble control** de la
+   FASE 5.
 4. 🔴 **Políticas de Meta antes de subir:** mirar guion y video. Nada de promesas de
-   ingresos o de plazos, antes/después ni montos. Un rechazo le pega a toda la cuenta.
-   Hay plata en juego: un dato que se da por sentado es un error.
+   ingresos o de plazos, antes/después ni montos. Un rechazo le pega a toda la cuenta. Hay plata en juego: un dato que se da por sentado es un error.
 
 🔑 **Preferible media hora más de montaje que un día entero de campaña sin entregar.**
 
+🔴 **Nunca tu nombre personal en un campo público.** Va **el nombre del producto o de tu marca**.
+Aplica a anunciante y pagador de la UE (`dsa_beneficiary` / `dsa_payor`), verificación de anunciante,
+Biblioteca de anuncios, avisos legales y cualquier campo público de Meta u otra plataforma. Si una plataforma exige
+el nombre de una persona verificada, **te frenás y lo decidís vos** antes de completarlo. Pasó que se puso
+el nombre personal en los conjuntos para destrabar la advertencia de la UE y estuvo público una hora hasta que se cambió.
+
+🔴 **Campaña que vende: no se toca de a pedacitos.** Pasó que una campaña ganadora perdió
+mucho dinero por día después de duplicarla, mover el presupuesto tres veces, cambiar el público, sacar el
+gasto mínimo y hacer pausas, todo en menos de 24 horas.
+1. **La estructura definida, exacta.** Si la herramienta no deja, se pregunta; no se improvisa.
+2. **Un solo paquete de cambios por noche.** El público no se toca salvo que sea imprescindible. Después de
+   un día movido, **48 horas sin tocar** (salvo un anuncio rechazado).
+3. **Cada cambio a una campaña ganadora se avisa con su riesgo ANTES de hacerlo**, no después.
+
 ---
 
-# FASE 0 — Los videos, YA. En paralelo. Sin que los pidas.
+# FASE 0 — Los videos, YA. En paralelo. Sin que los pida.
 
-**Apenas se habla de montar una campaña, y ANTES de crear nada en Meta**, el agente hace
+**Apenas se habla de montar una campaña, y ANTES de crear nada en Meta**, se hacen
 estas tres cosas juntas, en un solo mensaje:
 
-1. **Achicar los videos** a 1080x1920. Lo que sale de edición suele venir en 4K a 20+ Mbps
+1. **Achicar los videos** a 1080x1920. Lo que sale de edición viene en 4K a 20+ Mbps
    y **no sube**.
-2. **Pasarte la carpeta** donde quedaron, con la ruta completa.
-3. **Abrirte el cargador** (`ads_creative_upload_media`, `LOCAL_FILE`) de la cuenta
+2. **Pasarle la carpeta** donde quedaron, con la ruta completa.
+3. **Abrirle el cargador** (`ads_creative_upload_media`, `LOCAL_FILE`) de la cuenta
    que corresponda, en ese mismo mensaje.
 
-**Mientras vos subís los videos, el agente arma campaña y conjunto.** Los dos trabajos
-corren a la vez. No se espera uno al otro.
+**Mientras el usuario sube, vos armás campaña y conjunto.** Los dos trabajos corren a la vez.
+No se espera uno al otro.
 
 ```
 ffmpeg -y -i "<original>" -vf "scale=1080:1920:flags=lanczos" \
@@ -52,7 +69,7 @@ ffmpeg -y -i "<original>" -vf "scale=1080:1920:flags=lanczos" \
 
 Dejarlos con el mismo nombre, en una carpeta `<original> - LIVIANOS` al lado.
 
-### ⚠️ Verificar antes de pasártelos
+### ⚠️ Verificar antes de pasárselos
 
 Con `ffprobe`, uno por uno: **duración, 1080x1920 y pista de audio**. Un MP4 truncado
 o sin audio se sube igual y recién falla al crear el anuncio.
@@ -84,7 +101,7 @@ Esto se consigue sin molestar a nadie. **Antes** de abrir la boca.
 | Campañas que ya existen | `ads_get_ad_entities` level=campaign | si hay una vieja que apagar |
 
 **No se monta en una cuenta que devuelva `is_ads_mcp_enabled: false`.** Ahí no se ve
-nada desde el MCP: se avisa y se opera por navegador, o se elige otra cuenta.
+nada desde la nube: se avisa y se opera por navegador, o se elige otra cuenta.
 
 ---
 
@@ -96,9 +113,9 @@ Un mensaje con **todo** lo que falta. Después se ejecuta entero sin volver a pr
 |---|---|---|
 | 1 | 🔴 **En qué cuenta** se monta | Los nombres internos no coinciden con los públicos |
 | 2 | **Qué producto y qué tienda** | Define píxel, dominio, fanpage y landing. **Nunca asumir** |
-| 3 | **Qué videos** | Cuáles de los que subiste, y en qué orden |
+| 3 | **Qué videos** | Cuáles de los que subió, y en qué orden |
 | 4 | **Los textos**: copy, titular y descripción | El creativo es inmutable: se aprueban ANTES |
-| 5 | **Si apagás alguna campaña vieja** | Nunca se apaga sin que lo digas |
+| 5 | **Si apaga alguna campaña vieja** | Nunca se apaga sin que lo diga |
 
 ### El presupuesto se calcula, no se pregunta
 
@@ -106,9 +123,9 @@ Un mensaje con **todo** lo que falta. Después se ejecuta entero sin volver a pr
 arriba a múltiplos de 5**.
 
 ```
- 9,90 x 3 = 29,70  ->  30
-12,90 x 3 = 38,70  ->  40
-17,90 x 3 = 53,70  ->  55
+19,90 x 3 = 59,70  ->  60
+20,90 x 3 = 62,70  ->  65
+14,90 x 3 = 44,70  ->  45
 ```
 
 🔑 **Se redondea el presupuesto, no el ticket.** Se calcula el ticket × 3 y recién ahí
@@ -124,8 +141,8 @@ escalón deforma el porcentaje (60 → 80 es +33%, no +30%).
 
 | Paso | Qué | Detalle que se olvida |
 |---|---|---|
-| 1 | **Campaña** CBO | Nace PAUSED. Una firma fija en el nombre (por ejemplo, tus iniciales) para saber qué armó el agente. 🔴 **Un testeo nuevo de un producto que ya tiene campaña va como CONJUNTO nuevo dentro de esa campaña**, nunca campaña aparte |
-| 2 | **Conjunto** | 🔴 **SIN gasto mínimo**: los mínimos de cada conjunto se suman y los testeos siguientes quedan sin presupuesto libre. **10 anuncios por testeo, nunca menos**; la tanda siguiente se le pide al agente Edición 2 días antes. Testeo nuevo = **duplicar el conjunto en el Administrador destildando «Aplicar recomendaciones»** (si no, trae Contenido Advantage+ tildado) |
+| 1 | **Campaña** CBO | Nace PAUSED. Con tu firma en el nombre. 🔴 **Un testeo nuevo de un producto que ya tiene campaña va como CONJUNTO nuevo dentro de esa campaña**, nunca campaña aparte |
+| 2 | **Conjunto** | 🔴 **SIN gasto mínimo** (los mínimos se suman y los testeos siguientes quedan sin presupuesto libre). **10 anuncios por testeo, nunca menos**; la tanda siguiente se le pide al editor 2 días antes. Testeo nuevo = **duplicar el conjunto en el Administrador destildando «Aplicar recomendaciones»** (trae Contenido Advantage+ tildado). > Antes: 5% por conjunto, siempre |
 | 3 | **Miniaturas** | 1080x1920 propias. **Nunca** la automática de Meta |
 | 4 | **Creativos** | Uno por video |
 | 5 | **Anuncios** | Con `url_tags` y `conversion_domain` |
@@ -133,29 +150,33 @@ escalón deforma el porcentaje (60 → 80 es +33%, no +30%).
 ### Las miniaturas: Meta no baja de cualquier host
 
 ⚠️ La que devuelve `ads_get_ad_videos.picture` viene recortada a **160×200 px**: un
-cuadradito en un video 9:16. Se saca el frame y se aloja en Recursos de tu tienda en Impultienda:
+cuadradito en un video 9:16. Se saca el frame y se aloja en Recursos de Impultienda:
 
 ```
 ffmpeg -ss 2.5 -i video.mp4 -frames:v 1 -q:v 2 thumb.jpg
 ```
 
 Después `impultienda_subir_recurso_desde_url` y esa URL pública va como `image_url`.
-El CDN de Higgsfield **Meta no lo baja**; el de Impultienda sí.
+Meta no baja imágenes de cualquier CDN (el de Higgsfield, por ejemplo, no); el de Impultienda sí.
 
 ### El payload que funciona
 
+🔴 **La UTM se copia del panel de Impultienda de ESE producto** (Configuración → Meta / Tracking → bloque
+UTMIFLOW → "Pegá esto en Meta"), nunca de una nota ni de esta skill. El MCP `impultienda_configurar_tracking`
+no la devuelve: se lee por navegador. La de abajo es solo el formato.
+
 ```json
-{"object_story_spec":{"page_id":"[ID_DE_TU_PAGINA]","video_data":{"video_id":"[ID_DEL_VIDEO]",
-"image_url":"[URL_DE_LA_MINIATURA]","message":"<copy con emojis>","title":"<titular>",
+{"object_story_spec":{"page_id":"<PAGE>","video_data":{"video_id":"<VID>",
+"image_url":"<THUMB>","message":"<copy con emojis>","title":"<titular>",
 "link_description":"<descripcion, nunca vacia>",
-"call_to_action":{"type":"DOWNLOAD","value":{"link":"[URL_DE_TU_LANDING]"}}}},
+"call_to_action":{"type":"DOWNLOAD","value":{"link":"<URL landing>"}}}},
 "url_tags":"utm_source=facebook&utm_medium=paid&utm_campaign={{campaign.name}}&utm_term={{adset.name}}&utm_content={{ad.name}}&utm_id={{ad.id}}"}
 ```
 
 Más, a nivel de anuncio:
 
 ```json
-"tracking_specs":[{"action.type":["offsite_conversion"],"fb_pixel":["[ID_DE_TU_PIXEL]"]}]
+"tracking_specs":[{"action.type":["offsite_conversion"],"fb_pixel":["<PIXEL>"]}]
 ```
 
 ⚠️ `tracking_specs` con `offline_conversion` o `dataset` **rompe**. Sólo funciona
@@ -168,10 +189,10 @@ Más, a nivel de anuncio:
 | **`degrees_of_freedom_spec`** | **No mandarlo nunca.** Da `Creative should not include standard enhancements` |
 | **UTMs dentro del `link_url`** | 🔴 Van en **`url_tags`**. En el link se codifican (`%7B%7B`) y Meta no las reemplaza |
 | **`instagram_actor_id`** | **No mandarlo.** La API lo rechaza con los dos ids que existen. Meta aplica solo el IG vinculado a la fanpage |
-| **Botón `LEARN_MORE`** | La regla es **`DOWNLOAD`**. Son productos de descarga inmediata |
+| **Botón `LEARN_MORE`** | La regla de la casa es **`DOWNLOAD`**. Son productos de descarga inmediata |
 
-ℹ️ El botón **se traduce solo**: vos lo ves "Descargar", un comprador en inglés
-"Download". Ver "Más información" en la vista previa significa que el valor está mal.
+ℹ️ El botón **se traduce solo**: en tu cuenta se ve "Descargar", el comprador anglo
+ve "Download". Ver "Más información" en la vista previa significa que el valor está mal.
 
 ### 🔑 El creativo es inmutable
 
@@ -192,12 +213,12 @@ una coma obliga a creativo nuevo + anuncio nuevo, y reinicia el aprendizaje.
 | 1 | **Píxel correcto** | `promoted_object.pixel_id` del conjunto | Contra el píxel de ESA tienda, no el de otra |
 | 2 | 🔴 **La cuenta tiene ACCESO al píxel** | — | `ads_get_datasets` con `ad_account_id` |
 | 3 | **URL a la landing** | `call_to_action.value.link` | El dominio de la tienda correcta |
-| 4 | **UTMs** | `url_tags` del creativo | 🔴 Nunca dentro del link |
+| 4 | **UTMs** | `url_tags` del creativo | 🔴 Nunca dentro del link · **idéntica a la del Tracking de esa tienda en Impultienda** |
 | 5 | **Fanpage** | `object_story_spec.page_id` (o el de `effective_object_story_id`) | La página de ESA marca **y en el idioma del mercado**. Mercado sin página propia = avisar antes de montar |
 | 6 | **Instagram** | vista previa de Reels | Que muestre la marca correcta, **en el idioma del mercado** |
 | 7 | **El video correspondiente** | `video_data.video_id` | Uno por anuncio. Cotejar **duración** contra el archivo |
 | 8 | **Eventos offline** | `tracking_specs` del anuncio | `offsite_conversion` + `fb_pixel` |
-| 9 | **SIN gasto mínimo** | `daily_min_spend_target` del conjunto | 🔴 **Tiene que estar VACÍO**: los mínimos se suman y los testeos siguientes quedan sin presupuesto libre |
+| 9 | **SIN gasto mínimo** | `daily_min_spend_target` del conjunto | 🔴 **Tiene que estar VACÍO** (los mínimos se suman y los testeos siguientes quedan sin presupuesto libre). > Antes: 5% por conjunto |
 | 10 | **conversion_domain** | del anuncio | El dominio verificado de la tienda |
 
 🔴 **Ítem 9:** si un conjunto duplicado trae un gasto mínimo heredado, se borra (por API o en el
@@ -211,18 +232,17 @@ Administrador) antes de prender.
 2. **Leer cada anuncio por su id** con `ads_get_ad_entities` (sin `object_state`).
    Tiene que volver `status: ACTIVE`. **Si la lista vuelve vacía, NO existe**.
    🔴 Y además **`effective_status` anuncio por anuncio**: `DISAPPROVED` o `WITH_ISSUES` = rechazado aunque
-   `status` diga ACTIVE. El motivo no lo da la API: está en Calidad de la cuenta. Un rechazo puede
-   pasar días sin que nadie lo vea si no se mira este campo
+   `status` diga ACTIVE. El motivo no lo da la API: está en Calidad de la cuenta
 3. **Abrir el Administrador en el navegador** y mirar la columna **Entrega**.
    Si dice **"Borrador"**, no se publicó, por más que el MCP diga que sí
 4. 🔴 **Gasto de HOY > 0** (`date_preset: today`). "Activa" no es "gastando": una cuenta
    con la tarjeta frenada figura ACTIVE, `delivery: active` y sin errores, y gasta cero.
    Se mira **solo hoy**, no ayer: una campaña que arrancó hoy tiene ayer en 0 y está bien.
    Si da 0 con varias horas corridas → abrir **Facturación** de esa cuenta
-   (`business.facebook.com/latest/billing_hub/accounts/details/?asset_id=[ID_DE_TU_CUENTA]`)
+   (`business.facebook.com/latest/billing_hub/accounts/details/?asset_id=<id de tu cuenta>`)
    y buscar *"No pudimos efectuar una retención temporal"* o *"Se requiere la
-   verificación de la tarjeta"*. El arreglo lo hacés vos, que sos el dueño del medio de pago
-   (otra tarjeta predeterminada en esa cuenta + "Intentar de nuevo")
+   verificación de la tarjeta"*. El arreglo lo hacés vos (otra tarjeta predeterminada
+   en esa cuenta + "Intentar de nuevo")
 
 ⚠️ **El MCP y el Administrador no muestran lo mismo.** `validation_status: VALIDATED`
 y `active_errors: []` son chequeos **previos**. Los que deciden corren después, en el
@@ -233,7 +253,7 @@ al publicador", **nunca** "publicado".
 
 | Error | Causa |
 |---|---|
-| `Account does not have access to pixel` | El píxel no está asignado a esa cuenta. Lo asignás vos en Configuración del negocio |
+| `Account does not have access to pixel` | El píxel no está asignado a esa cuenta. Se asigna en Configuración del negocio |
 | `Creative should not include standard enhancements` | El creativo lleva `degrees_of_freedom_spec` |
 | `Invalid adgroup status` | Estado que el publicador no acepta. Rehacer el anuncio |
 
@@ -265,14 +285,13 @@ revés queda un hueco sin entrega.
 | **Advantage+ de creativo** | 🔴 APAGADO | Le deja a Meta tocar el video: filtros, música, texto encima |
 | **Filtro de idioma** | Sin filtro | El creativo y la landing filtran solos |
 
-⚠️ **Son cosas distintas.** Es fácil confundirlas y apagar las dos.
+⚠️ **Son cosas distintas.** Se confundieron una vez y se apagaron las dos.
 
 ---
 
 ## Al terminar
 
-1. Decirte **qué quedó entregando**, con el dato de los dos controles
-2. Anotar los ids y el movimiento en `RAW/bitacora/meta.md` (el agente Cerebro lo pasa a la WIKI
-   y al `changelog.md`)
-3. Si quedó algo pendiente (un video que no subió), **decirlo** y sumarlo a
-   "Esperando por mí" en `BRIEFING.md` si depende de vos. Un pendiente callado es el que cuesta el día siguiente.
+1. Decirle al usuario **qué quedó entregando**, con el dato de los dos controles
+2. Anotar los ids (cuenta, campaña, conjunto, anuncios) y el movimiento en tu registro `notas.md`
+3. Si quedó algo pendiente (un video que no subió), **decirlo**.
+   Un pendiente callado es el que cuesta el día siguiente.

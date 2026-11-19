@@ -62,7 +62,7 @@
 | Encendida | AAAA-MM-DD HH:MM |
 | Entrega verificada (ID + navegador) | ⬜ |
 
-## F6 · Bitácora de gestión
+## F6 · Registro de gestión
 
 | Fecha y hora | Gasto | Compras | ROAS hoy / 3d / 7d | Decisión |
 |---|---|---|---|---|

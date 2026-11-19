@@ -12,7 +12,7 @@ FORMATO DEL config.json
   "salida":  "montado_mudo.mp4",
   "fps":     25,
   "cortes": [
-    {"seg": 9.8,  "dur": 3.8, "tipo": "video",  "archivo": "brolls/clip01.mp4", "offset": 0.0},
+    {"seg": 9.8,  "dur": 3.8, "tipo": "video",  "archivo": "brolls/florero.mp4", "offset": 0.0},
     {"seg": 13.6, "dur": 3.3, "tipo": "imagen", "archivo": "planos/01.png"}
   ]
 }

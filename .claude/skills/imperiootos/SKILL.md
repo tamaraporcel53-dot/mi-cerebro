@@ -5,6 +5,30 @@ description: Se llama con "imperiootos". Produce de punta a punta el VSL (video 
 
 # VSL de OTO post-compra
 
+> **🔴 Marca de agua y cierre con la landing .**
+> - **Todo video de anuncio** lleva la tienda de ese producto (ej. `mitienda.store`) como marca de agua muy suave, que aparece en un lugar, se desvanece y reaparece en otro. Motor Remotion: prop `"watermark": "<tienda>"` en los props de `Reel` o `Historia` (componente `src/Watermark.tsx`, opacidad 0,18, cambia cada 3,4 s y nunca cae sobre los subtítulos). Motivo: *"para que no me descarguen los videos"*.
+> - **Cierre con la landing, a prueba:** en algunos anuncios de cada tanda (no en todos) el final se relaciona con la landing del producto. Puede ser la landing real o algo que se le parezca (imagen principal, titular, colores), para que el clic se sienta como continuación. Esos archivos se marcan con `-LANDING` en el nombre, para compararlos.
+
+
+## 🔴 Video generado en Kie: 720p, nunca Full HD 
+
+> Con 720p alcanza: generar en Full HD quema créditos sin que se note en el celular.
+
+- **Todo video que se genera en Kie** (avatar con lipsync, b-roll, escena) va en **720p** o en la resolución
+  más barata del modelo. **Nunca 1080p ni Pro.** Si la pieza sale en 1080x1920, se escala en la edición.
+- Avatar con lipsync: siempre `kling/ai-avatar-standard` (720p, 8 créditos/s), nunca la versión Pro (16 créditos/s).
+- **Antes de lanzar:** sacar el precio de la página oficial del modelo en kie.ai (no de una prueba), sumar el lote
+  entero y decírselo al usuario con ese número. 200 créditos = 1 USD.
+
+## 🔴 Voz, sonrisa e idioma 
+
+| Regla | Detalle |
+|---|---|
+| **Sin "golpecito" al empezar cada frase** | Se escucha un "golpecito" al arrancar cada frase. Causa probable: clips de ElevenLabs unidos sin fundido **(sin confirmar)**. La voz va en **una sola toma**; si se une por frases, **fundido de 15 a 30 ms** en cada unión y **escaneo de picos** en las uniones antes de mandar a HeyGen |
+| **Avatar sonriente y amigable** | La foto base con sonrisa natural (boca cerrada o casi, para el lip-sync) y un motionPrompt que pida expresión cálida |
+| **LATAM = español neutro de tú** | Guion, voz y subtítulos en tú neutro ("toca", "mira", "para ti"), sin voseo ni modismos rioplatenses. El voseo solo si la tienda es solo para Argentina. Guía: `WIKI/espanol-neutro.md` del cerebro |
+| **La página va en el mismo registro** | La página del OTO dice lo mismo que el video: si el VSL es de tú, la página también ("Toca el botón de abajo", "mira lo que tenemos para ti") |
+
 ## ⛔ Regla de entrega
 
 **Los once pasos se recorren en orden y ninguno se saltea.** Cada paso existe porque saltearlo rompió algo en producción real: videos desincronizados, imágenes cayendo sobre la frase equivocada, ofertas que prometían lo que el producto principal ya regalaba, créditos gastados en renders que hubo que tirar.
@@ -51,7 +75,7 @@ Pedí todo junto en un solo mensaje:
 
 **Leé el producto principal completo. No es opcional.** Es el paso que más errores evita, y descubre dos cosas:
 
-1. **Qué NO se puede prometer** porque ya está adentro. Prometer algo que el comprador ya tiene destruye la oferta. Pasa seguido: una idea de OTO del tipo "los errores más comunes y cómo corregirlos" se cae entera cuando el ebook principal ya trae ese capítulo.
+1. **Qué NO se puede prometer** porque ya está adentro. Prometer algo que el comprador ya tiene destruye la oferta. En un caso real, la idea de OTO 3 ("los errores más comunes y cómo rescatar una pieza") tuvo que descartarse entera porque el ebook principal ya traía ese capítulo.
 2. **Cuál es el límite real** del producto que justifica el OTO. Ese límite es el corazón del guion.
 
 Si el producto es un PDF de imágenes sin capa de texto —muy común en infoproductos visuales— convertí las páginas y mirálas:
@@ -86,8 +110,8 @@ Si la oferta pisa algo que ya está incluido, decílo ahora y proponé una alter
 
 | | Qué acepta bien |
 |---|---|
-| OTO 1 | Otra técnica o método. Viene caliente, quiere más de lo que acaba de comprar |
-| OTO 2 | Una variante o complemento distinto, si se sostiene sola sin el OTO 1 |
+| OTO 1 | Otra técnica. Viene caliente, quiere más de lo que acaba de comprar |
+| OTO 2 | Otra familia de acabados, si se sostiene sola sin el OTO 1 |
 | OTO 3 | **Algo que no le agregue trabajo.** Ya tiene tres PDFs sin abrir |
 
 **El error del OTO 3 es ofrecer más tarea.** "Otro método", "otra guía", "otro curso" en tercer lugar se lee como más deberes para alguien que todavía no empezó los primeros. Lo que convierte ahí es lo que se usa el mismo día sin estudiar nada: plantillas, calculadoras, guiones, archivos listos. Y sobre todo, **lo que le devuelve plata en vez de pedírsela** — es el único argumento que se entiende sin explicarlo cuando ya lleva tres compras encima.
@@ -149,9 +173,9 @@ Tabla, con el segundo aproximado, la frase del guion y una decisión por fila:
 
 | # | Segundo | Qué dice el guion ahí | Qué se muestra | ¿De dónde sale? |
 |---|---|---|---|---|
-| 1 | 0:13 | "[frase del guion]" | [el resultado terminado que nombra la frase] | Higgsfield / la cargo yo / omitir |
+| 1 | 0:13 | "mármol, humo, geoda" | Pieza terminada efecto mármol | Higgsfield / la cargo yo / omitir |
 
-Decíle explícitamente que **su material real convierte mejor que cualquier imagen generada**: una foto de algo que hizo de verdad tiene una autoridad que la IA no reproduce, y si el comprador la mira dos segundos, la diferencia se nota. Que pueda meter material propio es lo que separa esto de un video de IA genérico.
+Decíle explícitamente que **su material real convierte mejor que cualquier imagen generada**: una foto de una pieza que hizo de verdad tiene una autoridad que la IA no reproduce, y si el comprador la mira dos segundos, la diferencia se nota. Que pueda meter material propio es lo que separa esto de un video de IA genérico.
 
 **Esperá su respuesta antes de gastar un solo crédito.**
 
@@ -159,7 +183,7 @@ Decíle explícitamente que **su material real convierte mejor que cualquier ima
 
 Guardá todo lo que aporte en `biblioteca/` dentro del proyecto, con un `biblioteca/indice.md` de una línea por pieza (archivo, qué muestra, de dónde salió). En el OTO siguiente, ofrecé primero lo que ya hay antes de pedirle nada nuevo. Nadie quiere que le pidan la misma foto dos veces.
 
-**Buscá material que el usuario ya tenga antes de proponer generar.** Es común que exista una carpeta de b-rolls con filmaciones del proceso, ya en 1080x1920 y de 3 a 6 segundos — exactamente el formato y la duración de los cortes — que nadie mencionó. Revisá las carpetas del proyecto y preguntá si tiene filmaciones o fotos antes de generar nada.
+**Buscá material que el usuario ya tenga antes de proponer generar.** En un caso real había una carpeta `B-Rolls` con ocho filmaciones del proceso, en 1080x1920 y de 3 a 6 segundos — exactamente el formato y la duración de los cortes. Nadie la había mencionado. Revisá las carpetas del proyecto y preguntá si tiene filmaciones o fotos antes de generar nada.
 
 ---
 
@@ -179,7 +203,7 @@ Que las nombre con el número del plano o con la frase del guion, en la carpeta 
 
 `generate_image_batch` con `soul_2`, `aspect_ratio: "9:16"`. Cuesta ~0,15 créditos por imagen: es prácticamente gratis.
 
-**Mirá siempre el resultado antes de montarlo.** Una parte falla de formas que solo se ven mirando: un pedido de un objeto con un acabado concreto puede volver como otro objeto distinto. Armá una hoja de contactos numerada y revisala:
+**Mirá siempre el resultado antes de montarlo.** Una parte falla de formas que solo se ven mirando: un pedido de "termo estampado con efecto mármol" volvió como jarra de plata antigua. Armá una hoja de contactos numerada y revisala:
 
 ```bash
 for i in 01 02 03; do convert p$i.png -resize 250x375^ -gravity center -extent 250x375 \
@@ -193,9 +217,9 @@ montage l*.jpg -tile 6x2 -geometry +5+5 -background '#222' contactos.jpg
 
 ## Reglas que valen para las tres
 
-**Coherencia técnica.** Si el producto enseña dos técnicas distintas, cada plano tiene que mostrar la que la voz está nombrando en ese momento. Mostrar el resultado de la técnica B justo cuando la voz dice que con la técnica A eso es imposible contradice el argumento del video. Anotá en la lista de planos qué técnica corresponde a cada corte.
+**Coherencia técnica.** Si el producto enseña dos técnicas distintas, cada plano tiene que mostrar la que la voz está nombrando en ese momento. Un caso real: mostrar fibra de carbono (hecha con lámina impresa) justo cuando la voz dice que con aerosol eso es imposible contradice el argumento del video. Anotá en la lista de planos qué técnica corresponde a cada corte.
 
-**Filmaciones propias: mirá los primeros segundos.** Un clip que arranca con un plano muerto (antes de que pase nada) desperdicia el corte. Recortalo con un offset de entrada.
+**Filmaciones propias: mirá los primeros segundos.** Un clip que arranca con el balde vacío desperdicia el corte. Recortalo con un offset de entrada.
 
 ---
 
@@ -203,24 +227,24 @@ montage l*.jpg -tile 6x2 -geometry +5+5 -background '#222' contactos.jpg
 
 Si ya hay uno aprobado para este producto, **reusalo**. La continuidad entre OTOs de la misma marca suma.
 
-Si hay que crearlo, ver `references/prompts-visuales.md`, sección avatar. Resumen: `generate_image` con `soul_2`, `9:16`, `count: 2`. El personaje tiene que ser creíble para el nicho, y su autoridad tiene que venir del **resultado visible** (el lugar de trabajo, los resultados terminados detrás), nunca de credenciales inventadas — diplomas falsos de universidades reales son fabricar credenciales, no hacen falta y ensucian la marca.
+Si hay que crearlo, ver `references/prompts-visuales.md`, sección avatar. Resumen: `generate_image` con `soul_2`, `9:16`, `count: 2`. El personaje tiene que ser creíble para el nicho, y su autoridad tiene que venir del **resultado visible** (el taller, las piezas terminadas detrás), nunca de credenciales inventadas — diplomas falsos de universidades reales son fabricar credenciales, no hacen falta y ensucian la marca.
 
 **Elegí la variante de frente, cara centrada y boca cerrada o casi.** Una foto con la boca abierta a mitad de palabra produce artefactos de lip-sync.
 
 **Para regenerar al mismo personaje en otro escenario, el modelo importa.**
 
-`soul_2` **no** mantiene la identidad aunque le pases la imagen como referencia: devuelve personas distintas. `nano_banana_pro` y `gpt_image_2` **sí la mantienen** — misma cara, mismo pelo, misma ropa — pasando la imagen del avatar como `medias` con rol `image`. Comprobado: el mismo personaje en otro sector de su lugar de trabajo, reconocible sin dudas.
+`soul_2` **no** mantiene la identidad aunque le pases la imagen como referencia: devuelve personas distintas. `nano_banana_pro` y `gpt_image_2` **sí la mantienen** — misma cara, misma barba, misma ropa — pasando la imagen del avatar como `medias` con rol `image`. Comprobado: el mismo artesano en otro sector del taller, reconocible sin dudas.
 
 Sirve para dos cosas:
 
-- **Continuidad entre OTOs del mismo producto**: el mismo personaje en otro rincón, con los objetos del OTO nuevo sobre la mesa.
+- **Continuidad entre OTOs del mismo producto**: el mismo personaje en otro rincón del taller, con los objetos del OTO nuevo sobre la mesa.
 - **Variar la postura** sin renderizar en tramos (ver paso 8).
 
-En el prompt, abrí describiendo qué hay que conservar ("exactamente la misma cara, el mismo pelo y la misma ropa; tiene que ser reconociblemente la misma persona") y recién después describí la escena nueva.
+En el prompt, abrí describiendo qué hay que conservar ("exactamente la misma cara, la misma barba, la misma remera y el mismo delantal; tiene que ser reconociblemente el mismo hombre") y recién después describí la escena nueva.
 
 Generá con los dos modelos y compará: `nano_banana_pro` suele dar la boca más cerrada, mejor para lip-sync; `gpt_image_2` suele dar manos más limpias y expresión más cálida. **Miralos antes de elegir** — en una comparación real, la de `nano_banana_pro` tenía la mano sosteniendo un objeto indefinido que se habría notado en movimiento.
 
-**El cambio de encuadre dentro de un mismo video se sigue haciendo en el montaje** (paso 10), no generando imágenes: ahí lo que importa es que el avatar hable, y eso sale de un solo render.
+**El cambio de encuadre dentro de un mismo video se sigue haciendo en el montaje** (paso 9), no generando imágenes: ahí lo que importa es que el avatar hable, y eso sale de un solo render.
 
 ---
 
@@ -228,7 +252,7 @@ Generá con los dos modelos y compará: `nano_banana_pro` suele dar la boca más
 
 **Antes de lanzar**: verificá el saldo con `get_current_user` y decíle al usuario cuánto va a costar. El costo es **~20 créditos por minuto de video**. Un VSL de 3:38 costó 72 créditos.
 
-`create_video_from_image` con la URL de la imagen del avatar ([URL_DE_TU_AVATAR]):
+`create_video_from_image` con la URL de la imagen del avatar:
 
 ```
 voiceSettings: {"speed": 1.4}     # ritmo que sostiene la atención; 1.0 se siente lento
@@ -243,21 +267,23 @@ motionPrompt: "Cámara completamente fija, montada en trípode, sin ningún movi
   señalando, a veces las manos apoyadas y quietas mientras habla."
 ```
 
-Si el usuario tiene una voz propia o elegida en HeyGen, pasala con su ID ([ID_DE_TU_VOZ]). Pedíselo en el intake; no lo inventes.
-
 ## ⚠️ HeyGen anima todo lo que parezca un personaje
 
-Si en la foto del avatar hay muñecos, figuras, maniquíes o cualquier cosa con cara, **HeyGen se los anima**: saltan, giran la cabeza, mueven los brazos durante todo el video. No hay parámetro que lo apague.
+Si en la foto del avatar hay muñecos, figuras, maniquíes o cualquier cosa con cara, **HeyGen se los anima**: saltan, giran la cabeza, mueven los brazos durante todo el video. El usuario lo describió así: *"los muñecos se mueven en todo el video, saltan, se miran, mueven las manos"*. No hay parámetro que lo apague.
 
-**Se resuelve en la imagen, no en el render.** Regenerá el avatar con las figuras **lejos del plano de la persona**: sobre un pedestal a un costado, en estantes del fondo, o directamente fuera de cuadro. Cuanto más chicas y más al fondo, menos las toca. Objetos sin cara —herramientas, envases, piezas, materiales— no se animan.
+**Se resuelve en la imagen, no en el render.** Regenerá el avatar con las figuras **lejos del plano de la persona**: sobre un pedestal a un costado, en estantes del fondo, o directamente fuera de cuadro. Cuanto más chicas y más al fondo, menos las toca. Objetos sin cara —piezas de auto, cascos, aerosoles, llantas— no se animan.
+
+**🔴 Los tejidos con patrón también cuentan como cara**. En un tapiz de macramé con cuentas, HeyGen dibujó labios fantasma que se movían. Tapices, mandalas, tejidos con cuentas o nudos simétricos, cualquier patrón con "dos ojos y una boca", van fuera del plano del avatar. Se arregló editando la foto del avatar sin el tapiz.
+
+**Aun con la pared lisa pueden quedar manchas de 1 a 2 s.** Antes de entregar, escaneá el render buscando movimiento en zonas que deberían estar quietas, por ejemplo con la diferencia entre cuadros sobre el fondo. Cada mancha que aparezca se tapa con el filtro `delogo` de ffmpeg, en ese rectángulo y solo en ese tramo (`enable='between(t,a,b)'`).
 
 Revisá esto **antes** de renderizar: son 40 créditos por descubrirlo después.
 
 ## ⚠️ La vibración de cámara — el defecto que hay que prevenir
 
-HeyGen, al animar una foto fija, le agrega un **temblor de cámara en mano simulado**. Con `expressiveness: "high"` es fuerte, y el comprador lo percibe como si alguien golpeara la mesa y la cámara vibrara todo el tiempo.
+HeyGen, al animar una foto fija, le agrega un **temblor de cámara en mano simulado**. Con `expressiveness: "high"` es fuerte, y el comprador lo describe como *"parece que le está pegando a la mesa y vibra la cámara continuamente, medio molesto"*.
 
-Medido sobre una franja de fondo que debería estar quieta:
+Medido sobre la franja de fondo del taller, que debería estar quieta:
 
 | | Temblor por cuadro | Recorrido real |
 |---|---|---|
@@ -271,7 +297,13 @@ Lo que molesta no es el temblor solo: es **temblar mucho y desplazarse poco**. U
 **Los dos arreglos, y hacen falta los dos:**
 
 1. **En el origen** — `expressiveness: "medium"` y un `motionPrompt` que diga *cámara fija, torso anclado*. Nunca uses lenguaje de movimiento de cámara ni "se inclina hacia la cámara": eso lo empeora.
-2. **En la edición** — `scripts/estabilizar.py` sobre el render bajado, **antes de montar** (paso 9).
+2. **En la edición** — `scripts/estabilizar.py` sobre el render bajado, **antes de montar**. Es una pasada de `vidstab`, **no gasta créditos**, conserva el conteo exacto de cuadros (lo verifica y aborta si cambia) y deja el temblor por debajo del de tus propias fotos. Cuesta ~3% de zoom, imperceptible.
+
+```bash
+python3 scripts/estabilizar.py render_crudo.mp4 render.mp4
+```
+
+**El montaje del paso 9 se hace sobre `render.mp4` (el estabilizado), nunca sobre el crudo.**
 
 **No pases `style` dentro de `caption`.** Los subtítulos que quema HeyGen salen chicos y pegados al borde inferior. Los vas a quemar vos con control total en el paso 11.
 
@@ -284,18 +316,18 @@ Un video de 3-4 minutos tarda unos 10 minutos en renderizar. Poleá `get_video` 
 
 Del resultado sirven `video_url` (limpio) y `subtitle_url` (el SRT). **Ignorá `captioned_video_url`.**
 
-Bajá los dos y anotá el **número exacto de cuadros** del render, que es la referencia de los pasos 9 y 10:
+Bajá los dos y anotá el **número exacto de cuadros** del render, que es la referencia de todo el paso 9:
 
 ```bash
 ffprobe -v error -select_streams v:0 -count_frames \
-  -show_entries stream=nb_read_frames,r_frame_rate -of csv=p=0 render_crudo.mp4
+  -show_entries stream=nb_read_frames,r_frame_rate -of csv=p=0 render.mp4
 ```
 
 ---
 
 # PASO 9 · Estabilizar el render
 
-No gasta créditos. Se corre sobre el MP4 que bajaste de HeyGen y produce el archivo sobre el que se monta todo lo demás. Es una pasada de `vidstab`, conserva el conteo exacto de cuadros y deja el temblor por debajo del de tus propias fotos. Cuesta ~3% de zoom, imperceptible.
+No gasta créditos. Se corre sobre el MP4 que bajaste de HeyGen y produce el archivo sobre el que se monta todo lo demás.
 
 ```bash
 python3 scripts/estabilizar.py render_crudo.mp4 render.mp4
@@ -309,7 +341,7 @@ El script mide el temblor antes y después e imprime la reducción. Si el temblo
 nohup python3 scripts/estabilizar.py crudo.mp4 render.mp4 > /ruta/absoluta/estab.log 2>&1 &
 ```
 
-El `.trf` de la pasada 1 queda cacheado en la carpeta temporal del sistema, así que si se corta la segunda no hay que rehacer la primera. **Usá rutas absolutas para el log**: el directorio de trabajo se resetea entre comandos y un log relativo se pierde.
+El `.trf` de la pasada 1 queda cacheado en `/tmp`, así que si se corta la segunda no hay que rehacer la primera. **Usá rutas absolutas para el log**: el directorio de trabajo se resetea entre comandos y un log relativo se pierde.
 
 El porqué y los números medidos están en el paso 8, en "La vibración de cámara".
 
@@ -337,7 +369,7 @@ nohup python3 scripts/montar_vsl.py /ruta/absoluta/config.json > /ruta/absoluta/
 
 **Todo se calcula en cuadros, nunca en segundos.**
 
-En producción real, pedirle a ffmpeg tramos en segundos hizo que cada uno se redondeara al cuadro más cercano —40 ms a 25 fps— y esos redondeos se fueron acumulando siempre para el mismo lado. Con 31 tramos, el montaje terminó **0,56 segundos más largo** que el render. Resultado: la imagen se atrasaba respecto del audio, cada vez más hacia el final: primero se oía la voz y después se movía la boca.
+En producción real, pedirle a ffmpeg tramos en segundos hizo que cada uno se redondeara al cuadro más cercano —40 ms a 25 fps— y esos redondeos se fueron acumulando siempre para el mismo lado. Con 31 tramos, el montaje terminó **0,56 segundos más largo** que el render. Resultado: la imagen se atrasaba respecto del audio, cada vez más hacia el final. El usuario lo describió como *"primero va la voz y después mueve la boca"*.
 
 El script ya trabaja en cuadros y verifica en dos niveles:
 
@@ -374,6 +406,10 @@ Se encontraron así dos errores que no se ven de otra forma: un clip cayendo sob
 
 ---
 
+# 🔴 El cierre del VSL apunta al botón 
+
+En los últimos segundos, cuando la voz dice que el precio está debajo, se quema en el video una caja del color del producto con "**Toca el botón de abajo**" (en el idioma y el registro de la tienda: tú neutro para LATAM) y **tres flechas ▼▼▼** debajo, que quedan hasta el final. La página que lo contiene sigue el modelo de `WIKI/embudo-postcompra.md` del cerebro: marco foil, oferta oculta hasta ese segundo.
+
 # PASO 11 · Subtítulos y entrega
 
 ## Subtítulos
@@ -397,9 +433,9 @@ Dos topes que van a morder: **30 MB por archivo al chat** y **20 MB por archivo 
 
 ### 🚫 Un solo archivo, siempre
 
-**Nunca entregues dos versiones** (una "web" y una "chica", por ejemplo). Tener que elegir entre dos archivos casi idénticos es trabajo que le estás pasando al usuario, y molesta.
+**Nunca entregues dos versiones.** Se hizo una vez —una "web" y una "chica"— y el usuario respondió: *"¿POR QUÉ SIEMPRE ME TIRÁS UNO QUE DICE OTO CHICO?"*. Tener que elegir entre dos archivos casi idénticos es trabajo que le estás pasando a él.
 
-Entregá **un solo MP4 que entre bajo los 20 MB**, así sirve para el chat y para su carpeta sin decidir nada. A 720×1280 con bitrate ajustado, un VSL de 2-3 minutos entra sin que se note la diferencia en mobile, que es donde se ve la enorme mayoría de estos videos.
+Entregá **un solo MP4 que entre bajo los 20 MB**, así sirve para el chat y para su carpeta sin decidir nada. A 720×1280 con CRF ajustado, un VSL de 2-3 minutos entra sin que se note la diferencia en mobile, que es donde se ve el 90% de estos videos.
 
 ```bash
 # apuntá a ~18 MB; calculá el bitrate según la duración real
@@ -425,8 +461,6 @@ Decí explícitamente:
 - Los créditos gastados y los que quedan
 - Qué quedó pendiente
 
-Y anotá en `RAW/bitacora/productos.md` (una línea por hallazgo, con fecha absoluta) lo que falló, los créditos reales gastados y cualquier límite nuevo que hayas encontrado.
-
 ---
 
 # Después del video
@@ -435,15 +469,15 @@ Dos cosas que conviene dejar planteadas, porque el usuario suele estar pensando 
 
 **La página del OTO** pesa tanto como el video: titular arriba, botón de compra grande con el precio escrito, botón de rechazo chico y con costo escrito ("No gracias, prefiero seguir sin X"), y ningún link de escape.
 
-**El producto tiene que existir.** El video promete entregables concretos. Si el producto todavía no está hecho, el guion sirve de especificación: cada promesa es un capítulo obligatorio. Ofrecé armar esa especificación (y producirlo con `/imperioebook`).
+**El producto tiene que existir.** El video promete entregables concretos. Si el producto todavía no está hecho, el guion sirve de especificación: cada promesa es un capítulo obligatorio. Ofrecé armar esa especificación.
 
 ## 🚪 Auditar el producto contra el guion
 
-Cuando el ebook esté hecho, **abrilo y contá las promesas una por una contra el guion**. No preguntes si están: verificá. Las dos fallas más comunes:
+Cuando el ebook esté hecho, **abrilo y contá las promesas una por una contra el guion**. No preguntes si están: verificá. En producción real aparecieron dos fallas, y las dos en los dos libros a la vez:
 
-**Los capítulos de proveedores salen vacíos.** El ebook trae una tabla "insumo / cómo pedirlo" y un recuadro en blanco que dice "anotá acá tus precios", mientras el video promete *"nombres, links y precios reales"*. Enseña a preguntar, no dice dónde comprar. Es la promesa que más se incumple porque es la única que exige investigación real, fuera del alcance de un generador de páginas.
+**Los capítulos de proveedores salieron vacíos.** Los dos ebooks traían una tabla "insumo / cómo pedirlo" y un recuadro en blanco que decía "anotá acá tus precios". Los dos videos prometían *"nombres, links y precios reales"*. Enseñaban a preguntar, no decían dónde comprar. Es la promesa que más se incumple porque es la única que exige investigación real, fuera del alcance de un generador de páginas.
 
-**Las promesas contables no dan el número.** El video promete "cuarenta diseños" y el libro trae cuatro. Si encima la tapa repite "40 DISEÑOS", es peor. Una promesa con número es la más fácil de verificar para el comprador: se sienta, cuenta, y pide el reembolso.
+**Las promesas contables no daban el número.** El video prometía "cuarenta diseños" y el libro traía cuatro láminas adentro del PDF. La tapa del propio ebook repetía "40 DISEÑOS". Una promesa con número es la más fácil de verificar para el comprador: se sienta, cuenta, y pide el reembolso.
 
 Cómo auditar, en concreto:
 
@@ -453,4 +487,4 @@ Cómo auditar, en concreto:
 4. Marcá **tablas en blanco para completar**: pueden ser una decisión de diseño válida, pero si el video promete el dato y el libro pide que lo averigüe el comprador, hay desajuste.
 5. Decí qué falta con la página exacta, y ofrecé las dos salidas: completar el producto, o corregir esa línea del guion antes de publicar.
 
-Un producto con garantía larga (por ejemplo, 120 días) y una promesa contable incumplida es un reembolso programado.
+Un producto con garantía de 120 días y una promesa contable incumplida es un reembolso programado.

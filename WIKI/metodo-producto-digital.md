@@ -1,6 +1,6 @@
 ---
 tema: metodo-producto-digital
-actualizado: AAAA-MM-DD
+actualizado: 2026-10-29
 fuentes: Clase 1
 ---
 
@@ -22,29 +22,37 @@ Ajustá precios y reglas a tu mercado a medida que tengas tus propios números.
 
 ## Reglas por fase
 
-- **F0 Cazar:** 50 o más anuncios activos y 3 o más días corriendo. Los días pesan más que la cantidad.
-  Siempre se entra a la página y se anota el precio real.
+- **F0 Cazar:** la idea manda; los anuncios solo ordenan (ver [[caza-de-ideas]]). Los días al aire pesan más
+  que la cantidad. Siempre se entra a la página y se anota el precio real.
+  > Antes (V1): "50 o más anuncios activos y 3 o más días". Dejaba afuera ideas buenas y traía las de siempre.
 - **F1 Oferta:** se vende el atajo, no el tema. Lo que le cuesta al cliente se convierte en un bono.
   Si dice que no, se ofrece lo mismo a mitad de precio. Garantía larga para bajar el miedo.
 - **F2 Ebook:** primero una muestra de 3 páginas para aprobar; después el resto. El índice tiene que coincidir con las páginas reales.
+  Revisión foto ↔ texto por otro agente, con tabla (ver [[produccion-de-ebooks]]).
 - **F3 Tienda:** medición en orden (dominio, mail, píxel). Cada oferta nueva, píxel nuevo.
+  Cada tienda nueva con su proyecto de **Microsoft Clarity** desde el día uno (mapas de calor: dónde se traban).
   El día del lanzamiento sin extras en el pago ni ofertas post-compra. Siempre una compra de prueba.
 - **F4 Anuncios:** nunca menos de 10. Un ángulo por anuncio. Sin promesas de plata ni plazos (Meta los rechaza).
+  Variedad de voces, músicas, formatos y gente (ver [[anuncios-que-venden]]).
 - **F5 Campaña:** 1 campaña, 1 conjunto, 10 anuncios. Presupuesto diario = precio × 3, redondeado a múltiplo de 5.
   Etiquetas para saber de qué anuncio viene cada venta. Checklist de `CLAUDE.md` anuncio por anuncio.
 - **F6 Manejar:** se mira hoy, 3 días y 7 días, cruzando Meta con las ventas reales de la tienda.
+  Validar en ABO y escalar en CBO; cambios juntos una vez por día (ver [[reglas-de-campanas]]).
+  La tabla de abajo es la de V1: usala si testeás en un solo conjunto; con ABO manda [[reglas-de-campanas]].
 
 | Si pasa esto | Se hace esto |
 |---|---|
 | 3 o más ventas y retorno mayor a 1,8 | Subir el presupuesto 30% |
-| Retorno menor a 2 | Bajar el presupuesto 20% |
+| Retorno (ROAS) menor a 1 | Bajar el presupuesto 20% |
 | Llega el día 3 | 10 anuncios nuevos en un conjunto nuevo |
 | Día 4 sin ventas | Testeo nuevo |
 | Pierde 100 a 150 USD | Cortar la oferta |
 
 - **Diagnóstico:** de la página al pago debería pasar entre 8% y 16%; del pago a la compra, entre 12% y 17%.
   Si 50 llegan a pagar y nadie compra, el problema es la oferta.
-- **F7 Escalar:** al primer escalado se suman las ofertas post-compra con su video. Después, otros idiomas.
+- **F7 Escalar:** al primer escalado se suman las ofertas post-compra con su video (ver [[embudo-postcompra]]).
+  Después, otros idiomas: la tienda traducida es una **copia idéntica** (mismas ofertas, mismos juegos, videos
+  rehechos en el idioma nuevo), con su fanpage e Instagram en ese idioma.
 
 ## Lo que hacés vos y lo que hace el sistema
 
@@ -54,4 +62,4 @@ Ajustá precios y reglas a tu mercado a medida que tengas tus propios números.
 
 ## Relacionado
 
-[[protocolo-cerebro]]
+[[protocolo-cerebro]] · [[reglas-de-campanas]] · [[anuncios-que-venden]] · [[embudo-postcompra]] · [[produccion-de-ebooks]] · [[caza-de-ideas]]

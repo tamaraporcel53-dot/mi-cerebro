@@ -38,13 +38,13 @@ Formato que funciona:
 
 > "Adentro del libro hay un capítulo que quiero que mires bien. El de [X]. Ahí te digo, con todas las letras, que es [promesa real]. Y es verdad. Pero si realmente te querés tomar esto en serio, escuchá. [situación concreta donde esa promesa no alcanza]."
 
-**Ejemplo (inventado, para ver la forma).** Un ebook de fotografía con el celular dice que los retratos por encargo son "lo que más se cobra". El límite: los clientes que más pagan piden retratos de noche o en interiores, y todo el libro trabaja con luz natural. Verificable en el propio libro, no inventado, y le pega justo al capítulo que promete más plata.
+**Ejemplo real que funcionó.** El libro decía que las piezas de auto eran "el rubro con menos competencia y el de ticket más alto". El límite: en ese rubro lo que más se pide es fibra de carbono, que es una trama exacta que se repite, y la técnica del libro nunca hace dos veces lo mismo. Verificable, no inventado, y le pega justo al capítulo que promete más plata.
 
 ## 3 · La solución, con nombre propio
 
 Nombrala. Un nombre propio la convierte de "algo más" en un producto.
 
-Después explicá **por qué funciona**, con el mecanismo real. La ciencia verdadera casi siempre suena mejor que la inventada, y además resiste que la googleen. **Si no entendés el mecanismo lo suficiente como para explicarlo bien, investigalo antes de escribir.** Verificá parámetros concretos (temperaturas, tiempos, materiales, medidas) con búsqueda web: si el video promete "el dato exacto" y el dato está mal, el comprador falla y pide el reembolso.
+Después explicá **por qué funciona**, con el mecanismo real. La ciencia verdadera casi siempre suena mejor que la inventada, y además resiste que la googleen. **Si no entendés el mecanismo lo suficiente como para explicarlo bien, investigalo antes de escribir.** Verificá parámetros concretos (temperaturas, tiempos, materiales) con búsqueda web: si el video promete "la temperatura exacta" y el dato está mal, el comprador falla y pide el reembolso.
 
 Cerrá con la frase que separa las dos cosas sin desmerecer la que ya compró. El comprador tiene que sentir que suma, no que reemplaza:
 
@@ -111,7 +111,7 @@ Dos elementos: qué pasa cuando toca el botón, y que la oferta no vuelve.
 
 **El botón de rechazo importa tanto como el de compra.** Escribilo desde la pérdida concreta, no desde el precio:
 
-> ⚪ *"No gracias, prefiero seguir rechazando los encargos de retratos de noche"*
+> ⚪ *"No gracias, prefiero rechazar los trabajos de fibra de carbono"*
 
 pega mucho más que "No gracias".
 

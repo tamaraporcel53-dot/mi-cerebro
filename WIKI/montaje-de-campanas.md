@@ -62,9 +62,11 @@ No es "revisar por arriba": es verificar cada punto y poder mostrar el dato.
 | 5 | **Fanpage** | `object_story_spec.page_id` | Que sea la página de ESA marca **y en el idioma del mercado**: cada idioma lleva su fan page e Instagram |
 | 6 | **Instagram** | vista previa de Reels | Que muestre la marca correcta, en el idioma del mercado (ver sección Instagram) |
 | 7 | **El video correspondiente** | `video_data.video_id` | Uno por anuncio. Cotejar la **duración** contra el archivo original |
-| 8 | **Eventos offline** | `tracking_specs` del anuncio | `offsite_conversion` + `fb_pixel` |
+| 8 | **Eventos: píxel y offline, los dos** | `tracking_specs` del anuncio | `[{"action.type":["offsite_conversion"],"fb_pixel":["<PIXEL>"]},{"action.type":["offline_conversion"],"dataset":["<PIXEL>"]}]`. Si falta cualquiera de los dos, es error. La API lo escribe pero no siempre lo devuelve: confirmalo en el editor del anuncio |
 | 9 | **SIN gasto mínimo** | `daily_min_spend_target` del conjunto **vacío** | Los mínimos de cada conjunto se suman y los testeos siguientes quedan sin presupuesto libre. 🔴 **No existe gasto mínimo por anuncio**, ni en la API ni en el Administrador. Con CBO de **un solo** conjunto no reparte nada: ese conjunto ya recibe el 100% |
 | 10 | **conversion_domain** | del anuncio | El dominio verificado de la tienda |
+| 11 | **Anunciante y pagador** | conjunto (transparencia de la UE) | Con el **nombre del producto o la marca**, nunca tu nombre y apellido |
+| 12 | **UTM copiada de la tienda** | `url_tags` | Sacada del panel de tracking de ESA tienda, no de una nota vieja ni de otro producto |
 
 ### 🔴 Y después: verificar que esté PUBLICADO, no creado
 

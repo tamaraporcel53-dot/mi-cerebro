@@ -1,28 +1,27 @@
 ---
 name: imperioreels
-description: Genera y edita reels UGC verticales listos para redes - voz (ElevenLabs), avatar (HeyGen) y edición completa con Remotion (captions karaoke, jumpcut, zooms, b-rolls, escenas animadas, SFX, música y overlays). Edita con el Estándar Imperio - elegante, minimalista, fluido, transiciones de nivel After Effects, pack de producto con mockups reales y música sin copyright. Usar cuando el usuario dice "imperioreels", "reels", "un reel", "videos UGC", "editá este reel", "hacé un video de mi producto" o pasa un audio + un avatar para editar.
+description: Genera y edita reels UGC verticales listos para redes - voz (ElevenLabs), avatar (HeyGen) y edición completa con Remotion (captions karaoke, jumpcut, zooms, b-rolls, escenas animadas, SFX, música y overlays). Edita con el Estándar Imperio: elegante, minimalista, fluido, transiciones de nivel After Effects, pack de producto con mockups reales, música sin copyright. Usar cuando el usuario dice "imperioreels", "reels", "un reel", "videos UGC", "editá este reel", "hacé un video de mi producto" o pasa un audio + un avatar para editar.
 ---
 
 # Imperio Reels — generación + edición premium automática
 
 Convierte un guion en un reel editado listo para subir: voz (ElevenLabs) → avatar hablando
-(HeyGen) → b-rolls → **edición local con Remotion** (composición `Reel` del motor del kit). En un
-solo render arma captions karaoke, come los silencios (jumpcut), mete zooms en los cortes, encaja
+(HeyGen) → b-rolls → **edición local con Remotion** (composición `Reel` del motor). En un solo
+render arma captions karaoke, come los silencios (jumpcut), mete zooms en los cortes, encaja
 b-rolls y escenas animadas, suma SFX, música y overlays — vertical 1080x1920.
 
 > **Regla de oro:** validá UN reel de punta a punta con **stills** (que son gratis) antes de
 > renderizar en serie. Renderizar cuesta minutos; los stills, segundos. Y si ya tenés el audio y
 > el video de avatar hechos, saltá directo a la **§6a-bis (jumpcut)**.
 
-> **🔴 Antes de cualquier otra cosa:** si la sesión NO está corriendo en el modelo más capaz que
-> tengas disponible (Opus), lo PRIMERO es preguntarte si querés cambiarlo (se cambia desde el
-> selector de modelo de la app). Una sola pregunta, y recién después se arranca. Si ya está en
-> ese modelo, no preguntar.
+> **🔴 Antes de cualquier otra cosa:** si la sesión NO está corriendo en **Opus 5.5**, lo PRIMERO
+> es preguntarle al usuario si quiere pasar a Opus 5.5 (se cambia desde el selector de modelo de
+> la app). Una sola pregunta, y recién después se arranca. Si ya está en Opus 5.5, no preguntar.
 
 ## ⭐ Estándar Imperio de edición (obligatorio, en TODOS los reels)
 
 El listón: que parezca editado por un profesional en After Effects. **Elegante, minimalista,
-prolijo y fluido.** Nada tosco, nada gritón. Se aplica SIEMPRE, aunque no lo pidas.
+prolijo y fluido.** Nada tosco, nada gritón. Se aplica SIEMPRE, aunque el usuario no lo pida.
 
 **Antes de editar**
 1. **Si el producto tiene un anuncio ganador, estudiarlo primero.** Transcribirlo con Scribe (§6a)
@@ -39,11 +38,10 @@ prolijo y fluido.** Nada tosco, nada gritón. Se aplica SIEMPRE, aunque no lo pi
    muestra el producto y los bonos (escena `bundle`).
 
 **Montaje**
-4. **Nunca cortes secos.** El video base se arma con `scripts/cine-base.mjs` del motor (§4,
-   Opción C): cada plano con movimiento de cámara continuo (zoom lento que alterna acercar /
-   alejar) y transiciones de 0,3 s centradas en el corte (`smoothleft`, `smoothright`, `smoothup`,
-   `hblur`, `fade`, `slideup`). **No usar `zoomin`**: se mete al centro del plano y deja un cuadro
-   plano de color.
+4. **Nunca cortes secos.** El video base se arma con `scripts/cine-base.mjs` (§4, Opción C): cada
+   plano con movimiento de cámara continuo (zoom lento que alterna acercar / alejar) y transiciones
+   de 0,3 s centradas en el corte (`smoothleft`, `smoothright`, `smoothup`, `hblur`, `fade`,
+   `slideup`). **No usar `zoomin`**: se mete al centro del plano y deja un cuadro plano de color.
 5. **Ritmo:** un cambio de plano cada ~2 s, con los cortes anclados a palabras del Scribe.
 6. **Escenas animadas (números, checklist): nunca sobre negro liso.** El motor las pone sobre el
    mismo video desenfocado. Para un fondo todavía más suave, marcar ese plano con `"blur": true`
@@ -54,9 +52,9 @@ prolijo y fluido.** Nada tosco, nada gritón. Se aplica SIEMPRE, aunque no lo pi
    El producto entra solo y grande, se corre a su lugar, y los bonos llegan deslizándose desde los
    costados, cada uno en la palabra que lo nombra.
 8. **El mockup conserva la tapa EXACTA.** Buscar primero los que ya existen en la carpeta del
-   producto (`Mockup*.png`). Si vienen con fondo pegado, recortarlo (con la herramienta de quitar
-   fondo que uses). Si no existen, generarlos a partir de la tapa original sin que la IA la
-   redibuje, y compararlos contra la tapa antes de usarlos.
+   producto (`Mockup*.png`). Si vienen con fondo pegado, recortarlo (Higgsfield:
+   `media_upload` → `remove_background`). Si no existen, generarlos a partir de la tapa original
+   sin que la IA la redibuje, y compararlos contra la tapa antes de usarlos.
 9. **CTA minimalista:** píldora blanca + flecha en círculo negro (default del motor). El texto del
    botón va en oración normal ("Ver todo lo que incluye"), no en MAYÚSCULAS. Cuando entra el CTA,
    los subtítulos se apagan solos (el botón ya lo dice).
@@ -68,7 +66,7 @@ prolijo y fluido.** Nada tosco, nada gritón. Se aplica SIEMPRE, aunque no lo pi
       Cuesta centavos. Prompt: estilo + *"no vocals, steady groove, no big drops, sits under a
       voiceover"*.
     - **Segunda opción — Pixabay** (Pixabay Content License: uso comercial, sin pagar, sin
-      atribución). Si la pista dice "Content ID Registered", tenelo en cuenta: en Meta no pasa
+      atribución). Si la pista dice "Content ID Registered", avisarle al usuario: en Meta no pasa
       nada; en YouTube puede llegar un reclamo que se disputa con el link de la licencia.
     - Nunca usar una pista sin saber de dónde salió.
 11. **La música se tiene que ESCUCHAR.** `make-props` la mide sola (LUFS) y la deja 8 dB bajo la voz.
@@ -77,44 +75,41 @@ prolijo y fluido.** Nada tosco, nada gritón. Se aplica SIEMPRE, aunque no lo pi
 12. **Masterizado final a −12 LUFS** (§6d). Sin esto el reel suena más bajo que el resto del feed.
 
 **Prolijidad**
-13. **Sin barra de progreso** (default apagada; `--progress` la prende si la pedís).
+13. **Sin barra de progreso** (default apagada; `--progress` la prende si el usuario la pide).
 14. **Validar con stills cada momento clave:** el hook, una transición a mitad de camino, cada
     escena, cada paso del `bundle` y el CTA. Mirar: nada tapado, nada duplicado (subtítulo encima
     del mismo texto), nada negro liso, nada pixelado, nada en la zona de la UI de Meta.
 15. **Ojo con los nombres de archivo:** `make-props` copia el video como
     `public/reels/<slug>/base.mp4`. Si después se rehace el video base, pisar ESE archivo (no uno
     con otro nombre), o el render sigue usando el viejo sin avisar.
-16. **Cada pedido de cambio se aplica y se vuelve a validar con stills** antes de re-renderizar.
-    Entregar siempre con la versión numerada (`NN-<angulo>-FINAL.mp4`).
+16. **Cada pedido de cambio del usuario se aplica y se vuelve a validar con stills** antes de
+    re-renderizar. Entregar siempre con la versión numerada (`NN-<angulo>-FINAL.mp4`).
 
 ## 0. Prerrequisitos (verificar antes de arrancar)
 
 1. **Claude Code**, **Node** (v18+) y **ffmpeg / ffprobe** en el PATH (`ffmpeg -version`, `node -v`).
-2. El **kit de reels** instalado, con su **motor de edición Remotion** y las dependencias
-   (`npm i` **una vez** dentro de la carpeta del motor). El kit se instala con la **clase 12
-   "Edición automática con Claude"** del módulo **Impultienda + Claude**. Anotá la ruta absoluta
-   del motor: en esta skill se la llama `$MOTOR` (es la carpeta del motor, dentro de la carpeta
-   donde instalaste el kit de reels: `[CARPETA_DEL_KIT]`).
+2. El **motor de edición Remotion** (carpeta `motor-remotion/` de este kit) con dependencias
+   instaladas: entrá a la carpeta y corré `npm i` **una vez**. Anotá su ruta absoluta — en esta
+   skill se la llama `$MOTOR` (ej: `C:\Users\vos\Kit-Reels\motor-remotion`).
 3. **API keys** en un `.env` en la raíz de tu carpeta de trabajo:
    `ELEVENLABS_API_KEY=...` y `HEYGEN_API_KEY=...`. **NUNCA** imprimir su valor en el chat ni en
    archivos. Para usarlas en curl sin exponerlas:
    `export $(grep -v '^#' .env | grep -v '^$' | tr -d '\r' | xargs)` y referenciar como
-   `$ELEVENLABS_API_KEY` / `$HEYGEN_API_KEY`. El `.env` nunca se sube a ningún repositorio.
+   `$ELEVENLABS_API_KEY` / `$HEYGEN_API_KEY`.
 4. Carpeta de trabajo del reel: `reels/<proyecto>/` con subcarpetas
    `guiones/ audios/ avatar/ heygen/ brolls/ captions/ edited/ assets/` y un `config.md`
-   (ahí se anotan `[ID_DE_TU_VOZ]`, `[ID_DE_TU_AVATAR]` y ajustes, para reusarlos en la próxima tanda).
-5. **Créditos:** HeyGen y ElevenLabs consumen créditos por minuto generado. Confirmá cuántos
-   reels vas a hacer antes de generar en masa.
+   (ahí se anotan voice_id, talking_photo_id/avatar_id y ajustes, para reusarlos en la próxima tanda).
+5. **Créditos:** HeyGen y ElevenLabs consumen créditos por minuto generado. Confirmá con el
+   usuario cuántos reels antes de generar en masa.
 
 ## 1. Molde del guion
 
-- Si tenés un reel de referencia que funciona (archivo/URL): extraer audio
+- Si el usuario tiene un reel de referencia que funciona (archivo/URL): extraer audio
   (`ffmpeg -i ref.mp4 -vn -c:a libmp3lame ref.mp3`), transcribir con Scribe (§6a) y **copiar su
   estructura** (qué dice cada bloque, duración, dónde entran b-rolls).
 - **Duración recomendada para reel de venta UGC: 2:00–3:00 min** (el default apunta a 2:30). Los
-  reels muy cortos (15–45s) quedan cortos para "hipnotizar" en venta directa (para esos está
-  `imperioreelscorto`). Formato voz en off de ~1:30 es válido si el visual ES el
-  producto/resultado (§4-C).
+  reels muy cortos (15–45s) quedan cortos para "hipnotizar" en venta directa. Formato voz en off
+  de ~1:30 es válido si el visual ES el producto/resultado (§4-C).
 - ⚠️ **HOOK = LA SOLUCIÓN en los primeros 3 segundos**, nunca el dolor ni el contexto. Arrancá con
   el resultado ya logrado ("esto fue lo que me resolvió X"), y el dolor entra DESPUÉS como
   validación corta. Un buildup de dolor al inicio pierde al espectador.
@@ -127,7 +122,7 @@ prolijo y fluido.** Nada tosco, nada gritón. Se aplica SIEMPRE, aunque no lo pi
   reencuadra (12s) → "hasta que descubrí X" (10s) → beneficios (20s) → mecánica 1-2-3 en detalle
   (35s) → prueba social + segundo dato (20s) → objeción (15s) → CTA (10s)`.
 
-**Regla "lavador de cerebro":** el guion tiene que hipnotizar hasta el CTA. Para eso se meten
+**Regla de datos que hipnotizan:** el guion tiene que hipnotizar hasta el CTA. Para eso se meten
 **datos duros (salud / científicos / filosóficos) que reencuadren el problema y el deseo**:
 - El dato entra SOLO si suma al ángulo (refuerza el dolor, valida la solución o rompe una
   objeción). Nunca de adorno ni para rellenar.
@@ -144,15 +139,15 @@ en guiones nuevos.
 
 ## 2. Guion → `guiones/NN-<angulo>.md`
 
-🔴 **Políticas de Meta ANTES del guion.** Si la pieza va a un anuncio: nada de **promesas de
-ingresos ni de resultados en un plazo** ("en 7 días…"), ni **antes/después**, ni **montos** de
-ganancia, ni nombres de terceros. Un anuncio rechazado le pega a **toda la cuenta publicitaria**
-(se ve en Calidad de la cuenta). Con duda, se cambia la frase antes de editar, no después.
+🔴 **Políticas de Meta ANTES del guion.** Si la pieza va a un anuncio: nada de
+**promesas de ingresos ni de resultados en un plazo** ("sprint de 7 días"), ni **antes/después**, ni **montos**
+de ganancia. Un anuncio rechazado le pega a **toda la cuenta publicitaria**. Con duda, se
+cambia la frase antes de editar, no después.
 
-🔴 **No muestres tus otros productos reales en piezas públicas.** Si la pieza tiene que mostrar
-"lo que hace Claude" o un ejemplo de trabajo, no van tus landings, ebooks, anuncios, bonos ni
-tiendas reales: te los copian. Se arma un ejemplo inventado. El anuncio de un producto muestra
-solo ese producto.
+🔴 **Un anuncio muestra solo el producto que promociona.** No mostrar en piezas públicas las landings, ebooks,
+anuncios, bonos ni tiendas reales de tus otros productos: te los copian. Si hace falta mostrar "cómo se ve" algo,
+se arma un ejemplo inventado o se pregunta antes.
+
 
 Texto plano hablado, **exactamente** lo que se manda a TTS (sin acotaciones), en el idioma y
 registro del mercado del producto (¡no siempre español!). Un ángulo por guion si se hace tanda
@@ -179,18 +174,16 @@ y el CTA exacto del final.
 ## 3. Voz → `audios/NN.mp3` (ElevenLabs)
 
 - ⚠️ **Acento nativo del mercado.** La voz tiene que sonar del PAÍS del avatar (guion en voseo =
-  acento argentino, no "LATAM neutro"; un neutro leyendo voseo suena falso). Si tu cuenta no
-  tiene voz nativa, buscarla en la librería compartida
+  acento argentino, no "LATAM neutro"; un neutro leyendo voseo canta a fake). Si la cuenta no tiene
+  voz nativa, buscarla en la librería compartida
   (`GET /v1/shared-voices?search=<pais/acento>&gender=female&language=es`) y agregarla
   (`POST /v1/voices/add/{public_owner_id}/{voice_id}` con `{"new_name":"..."}`). (Excepción:
   productos pan-LATAM con guion en "tú" neutro → voz neutra.)
-- Si clonaste tu voz, usá ese `[ID_DE_TU_VOZ]`; antes de producir, probá una frase y fijate que
-  el acento sea el tuyo.
 - Listar voces de la cuenta: `curl -s https://api.elevenlabs.io/v1/voices -H "xi-api-key: $ELEVENLABS_API_KEY"`.
-  Elegir una acorde al avatar (mujer joven suele rendir en UGC) y guardar el id en `config.md`.
+  Elegir una acorde al avatar (mujer joven suele rendir en UGC) y guardar el `voice_id` en `config.md`.
 - Generar:
 ```bash
-curl -s -X POST "https://api.elevenlabs.io/v1/text-to-speech/[ID_DE_TU_VOZ]?output_format=mp3_44100_128" \
+curl -s -X POST "https://api.elevenlabs.io/v1/text-to-speech/<VOICE_ID>?output_format=mp3_44100_128" \
   -H "xi-api-key: $ELEVENLABS_API_KEY" -H "Content-Type: application/json" \
   -d '{"text":"<script>","model_id":"eleven_multilingual_v2","voice_settings":{"stability":0.4,"similarity_boost":0.8,"style":0.35}}' \
   -o audios/NN.mp3
@@ -207,8 +200,8 @@ HeyGen NO genera voz: recibe el audio de ElevenLabs y lo lip-syncea.
 **Opción A — Photo Avatar con Avatar IV (preferida): tu propia foto/imagen.**
 Mejor una foto del personaje EN SU CONTEXTO (mamá en la cocina, abogado en un podcast, escritorio
 con diplomas) que un avatar de stock con fondo blanco. Reusar el mismo avatar entre tandas:
-guardar su id en `config.md` como `[ID_DE_TU_AVATAR]`. Avatar IV anima desde una sola foto la
-cara Y el cuerpo (cabeza, manos), controlado por `motion_prompt` + `expressiveness`.
+guardar su `talking_photo_id` en `config.md`. Avatar IV anima desde una sola foto la cara Y el
+cuerpo (cabeza, manos), controlado por `motion_prompt` + `expressiveness`.
 1. Subir la imagen como talking photo:
 ```bash
 curl -s -X POST https://upload.heygen.com/v1/talking_photo -H "X-Api-Key: $HEYGEN_API_KEY" \
@@ -226,7 +219,7 @@ curl -s -X POST https://upload.heygen.com/v1/asset -H "X-Api-Key: $HEYGEN_API_KE
 curl -s -X POST https://api.heygen.com/v3/videos -H "X-Api-Key: $HEYGEN_API_KEY" \
   -H "Content-Type: application/json" -d '{
   "type":"avatar","title":"reel-NN",
-  "avatar_id":"[ID_DE_TU_AVATAR]","audio_asset_id":"<ASSET_ID>",
+  "avatar_id":"<TALKING_PHOTO_ID>","audio_asset_id":"<ASSET_ID>",
   "engine":{"type":"avatar_iv"},
   "motion_prompt":"hablando a camara con gestos naturales de manos, como en un podcast, movimientos sutiles de cabeza",
   "expressiveness":"medium","aspect_ratio":"9:16","resolution":"1080p"}'
@@ -237,7 +230,7 @@ curl -s -X POST https://api.heygen.com/v3/videos -H "X-Api-Key: $HEYGEN_API_KEY"
    - Si el plan no soporta 1080p, usar `"resolution":"720p"` y escalar en la edición.
    Requisitos de la foto: cara frontal, ojos abiertos, boca neutra, buena luz, un solo rostro
    nítido, NADA tapando la boca/mandíbula. No pedir "texto legible" en prompts de imagen (la IA lo
-   genera ilegible) — texto de fondo desenfocado.
+   genera gibberish) — texto de fondo desenfocado.
 
 **Opción B — Avatar de stock (si no hay foto):** misma voz, **avatar distinto por reel** (parece
 gente distinta = más ángulos de test):
@@ -254,17 +247,16 @@ curl -s -X POST https://api.heygen.com/v2/video/generate -H "X-Api-Key: $HEYGEN_
 **Opción C — Voz en off sobre b-rolls (SIN HeyGen):** cuando el visual ES el producto/resultado o
 para bajar costo. Cero créditos HeyGen; el "video base" se arma con ffmpeg:
 1. Banco de clips (§5) que cubra TODO el audio (15-17 segmentos de 5-8s por reel de ~1:30-2:00).
-2. **Video base cinematográfico con `cine-base.mjs`** (NUNCA concat seco). Armar `plan.json`
-   (las rutas de los clips, absolutas o relativas a tu carpeta del reel):
+2. **Video base cinematográfico con `cine-base.mjs`** (NUNCA concat seco). Armar `plan.json`:
 ```json
 { "T": 0.30, "end": 29.83,
   "cuts": [2.30, 4.00, 5.40],
   "transitions": ["smoothright", "smoothleft", "hblur"],
   "clips": [
-    { "src": "brolls/hero.mp4", "ss": 0 },
-    { "src": "brolls/detalle.mp4", "ss": 1.1 },
-    { "src": "brolls/plano-bajo-escena.mp4", "ss": 0.9, "blur": true },
-    { "src": "assets/tapa.png", "image": true }
+    { "src": "C:/.../hero.mp4", "ss": 0 },
+    { "src": "C:/.../manzana.mp4", "ss": 1.1 },
+    { "src": "C:/.../plano-bajo-escena.mp4", "ss": 0.9, "blur": true },
+    { "src": "C:/.../tapa.png", "image": true }
   ] }
 ```
    - `cuts` = segundos donde se PERCIBE cada cambio de plano (uno menos que `clips`), anclados a
@@ -372,8 +364,8 @@ node "$MOTOR/scripts/make-props.mjs" --slug <proyecto>-NN \
 
 **Kit de retención** (todo anclable por `palabra:`):
 - `--hook "TEXTO[|resaltado]"` — titular grande sobre el avatar en los primeros ~3s. Ponerlo
-  SIEMPRE (la mayoría decide en el hook). JSON: `hookTitle {text, highlight?, start?, duration?, y?}`.
-- `--zoom-hit "palabra:X[:amount]"` — punch de cámara (empuja y vuelve, sin sonido).
+  SIEMPRE (el 80% decide en el hook). JSON: `hookTitle {text, highlight?, start?, duration?, y?}`.
+- `--zoom-hit "palabra:X[:amount]"` — punch de cámara estilo Hormozi (empuja y vuelve, sin sonido).
   1-3 por reel: el "dije basta", el número del dato, el nombre del método.
 - `--impact "palabra:X[:sfx]"` — micro-shake + pulso de zoom + SFX para EL dato duro. 1 por reel
   (máx. 2). No ponerlo dentro de un b-roll fullscreen (el golpe queda tapado).
@@ -388,7 +380,7 @@ node "$MOTOR/scripts/make-props.mjs" --slug <proyecto>-NN \
   Para las capturas que convierten: landing, producto, prueba social. `pipY` en el JSON si tapa los ojos.
 - Transición: `fade` (default), `whip` (barrido con blur, SFX `swoosh`), `slide` (sube), `cut`
   (corte seco, pega con jumpcut). El SFX default se adapta (pip=`pop`).
-- **Música** (SIEMPRE): track sin copyright en `assets/music.mp3`. `make-props` mide
+- **Música** (SIEMPRE): track sin copyright de Pixabay en `assets/music.mp3`. `make-props` mide
   música y voz y deja la música **8 dB bajo la voz** (se escucha clara y no tapa). `--music-vol N`
   solo para pisar el cálculo. Nunca créditos en pantalla.
 - **Badges** (pill animada): editar el JSON → `"badges":[{"text":"HOY 50% OFF","start":38,"duration":6,"y":20}]`.
@@ -410,7 +402,7 @@ Stock (registro en `$MOTOR/src/reels/scenes/registry.tsx`):
 Las escenas van por defecto sobre el video de abajo **desenfocado** (nunca negro liso). Para un
 fondo opaco propio: `"bg": "#07070A"` en la escena.
 
-**Escena `bundle` — el cierre con producto y bonos** (estilo de los anuncios que ya venden):
+**Escena `bundle` — el cierre con producto y bonos** (estilo de los anuncios ganadores):
 ```json
 {"name":"bundle","start":20.85,"duration":8.98,"bg":"#07070A","sfx":false,"props":{
   "bg":"reels/<slug>/fondo.png","kickerSmall":"INCLUYE","kicker":"3 BONOS DE REGALO","kickerAt":0.85,
@@ -492,7 +484,7 @@ flag antes del render final.
 
 ### 6d. Render final
 ```bash
-npx remotion render Reel <ruta>/edited/NN-raw.mp4 --props=props/<slug>.json > render.log 2>&1
+npx remotion render Reel <ruta>/edited/NN-<angulo>-FINAL.mp4 --props=props/<slug>.json
 ```
 Sale h264 1080x1920 30fps con la duración ya acelerada. Tarda unos minutos por reel — correrlo en
 background si hay más trabajo. **Capturar SIEMPRE el log completo (`> render.log 2>&1`), nunca
@@ -509,13 +501,11 @@ Renderizar a `NN-raw.mp4`, masterizar al FINAL y borrar el raw.
 node "$MOTOR/scripts/verify.mjs" --video edited/NN-<angulo>-FINAL.mp4 [--expect-duration 30]
 ```
 Chequea 1080x1920, audio presente, duración y extrae 3 frames (exit 1 si falla → corta el batch).
-- **Mirá el video final entero antes de entregarlo** (un cuadro por segundo alcanza para detectar
-  huecos, textos tapados o planos negros).
 - **El reel dura lo que dura el audio — NUNCA cortarlo para llegar a un target.** Si quedó largo,
   el guion tenía demasiadas palabras: recortar el guion y regenerar el audio (§3).
-- **Reel 01 primero:** correr 6a-6d + verify, mirarlo y dar el OK. Con el OK, correr los demás en
-  batch (los props quedan en `$MOTOR/props/`, los assets en `$MOTOR/public/reels/` — se pueden
-  borrar después del render).
+- **Reel 01 primero:** correr 6a-6d + verify, mostrárselo al usuario y esperar el OK. Con el OK,
+  correr los demás en batch (los props quedan en `$MOTOR/props/`, los assets en
+  `$MOTOR/public/reels/` — se pueden borrar después del render).
 - Si Remotion falla y no se arregla rápido: fallback de 3 pasadas de ffmpeg en `ffmpeg-fallback.md`.
 
 ## 7. Variaciones y formato Kinetic (mismo audio, cero créditos)
@@ -531,10 +521,5 @@ npx remotion render Kinetic edited/NN-<angulo>-KINETIC.mp4 --props=props/<slug>.
   Acepta los mismos overlays de conversión (`priceTag`/`counter`/`ctaCard`) en el JSON.
 
 ## 8. Cerrar
-
-- Anotar en `config.md` qué molde, voz, avatar y ajustes se usaron (hace repetible la próxima
-  tanda) y dejar los reels finales en `edited/`.
-- Lo que aprendiste (lo que falló, un número real, una decisión y su motivo) va en una línea a
-  `RAW/bitacora/edicion.md` de tu segundo cerebro, con fecha absoluta.
-- Si el pedido vino de otro agente (Redes, Productos o Meta), avisale con `SendMessage` que los
-  videos están listos y dónde quedaron.
+Anotar en `config.md` qué molde, voz, avatar y ajustes se usaron (hace repetible la próxima tanda)
+y dejar los reels finales en `edited/`.
