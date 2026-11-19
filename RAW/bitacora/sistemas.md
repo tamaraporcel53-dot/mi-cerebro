@@ -17,3 +17,4 @@
 - 2026-11-19 · Prueba nube: ffmpeg 6.1.1, node v22, python3 3.13 → anda · se puede editar video y correr scripts en la nube.
 - 2026-11-19 · Prueba nube: navegador → anda solo Chromium sin pantalla (Playwright), sin sesiones iniciadas · sirve para páginas públicas (ej. revisar una landing); NO sirve para nada que pida login (Business Manager, Impultienda panel). Eso necesita la notebook con Control Remoto.
 - 2026-11-19 · Prueba nube: git en la nube firma commits como "Claude", no como Tamy · no es un problema, pero el historial va a mostrar los dos nombres.
+- 2026-11-19 · Prueba nube: git push a main → anda (commit 39dfdb6 subido a main desde la nube) · lo que se hace en la nube queda guardado en GitHub, siempre que se suba a main y no solo a la rama de la sesión.
