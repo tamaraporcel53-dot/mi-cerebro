@@ -9,7 +9,7 @@
 
 | Qué | Lo pide |
 |---|---|
-| Crear la cuenta publicitaria de Meta **en USD** para los anuncios (decidido por Tamy el 2026-11-19). La de **ARS** que ya existe no se usa para anuncios | Sistemas → Meta |
+| Crear la cuenta publicitaria de Meta **en USD** para los anuncios (decidido por Tamy el 2026-11-19). La de **ARS** que ya existe no se usa para anuncios. ⚠️ Crearla como cuenta **nueva**; no tocar "cambiar moneda" en la de ARS (eso la cierra para siempre) | Sistemas → Meta |
 
 ## El negocio hoy
 
