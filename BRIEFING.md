@@ -9,6 +9,7 @@
 
 | Qué | Lo pide |
 |---|---|
+| ⚠️ La única cuenta publicitaria de Meta está en **ARS**, no en USD (visto el 2026-11-19 desde la nube). Decidir: crear una cuenta nueva en USD (Meta no deja cambiar la moneda, sin confirmar) | Sistemas |
 | Energía con cargador: suspensión e hibernación en "Nunca" y tapa en "No hacer nada" (al 2026-11-19 se duerme a los 10 min) | Sistemas |
 
 ## El negocio hoy
