@@ -1,6 +1,6 @@
 # CHUPETINES DECORADOS — 10%
 
-**Creada:** 2026-11-19 · **Mercado:** español / Argentina primero (ARS, Mercado Pago, Impultienda) · **Estado:** en armado, oferta esperando aprobación de Tamy
+**Creada:** 2026-11-19 · **Mercado:** español / Argentina primero (ARS, Mercado Pago, Impultienda) · **Estado:** ⏸️ **EN PAUSA desde el 2026-11-19**: Tamy cambió al pan dulce relleno (ver `BRIEFING.md`). La oferta propuesta de abajo queda guardada por si se retoma; no está aprobada
 
 ## Tablero
 
