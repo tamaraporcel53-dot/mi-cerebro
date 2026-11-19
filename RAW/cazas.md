@@ -27,3 +27,21 @@ Consultas: panetone trufado · panetone de pote · panetone recheado · pan dulc
 | 1-9 | ~15 entre 6 anunciantes | Cocina 360 · Espacio Reinicia · Tu Negocio Sin Tacc · Dulces Fiestas Saludables · Sabor a Bienestar · Dulce Navidad Keto | 🟡 lleno | AR | https://www.facebook.com/ads/library/?id=2974083226294578 | Recetas navideñas sin TACC, keto o saludables: ese ángulo ya está ocupado |
 
 Hueco (hipótesis): en Argentina no encontré ningún infoproducto que enseñe pan dulce **relleno o trufado** (lo que en Brasil es furor). Buscando "pan dulce relleno" en AR solo aparecen panes rellenos salados (Chef Isabela López, Chef Laura Navarro) y marcas que venden el pan dulce terminado. Faltaría buscar "pan dulce de dulce de leche" y "pan dulce de pistacho".
+
+## 2026-11-19 (tercera vuelta) · chupetines decorados (Tamy eligió chupetines)
+
+Consultas: pirulito de chocolate · pirulitos personalizados · lollipops · paletas de caramelo · chupetines de chocolate (AR) · paletas para cócteles (y en AR) · souvenirs comestibles (AR) · isomalt (AR) · chupetines (AR).
+
+> Corrección: la primera vuelta dijo que los chupetines tenían 2 o 3 competidores en AR. Con el filtro de país, los de **isomalt o "cristal"** tienen unos 7 anunciantes de infoproducto. El error vino de buscar solo "chupetines" y no los nombres de la técnica ("paletas de cristal", "paletas botánicas", "paletas para cócteles").
+
+| Días | Ads | Anunciante | Evidencia | Mercado | Link | Qué vende |
+|---|---|---|---|---|---|---|
+| ~8 (desde ~2026-11-11) | ~7 | DulceSabor | 🟡 | llega a AR | https://www.facebook.com/ads/library/?id=1677067053816400 | "5 PDFs de paletas para cócteles" |
+| ~3 (desde ~2026-11-16) | 20 | Cocina Saludable y Facil | 🟡 | LATAM | https://www.facebook.com/ads/library/?id=927202413690333 | "Haz tus propias paletas para cócteles" |
+| ~2 | 3 | Bienestar Integral Digital | ⚪ | AR (habla de vos) | https://www.facebook.com/ads/library/?id=2025742114781427 | "Aprendé a hacer paletas de cristal en casa" / "La flor que aparece en tu copa" |
+| ~3 | 3 | Aprendemos.juntas. | ⚪ | llega a AR | https://www.facebook.com/ads/library/?id=1314894820763490 | "Guía digital: Paletas Botánicas Gourmet" |
+| ~8 | 5+ | Recetas Gourmet by Proyecta | 🟡 | llega a AR | https://www.facebook.com/ads/library/?id=1756001075499096 | Producto con isomalt (sin confirmar cuál), 60% off |
+| — | 6 resultados, todos físicos | cotillones y mayoristas (navicotillon, Cotillón Carlitos) | — | AR | — | **Chupetines de chocolate**: en AR solo se venden ya hechos; no apareció ningún infoproducto |
+| — | 259 + 217 resultados, todos físicos | docerías chicas de Brasil | 🟢 como objeto | Brasil | — | Pirulitos de chocolate personalizados para cumpleaños: la demanda de vender está probada en Brasil |
+
+Hueco (hipótesis): **chupetines de chocolate personalizados para cumpleaños y souvenirs**. En AR no apareció ningún infoproducto; en Brasil es un rubro de emprendedoras. Falta buscar "chupetines con foto" y "chupetines personalizados" con filtro AR.
