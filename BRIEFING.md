@@ -9,7 +9,7 @@
 
 | Qué | Lo pide |
 |---|---|
-| Tamy eligió **chupetines decorados** (2026-11-19). Falta confirmar el ángulo: Investigación recomienda **chupetines de chocolate personalizados para cumpleaños** (0 competidores en AR), porque los de isomalt o "cristal" ya tienen ~7. Falta decidir si queda en USD 19,90 (la competencia vende a ARS 1.600-1.900). Detalle en `RAW/cazas.md` | Investigación |
+| Aprobar la **oferta de chupetines decorados**: el ángulo (recomendado: chocolate personalizado para cumpleaños y souvenirs, 0 competidores en AR), el precio (propuesto: **ARS 9.900**, tachado ARS 39.900, porque la competencia cobra ARS 1.600-1.900 y USD 19,90 serían ≈ ARS 31.000) y los 4 bonos. Detalle en `OUTPUTS/lanzamientos/chupetines-decorados.md` | Productos |
 | Crear la **fanpage y el Instagram** de la marca de ebooks (en español) y conectarlos al portfolio comercial. Hoy el portfolio no tiene ninguna página (2026-11-19) | Meta |
 
 ## El negocio hoy
@@ -25,7 +25,7 @@
 
 | Qué | Quién | Estado | Fecha |
 |---|---|---|---|
-| | | | |
+| Ebook de chupetines decorados | Productos | 10%: la oferta está propuesta y espera a Tamy | 2026-11-19 |
 
 ## Próximos pasos
 
