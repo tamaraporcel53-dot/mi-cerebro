@@ -9,6 +9,7 @@
 
 | Qué | Lo pide |
 |---|---|
+| **Elegir el primer ebook** entre las 3 ideas de repostería (velas comestibles · chupetines decorados · pan dulce para vender) y decidir si queda en USD 19,90: en Argentina la competencia vende a ARS 1.600-1.900. Detalle en `RAW/cazas.md` (2026-11-19) | Investigación |
 | Crear la **fanpage y el Instagram** de la marca de ebooks (en español) y conectarlos al portfolio comercial. Hoy el portfolio no tiene ninguna página (2026-11-19) | Meta |
 
 ## El negocio hoy
@@ -29,6 +30,6 @@
 ## Próximos pasos
 
 1. ~~Carpeta fija + repositorio privado en GitHub~~ hecho el 2026-11-19: `C:\Users\Tamara\Documents\mi-cerebro` → github.com/tamaraporcel53-dot/mi-cerebro, guardado automático probado (agente **Sistemas**)
-2. Validar una oferta con `imperiowhale` (ya instalada el 2026-11-19) y con el buscador de ofertas propio (agente **Investigación**)
+2. Validar una oferta con `imperiowhale` (ya instalada el 2026-11-19; caza de repostería hecha el 2026-11-19: 3 ideas en `RAW/cazas.md`, falta que Tamy elija) y con el buscador de ofertas propio (agente **Investigación**)
 3. Elegir el primer ebook y armar producto, landing y checkout en Impultienda con Mercado Pago en pesos (agente **Productos**)
 4. Preparar Meta: ~~cuenta publicitaria en USD~~ lista el 2026-11-19 (termina en 7584, USD, activa, con tarjeta; ⚠️ no tocar "cambiar moneda" ni zona horaria: cierra la cuenta); faltan píxel, fanpage, Instagram y dominio (agente **Meta**)
