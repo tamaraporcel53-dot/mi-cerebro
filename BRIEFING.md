@@ -9,7 +9,7 @@
 
 | Qué | Lo pide |
 |---|---|
-| ⚠️ La única cuenta publicitaria de Meta está en **ARS**, no en USD (visto el 2026-11-19 desde la nube). Decidir: crear una cuenta nueva en USD (Meta no deja cambiar la moneda, sin confirmar) | Sistemas |
+| Crear la cuenta publicitaria de Meta **en USD** para los anuncios (decidido por Tamy el 2026-11-19). La de **ARS** que ya existe no se usa para anuncios | Sistemas → Meta |
 
 ## El negocio hoy
 
