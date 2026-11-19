@@ -9,8 +9,7 @@
 
 | Qué | Lo pide |
 |---|---|
-| Instalar Git (git-scm.com) y crear la cuenta de GitHub: hoy Git no está en la compu | Cerebro |
-| Mover el cerebro a una carpeta fija (hoy está en una carpeta temporal) | Cerebro |
+| Energía con cargador: suspensión e hibernación en "Nunca" y tapa en "No hacer nada" (al 2026-11-19 se duerme a los 10 min) | Sistemas |
 
 ## El negocio hoy
 
@@ -29,7 +28,7 @@
 
 ## Próximos pasos
 
-1. Pasar el cerebro a una carpeta fija y conectarlo a un repositorio privado de GitHub (agente **Sistemas**)
+1. ~~Carpeta fija + repositorio privado en GitHub~~ hecho el 2026-11-19: `C:\Users\Tamara\Documents\mi-cerebro` → github.com/tamaraporcel53-dot/mi-cerebro, guardado automático probado (agente **Sistemas**)
 2. Validar una oferta con `imperiowhale` (ya instalada el 2026-11-19) y con el buscador de ofertas propio (agente **Investigación**)
 3. Elegir el primer ebook y armar producto, landing y checkout en Impultienda con Mercado Pago en pesos (agente **Productos**)
 4. Preparar Meta: cuenta publicitaria **en USD**, píxel, fanpage, Instagram y dominio (agente **Meta**)
