@@ -28,6 +28,8 @@
 
 ## Bonos
 
+Valores de anclaje propuestos (sin aprobar): Bono 1 ARS 9.900 · Bono 2 ARS 7.900 · Bono 3 ARS 4.900 · Bono 4 ARS 7.300 = ARS 30.000. Más la guía (ARS 19.900) = ARS 49.900, el precio tachado. La competencia en AR pone valores de AR$ 9.990 a 14.990 por bono (según Investigación, décima vuelta).
+
 | Bono | Contenido |
 |---|---|
 | 1 · De tu foto al dibujo en 10 minutos | Método: elegir la foto → espejar → pasar a líneas → calcar al revés de la tela |
