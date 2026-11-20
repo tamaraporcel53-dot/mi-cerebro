@@ -35,7 +35,7 @@
 
 | Qué | Quién | Estado | Fecha |
 |---|---|---|---|
-| Ebook **retrato de mascota en aguja mágica**: armar la oferta (contenido, método foto → dibujo → tela, bonos, lista de materiales en AR) | Productos | 20%: oferta aprobada; borrador de texto del ebook (23 págs., 0 créditos) listo; las imágenes esperan que Tamy conecte Higgsfield | 2026-11-19 |
+| Ebook **retrato de mascota en aguja mágica**: **tienda completa en Impultienda por el conector** (landing, ebook + 4 bonos como entregables, order bump en el checkout, OTOs post-compra). Confirmado por Tamy el 2026-11-20 después de la caza de ofertas escaladas (duodécima vuelta: HeyHobby, ~320 anuncios desde 2026-04-15) | Productos | 20%: borrador de texto listo; imágenes frenadas (Higgsfield con 10 créditos; hacen falta ~62) | 2026-11-20 |
 | Validar punch needle (caza, competencia, precios) | Investigación | **Hecho** (vueltas 6 a 9 en `RAW/cazas.md`) | 2026-11-19 |
 | Ebook de pan dulce relleno | Productos | **Descartado por ahora**: Tamy eligió punch needle (salir de repostería) | 2026-11-19 |
 
