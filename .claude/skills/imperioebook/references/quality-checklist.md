@@ -74,6 +74,7 @@ Un solo item en rojo y no se entrega. Si un item no se puede verificar, se dice 
 - [ ] **50 MB o menos** (es el tope de Impultienda)
 - [ ] Nombre de archivo profesional (no `ebook_v3_final_DEFINITIVO.pdf`)
 - [ ] Metadatos del PDF sin la marca Imperio
+- [ ] **Sin marcas internas en el texto del comprador:** buscar `sin confirmar|sin aprobar|a verificar|BORRADOR|\[` en el texto del PDF y que dé **cero** (ej. `pdftotext ebook.pdf - | grep -Ei 'sin confirmar|sin aprobar|a verificar|borrador|\['`). Lo dudoso se verifica, se escribe en general o se saca; la marca es para el cerebro, no para el producto (2026-11-20: 8 PDF salieron con 31 "(sin confirmar)")
 - [ ] Cargado con `impultienda_cargar_entregable` (`subir` → PUT → `confirmar`)
 - [ ] Si había link externo de entrega, el usuario sabe que se quitó
 - [ ] Compra de prueba pedida al usuario: **no se afirma que el comprador lo recibe sin ella**

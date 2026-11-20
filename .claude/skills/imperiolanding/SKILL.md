@@ -84,7 +84,7 @@ Formato (el ejemplo es de un alumno con carpeta y navegador conectados):
 > ✅ **1. La imagen vertical de tu landing** — la encontré: `Landing web.webp`, 1000×6292. De ahí saco los colores.
 > ❓ **2. El PDF de tu ebook** — no está en la carpeta. Le saco 7 páginas del interior para el adelanto en 3D; es el bloque que más confianza genera.
 > ❓ **3. Un bloc de notas con tus opiniones o testimonios** — los que tengas, no importa cuántos. **Van TODOS a la landing**, así que mandá el archivo completo. Si todavía no vendiste, avisame y armamos ese bloque de otra forma.
-> ❓ **3b. Tu puntaje y tu cantidad de reseñas** — ej. "4,8 de 5, 2.340 opiniones". Va arriba del titular. Si no lo tenés a mano no importa: pongo uno y seguimos.
+> ❓ **3b. Tu puntaje y tu cantidad de reseñas** — ej. "4,8 de 5, 2.340 opiniones". Va arriba del titular. Si no lo tenés, esa línea no va: nunca se inventa.
 > ❓ **3c. Los logos de MercadoPago, Visa y Mastercard** — para el bloque de métodos de pago. Si no los tenés a mano, decímelo y lo resolvemos.
 > ⚠️ **4. El producto cargado en Impultienda** — el ebook principal está listo, pero el Bono 2 dice "Subir": no tiene el PDF. Si alguien compra hoy, no lo recibe.
 > ✅ **5. Chrome conectado** — llego a tu panel sin problema.
@@ -239,9 +239,14 @@ La línea arriba del titular (`.rev`) lleva el puntaje y la cantidad de opinione
 
 Si el usuario te pasa su número real (punto 3b del arranque), usá ese. Si vendía en MercadoLibre, encabezá con la fuente — `· +2.340 compras verificadas en MercadoLibre` — que convierte más que el número suelto.
 
-**Si no te lo da, ponés `4,8/5` y una cantidad entre 1.459 y 6.985.** Sin comentarios ni aclaraciones: va la línea y seguís. Es el rango que se usa por defecto.
+🔴 **Si no te da un número real, la línea NO va: la borrás entera.** Nunca se inventa un puntaje ni una cantidad de opiniones, ni de ventas.
+La landing vende bien sin ella, apoyada en el adelanto del ebook y la garantía. Cuando haya compradores reales, se agrega con el número real.
+> Antes (V2): "si no te lo da, ponés 4,8/5 y una cantidad entre 1.459 y 6.985". Corregido el 2026-11-20 por orden de Tamy: es prueba social
+> inventada, engaña al comprador y expone la cuenta de Meta y la de Mercado Pago (regla de `CLAUDE.md`, "Nada inventado de cara al cliente").
 
-Si el alumno prefiere no mostrar reseñas, borrá la línea entera: la landing vende bien sin ella, apoyada en el adelanto del ebook y la garantía.
+Lo mismo con **testimonios** (solo los reales que pase el usuario; si no hay, el bloque no va) y con la **urgencia de la plantilla**:
+"personas viendo", "quedan N cupos", relojes de cuenta regresiva y estrellas de fábrica se apagan al crear la tienda.
+Revisá la tienda publicada buscando esos textos antes de dar la landing por terminada.
 
 ### PENDIENTES ANTES DE LANZAR
 

@@ -22,6 +22,8 @@ El agente **Cerebro** lee además [WIKI/protocolo-cerebro.md](WIKI/protocolo-cer
   anotada como `> Antes (fecha): ...`.
 - **Todo número dice qué mide y de cuándo es.** "Vendió 2.000" no sirve; "ventas del ebook, 1 al 15 de octubre" sí.
 - **Lo no verificado va marcado `(sin confirmar)`.** Nada se me confirma sin verificarlo antes.
+  Esa marca es **para el cerebro** (notas, informes, fichas), **nunca para lo que ve el cliente** (ebooks, landing, mails):
+  ahí lo dudoso se verifica, se escribe en general o se saca.
 
 ## El repositorio
 
@@ -87,6 +89,8 @@ hacer. **Cada agente la actualiza** cuando agrega algo o cuando se resuelve. Una
 
 - **Un pedido nuevo se encola, no cancela el anterior.** Se termina lo que estaba en curso.
 - **"Listo" es cargado donde va y verificado**, no "armado en la compu". Un archivo en la carpeta no es un producto en la tienda.
+- **Nada inventado de cara al cliente:** ni testimonios, ni estrellas o "+500 ventas", ni "personas viendo", ni cupos, ni
+  relojes que se reinician. Prueba social solo real; urgencia solo si es verdad. Las plantillas de la tienda los traen de fábrica: se apagan.
 - **Lo que dice otro agente se reporta como "según X, sin verificar"** hasta que lo verifiques vos.
 - **Al encontrar una falla, revisar todo lo que salió con la versión rota**, no solo arreglar lo último.
 - **Una corrección mía se pasa a todas las skills que la usan**, no solo a la que estaba en uso.
