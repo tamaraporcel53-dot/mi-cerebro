@@ -7,9 +7,10 @@
   @page { size: A4; margin: 0; }
   :root { --azul:#1A3D6B; --naranja:#FF8C42; --fondo:#F0F7FF; --texto:#1f2a37; --suave:#5b6b80; }
   * { box-sizing: border-box; }
-  body { margin:0; font-family: "Segoe UI", Arial, sans-serif; color: var(--texto); background:#fff; }
-  .page { width:210mm; height:297mm; padding:20mm 18mm 16mm; position:relative; overflow:hidden;
+  body { counter-reset: pg; margin:0; font-family: "Segoe UI", Arial, sans-serif; color: var(--texto); background:#fff; }
+  .page { counter-increment: pg; width:210mm; height:297mm; padding:20mm 18mm 16mm; position:relative; overflow:hidden;
           page-break-after: always; break-after: page; background: var(--fondo); }
+  .foot .n::after { content: counter(pg); }
   .page:last-child { page-break-after: auto; break-after: auto; }
   .head { font-size:9pt; color: var(--suave); letter-spacing:.08em; text-transform:uppercase; margin-bottom:8mm;
           display:flex; justify-content:space-between; border-bottom:1px solid #cfdcec; padding-bottom:3mm; }
@@ -73,19 +74,20 @@
     <tr><td>3 · Elegir la foto</td><td>6</td></tr>
     <tr><td>4 · De la foto a la tela</td><td>7</td></tr>
     <tr><td>5 · La técnica paso a paso</td><td>8</td></tr>
-    <tr><td>6 · El pelaje</td><td>9</td></tr>
-    <tr><td>7 · Ojos, nariz y hocico</td><td>10</td></tr>
-    <tr><td>8 · Fondo, nombre y terminación</td><td>11</td></tr>
-    <tr><td>9 · Errores comunes</td><td>12</td></tr>
+    <tr><td>5 · Los 6 rellenos, uno por uno</td><td>9</td></tr>
+    <tr><td>6 · El pelaje</td><td>10</td></tr>
+    <tr><td>7 · Ojos, nariz y hocico</td><td>11</td></tr>
+    <tr><td>8 · Fondo, nombre y terminación</td><td>12</td></tr>
+    <tr><td>9 · Errores comunes</td><td>13</td></tr>
     <tr><th colspan="2">Tus 4 bonos</th></tr>
-    <tr><td>Tus 4 bonos</td><td>13</td></tr>
-    <tr><td>Bono 1 · De tu foto al dibujo en 10 minutos</td><td>14</td></tr>
-    <tr><td>Bono 2 · 20 moldes de razas</td><td>17</td></tr>
-    <tr><td>Bono 3 · Materiales en Argentina</td><td>19</td></tr>
-    <tr><td>Bono 4 · Vendé retratos por encargo</td><td>20</td></tr>
-    <tr><td>¡A bordar!</td><td>22</td></tr>
+    <tr><td>Tus 4 bonos</td><td>14</td></tr>
+    <tr><td>Bono 1 · De tu foto al dibujo en 10 minutos</td><td>15</td></tr>
+    <tr><td>Bono 2 · 20 moldes de razas</td><td>18</td></tr>
+    <tr><td>Bono 3 · Materiales en Argentina</td><td>20</td></tr>
+    <tr><td>Bono 4 · Vendé retratos por encargo</td><td>21</td></tr>
+    <tr><td>¡A bordar!</td><td>23</td></tr>
   </table>
-  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span>2</span></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
 </section>
 
 <!-- 3 · BIENVENIDA -->
@@ -94,6 +96,14 @@
   <h2>Bienvenida</h2>
   <p>Hay fotos que no se borran nunca del celular: tu perro dormido en el sillón, tu gato mirando por la ventana. Esta guía es para sacar una de esas fotos del celular y convertirla en un cuadro que podés tocar, colgar o regalar.</p>
   <p>La aguja mágica (en inglés, <i>punch needle</i>) es una técnica de bordado en la que la aguja hace casi todo el trabajo. No hace falta saber bordar a mano, y con el método de esta guía tampoco hace falta saber dibujar.</p>
+  <div class="box azul">
+    <p><b>¿Te suena alguna de estas?</b></p>
+    <ul>
+      <li>"No sé dibujar." → No hace falta: el Bono 1 pasa la foto a líneas por vos.</li>
+      <li>"Nunca bordé, no me va a salir." → La aguja mágica es lo más fácil para arrancar, y si un punto sale mal, se saca y listo.</li>
+      <li>"Los materiales deben ser caros." → Con un kit básico alcanza para el primer retrato (Bono 3).</li>
+    </ul>
+  </div>
   <h3>Cómo usar esta guía</h3>
   <ol>
     <li>Leé los capítulos 1 a 3 antes de comprar nada.</li>
@@ -102,7 +112,7 @@
     <li>Si algo sale raro, andá directo al capítulo 9.</li>
   </ol>
   <div class="box"><p><b>Tu primer objetivo:</b> un retrato en un bastidor de 200 mm (sin confirmar). Es el tamaño justo para una cara de perro o gato, y se termina en un fin de semana (sin confirmar).</p></div>
-  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span>3</span></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
 </section>
 
 <!-- 4 · CAP 1 -->
@@ -119,7 +129,7 @@
   </ul>
   <div class="box azul"><p><b>Lo más importante de todo el libro:</b> se borda <b>desde el revés</b>. Vos trabajás de un lado y el dibujo con rulitos aparece del otro. Por eso el dibujo se calca <b>al revés</b>, como en un espejo. El Bono 1 te muestra cómo hacerlo sin pensar.</p></div>
   <div class="img" style="height:60mm">[IMAGEN FINAL: corte de la tela de costado, con la aguja entrando por el revés y los rulitos saliendo del lado del derecho]</div>
-  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span>4</span></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
 </section>
 
 <!-- 5 · CAP 2 -->
@@ -139,7 +149,7 @@
     <tr><td><b>Cola vinílica</b></td><td>Para fijar el revés al final (capítulo 8).</td></tr>
   </table>
   <div class="box"><p>Dónde conseguir cada cosa en Argentina, en el <b>Bono 3</b>.</p></div>
-  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span>5</span></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
 </section>
 
 <!-- 6 · CAP 3 -->
@@ -172,7 +182,7 @@
   </div>
   <div class="box"><p><b>Truco:</b> sacale varias fotos nuevas a la altura de sus ojos, con un premio en la mano para que mire a la cámara. Elegí la mejor.</p></div>
   <div class="img" style="height:55mm">[IMAGEN FINAL: dos fotos de un perro, una buena y una mala, con un tilde y una cruz]</div>
-  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span>6</span></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
 </section>
 
 <!-- 7 · CAP 4 -->
@@ -190,7 +200,7 @@
     <li><b>Marcá los colores</b> con letras chiquitas dentro de cada zona (A, B, C…).</li>
   </ol>
   <div class="box azul"><p>Si no tenés una buena foto, usá uno de los <b>20 moldes de razas del Bono 2</b>: ya vienen espejados y al tamaño justo.</p></div>
-  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span>7</span></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
 </section>
 
 <!-- 8 · CAP 5 -->
@@ -217,10 +227,30 @@
       <li>Probá cada largo en un costado de la tela antes de usarlo en el retrato.</li>
     </ul>
   </div>
-  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span>8</span></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
 </section>
 
-<!-- 9 · CAP 6 -->
+<!-- 9 · CAP 5 (2/2) RELLENOS -->
+<section class="page">
+  <div class="head"><span>Tu Mascota en Aguja Mágica</span><span>Capítulo 5</span></div>
+  <span class="badge">Capítulo 5 · 2/2</span>
+  <h2>Los 6 rellenos, uno por uno</h2>
+  <p>Con estos 6 rellenos se hace cualquier retrato. Practicalos en un costado de la tela antes de empezar.</p>
+  <table>
+    <tr><th>Relleno</th><th>Cómo se hace</th><th>Para qué se usa</th></tr>
+    <tr><td><b>1 · Contorno</b></td><td>Una sola fila de puntos siguiendo la línea</td><td>Bordes de la cara, orejas, nombre</td></tr>
+    <tr><td><b>2 · Filas</b></td><td>Filas paralelas, una al lado de la otra</td><td>Fondos y zonas grandes de un color</td></tr>
+    <tr><td><b>3 · Espiral</b></td><td>De afuera hacia adentro, en círculos</td><td>Ojos, nariz y zonas redondas</td></tr>
+    <tr><td><b>4 · Siguiendo el pelo</b></td><td>Filas que van en la dirección de las flechas (capítulo 6)</td><td>Todo el pelaje</td></tr>
+    <tr><td><b>5 · Salpicado</b></td><td>Puntos sueltos de un color encima de otro</td><td>Pasar de un tono a otro sin corte</td></tr>
+    <tr><td><b>6 · Recortado</b></td><td>Rulito alto y después cortado con tijera</td><td>Efecto peluche en el pecho y las orejas</td></tr>
+  </table>
+  <div class="img" style="height:62mm">[IMAGEN FINAL: 6 muestras chiquitas en fila, una por relleno, vistas del lado del derecho]</div>
+  <div class="box"><p><b>Del derecho y del revés:</b> del lado donde bordás se ven puntos chatos, como un pespunte, y del otro lado, los rulitos. Algunos retratos quedan lindos mostrando el lado chato: probá los dos.</p></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+
+<!-- 10 · CAP 6 -->
 <section class="page">
   <div class="head"><span>Tu Mascota en Aguja Mágica</span><span>Capítulo 6</span></div>
   <span class="badge">Capítulo 6</span>
@@ -240,7 +270,7 @@
     <li>Con 3 a 4 colores alcanza (sin confirmar): uno oscuro, uno medio, uno claro y un brillo.</li>
   </ul>
   <div class="img" style="height:50mm">[IMAGEN FINAL: cara de gato con las flechas de dirección del pelo dibujadas]</div>
-  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span>9</span></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
 </section>
 
 <!-- 10 · CAP 7 -->
@@ -256,7 +286,7 @@
     <li><b>Mirala de lejos</b>: dalo vuelta cada tanto y miralo desde 2 metros. Si se parece de lejos, vas bien.</li>
   </ol>
   <div class="box"><p><b>Si no se parece:</b> casi siempre es la distancia entre los ojos o el tamaño de la nariz. Sacá esos puntos y volvé a hacerlos. Es más fácil que arrancar de nuevo.</p></div>
-  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span>10</span></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
 </section>
 
 <!-- 11 · CAP 8 -->
@@ -275,7 +305,7 @@
     <li>Dejá el retrato en el bastidor y recortá la tela sobrante, o montalo en un marco.</li>
   </ol>
   <div class="box azul"><p><b>Para regalar:</b> envolvelo con papel de seda, con una tarjeta que diga el nombre de la mascota. Hay más ideas en el Bono 4.</p></div>
-  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span>11</span></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
 </section>
 
 <!-- 12 · CAP 9 -->
@@ -293,7 +323,7 @@
     <tr><td>No se parece</td><td>Los ojos o la nariz quedaron corridos</td><td>Sacá esos puntos y rehacelos (capítulo 7)</td></tr>
     <tr><td>Los colores se mezclan</td><td>Se bordó el claro antes que el oscuro</td><td>Siempre del más oscuro al más claro</td></tr>
   </table>
-  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span>12</span></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
 </section>
 
 <!-- 13 · SEPARADOR BONOS -->
@@ -321,7 +351,7 @@
     <li><b>Guardala como copia</b>: la original queda intacta para mirar los colores reales.</li>
   </ol>
   <div class="img" style="height:62mm">[IMAGEN FINAL: 4 pantallas de celular en fila: foto original → recortada → espejada → blanco y negro con contraste]</div>
-  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span>14</span></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
 </section>
 
 <!-- 15 · BONO 1 (2/3) -->
@@ -339,7 +369,7 @@
   </ol>
   <div class="box azul"><p><b>Si la tela no deja ver la pantalla:</b> calcá primero sobre un papel fino y después pasá ese papel a la tela contra una ventana de día.</p></div>
   <div class="box"><p><b>Ojo:</b> con la pantalla, apoyá la tela con cuidado y sin presionar: el marcador no puede tocar el vidrio.</p></div>
-  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span>15</span></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
 </section>
 
 <!-- 16 · BONO 1 (3/3) -->
@@ -358,7 +388,7 @@
   </table>
   <div class="box azul"><p><b>Llevá la foto a la mercería</b> (o mirala al lado de la pantalla cuando compres online) para elegir las lanas: ponelas al lado de la foto y quedate con las que se parezcan.</p></div>
   <div class="box"><p>Listo: tenés el dibujo espejado, al tamaño justo y con los colores marcados. Seguí en el capítulo 5.</p></div>
-  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span>16</span></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
 </section>
 
 <!-- 17 · BONO 2 LISTA -->
@@ -396,7 +426,7 @@
     </table>
   </div>
   <div class="img" style="height:45mm">[VERSIÓN FINAL: 1 página por molde, 20 páginas más, dibujadas con Higgsfield. En este borrador va solo la lista]</div>
-  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span>17</span></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
 </section>
 
 <!-- 18 · BONO 2 USO -->
@@ -407,12 +437,12 @@
   <ol class="steps">
     <li><b>Elegí la raza</b> que más se parezca a tu mascota. Si es mestiza, elegí la que tenga orejas y hocico parecidos.</li>
     <li><b>Imprimí la página</b> al 100%, sin "ajustar a la hoja", o abrila en el celular al tamaño del bastidor.</li>
-    <li><b>Calcala</b> en la tela a contraluz (Bono 1, página 15). Ya viene espejada.</li>
+    <li><b>Calcala</b> en la tela a contraluz (Bono 1, página 16). Ya viene espejada.</li>
     <li><b>Cambiá los colores</b> por los de tu mascota: las manchas, el color de los ojos y el del pelo.</li>
     <li><b>Agregá lo propio</b>: una oreja caída, una mancha en el ojo, el collar. Eso lo hace único.</li>
   </ol>
   <div class="box azul"><p><b>Para practicar:</b> antes de tu primer retrato, hacé un molde chico de prueba. Es la mejor forma de soltar la mano.</p></div>
-  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span>18</span></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
 </section>
 
 <!-- 19 · BONO 3 -->
@@ -439,7 +469,7 @@
     </ul>
   </div>
   <div class="box"><p><b>Para ahorrar:</b> comprá el kit para el primer retrato y después sumá solo las lanas de los colores que te falten.</p></div>
-  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span>19</span></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
 </section>
 
 <!-- 20 · BONO 4 (1/2) -->
@@ -469,7 +499,7 @@
     <li>Pedí una seña antes de arrancar y el resto al entregar.</li>
     <li>Acordá la fecha de entrega antes de cobrar la seña.</li>
   </ul>
-  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span>20</span></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
 </section>
 
 <!-- 21 · BONO 4 (2/2) -->
@@ -489,7 +519,7 @@
     <li>Con luz de ventana, de día y sobre un fondo liso.</li>
   </ul>
   <div class="box"><p><b>Fechas para avisar:</b> Navidad, Día del Animal, cumpleaños de la mascota y Día de la Madre y del Padre.</p></div>
-  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span>21</span></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
 </section>
 
 <!-- 22 · CIERRE -->
