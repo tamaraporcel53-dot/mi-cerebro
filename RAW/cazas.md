@@ -160,3 +160,28 @@ Patrones (hipótesis):
 - El paso que nadie resuelve en un PDF es **foto → contorno → tela**. HeyHobby lo resuelve imprimiendo la tela.
 
 Falta (parte 2, necesita navegador y el OK de Tamy): ver las landings de Bordando com Amor, Aline Martins y Magiconinja, y leer completas las de Pordentro y Un Mundo (capítulos, bonos y cómo muestran el paso a paso). Son ~8-10 pasos. El contenido interno de cada ebook (páginas y moldes reales) solo se ve **comprándolo**: eso queda afuera, salvo que Tamy lo decida.
+
+## 2026-11-19 (undécima vuelta) · los que más venden en aguja mágica, parte 2 (navegador, OK de Tamy vía Cerebro). Solo estructura, sin copiar
+
+| Producto | Formato y cómo se entrega | Estructura (lo que muestra la landing) | Promesa principal | Bonos | Cómo muestra el paso a paso | Precio | Señal de venta |
+|---|---|---|---|---|---|---|---|
+| **Bordando com Amor** (BR) | Clases por **WhatsApp** + PDF con moldes listos + certificado + acceso de por vida | sin landing: el anuncio lleva directo a WhatsApp | "No fue culpa tuya, fue el método equivocado": aprender desde cero, a tu ritmo | certificado, PDF de moldes | video del anuncio (1:09) | **R$ 9,90, "recibís primero, pagás después"** | 🟢 al aire desde el **2026-06-15** (~157 días) |
+| **Aline Martins** (BR) "Bordado russo" | Landing con **quiz** ("armá tu plan personalizado") antes del precio | tendencia 2027 → promesa de ingresos → testimonios → botón al quiz | Ganar hasta R$ 3.240 por mes desde casa con bordado ruso (peonías y aves en seda) | no visible antes del quiz | no visible | no visible (detrás del quiz) | 🟡 45 anuncios, todos de ~1 día (relanza) |
+| **Pordentro Studio** (AR) "Curso Inicial de Bordado con Aguja Mágica" | Curso en **video** + grupo de WhatsApp con la profe | 4 pasos: materiales (y qué buscar en tu país) → pasar el patrón a la tela → punto a punto y arreglar errores → terminar y mostrar. Comparación "sin guía / con el curso". Preguntas frecuentes (si nunca bordé, materiales, cómo lo recibo, horarios, si me trabo, cómo pago) | Desde cero, con +150 patrones; "no vas a estar sola" | 5 bonos: (1) diseños y moldes para imprimir, (2) guía de combinación de materiales, (3) guía de colores, (4) solución de errores comunes, (5) costos, precios y ventas en redes. + **acompañamiento por WhatsApp** | video + patrones para imprimir | **$18.900** (antes $36.000), en pesos, con tarjeta o transferencia | 🟡 desde 2026-10-22 |
+| **Un Mundo de Manualidades** (AR) "Puntada Mágica" | **Guía PDF**: "37 páginas, 10 capítulos, los 8 puntos con dibujos y moldes para calcar", para leer en el celular, llega al mail | Problemas con los que se identifica la compradora ("te suena si…": no sabés dibujar, la tarde se te va con el celular, compraste cursos que nunca abriste, creés que los materiales son caros) → 4 cambios → testimonios en formato chat de WhatsApp → vista de 7 páginas de adentro → "en una semana tenés tu primera pieza" → oferta | "De 'no me va a salir' a '¡lo hice yo!'"; 20 minutos por día, una semana | Bonos de temporada y de uso: "Tu arbolito bordado" ($12.990), "Bordá tu ropa" ($14.990), "Regalitos en una tarde" ($12.990) y 2 más de $9.990 (sin ver el nombre) | **calco a contraluz en la ventana** + cada punto dibujado uno por uno | **AR$ 19.900** (principal "valuado" en AR$ 49.900; total $110.850) · garantía de 7 días | 🟡 desde 2026-11-02, 27 anuncios |
+| **HeyHobby** (EN/EU) | **kit físico** con tu mascota impresa en la tela | — | "Tu mascota en lana desde la foto del celular" | "El tercer kit, gratis" | lo resuelve la tela impresa | no visto | 🟡 315 anuncios; el de mascota, desde el 2026-11-13 |
+
+Descartado: Magiconinja (apareció con "agulha mágica", pero vende un curso de magia: falso positivo).
+
+**Qué funciona (para Productos, hipótesis):**
+1. **"Desde cero / no sabés dibujar"** está en todos. El miedo número uno es "no me va a salir".
+2. **Pasar el dibujo a la tela** lo resuelven con **calco a contraluz** (ventana) o moldes para imprimir. Para la mascota: foto → contorno → calco en la ventana.
+3. **Bonos que funcionan**: errores comunes, materiales y colores, temporada (arbolito), "bordá tu ropa", y costos y precios para vender.
+4. **Acompañamiento** por WhatsApp o grupo (Pordentro, Bordando com Amor): hace que el producto valga más que un PDF solo.
+5. **Mostrar 5 a 7 páginas de adentro** en la landing (Un Mundo).
+6. Garantía de 7 días y entrega inmediata al mail.
+
+### Precios de materiales en AR (para el bono "Dónde comprar")
+- **Mercado Libre AR y Shein bloquearon el navegador con una verificación anti-robots** (2026-11-19): **no se pudo observar ningún precio**. La API pública de Mercado Libre también da 403.
+- Solo hay datos de resúmenes de búsqueda web, **no observados** (sin confirmar): kits DIY de punch needle en Shein AR a ~ARS 4.954 y ~ARS 9.147 (precio estimado), y en Desertcart AR a AR$ 3.299-12.129 (sin stock). En Mercado Libre AR existen kits "Aguja Mágica + lanas + bastidor + tela" (ERMITA CREA), tela panamá para punch needle (mercedesherenu) y agujas de 3 puntas (CANDY CRAFT), pero sin precio visible.
+- Para cerrar este dato hace falta una persona: abrir esas 3 tiendas de Mercado Libre desde un navegador común (unos 2 minutos).
