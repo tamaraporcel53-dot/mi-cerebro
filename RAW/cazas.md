@@ -89,3 +89,23 @@ Ruido: luminária de cimento, laços de fita, papel marmorizado, flores de papel
 | no verificable (50 de 58 vistos, todos ≤2,3 días) | 58 | Bambolê Moldes Artes · Maria Flor Ateliê ("250+ projetos") · Marina Alves | 🟡 (50+ anuncios, antigüedad no verificable) | Brasil (USD/BRL) | https://www.facebook.com/ads/library/?id=2305856499955035 | Moldes de **muñecas de trapo**. En AR ya hay 2: Manos al arte ("Curso muñecas de trapo") y El Rincón de Mica ("Cosé tu primer animalito de trapo") |
 
 Patrón del día: lo que más se ve validado afuera en manualidades (punch needle, kokedama, yeso aromático) se vende como **objeto o kit físico**, y casi nadie vende la técnica en PDF: es el caso "objeto → técnica". En AR esos tres tienen 0 o 1 infoproducto. Mascotas y muñecas de trapo ya tienen competencia en AR. La API no deja confirmar la antigüedad de HeyHobby ni de Bambolê: falta abrir sus páginas en la biblioteca (orden por impresiones) para ver "N anuncios usan este contenido".
+
+## 2026-11-19 (séptima vuelta) · validación de punch needle / aguja mágica (pedido de Tamy vía Cerebro)
+
+> Corrige la sexta vuelta: "en AR 0 infoproductos de punch needle" es **falso**. Con los nombres locales ("aguja mágica", "bordado ruso") y el filtro AR aparecen ~8 infoproductos. El error vino de buscar solo el nombre en inglés: es el mismo que tuvimos con los chupetines (ver tercera vuelta).
+
+Consultas: aguja mágica (AR, 68 resultados) · bordado ruso (AR, 76) · punch (AR, solo ruido) · agulha mágica (230) · punch needle (BR). Validación por página: Pordentro Studio · Un Mundo de Manualidades · Aline Martins.
+
+| Días | Ads | Anunciante | Evidencia | Mercado | Link | Qué vende |
+|---|---|---|---|---|---|---|
+| ~28 (desde ~2026-10-22) | 12 | Pordentro Studio | 🟡 | AR (ARS, habla de vos) | https://www.facebook.com/ads/library/?id=28905520189143495 | "Bordado con aguja mágica desde cero" / "Aprendé bordado con aguja mágica"; ahora con ángulo de adornos navideños |
+| ~17 (desde ~2026-11-02) | 27 | Un Mundo de Manualidades | 🟡 | habla de vos (USD) | https://www.facebook.com/ads/library/?id=1702456864697796 | Bordado para principiantes ("Nunca bordaste: justamente por eso", "Tu arbolito, bordado por vos", "Bordado chino desde cero") |
+| ~12 (desde ~2026-11-07) | 3+ | Sarah lurdes | ⚪ | habla de vos (BRL) | https://www.facebook.com/ads/library/?id=2220255551854734 | "Aprendé BORDADO RUSO desde cero… nueva fuente de ingresos" |
+| ~8 (desde ~2026-11-11) | 10+ | Tranquila-Mente | ⚪ | llega a AR (USD) | https://www.facebook.com/ads/library/?id=2252239425348862 | "Recibe y después paga 🧶" (producto sin confirmar) |
+| ~4 | 3 | Bordados Lucía | ⚪ | AR (ARS) | https://www.facebook.com/ads/library/?id=2129609284313632 | "Dos técnicas, miles de oportunidades" |
+| 1-2 | 1-2 c/u | gaby deco home · Expansión Creativa · Creando a Mano · Anabella Cerini | ⚪ | llegan a AR | https://www.facebook.com/ads/library/?id=1010777168756517 | "Aprendé bordado ruso paso a paso" (gaby); los demás sin confirmar |
+| ~1 (relanzan) | 45 | Aline Martins | 🟡 volumen | Brasil (USD) | https://www.facebook.com/ads/library/?id=1455697223342720 | Agulha mágica (producto sin confirmar: no tiene titular) |
+
+Competencia en AR: **7 o más infoproductos** → según imperiowhale, hay que **buscar un subnicho** (no entrar de frente). Ninguno domina; el más viejo es Pordentro Studio, con ~28 días.
+Materiales en AR (búsqueda web, sin verificar precios): Mercado Libre AR tiene kits de "Aguja Mágica Punch Needle + lanas + bastidor + tela" (ERMITA CREA), tela panamá para punch needle (mercedesherenu) y agujas de 3 puntas (CANDY CRAFT). La fricción de materiales es baja.
+Pendiente (con navegador, espera el OK de Tamy): la antigüedad de HeyHobby y el precio real en las landings de Pordentro Studio y Un Mundo de Manualidades.

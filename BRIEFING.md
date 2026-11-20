@@ -10,11 +10,13 @@
 | Qué | Lo pide |
 |---|---|
 | **Bot Escala IU:** decidir si su regla (×2 con 1 venta y ROAS ≥ 2, cada 15 min) reemplaza a la tabla F6 de imperioproducto (+30% con 3 ventas y ROAS > 1,8, a las 23:30) y si aprobás que mueva presupuesto solo. No se construye hasta tener una campaña vendiendo (2026-11-19) | Sistemas |
+| **Punch needle / aguja mágica** (Investigación, 2026-11-19): **sí tiene competencia en AR**, unos 8 ebooks; el más viejo lleva ~28 días. El dato anterior de "0 competidores" estaba mal. Decidir: (A) seguir con un subnicho de aguja mágica, (B) buscar otra idea. Y si sigue, dar el OK para usar el navegador (unos 10-12 pasos) y ver el precio real de 2 competidores de AR. Detalle en `RAW/cazas.md`, séptima vuelta | Investigación |
 | Crear la **fanpage y el Instagram** de la marca de ebooks (en español) y conectarlos al portfolio comercial. Hoy el portfolio no tiene ninguna página (2026-11-19) | Meta |
 
 ## El negocio hoy
 
-- **Qué vendo:** ebooks digitales a USD 19,90. **Candidato elegido por Tamy el 2026-11-19: cuadros de punch needle (aguja mágica) en PDF**, en validación (antigüedad de los anuncios de afuera y precio real, sin confirmar). Se salió de repostería: ahí la competencia vende a USD 7-10
+- **Qué vendo:** ebooks digitales a USD 19,90. **Candidato elegido por Tamy el 2026-11-19: cuadros de punch needle (aguja mágica) en PDF**, en validación. **En AR sí hay competencia: unos 8 infoproductos con "aguja mágica" / "bordado ruso"** (Pordentro Studio, Un Mundo de Manualidades, Bordados Lucía, gaby deco home, Expansión Creativa y otros; verificado por Investigación y por el Cerebro el 2026-11-19)
+  > Antes (2026-11-19): "0 infoproductos en AR". Error del Cerebro: se buscó solo "punch needle" en inglés. Se salió de repostería: ahí la competencia vende a USD 7-10
   > Antes (2026-11-19): pan dulce relleno y chupetines de chocolate (repostería), en pausa
 - **Dónde vendo:** primero Argentina; después otros países (2026-11-19)
 - **Tienda y cobro:** Impultienda. En Argentina se cobra **en pesos con Mercado Pago**. Falta definir cuánto es el precio en pesos equivalente a USD 19,90
