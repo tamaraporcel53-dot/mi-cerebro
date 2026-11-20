@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Tu Mascota en Aguja Mágica — borrador</title>
+<style>
+  @page { size: A4; margin: 0; }
+  :root { --azul:#1A3D6B; --naranja:#FF8C42; --fondo:#F0F7FF; --texto:#1f2a37; --suave:#5b6b80; }
+  * { box-sizing: border-box; }
+  body { counter-reset: pg; margin:0; font-family: "Segoe UI", Arial, sans-serif; color: var(--texto); background:#fff; }
+  .page { counter-increment: pg; width:210mm; height:297mm; padding:20mm 18mm 16mm; position:relative; overflow:hidden;
+          page-break-after: always; break-after: page; background: var(--fondo); }
+  .foot .n::after { content: counter(pg); }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+  .head { font-size:9pt; color: var(--suave); letter-spacing:.08em; text-transform:uppercase; margin-bottom:8mm;
+          display:flex; justify-content:space-between; border-bottom:1px solid #cfdcec; padding-bottom:3mm; }
+  .foot { position:absolute; bottom:9mm; left:18mm; right:18mm; font-size:9pt; color: var(--suave);
+          display:flex; justify-content:space-between; }
+  h1 { font-size:30pt; color: var(--azul); margin:0 0 4mm; line-height:1.1; }
+  h2 { font-size:22pt; color: var(--azul); margin:0 0 5mm; line-height:1.15; }
+  h3 { font-size:13pt; color: var(--azul); margin:6mm 0 2mm; }
+  p, li { font-size:11pt; line-height:1.5; margin:0 0 2.5mm; }
+  ul, ol { padding-left:6mm; margin:0 0 3mm; }
+  .badge { display:inline-block; background: var(--naranja); color:#fff; font-weight:700; font-size:10pt;
+           padding:1.5mm 4mm; border-radius:20mm; margin-bottom:4mm; }
+  .box { background:#fff; border-left:4px solid var(--naranja); border-radius:3mm; padding:4mm 5mm; margin:4mm 0; }
+  .box.azul { border-left-color: var(--azul); }
+  .box p:last-child, .box ul:last-child { margin-bottom:0; }
+  .img { border:2px dashed #9fb4cf; border-radius:3mm; background:#fff; color:#7a8ca5; font-size:10pt;
+         display:flex; align-items:center; justify-content:center; text-align:center; padding:5mm; margin:4mm 0; }
+  .cols { display:grid; grid-template-columns: 1fr 1fr; gap:6mm; }
+  .steps { counter-reset: s; list-style:none; padding:0; }
+  .steps li { counter-increment: s; background:#fff; border-radius:3mm; padding:3mm 4mm 3mm 13mm; position:relative; margin-bottom:2.5mm; }
+  .steps li::before { content: counter(s); position:absolute; left:3.5mm; top:3mm; width:7mm; height:7mm; border-radius:50%;
+           background: var(--azul); color:#fff; font-weight:700; font-size:10pt; display:flex; align-items:center; justify-content:center; }
+  .steps li:nth-child(even)::before { background: var(--naranja); }
+  table { width:100%; border-collapse:collapse; background:#fff; border-radius:3mm; overflow:hidden; font-size:10.5pt; }
+  th { background: var(--azul); color:#fff; text-align:left; padding:2.5mm 3mm; }
+  td { padding:2.2mm 3mm; border-bottom:1px solid #e3ebf5; vertical-align:top; }
+  .toc td:last-child { text-align:right; font-weight:700; color: var(--azul); width:18mm; }
+  .cover { background: var(--azul); color:#fff; display:flex; flex-direction:column; justify-content:center; }
+  .cover h1 { color:#fff; font-size:40pt; }
+  .cover .sub { font-size:15pt; line-height:1.4; color:#dce8f7; max-width:150mm; }
+  .cover .img { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.4); color:#dce8f7; height:95mm; }
+  .sep { background: var(--naranja); color:#fff; display:flex; flex-direction:column; justify-content:center; }
+  .sep h1 { color:#fff; font-size:38pt; }
+  .sep p { font-size:14pt; }
+  .draft { position:absolute; top:6mm; right:8mm; font-size:8pt; background:#fff3cd; color:#7a5b00; padding:1mm 3mm; border-radius:2mm; }
+  .chat { background:#fff; border-radius:3mm; padding:3mm 4mm; margin-bottom:2.5mm; font-size:10.5pt; border:1px solid #e3ebf5; }
+  .chat b { color: var(--azul); }
+</style>
+</head>
+<body>
+
+<!-- 21 · BONO 4 (1/2) -->
+<section class="page">
+  <div class="head"><span>Tu Mascota en Aguja Mágica</span><span>Bono 4</span></div>
+  <span class="badge">Bono 4 · 1/2</span>
+  <h2>Vendé retratos por encargo</h2>
+  <p>Cuando hayas hecho el de tu mascota, te van a preguntar "¿me hacés uno del mío?". Así lo convertís en un encargo.</p>
+  <h3>Cuánto cobrar</h3>
+  <div class="box azul">
+    <p><b>Precio = materiales + (horas × lo que vale tu hora) + ganancia</b></p>
+    <ul>
+      <li><b>Materiales</b>: sumá lo que gastaste en tela, lana y bastidor para un retrato.</li>
+      <li><b>Horas</b>: anotá cuánto tardás en tu primer retrato.</li>
+      <li><b>Tu hora</b>: lo que querés ganar por cada hora de trabajo.</li>
+      <li><b>Ganancia</b>: un extra por el diseño y la entrega.</li>
+    </ul>
+  </div>
+  <h3>Cómo pedir la foto</h3>
+  <ul>
+    <li>Pedí 3 fotos: de frente, de tres cuartos y una de cuerpo entero (para ver los colores).</li>
+    <li>Con luz de día y sin filtros (capítulo 3).</li>
+    <li>Preguntá el nombre de la mascota y si quieren el nombre bordado.</li>
+  </ul>
+  <h3>Seña y entrega</h3>
+  <ul>
+    <li>Pedí una seña antes de arrancar y el resto al entregar.</li>
+    <li>Acordá la fecha de entrega antes de cobrar la seña.</li>
+  </ul>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+
+<!-- 22 · BONO 4 (2/2) -->
+<section class="page">
+  <div class="head"><span>Tu Mascota en Aguja Mágica</span><span>Bono 4</span></div>
+  <span class="badge">Bono 4 · 2/2</span>
+  <h2>Mensajes y fotos para vender</h2>
+  <h3>Mensajes de WhatsApp para copiar</h3>
+  <div class="chat"><b>Cuando te consultan:</b> "¡Hola! Sí, hago retratos bordados de mascotas a partir de una foto. Mandame 3 fotos con luz de día y el nombre, y te paso el precio y la fecha de entrega 🐾"</div>
+  <div class="chat"><b>Para confirmar:</b> "¡Genial! Para arrancar te pido una seña de $____. El retrato va a estar listo el ____. Te mando fotos del avance 😊"</div>
+  <div class="chat"><b>Al entregar:</b> "¡Listo el retrato de ____! Si te gustó, me ayudaría un montón que me etiquetes en Instagram o me dejes un comentario 💛"</div>
+  <h3>Fotos para Instagram</h3>
+  <ul>
+    <li><b>Antes y después</b>: la foto de la mascota al lado del cuadro terminado.</li>
+    <li><b>El proceso</b>: la aguja en la mano y el dibujo a medio bordar.</li>
+    <li><b>La entrega</b>: el dueño con el cuadro (pedile permiso).</li>
+    <li>Con luz de ventana, de día y sobre un fondo liso.</li>
+  </ul>
+  <div class="box"><p><b>Fechas para avisar:</b> Navidad, Día del Animal, cumpleaños de la mascota y Día de la Madre y del Padre.</p></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+
+</body>
+</html>

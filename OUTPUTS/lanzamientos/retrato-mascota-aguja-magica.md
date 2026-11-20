@@ -1,4 +1,4 @@
-# RETRATO DE TU MASCOTA EN AGUJA MÁGICA — 20%
+# RETRATO DE TU MASCOTA EN AGUJA MÁGICA — 40%
 
 **Creada:** 2026-11-19 · **Mercado:** español / Argentina primero (cobro en pesos con Mercado Pago, en Impultienda) · **Estado:** en armado. Oferta aprobada (ARS 19.900 + 4 bonos). El borrador de texto del ebook espera la revisión de Tamy
 **Origen:** orden de Tamy del 2026-11-19, que llegó por el Cerebro: "Vamos con el retrato de mascota". Datos de Investigación en `RAW/cazas.md`, vueltas 6 a 9.
@@ -10,17 +10,17 @@
 | 10 | F0 · Cazar | ✅ | 2026-11-19 | Subnicho elegido por Tamy. Es un **hueco**: en AR, 0 ebooks de retrato de mascota; solo servicios que venden el bordado hecho |
 | 20 | F1 · Oferta | ✅ | 2026-11-19 | Precio ARS 19.900 y los 4 bonos aprobados por Tamy (vía Cerebro). El bump y los OTOs siguen sin decidir (no se arman hasta F7) |
 | 35 | F2 · Producto | 🟡 | 2026-11-19 | Borrador de **texto** del ebook + 4 bonos en PDF (23 páginas: se sumó "Los 6 rellenos"; índice verificado contra el PDF el 2026-11-19 a las 23:18; HTML → PDF con Edge, 0 créditos), en `OUTPUTS/lanzamientos/retrato-mascota-aguja-magica/`. Espera la revisión de Tamy. Faltan: 27 ilustraciones con Higgsfield (≈ 62 créditos, sin confirmar; aprobado hasta ~97; **lo conecta Tamy**, sigue sin conectar el 2026-11-19 23:18), 20 moldes, precios de materiales, retrato real de prueba para confirmar las medidas. **No cargado en Impultienda** |
-| 55 | F3 · Tienda | ⬜ | | |
+| 55 | F3 · Tienda | 🟡 | 2026-11-20 | Tienda creada por conector (orden de Tamy vía Cerebro): https://tumascota-agujamagica.impultienda.ar · ID 0033f199-b863-461b-ab01-5b01fa40bf9e · ARS, es-AR. Precio 19.900 (tachado 49.900). Ebook + 4 bonos cargados (versión de texto). Landing de plantilla corregida. Bump + 2 OTOs creados (OTOs pausados). **Faltan: Mercado Pago, Clarity, píxel, contenido del bump y los OTOs, compra de prueba** |
 | 70 | F4 · Creativos | ⬜ | | |
 | 85 | F5 · Campaña entregando | ⬜ | | |
 | 95 | F6 · Validada | ⬜ | | |
 | 100 | F7 · Escalera | ⬜ | | |
 
 ```
-RETRATO DE TU MASCOTA EN AGUJA MÁGICA — 20%
+RETRATO DE TU MASCOTA EN AGUJA MÁGICA — 40%
 ✅ F0 Cazar  ✅ F1 Oferta  🟡 F2 Producto  ⬜ F3 Tienda
-⬜ F4 Creativos  ⬜ F5 Campaña  ⬜ F6 Validar  ⬜ F7 Escalera
-Sigue: F2. Falta de vos: conectar Higgsfield y revisar el borrador (23 págs.). Después va la muestra de 3 páginas con imagen.
+🟡 F3 Tienda (en curso)  ⬜ F4 Creativos  ⬜ F5 Campaña  ⬜ F6 Validar  🟡 F7 Escalera (armada, apagada)
+Sigue: F3. Falta de vos: conectar Mercado Pago, crear Clarity y pasar el ID, créditos de Higgsfield (≈ 44 más), revisar el borrador.
 ```
 
 ## F0 · La oferta original
@@ -107,9 +107,9 @@ Datos de Investigación (2026-11-19), sin volver a verificar acá.
 | Activo | Valor |
 |---|---|
 | Carpeta del producto | `OUTPUTS/lanzamientos/retrato-mascota-aguja-magica/` (ficha_datos.md, plan_paginas.md, borrador.html, borrador-tu-mascota-en-aguja-magica.pdf) |
-| Tienda (ID) y dominio | Todavía no hay tienda (2026-11-19) |
-| URL de la landing | |
-| Pasarela | Mercado Pago en pesos (decidido el 2026-11-19) |
+| Tienda (ID) y dominio | 0033f199-b863-461b-ab01-5b01fa40bf9e · tumascota-agujamagica.impultienda.ar (creada 2026-11-20) |
+| URL de la landing | https://tumascota-agujamagica.impultienda.ar (plantilla "classic" de Impultienda, sin HTML propio: no hay imagen creativa ni créditos para las 10 imágenes de imperiolanding) |
+| Pasarela | Mercado Pago en pesos: **sin conectar** (lo conecta Tamy con el botón, 2026-11-20) |
 | Píxel (ID) | Falta (agente Meta) |
 | Compra de prueba | ⬜ |
 
@@ -139,3 +139,22 @@ Datos de Investigación (2026-11-19), sin volver a verificar acá.
 ## Lecciones de este producto
 
 - 2026-11-19 · El paso foto → dibujo es la fricción principal y, a la vez, la ventaja: hay que probarlo en serio en F2 (hacer un retrato real con el método) antes de prometerlo en la landing.
+
+## Catálogo cargado en Impultienda (2026-11-20)
+
+| Rol | Producto | ID | Precio (tachado) | Entregable |
+|---|---|---|---|---|
+| Principal | Tu Mascota en Aguja Mágica | bb1dceb7-19d1-460e-8cd2-29687ece5e73 | ARS 19.900 (49.900) | PDF borrador de texto, 23 págs. ⚠️ reemplazar por la versión con imágenes |
+| Bono 1 | De tu foto al dibujo en 10 minutos | 27d767c1-8be2-4de9-9a61-715ffa25e95f | regalo | PDF 3 págs. (texto) |
+| Bono 2 | 20 moldes de razas listos para calcar | 81d60718-5dd6-4d38-be38-ad2e2f7ba7e2 | regalo | PDF 2 págs. ⚠️ **solo la lista: faltan los 20 moldes dibujados** |
+| Bono 3 | Lista de materiales en Argentina | 44f56f9d-79b4-4a0a-ae27-e4325fa7d015 | regalo | PDF 1 pág. ⚠️ precios "[a verificar]" |
+| Bono 4 | Vendé retratos por encargo | d958dd83-6942-4f68-8174-9011a0906cc3 | regalo (valor 7.300) | PDF 2 págs. (texto) |
+| Order bump | Pack 50 moldes extra | d96cbc83-1838-4428-a52a-ff7c9aa19585 | ARS 5.900 (11.900) | 🔴 **SIN contenido** y aparece solo en el checkout |
+| OTO 1 | Retratos de familia | 429c9e61-acbc-404c-8879-617c55648759 | ARS 46.900 (93.800) | 🔴 sin contenido · solo post-compra |
+| OTO 2 | Alfombras chicas sin pistola de tufting | 337ba768-119d-4db0-99ec-d995ae91f0c4 | ARS 26.900 (53.800) | 🔴 sin contenido · solo post-compra |
+
+- Funnel post-compra "OTOs retrato de mascota" (5bfe00ae-4da9-4149-b7c7-df34d48024ba), modo "siempre": OTO1 −15% → OTO2 −20%, downsells −40% y −45% (Impultienda los pone solo; el canon dice downsell al 50%: se ajusta cuando haya contenido). **PAUSADO.**
+- OTO 3 ("vendé por encargo PRO") y OTO 4 (diseños de temporada): afuera por el tope de 3 upsells por tienda del plan Max (decisión de Tamy 2026-11-20: bump + 2 OTOs).
+- Escalera en pesos (46.900 / 26.900): la eligió el Cerebro porque todo cobra en pesos; **es cambiable**.
+- Landing: plantilla classic de Impultienda. Se ocultaron los 3 testimonios inventados por la IA y la notificación de venta flotante (0 ventas reales). Garantía 7 → 120 días. Pie "Nombre de la marca" → nombre del producto. FAQ 5 sin el upsell viejo. Títulos de bonos cargados.
+- Archivos subidos: `OUTPUTS/lanzamientos/retrato-mascota-aguja-magica/entregables/`.

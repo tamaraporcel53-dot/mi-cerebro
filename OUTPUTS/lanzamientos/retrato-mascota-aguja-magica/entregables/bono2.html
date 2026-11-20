@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Tu Mascota en Aguja Mágica — borrador</title>
+<style>
+  @page { size: A4; margin: 0; }
+  :root { --azul:#1A3D6B; --naranja:#FF8C42; --fondo:#F0F7FF; --texto:#1f2a37; --suave:#5b6b80; }
+  * { box-sizing: border-box; }
+  body { counter-reset: pg; margin:0; font-family: "Segoe UI", Arial, sans-serif; color: var(--texto); background:#fff; }
+  .page { counter-increment: pg; width:210mm; height:297mm; padding:20mm 18mm 16mm; position:relative; overflow:hidden;
+          page-break-after: always; break-after: page; background: var(--fondo); }
+  .foot .n::after { content: counter(pg); }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+  .head { font-size:9pt; color: var(--suave); letter-spacing:.08em; text-transform:uppercase; margin-bottom:8mm;
+          display:flex; justify-content:space-between; border-bottom:1px solid #cfdcec; padding-bottom:3mm; }
+  .foot { position:absolute; bottom:9mm; left:18mm; right:18mm; font-size:9pt; color: var(--suave);
+          display:flex; justify-content:space-between; }
+  h1 { font-size:30pt; color: var(--azul); margin:0 0 4mm; line-height:1.1; }
+  h2 { font-size:22pt; color: var(--azul); margin:0 0 5mm; line-height:1.15; }
+  h3 { font-size:13pt; color: var(--azul); margin:6mm 0 2mm; }
+  p, li { font-size:11pt; line-height:1.5; margin:0 0 2.5mm; }
+  ul, ol { padding-left:6mm; margin:0 0 3mm; }
+  .badge { display:inline-block; background: var(--naranja); color:#fff; font-weight:700; font-size:10pt;
+           padding:1.5mm 4mm; border-radius:20mm; margin-bottom:4mm; }
+  .box { background:#fff; border-left:4px solid var(--naranja); border-radius:3mm; padding:4mm 5mm; margin:4mm 0; }
+  .box.azul { border-left-color: var(--azul); }
+  .box p:last-child, .box ul:last-child { margin-bottom:0; }
+  .img { border:2px dashed #9fb4cf; border-radius:3mm; background:#fff; color:#7a8ca5; font-size:10pt;
+         display:flex; align-items:center; justify-content:center; text-align:center; padding:5mm; margin:4mm 0; }
+  .cols { display:grid; grid-template-columns: 1fr 1fr; gap:6mm; }
+  .steps { counter-reset: s; list-style:none; padding:0; }
+  .steps li { counter-increment: s; background:#fff; border-radius:3mm; padding:3mm 4mm 3mm 13mm; position:relative; margin-bottom:2.5mm; }
+  .steps li::before { content: counter(s); position:absolute; left:3.5mm; top:3mm; width:7mm; height:7mm; border-radius:50%;
+           background: var(--azul); color:#fff; font-weight:700; font-size:10pt; display:flex; align-items:center; justify-content:center; }
+  .steps li:nth-child(even)::before { background: var(--naranja); }
+  table { width:100%; border-collapse:collapse; background:#fff; border-radius:3mm; overflow:hidden; font-size:10.5pt; }
+  th { background: var(--azul); color:#fff; text-align:left; padding:2.5mm 3mm; }
+  td { padding:2.2mm 3mm; border-bottom:1px solid #e3ebf5; vertical-align:top; }
+  .toc td:last-child { text-align:right; font-weight:700; color: var(--azul); width:18mm; }
+  .cover { background: var(--azul); color:#fff; display:flex; flex-direction:column; justify-content:center; }
+  .cover h1 { color:#fff; font-size:40pt; }
+  .cover .sub { font-size:15pt; line-height:1.4; color:#dce8f7; max-width:150mm; }
+  .cover .img { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.4); color:#dce8f7; height:95mm; }
+  .sep { background: var(--naranja); color:#fff; display:flex; flex-direction:column; justify-content:center; }
+  .sep h1 { color:#fff; font-size:38pt; }
+  .sep p { font-size:14pt; }
+  .draft { position:absolute; top:6mm; right:8mm; font-size:8pt; background:#fff3cd; color:#7a5b00; padding:1mm 3mm; border-radius:2mm; }
+  .chat { background:#fff; border-radius:3mm; padding:3mm 4mm; margin-bottom:2.5mm; font-size:10.5pt; border:1px solid #e3ebf5; }
+  .chat b { color: var(--azul); }
+</style>
+</head>
+<body>
+
+<!-- 18 · BONO 2 LISTA -->
+<section class="page">
+  <div class="head"><span>Tu Mascota en Aguja Mágica</span><span>Bono 2</span></div>
+  <span class="badge">Bono 2 · 1/2</span>
+  <h2>20 moldes de razas</h2>
+  <p>Cada molde viene espejado, al tamaño de un bastidor de 200 mm (sin confirmar) y con el mapa de colores sugerido.</p>
+  <div class="cols">
+    <table>
+      <tr><th colspan="2">Perros</th></tr>
+      <tr><td>1</td><td>Mestizo de pelo corto</td></tr>
+      <tr><td>2</td><td>Caniche</td></tr>
+      <tr><td>3</td><td>Labrador</td></tr>
+      <tr><td>4</td><td>Golden retriever</td></tr>
+      <tr><td>5</td><td>Ovejero alemán</td></tr>
+      <tr><td>6</td><td>Bulldog francés</td></tr>
+      <tr><td>7</td><td>Pug</td></tr>
+      <tr><td>8</td><td>Yorkshire</td></tr>
+      <tr><td>9</td><td>Chihuahua</td></tr>
+      <tr><td>10</td><td>Beagle</td></tr>
+    </table>
+    <table>
+      <tr><th colspan="2">Perros y gatos</th></tr>
+      <tr><td>11</td><td>Border collie</td></tr>
+      <tr><td>12</td><td>Salchicha</td></tr>
+      <tr><td>13</td><td>Schnauzer</td></tr>
+      <tr><td>14</td><td>Shih tzu</td></tr>
+      <tr><td>15</td><td>Pitbull</td></tr>
+      <tr><td>16</td><td>Boxer</td></tr>
+      <tr><td>17</td><td>Gato común atigrado</td></tr>
+      <tr><td>18</td><td>Gato negro</td></tr>
+      <tr><td>19</td><td>Gato siamés</td></tr>
+      <tr><td>20</td><td>Gato persa</td></tr>
+    </table>
+  </div>
+  <div class="img" style="height:45mm">[VERSIÓN FINAL: 1 página por molde, 20 páginas más, dibujadas con Higgsfield. En este borrador va solo la lista]</div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+
+<!-- 19 · BONO 2 USO -->
+<section class="page">
+  <div class="head"><span>Tu Mascota en Aguja Mágica</span><span>Bono 2</span></div>
+  <span class="badge">Bono 2 · 2/2</span>
+  <h2>Cómo usar los moldes</h2>
+  <ol class="steps">
+    <li><b>Elegí la raza</b> que más se parezca a tu mascota. Si es mestiza, elegí la que tenga orejas y hocico parecidos.</li>
+    <li><b>Imprimí la página</b> al 100%, sin "ajustar a la hoja", o abrila en el celular al tamaño del bastidor.</li>
+    <li><b>Calcala</b> en la tela a contraluz (Bono 1, página 16). Ya viene espejada.</li>
+    <li><b>Cambiá los colores</b> por los de tu mascota: las manchas, el color de los ojos y el del pelo.</li>
+    <li><b>Agregá lo propio</b>: una oreja caída, una mancha en el ojo, el collar. Eso lo hace único.</li>
+  </ol>
+  <div class="box azul"><p><b>Para practicar:</b> antes de tu primer retrato, hacé un molde chico de prueba. Es la mejor forma de soltar la mano.</p></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+
+</body>
+</html>
