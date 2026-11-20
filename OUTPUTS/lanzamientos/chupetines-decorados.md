@@ -1,6 +1,7 @@
 # CHUPETINES DECORADOS — 10%
 
-**Creada:** 2026-11-19 · **Mercado:** español / Argentina primero (ARS, Mercado Pago, Impultienda) · **Estado:** ❌ **DESCARTADO POR AHORA (2026-11-19)**: Tamy eligió punch needle como candidato para el primer ebook (según el Cerebro). Antes estaba en pausa: Tamy cambió al pan dulce relleno (ver `BRIEFING.md`). La oferta propuesta de abajo queda guardada por si se retoma; no está aprobada
+**Creada:** 2026-11-19 · **Mercado:** español / Argentina primero (ARS, Mercado Pago, Impultienda) · **Estado:** ❌ **DESCARTADO DEL TODO (2026-11-19)**. Orden de Tamy, vía Cerebro: "El de chupetines, sácanlo de la lista. Ya no vamos más con ese." No se busca ni se arma más. La ficha queda como registro (no se borra sin preguntarle a Tamy).
+> Antes (2026-11-19): descartado por ahora: Tamy eligió punch needle como candidato para el primer ebook (según el Cerebro). Antes estaba en pausa: Tamy cambió al pan dulce relleno (ver `BRIEFING.md`). La oferta propuesta de abajo queda guardada por si se retoma; no está aprobada
 
 ## Tablero
 

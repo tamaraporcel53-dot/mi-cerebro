@@ -20,7 +20,7 @@
   - Por qué: afuera es el ángulo principal de HeyHobby (kit físico con el dibujo impreso; anuncio de mascota al aire desde 2026-11-13). En AR no hay ningún ebook de esto: Huella & Alma y Luna Decima venden el bordado ya hecho (servicio). La aguja mágica genérica sí tiene ~8 competidores en AR, a AR$ 18.900-19.900 (vistos el 2026-11-19)
   - El punto a resolver en el producto: pasar la foto a un dibujo y a la tela. Nadie lo resuelve en un PDF (hipótesis: calco a contraluz o una app)
   > Antes (2026-11-19): punch needle genérico, con "0 infoproductos en AR" (error del Cerebro: se buscó solo en inglés). Antes de eso se salió de repostería: ahí la competencia vende a USD 7-10
-  > Antes (2026-11-19): pan dulce relleno y chupetines de chocolate (repostería), en pausa
+  > Antes (2026-11-19): pan dulce relleno y chupetines de chocolate (repostería). Chupetines **descartados del todo** por Tamy el 2026-11-19: no se buscan más
 - **Dónde vendo:** primero Argentina; después otros países (2026-11-19)
 - **Tienda y cobro:** Impultienda. En Argentina se cobra **en pesos con Mercado Pago**. Precio del primer ebook: cerca de AR$ 19.900
 - **Cuentas publicitarias:** siempre en **USD** (regla en `CLAUDE.md`)
@@ -35,7 +35,6 @@
 | Ebook **retrato de mascota en aguja mágica**: armar la oferta (contenido, método foto → dibujo → tela, bonos, lista de materiales en AR) | Productos | 10%: precio ARS 19.900 decidido; faltan los bonos y el plan de bump y OTOs | 2026-11-19 |
 | Validar punch needle (caza, competencia, precios) | Investigación | **Hecho** (vueltas 6 a 9 en `RAW/cazas.md`) | 2026-11-19 |
 | Ebook de pan dulce relleno | Productos | **Descartado por ahora**: Tamy eligió punch needle (salir de repostería) | 2026-11-19 |
-| Ebook de chupetines decorados | Productos | **Descartado por ahora**: Tamy eligió punch needle | 2026-11-19 |
 
 ## Próximos pasos
 
