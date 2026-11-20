@@ -25,3 +25,6 @@
 2026-11-19 · El ángulo principal de HeyHobby (whale de punch needle, 315 anuncios) es "tu mascota en lana desde una foto"; en AR solo hay 2 jugadores de mascota bordada y ninguno confirmado como ebook · por qué: es el subnicho más fuerte para aguja mágica (Huella & Alma, Luna Decima, a revisar)
 2026-11-19 · En AR hay 6+ marcas que venden alfombras de tufting ya hechas y 0 infoproductos · por qué: hay demanda del objeto y nadie enseña a hacerlo con aguja mágica, sin pistola
 2026-11-19 · "Aguja mágica para vender" ya lo usan 3 competidores de AR · por qué: no sirve como ángulo principal, sí como bono
+2026-11-19 · Precio real de aguja mágica en AR: Pordentro Studio, curso en video a $18.900 (tachado $36.000); Un Mundo de Manualidades, guía en Impultienda a AR$ 19.900 (tachado 49.900) · por qué: es el ticket más alto que se vio en toda la caza; queda ~2/3 por debajo de USD 19,90 (≈ AR$ 31.000, dólar sin confirmar)
+2026-11-19 · Huella & Alma y Luna Decima venden el SERVICIO de mascota bordada, no un infoproducto · por qué: el subnicho "retrato de tu mascota" está libre de ebooks en AR, y la demanda de pagar por el objeto existe
+2026-11-19 · La competencia resuelve "pasar el dibujo a la tela" con moldes a tamaño real para calcar o imprimir · por qué: para la mascota hace falta un paso foto → contorno; puede ser el bono que justifique el precio (hipótesis)

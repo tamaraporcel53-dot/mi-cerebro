@@ -121,3 +121,19 @@ Consultas: tapete agulha mágica (0) · almofada agulha mágica (10, todos de Al
 | **Almohadones de diseño para el living** | ⚪ solo Aline Martins (BR) con "almofada" | En AR solo tiendas que venden el almohadón (Tampa Home, En casa Arroyito). 0 infoproductos | 🟡 hueco, pero con menos wow |
 | Aguja mágica "para vender" / emprender | — | **Ya cubierto**: Bordados Lucía ("Miles de oportunidades"), Sarah lurdes ("nueva fuente de ingresos"), Un Mundo de Manualidades ("Tres encargos sin buscarlos", "Dejá de regalar tu trabajo") | ❌ como ángulo principal; sirve como bono |
 | Tapices para cuarto de bebé o de chicos | no buscado | no buscado | pendiente |
+
+## 2026-11-19 (novena vuelta) · aguja mágica con navegador (OK de Tamy vía Cerebro; ~10 pasos usados)
+
+| Anunciante | Qué vende de verdad | Precio real (landing, 2026-11-19) | Cómo pasan el dibujo a la tela | Link |
+|---|---|---|---|---|
+| Pordentro Studio | **Curso en video** "Curso Inicial de Bordado con Aguja Mágica" (Flor Ledesma, "+800 alumnas", sin confirmar). 150+ patrones. "Pagás en pesos". Anuncio al aire desde el 2026-10-22 (2 anuncios con el mismo contenido) | **$18.900** (tachado $36.000) | "Pasá tu patrón a la tela… sin saber dibujar"; "moldes para imprimir" | http://creatuprimerbordado.lovable.app/ar |
+| Un Mundo de Manualidades | **Guía digital** "Puntada Mágica: bordado chino con aguja mágica para principiantes" (Impultienda) + bonos de AR$ 9.990 a 14.990 | **AR$ 19.900** (tachado AR$ 49.900; "valor total" $110.850). Anuncio al aire desde el 2026-11-02 | "Moldes a tamaño real para **calcar**"; "Calcás el molde y seguís el paso a paso" | https://puntada-magica.impultienda.ar/ |
+| Huella & Alma | **Servicio físico**: buzo bordado con tu mascota (no es infoproducto). Al aire desde el 2026-11-07 | no visto | — | https://huella-y-alma.com.ar/productos/buzo-bordado-con-tu-mascota/ |
+| Luna Decima | **Servicio**: "Cuadritos bordados personalizados de tu mascota. Transformamos la foto de tu mascota en un retrato bordado". Al aire desde el 2026-11-19 (5 h) | no visto (sin link de destino) | — | https://www.facebook.com/ads/library/?id=1702399088121414 |
+| HeyHobby (anuncio "A Portrait for Every Pet") | Kit físico "custom pet punch needle kit" (el dibujo viene impreso en la tela) | no visto | Lo imprimen ellos sobre la tela | https://heyhobby.com/products/custom-pet-punch-needle-kit |
+
+Conclusiones:
+- **El retrato de mascota está libre de infoproductos en AR**: los dos que aparecen venden el **servicio** (el bordado ya hecho). Eso prueba que en AR se paga por "tu mascota bordada": es el caso objeto → técnica.
+- **Precio de referencia en AR para aguja mágica: AR$ 18.900 a 19.900.** Es lo más cerca de USD 19,90 que se vio en toda la caza: unos 2/3 del precio de Tamy, si USD 19,90 ≈ AR$ 31.000 (dólar sin confirmar).
+- **Cómo pasar la foto a la tela** (el paso difícil del PDF): la competencia usa **moldes a tamaño real para calcar** o imprimir. Para la mascota haría falta un paso de "foto → contorno" (por ejemplo, calco a contraluz en la ventana o una app que pase la foto a líneas). Esto es hipótesis: no vi a nadie haciéndolo en un PDF.
+- HeyHobby: el anuncio de mascota está al aire desde el 2026-11-13. No se vio "N anuncios usan este contenido" ni el total de la página.
