@@ -48,15 +48,26 @@
   .draft { position:absolute; top:6mm; right:8mm; font-size:8pt; background:#fff3cd; color:#7a5b00; padding:1mm 3mm; border-radius:2mm; }
   .chat { background:#fff; border-radius:3mm; padding:3mm 4mm; margin-bottom:2.5mm; font-size:10.5pt; border:1px solid #e3ebf5; }
   .chat b { color: var(--azul); }
+
+  .pic { border-radius:3mm; overflow:hidden; margin:4mm 0; background:#fff; box-shadow:0 .6mm 2.5mm rgba(26,61,107,.13); }
+  .pic img { width:100%; height:100%; object-fit:cover; display:block; }
+  .cover .pic { height:95mm; box-shadow:0 1mm 4mm rgba(0,0,0,.25); }
+  .grid-moldes { display:grid; grid-template-columns:repeat(6,1fr); gap:2.5mm; margin:4mm 0; }
+  .grid-moldes img { width:100%; aspect-ratio:1; object-fit:contain; background:#fff; border-radius:2mm; box-shadow:0 .4mm 1.5mm rgba(26,61,107,.12); }
+  .molde-pag { display:flex; flex-direction:column; }
+  .molde-img { flex:none; width:150mm; height:150mm; margin:2mm auto 4mm; background:#fff; border-radius:3mm; box-shadow:0 .6mm 2.5mm rgba(26,61,107,.13); }
+  .molde-img img { width:100%; height:100%; object-fit:contain; display:block; }
+  .mapa { display:flex; gap:3mm; }
+  .mapa div { flex:1; background:#fff; border-radius:2mm; padding:2mm; font-size:9.5pt; display:flex; align-items:center; gap:2mm; }
+  .mapa i { width:7mm; height:7mm; border-radius:50%; flex:none; border:1px solid #cfdcec; }
 </style>
 </head>
 <body>
 <section class="page cover">
-  <span class="draft">VERSIÓN DE TEXTO · 2026-11-20</span>
   <span class="badge" style="align-self:flex-start">Guía avanzada</span>
   <h1>Retratos de familia</h1>
   <p class="sub">Dos o más mascotas en un mismo cuadro y retratos de personas a partir de una foto, con el mismo método que ya aprendiste.</p>
-  <div class="img">[VERSIÓN FINAL: cuadro bordado con un perro y un gato juntos]</div>
+  <div class="pic" style="height:95mm"><img src="../imagenes/web/P6_oto1.jpg" alt=""></div>
 </section>
 <section class="page">
   <div class="head"><span>Retratos de familia</span><span>Contenido</span></div>
@@ -96,6 +107,7 @@
   <h3>Mascotas con personas</h3>
   <p>La persona abrazando o sosteniendo a la mascota, con las caras cerca. Si la foto es de cuerpo entero, recortala a la altura del pecho.</p>
   <div class="box azul"><p><b>Regla simple:</b> dejá un margen libre alrededor del grupo. El fondo liso es lo que hace que las caras se lean desde lejos.</p></div>
+  <div class="pic" data-auto data-id="O1a_composicion" style="height:85mm"><img src="../imagenes/web/O1a_composicion.jpg" alt=""></div>
   <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
 </section>
 <section class="page">
@@ -129,6 +141,7 @@
     <li><b>Boca:</b> una línea corta en un tono de piel más oscuro, no en rojo.</li>
   </ul>
   <div class="box"><p><b>Estilo recomendado para empezar:</b> cara sin rasgos, solo con el peinado y la ropa. Es el estilo que más se ve en retratos de familia bordados y es el que menos se equivoca.</p></div>
+  <div class="pic" data-auto data-id="O1b_simplificar" style="height:85mm"><img src="../imagenes/web/O1b_simplificar.jpg" alt=""></div>
   <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
 </section>
 <section class="page">
@@ -142,6 +155,7 @@
   </ul>
   <h3>Que mascotas y personas convivan</h3>
   <p>Usá la misma altura de rulito para todos los pelajes y los pelos, y un rulito más bajo para la piel. Así el cuadro se ve parejo.</p>
+  <div class="pic" data-auto data-id="O1c_colores" style="height:85mm"><img src="../imagenes/web/O1c_colores.jpg" alt=""></div>
   <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
 </section>
 <section class="page">

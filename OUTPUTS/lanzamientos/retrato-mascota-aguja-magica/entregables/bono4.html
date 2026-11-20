@@ -48,6 +48,18 @@
   .draft { position:absolute; top:6mm; right:8mm; font-size:8pt; background:#fff3cd; color:#7a5b00; padding:1mm 3mm; border-radius:2mm; }
   .chat { background:#fff; border-radius:3mm; padding:3mm 4mm; margin-bottom:2.5mm; font-size:10.5pt; border:1px solid #e3ebf5; }
   .chat b { color: var(--azul); }
+
+  .pic { border-radius:3mm; overflow:hidden; margin:4mm 0; background:#fff; box-shadow:0 .6mm 2.5mm rgba(26,61,107,.13); }
+  .pic img { width:100%; height:100%; object-fit:cover; display:block; }
+  .cover .pic { height:95mm; box-shadow:0 1mm 4mm rgba(0,0,0,.25); }
+  .grid-moldes { display:grid; grid-template-columns:repeat(6,1fr); gap:2.5mm; margin:4mm 0; }
+  .grid-moldes img { width:100%; aspect-ratio:1; object-fit:contain; background:#fff; border-radius:2mm; box-shadow:0 .4mm 1.5mm rgba(26,61,107,.12); }
+  .molde-pag { display:flex; flex-direction:column; }
+  .molde-img { flex:none; width:150mm; height:150mm; margin:2mm auto 4mm; background:#fff; border-radius:3mm; box-shadow:0 .6mm 2.5mm rgba(26,61,107,.13); }
+  .molde-img img { width:100%; height:100%; object-fit:contain; display:block; }
+  .mapa { display:flex; gap:3mm; }
+  .mapa div { flex:1; background:#fff; border-radius:2mm; padding:2mm; font-size:9.5pt; display:flex; align-items:center; gap:2mm; }
+  .mapa i { width:7mm; height:7mm; border-radius:50%; flex:none; border:1px solid #cfdcec; }
 </style>
 </head>
 <body>
@@ -79,6 +91,7 @@
     <li>Pedí una seña antes de arrancar y el resto al entregar.</li>
     <li>Acordá la fecha de entrega antes de cobrar la seña.</li>
   </ul>
+  <div class="pic" data-auto data-id="P4_bono4" style="height:67mm"><img src="../imagenes/web/P4_bono4.jpg" alt=""></div>
   <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
 </section>
 
@@ -99,6 +112,7 @@
     <li>Con luz de ventana, de día y sobre un fondo liso.</li>
   </ul>
   <div class="box"><p><b>Fechas para avisar:</b> Navidad, Día del Animal, cumpleaños de la mascota y Día de la Madre y del Padre.</p></div>
+  <div class="pic" data-auto data-id="B4b_pedido" style="height:77mm"><img src="../imagenes/web/B4b_pedido.jpg" alt=""></div>
   <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
 </section>
 
