@@ -181,6 +181,13 @@ duplicado 25 veces**. Por eso:
 2-6 sin dominante = **entrar**; 7+ parecidos = buscar el subnicho; un whale dominante = no competirle de
 frente: lanzarla en otro mercado o con otro ángulo.
 
+🔴 **Antes de decir "sin competencia en <país>": buscar con el nombre LOCAL del oficio en ese país**, con el filtro de
+país, y no solo con el término en inglés o el del mercado de origen. Mínimo 2 o 3 nombres locales por idea (ej.: en
+Argentina, *punch needle* = "aguja mágica" y "bordado ruso"; *isomalt* = "paletas de cristal"). Si no se buscó con el
+nombre local, la competencia se escribe **"no revisada con el nombre local"**, nunca "0".
+> Por qué (2026-11-19): dos veces se informó "0 competidores en AR" (chupetines de isomalt, punch needle) y había 7-8,
+> porque se buscó solo el nombre extranjero.
+
 **Arbitraje:** si la idea corre fuerte en un mercado (Brasil suele ser la fuente), buscar el término
 traducido en los mercados destino (inglés, Europa, LATAM). Un mercado con 0-3 jugadores
 débiles es el hueco. **Mirar la brecha de precio** entre mercados: suele estar en el ángulo, no en el producto.
