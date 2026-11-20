@@ -1,0 +1,15 @@
+/* Tu Mascota en Aguja Mágica — pegar en Diseño de tienda → Código (CSS) → Guardar.
+   Probado en la tienda publicada el 2026-11-20 (Productos). Saca lo inventado: */
+/* 1. La línea "Estos bonos tienen un valor total de AR$ ..." (pedido de Tamy) */
+#bonuses .mt-8.text-center:has(.bg-amber-100){display:none!important}
+/* 2. Las estrellas "4.9 (500+ ventas)": todavía no hay ventas */
+div[data-extras-slot="hero/ebook_title"] + div{display:none!important}
+/* 3. "Accedé hoy: cupos de descarga habilitados por tiempo limitado" */
+div[data-edit-section="hero_urgency"]{display:none!important}
+/* 4. "Quedan 7 cupos a este precio" */
+div[data-edit-section="hero_urgency_slots"]{display:none!important}
+/* 5. El reloj "Oferta termina en" del hero y de la barra de abajo */
+div[data-edit-section="hero_urgency_slots"] + div{display:none!important}
+#countdown-display,#hero-timer,#sticky-timer{display:none!important}
+/* 6. El valor tachado de cada bono (son regalo) */
+#bonuses .line-through,#hero-bonuses .line-through{display:none!important}
