@@ -10,7 +10,7 @@
 | 10 | F0 · Cazar | ✅ | 2026-11-19 | Subnicho elegido por Tamy. Es un **hueco**: en AR, 0 ebooks de retrato de mascota; solo servicios que venden el bordado hecho |
 | 20 | F1 · Oferta | ✅ | 2026-11-19 | Precio ARS 19.900 y los 4 bonos aprobados por Tamy (vía Cerebro). El bump y los OTOs siguen sin decidir (no se arman hasta F7) |
 | 35 | F2 · Producto | 🟡 | 2026-11-19 | Borrador de **texto** del ebook + 4 bonos en PDF (23 páginas: se sumó "Los 6 rellenos"; índice verificado contra el PDF el 2026-11-19 a las 23:18; HTML → PDF con Edge, 0 créditos), en `OUTPUTS/lanzamientos/retrato-mascota-aguja-magica/`. Espera la revisión de Tamy. Faltan: 27 ilustraciones con Higgsfield (≈ 62 créditos, sin confirmar; aprobado hasta ~97; **lo conecta Tamy**, sigue sin conectar el 2026-11-19 23:18), 20 moldes, precios de materiales, retrato real de prueba para confirmar las medidas. **No cargado en Impultienda** |
-| 55 | F3 · Tienda | 🟡 | 2026-11-20 | Tienda creada por conector (orden de Tamy vía Cerebro): https://tumascota-agujamagica.impultienda.ar · ID 0033f199-b863-461b-ab01-5b01fa40bf9e · ARS, es-AR. Precio 19.900 (tachado 49.900). Ebook + 4 bonos cargados (versión de texto). Landing de plantilla corregida. Bump + 2 OTOs creados (OTOs pausados). **Faltan: Mercado Pago, Clarity, píxel, contenido del bump y los OTOs, compra de prueba** |
+| 55 | F3 · Tienda | 🟡 | 2026-11-20 | Tienda creada por conector (orden de Tamy vía Cerebro): https://tumascota-agujamagica.impultienda.ar · ID 0033f199-b863-461b-ab01-5b01fa40bf9e · ARS, es-AR. Precio 19.900 (tachado 49.900). Ebook + 4 bonos cargados (versión de texto). Landing de plantilla corregida. Bump + 2 OTOs con contenido de texto y funnel activo. Diagnóstico de Impultienda: sin advertencias. **Faltan: Mercado Pago, Clarity, píxel, compra de prueba** |
 | 70 | F4 · Creativos | ⬜ | | |
 | 85 | F5 · Campaña entregando | ⬜ | | |
 | 95 | F6 · Validada | ⬜ | | |
@@ -149,11 +149,11 @@ Datos de Investigación (2026-11-19), sin volver a verificar acá.
 | Bono 2 | 20 moldes de razas listos para calcar | 81d60718-5dd6-4d38-be38-ad2e2f7ba7e2 | regalo | PDF 2 págs. ⚠️ **solo la lista: faltan los 20 moldes dibujados** |
 | Bono 3 | Lista de materiales en Argentina | 44f56f9d-79b4-4a0a-ae27-e4325fa7d015 | regalo | PDF 1 pág. ⚠️ precios "[a verificar]" |
 | Bono 4 | Vendé retratos por encargo | d958dd83-6942-4f68-8174-9011a0906cc3 | regalo (valor 7.300) | PDF 2 págs. (texto) |
-| Order bump | Pack 50 moldes extra | d96cbc83-1838-4428-a52a-ff7c9aa19585 | ARS 5.900 (11.900) | 🔴 **SIN contenido** y aparece solo en el checkout |
-| OTO 1 | Retratos de familia | 429c9e61-acbc-404c-8879-617c55648759 | ARS 46.900 (93.800) | 🔴 sin contenido · solo post-compra |
-| OTO 2 | Alfombras chicas sin pistola de tufting | 337ba768-119d-4db0-99ec-d995ae91f0c4 | ARS 26.900 (53.800) | 🔴 sin contenido · solo post-compra |
+| Order bump | Pack 50 moldes extra | d96cbc83-1838-4428-a52a-ff7c9aa19585 | ARS 5.900 (11.900) | PDF 3 págs. (2026-11-20): la lista de 50 + cómo usarlos. ⚠️ faltan los 50 moldes dibujados (Higgsfield) |
+| OTO 1 | Retratos de familia | 429c9e61-acbc-404c-8879-617c55648759 | ARS 46.900 (93.800) | PDF 8 págs. de texto (2026-11-20) · solo post-compra |
+| OTO 2 | Alfombras chicas sin pistola de tufting | 337ba768-119d-4db0-99ec-d995ae91f0c4 | ARS 26.900 (53.800) | PDF 8 págs. de texto (2026-11-20) · solo post-compra |
 
-- Funnel post-compra "OTOs retrato de mascota" (5bfe00ae-4da9-4149-b7c7-df34d48024ba), modo "siempre": OTO1 −15% → OTO2 −20%, downsells −40% y −45% (Impultienda los pone solo; el canon dice downsell al 50%: se ajusta cuando haya contenido). **PAUSADO.**
+- Funnel post-compra "OTOs retrato de mascota" (5bfe00ae-4da9-4149-b7c7-df34d48024ba), modo "siempre": OTO1 −15% → OTO2 −20%, downsells −40% y −45% (los pone Impultienda; el canon dice 50%). **ACTIVO desde el 2026-11-20**, con entregable en cada oferta (orden del Cerebro). Sin VSL todavía (WIKI/embudo-postcompra.md).
 - OTO 3 ("vendé por encargo PRO") y OTO 4 (diseños de temporada): afuera por el tope de 3 upsells por tienda del plan Max (decisión de Tamy 2026-11-20: bump + 2 OTOs).
 - Escalera en pesos (46.900 / 26.900): la eligió el Cerebro porque todo cobra en pesos; **es cambiable**.
 - Landing: plantilla classic de Impultienda. Se ocultaron los 3 testimonios inventados por la IA y la notificación de venta flotante (0 ventas reales). Garantía 7 → 120 días. Pie "Nombre de la marca" → nombre del producto. FAQ 5 sin el upsell viejo. Títulos de bonos cargados.
