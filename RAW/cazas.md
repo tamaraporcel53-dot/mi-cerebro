@@ -109,3 +109,15 @@ Consultas: aguja mágica (AR, 68 resultados) · bordado ruso (AR, 76) · punch (
 Competencia en AR: **7 o más infoproductos** → según imperiowhale, hay que **buscar un subnicho** (no entrar de frente). Ninguno domina; el más viejo es Pordentro Studio, con ~28 días.
 Materiales en AR (búsqueda web, sin verificar precios): Mercado Libre AR tiene kits de "Aguja Mágica Punch Needle + lanas + bastidor + tela" (ERMITA CREA), tela panamá para punch needle (mercedesherenu) y agujas de 3 puntas (CANDY CRAFT). La fricción de materiales es baja.
 Pendiente (con navegador, espera el OK de Tamy): la antigüedad de HeyHobby y el precio real en las landings de Pordentro Studio y Un Mundo de Manualidades.
+
+## 2026-11-19 (octava vuelta) · subnichos de aguja mágica (Tamy eligió "subnicho aguja mágica", vía Cerebro). Solo API, sin navegador
+
+Consultas: tapete agulha mágica (0) · almofada agulha mágica (10, todos de Aline Martins) · punch needle rug (43) · punch needle pet portrait (13) · con filtro AR: retrato de mascota bordado (4) · tufting (63) · almohadones bordados (19) · bordado para vender (171).
+
+| Subnicho | Demanda afuera | ¿Lo cubre alguien en AR? | Veredicto |
+|---|---|---|---|
+| **Retrato de tu mascota en aguja mágica, desde una foto** | 🟡 fuerte: el ángulo principal de HeyHobby (315 anuncios activos) es la mascota: "A Portrait for Every Pet", "From Your Phone to Yarn", "Cat Portrait, Made by You", "Free Preview of Your Pet in Yarn" | 2 jugadores, ninguno confirmado como infoproducto: Huella & Alma ("Tu mascota bordada", USD, desde ~2026-11-07) y Luna Decima ("Cuadritos de tu Mascotas", ARS, parece servicio) | ✅ hueco. El más fuerte |
+| **Alfombras chicas con aguja mágica, sin pistola de tufting** | 🟡 "punch needle rug": Cozytuft, TuftLove, zreki (PL) venden kits o talleres | En AR, 6+ marcas venden **alfombras ya hechas** (Tropica Tufting, Materia Tuft, Wooli.ok, Indahood.rugs, taiger.rugs, Bengal Rugs) y hay talleres presenciales (Sommelier de Talleres). 0 infoproductos | ✅ hueco "objeto → técnica" |
+| **Almohadones de diseño para el living** | ⚪ solo Aline Martins (BR) con "almofada" | En AR solo tiendas que venden el almohadón (Tampa Home, En casa Arroyito). 0 infoproductos | 🟡 hueco, pero con menos wow |
+| Aguja mágica "para vender" / emprender | — | **Ya cubierto**: Bordados Lucía ("Miles de oportunidades"), Sarah lurdes ("nueva fuente de ingresos"), Un Mundo de Manualidades ("Tres encargos sin buscarlos", "Dejá de regalar tu trabajo") | ❌ como ángulo principal; sirve como bono |
+| Tapices para cuarto de bebé o de chicos | no buscado | no buscado | pendiente |
