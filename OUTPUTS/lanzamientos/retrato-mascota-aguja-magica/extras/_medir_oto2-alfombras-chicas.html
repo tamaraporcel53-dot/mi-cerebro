@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Tu Mascota en Aguja Mágica</title>
+<style>
+  @page { size: A4; margin: 0; }
+  :root { --azul:#1A3D6B; --naranja:#FF8C42; --fondo:#F0F7FF; --texto:#1f2a37; --suave:#5b6b80; }
+  * { box-sizing: border-box; }
+  body { counter-reset: pg; margin:0; font-family: "Segoe UI", Arial, sans-serif; color: var(--texto); background:#fff; }
+  .page { counter-increment: pg; width:210mm; height:297mm; padding:20mm 18mm 16mm; position:relative; overflow:hidden;
+          page-break-after: always; break-after: page; background: var(--fondo); }
+  .foot .n::after { content: counter(pg); }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+  .head { font-size:9pt; color: var(--suave); letter-spacing:.08em; text-transform:uppercase; margin-bottom:8mm;
+          display:flex; justify-content:space-between; border-bottom:1px solid #cfdcec; padding-bottom:3mm; }
+  .foot { position:absolute; bottom:9mm; left:18mm; right:18mm; font-size:9pt; color: var(--suave);
+          display:flex; justify-content:space-between; }
+  h1 { font-size:30pt; color: var(--azul); margin:0 0 4mm; line-height:1.1; }
+  h2 { font-size:22pt; color: var(--azul); margin:0 0 5mm; line-height:1.15; }
+  h3 { font-size:13pt; color: var(--azul); margin:6mm 0 2mm; }
+  p, li { font-size:11pt; line-height:1.5; margin:0 0 2.5mm; }
+  ul, ol { padding-left:6mm; margin:0 0 3mm; }
+  .badge { display:inline-block; background: var(--naranja); color:#fff; font-weight:700; font-size:10pt;
+           padding:1.5mm 4mm; border-radius:20mm; margin-bottom:4mm; }
+  .box { background:#fff; border-left:4px solid var(--naranja); border-radius:3mm; padding:4mm 5mm; margin:4mm 0; }
+  .box.azul { border-left-color: var(--azul); }
+  .box p:last-child, .box ul:last-child { margin-bottom:0; }
+  .img { border:2px dashed #9fb4cf; border-radius:3mm; background:#fff; color:#7a8ca5; font-size:10pt;
+         display:flex; align-items:center; justify-content:center; text-align:center; padding:5mm; margin:4mm 0; }
+  .cols { display:grid; grid-template-columns: 1fr 1fr; gap:6mm; }
+  .steps { counter-reset: s; list-style:none; padding:0; }
+  .steps li { counter-increment: s; background:#fff; border-radius:3mm; padding:3mm 4mm 3mm 13mm; position:relative; margin-bottom:2.5mm; }
+  .steps li::before { content: counter(s); position:absolute; left:3.5mm; top:3mm; width:7mm; height:7mm; border-radius:50%;
+           background: var(--azul); color:#fff; font-weight:700; font-size:10pt; display:flex; align-items:center; justify-content:center; }
+  .steps li:nth-child(even)::before { background: var(--naranja); }
+  table { width:100%; border-collapse:collapse; background:#fff; border-radius:3mm; overflow:hidden; font-size:10.5pt; }
+  th { background: var(--azul); color:#fff; text-align:left; padding:2.5mm 3mm; }
+  td { padding:2.2mm 3mm; border-bottom:1px solid #e3ebf5; vertical-align:top; }
+  .toc td:last-child { text-align:right; font-weight:700; color: var(--azul); width:18mm; }
+  .cover { background: var(--azul); color:#fff; display:flex; flex-direction:column; justify-content:center; }
+  .cover h1 { color:#fff; font-size:40pt; }
+  .cover .sub { font-size:15pt; line-height:1.4; color:#dce8f7; max-width:150mm; }
+  .cover .img { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.4); color:#dce8f7; height:95mm; }
+  .sep { background: var(--naranja); color:#fff; display:flex; flex-direction:column; justify-content:center; }
+  .sep h1 { color:#fff; font-size:38pt; }
+  .sep p { font-size:14pt; }
+  .draft { position:absolute; top:6mm; right:8mm; font-size:8pt; background:#fff3cd; color:#7a5b00; padding:1mm 3mm; border-radius:2mm; }
+  .chat { background:#fff; border-radius:3mm; padding:3mm 4mm; margin-bottom:2.5mm; font-size:10.5pt; border:1px solid #e3ebf5; }
+  .chat b { color: var(--azul); }
+
+  .pic { border-radius:3mm; overflow:hidden; margin:4mm 0; background:#fff; box-shadow:0 .6mm 2.5mm rgba(26,61,107,.13); }
+  .pic img { width:100%; height:100%; object-fit:cover; display:block; }
+  .cover .pic { height:95mm; box-shadow:0 1mm 4mm rgba(0,0,0,.25); }
+  .grid-moldes { display:grid; grid-template-columns:repeat(6,1fr); gap:2.5mm; margin:4mm 0; }
+  .grid-moldes img { width:100%; aspect-ratio:1; object-fit:contain; background:#fff; border-radius:2mm; box-shadow:0 .4mm 1.5mm rgba(26,61,107,.12); }
+  .molde-pag { display:flex; flex-direction:column; }
+  .molde-img { flex:none; width:150mm; height:150mm; margin:2mm auto 4mm; background:#fff; border-radius:3mm; box-shadow:0 .6mm 2.5mm rgba(26,61,107,.13); }
+  .molde-img img { width:100%; height:100%; object-fit:contain; display:block; }
+  .mapa { display:flex; gap:3mm; }
+  .mapa div { flex:1; background:#fff; border-radius:2mm; padding:2mm; font-size:9.5pt; display:flex; align-items:center; gap:2mm; }
+  .mapa i { width:7mm; height:7mm; border-radius:50%; flex:none; border:1px solid #cfdcec; }
+</style>
+</head>
+<body>
+<section class="page cover">
+  <span class="badge" style="align-self:flex-start">Guía extra</span>
+  <h1>Alfombras chicas con aguja mágica</h1>
+  <p class="sub">Alfombritas, posavasos y almohadones con la cara de tu mascota, sin comprar una pistola de tufting.</p>
+  <div class="pic" style="height:95mm"><img src="../imagenes/web/P7_oto2.jpg" alt=""></div>
+</section>
+<section class="page">
+  <div class="head"><span>Alfombras chicas</span><span>Contenido</span></div>
+  <h2>Qué vas a aprender</h2>
+  <table class="toc">
+    <tr><td>1 · Qué cambia respecto del cuadro</td><td>3</td></tr>
+    <tr><td>2 · Materiales</td><td>4</td></tr>
+    <tr><td>3 · El marco y el diseño</td><td>5</td></tr>
+    <tr><td>4 · Bordar la alfombra</td><td>6</td></tr>
+    <tr><td>5 · Fijar el revés y terminar los bordes</td><td>7</td></tr>
+    <tr><td>6 · Posavasos, almohadones y cuidado</td><td>8</td></tr>
+  </table>
+  <div class="box"><p><b>Primer proyecto recomendado:</b> una alfombrita redonda de 40 cm (sin confirmar) con la cara de tu mascota. Es chica, se termina rápido y sirve para la cucha o al lado de la cama.</p></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page">
+  <div class="head"><span>Alfombras chicas</span><span>Capítulo 1</span></div>
+  <span class="badge">Capítulo 1</span>
+  <h2>Qué cambia respecto del cuadro</h2>
+  <ul>
+    <li><b>Se pisa:</b> los puntos tienen que quedar bien juntos y el revés, fijado, o la lana se sale.</li>
+    <li><b>Es más grande:</b> se trabaja en un marco fijo, no en un bastidor redondo chico.</li>
+    <li><b>Lleva lana más gruesa</b> y una aguja más grande que la del cuadro.</li>
+    <li><b>Se lava:</b> los colores y la lana tienen que aguantar.</li>
+  </ul>
+  <div class="box azul"><p><b>¿Por qué sin pistola de tufting?</b> La pistola es rápida, pero cara y ruidosa. Para piezas chicas, la aguja mágica gruesa da el mismo rulito, con tus manos y sin enchufe.</p></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page">
+  <div class="head"><span>Alfombras chicas</span><span>Capítulo 2</span></div>
+  <span class="badge">Capítulo 2</span>
+  <h2>Materiales</h2>
+  <table>
+    <tr><th>Qué</th><th>Cuál sirve</th></tr>
+    <tr><td>Tela base</td><td>Tela para punch needle de trama abierta y firme (tipo "monk cloth") o arpillera de buena calidad</td></tr>
+    <tr><td>Aguja</td><td>Aguja mágica gruesa para lana (tipo Oxford o similar, sin confirmar el número)</td></tr>
+    <tr><td>Lana</td><td>Lana gruesa o acrílico grueso que no se deshilache. Probá que pase suelta por la aguja</td></tr>
+    <tr><td>Marco</td><td>Marco de madera con tachuelas o con cinta de agarre en los bordes</td></tr>
+    <tr><td>Para el revés</td><td>Pegamento para alfombras o látex de tapicería, y fieltro o tela antideslizante</td></tr>
+    <tr><td>Bordes</td><td>Cinta de algodón o bies, aguja e hilo fuerte</td></tr>
+  </table>
+  <div class="box"><p><b>Dónde comprar:</b> en Argentina se consigue en mercerías y tiendas de tapicería. Precios sin verificar: mirá la lista de materiales del Bono 3.</p></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page">
+  <div class="head"><span>Alfombras chicas</span><span>Capítulo 3</span></div>
+  <span class="badge">Capítulo 3</span>
+  <h2>El marco y el diseño</h2>
+  <ol class="steps">
+    <li><b>Tensá la tela</b> en el marco, bien pareja. Dejá 8 a 10 cm de tela de sobra por lado (sin confirmar) para el dobladillo.</li>
+    <li><b>Prepará el diseño</b> con el mismo método del Bono 1: foto, espejada, pasada a líneas.</li>
+    <li><b>Agrandalo</b> al tamaño de la alfombra imprimiendo en varias hojas y pegándolas con cinta.</li>
+    <li><b>Calcalo al revés de la tela</b> con un marcador grueso. En una tela de trama abierta, apoyá el dibujo debajo y marcá a través.</li>
+    <li><b>Simplificá:</b> en una alfombra los detalles chicos se pierden. Quedate con la forma de la cara, los ojos, la nariz y 3 o 4 colores.</li>
+  </ol>
+  <div class="pic" data-auto data-id="O2a_marco" style="height:0mm"><img src="../imagenes/web/O2a_marco.jpg" alt=""></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page">
+  <div class="head"><span>Alfombras chicas</span><span>Capítulo 4</span></div>
+  <span class="badge">Capítulo 4</span>
+  <h2>Bordar la alfombra</h2>
+  <ul>
+    <li><b>Puntos más juntos que en el cuadro:</b> si mirás del lado de los rulitos y ves la tela, agregá filas.</li>
+    <li><b>Altura pareja:</b> regulá la aguja al mismo largo para toda la alfombra; solo cambiala si querés un efecto de relieve.</li>
+    <li><b>Orden:</b> contornos, ojos y nariz, el color más oscuro, los medios y el fondo al final.</li>
+    <li><b>Descansá la mano:</b> con lana gruesa la aguja hace más fuerza. Trabajá de a ratos.</li>
+  </ul>
+  <div class="box"><p><b>Efecto peluche:</b> cortá los rulitos con una tijera filosa en la zona del hocico o de las orejas. Queda más suave, ideal para la cucha.</p></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page">
+  <div class="head"><span>Alfombras chicas</span><span>Capítulo 5</span></div>
+  <span class="badge">Capítulo 5</span>
+  <h2>Fijar el revés y terminar los bordes</h2>
+  <ol class="steps">
+    <li><b>Con la alfombra todavía en el marco</b>, pasá una capa fina y pareja de pegamento para alfombras o látex por el revés.</li>
+    <li><b>Dejá secar</b> el tiempo que diga el envase, en un lugar ventilado.</li>
+    <li><b>Sacala del marco</b> y cortá la tela de sobra dejando unos 4 cm (sin confirmar).</li>
+    <li><b>Doblá esa tela hacia el revés</b> y pegala o cosela. En una alfombra redonda, hacé cortes chiquitos para que el borde no se arrugue.</li>
+    <li><b>Cubrí el revés</b> con fieltro o tela antideslizante, cosida a mano todo alrededor.</li>
+  </ol>
+  <div class="box azul"><p><b>Si va al piso:</b> el antideslizante no es opcional, sobre todo con mascotas que corren.</p></div>
+  <div class="pic" data-auto data-id="O2b_reves" style="height:0mm"><img src="../imagenes/web/O2b_reves.jpg" alt=""></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page">
+  <div class="head"><span>Alfombras chicas</span><span>Capítulo 6</span></div>
+  <span class="badge">Capítulo 6</span>
+  <h2>Posavasos, almohadones y cuidado</h2>
+  <h3>Posavasos</h3>
+  <p>Con la aguja del cuadro y lana común: un círculo de 10 cm (sin confirmar) con la cara de tu mascota. Fijá el revés igual que la alfombra y pegale un círculo de corcho o fieltro.</p>
+  <h3>Almohadón</h3>
+  <p>Bordá el frente en la tela base y, sin pegamento en el revés, cosela a una funda con cierre. Es el regalo más fácil de vender por encargo.</p>
+  <h3>Cuidado</h3>
+  <ul>
+    <li>Aspirá del lado de los rulitos, con la potencia baja.</li>
+    <li>Las manchas se limpian a mano con agua fría y jabón neutro, sin frotar.</li>
+    <li>No la metas al lavarropas ni a la secadora.</li>
+  </ul>
+  <div class="pic" data-auto data-id="O2c_posavasos" style="height:0mm"><img src="../imagenes/web/O2c_posavasos.jpg" alt=""></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<script>
+const out=[];document.querySelectorAll('.page').forEach((pg,i)=>{const foot=pg.querySelector('.foot');if(!foot){return}
+const fb=foot.getBoundingClientRect().top;let maxB=0,maxSinAuto=0;[...pg.children].forEach(c=>{if(c===foot||c.classList.contains('draft'))return;const r=c.getBoundingClientRect();const b=r.bottom+parseFloat(getComputedStyle(c).marginBottom||0);if(!c.hasAttribute('data-auto'))maxSinAuto=Math.max(maxSinAuto,b);maxB=Math.max(maxB,b)});
+const a=pg.querySelector('[data-auto]');out.push({p:i+1,id:a?a.dataset.id:null,libre:+((fb-maxB)/3.7795).toFixed(1),corta:maxB>fb+0.5})});
+document.body.setAttribute('data-medida',JSON.stringify(out));</script></body></html>

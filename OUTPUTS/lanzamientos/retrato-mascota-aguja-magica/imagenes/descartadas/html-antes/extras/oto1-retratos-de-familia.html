@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Tu Mascota en Aguja Mágica</title>
+<style>
+  @page { size: A4; margin: 0; }
+  :root { --azul:#1A3D6B; --naranja:#FF8C42; --fondo:#F0F7FF; --texto:#1f2a37; --suave:#5b6b80; }
+  * { box-sizing: border-box; }
+  body { counter-reset: pg; margin:0; font-family: "Segoe UI", Arial, sans-serif; color: var(--texto); background:#fff; }
+  .page { counter-increment: pg; width:210mm; height:297mm; padding:20mm 18mm 16mm; position:relative; overflow:hidden;
+          page-break-after: always; break-after: page; background: var(--fondo); }
+  .foot .n::after { content: counter(pg); }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+  .head { font-size:9pt; color: var(--suave); letter-spacing:.08em; text-transform:uppercase; margin-bottom:8mm;
+          display:flex; justify-content:space-between; border-bottom:1px solid #cfdcec; padding-bottom:3mm; }
+  .foot { position:absolute; bottom:9mm; left:18mm; right:18mm; font-size:9pt; color: var(--suave);
+          display:flex; justify-content:space-between; }
+  h1 { font-size:30pt; color: var(--azul); margin:0 0 4mm; line-height:1.1; }
+  h2 { font-size:22pt; color: var(--azul); margin:0 0 5mm; line-height:1.15; }
+  h3 { font-size:13pt; color: var(--azul); margin:6mm 0 2mm; }
+  p, li { font-size:11pt; line-height:1.5; margin:0 0 2.5mm; }
+  ul, ol { padding-left:6mm; margin:0 0 3mm; }
+  .badge { display:inline-block; background: var(--naranja); color:#fff; font-weight:700; font-size:10pt;
+           padding:1.5mm 4mm; border-radius:20mm; margin-bottom:4mm; }
+  .box { background:#fff; border-left:4px solid var(--naranja); border-radius:3mm; padding:4mm 5mm; margin:4mm 0; }
+  .box.azul { border-left-color: var(--azul); }
+  .box p:last-child, .box ul:last-child { margin-bottom:0; }
+  .img { border:2px dashed #9fb4cf; border-radius:3mm; background:#fff; color:#7a8ca5; font-size:10pt;
+         display:flex; align-items:center; justify-content:center; text-align:center; padding:5mm; margin:4mm 0; }
+  .cols { display:grid; grid-template-columns: 1fr 1fr; gap:6mm; }
+  .steps { counter-reset: s; list-style:none; padding:0; }
+  .steps li { counter-increment: s; background:#fff; border-radius:3mm; padding:3mm 4mm 3mm 13mm; position:relative; margin-bottom:2.5mm; }
+  .steps li::before { content: counter(s); position:absolute; left:3.5mm; top:3mm; width:7mm; height:7mm; border-radius:50%;
+           background: var(--azul); color:#fff; font-weight:700; font-size:10pt; display:flex; align-items:center; justify-content:center; }
+  .steps li:nth-child(even)::before { background: var(--naranja); }
+  table { width:100%; border-collapse:collapse; background:#fff; border-radius:3mm; overflow:hidden; font-size:10.5pt; }
+  th { background: var(--azul); color:#fff; text-align:left; padding:2.5mm 3mm; }
+  td { padding:2.2mm 3mm; border-bottom:1px solid #e3ebf5; vertical-align:top; }
+  .toc td:last-child { text-align:right; font-weight:700; color: var(--azul); width:18mm; }
+  .cover { background: var(--azul); color:#fff; display:flex; flex-direction:column; justify-content:center; }
+  .cover h1 { color:#fff; font-size:40pt; }
+  .cover .sub { font-size:15pt; line-height:1.4; color:#dce8f7; max-width:150mm; }
+  .cover .img { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.4); color:#dce8f7; height:95mm; }
+  .sep { background: var(--naranja); color:#fff; display:flex; flex-direction:column; justify-content:center; }
+  .sep h1 { color:#fff; font-size:38pt; }
+  .sep p { font-size:14pt; }
+  .draft { position:absolute; top:6mm; right:8mm; font-size:8pt; background:#fff3cd; color:#7a5b00; padding:1mm 3mm; border-radius:2mm; }
+  .chat { background:#fff; border-radius:3mm; padding:3mm 4mm; margin-bottom:2.5mm; font-size:10.5pt; border:1px solid #e3ebf5; }
+  .chat b { color: var(--azul); }
+</style>
+</head>
+<body>
+<section class="page cover">
+  <span class="draft">VERSIÓN DE TEXTO · 2026-11-20</span>
+  <span class="badge" style="align-self:flex-start">Guía avanzada</span>
+  <h1>Retratos de familia</h1>
+  <p class="sub">Dos o más mascotas en un mismo cuadro y retratos de personas a partir de una foto, con el mismo método que ya aprendiste.</p>
+  <div class="img">[VERSIÓN FINAL: cuadro bordado con un perro y un gato juntos]</div>
+</section>
+<section class="page">
+  <div class="head"><span>Retratos de familia</span><span>Contenido</span></div>
+  <h2>Qué vas a aprender</h2>
+  <table class="toc">
+    <tr><td>1 · La foto para un retrato de grupo</td><td>3</td></tr>
+    <tr><td>2 · Armar la composición</td><td>4</td></tr>
+    <tr><td>3 · Tamaño del bastidor y orden de trabajo</td><td>5</td></tr>
+    <tr><td>4 · Retratos de personas: simplificar la cara</td><td>6</td></tr>
+    <tr><td>5 · Colores de piel y de pelo</td><td>7</td></tr>
+    <tr><td>6 · Errores comunes en retratos grandes</td><td>8</td></tr>
+  </table>
+  <div class="box"><p><b>Antes de empezar:</b> hacé primero un retrato de una sola mascota con la guía principal. Esta guía da por sabida la técnica básica.</p></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page">
+  <div class="head"><span>Retratos de familia</span><span>Capítulo 1</span></div>
+  <span class="badge">Capítulo 1</span>
+  <h2>La foto para un retrato de grupo</h2>
+  <p>Lo ideal es una sola foto donde estén todos, con luz pareja y las caras a la misma altura. Casi nunca existe: por eso se puede <b>armar con varias fotos</b>.</p>
+  <ol class="steps">
+    <li>Elegí una foto buena de cada uno, de frente o con la cabeza apenas girada, y con luz parecida.</li>
+    <li>Recortá cada cara y llevalas al mismo tamaño: los ojos de todos tienen que medir parecido.</li>
+    <li>Juntalas en una sola imagen con una app de collage gratis o en una presentación, y recién ahí pasala a líneas con el método del Bono 1.</li>
+  </ol>
+  <div class="box"><p><b>Ojo con la escala:</b> un gato al lado de un labrador no puede quedar del mismo tamaño. Respetá el tamaño real, o la imagen se ve rara aunque no se sepa por qué.</p></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page">
+  <div class="head"><span>Retratos de familia</span><span>Capítulo 2</span></div>
+  <span class="badge">Capítulo 2</span>
+  <h2>Armar la composición</h2>
+  <h3>Dos integrantes</h3>
+  <p>Cabezas juntas, levemente inclinadas una hacia la otra. Que se toquen o se superpongan un poco: separadas parecen dos cuadros en uno.</p>
+  <h3>Tres o más</h3>
+  <p>Armá un triángulo: el más grande atrás y al centro, los más chicos adelante y a los costados. Evitá ponerlos a todos en fila.</p>
+  <h3>Mascotas con personas</h3>
+  <p>La persona abrazando o sosteniendo a la mascota, con las caras cerca. Si la foto es de cuerpo entero, recortala a la altura del pecho.</p>
+  <div class="box azul"><p><b>Regla simple:</b> dejá un margen libre alrededor del grupo. El fondo liso es lo que hace que las caras se lean desde lejos.</p></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page">
+  <div class="head"><span>Retratos de familia</span><span>Capítulo 3</span></div>
+  <span class="badge">Capítulo 3</span>
+  <h2>Tamaño del bastidor y orden de trabajo</h2>
+  <table>
+    <tr><th>Integrantes</th><th>Bastidor sugerido (sin confirmar)</th></tr>
+    <tr><td>2</td><td>250 a 300 mm</td></tr>
+    <tr><td>3</td><td>300 mm o marco rectangular</td></tr>
+    <tr><td>4 o más</td><td>marco rectangular o bastidor de tapicería</td></tr>
+  </table>
+  <h3>Orden de trabajo</h3>
+  <ol class="steps">
+    <li>Contornos de todos los integrantes, con rulito bajo.</li>
+    <li>Ojos y narices de todos. Si un ojo sale mal, se nota enseguida: arreglalo antes de seguir.</li>
+    <li>El que está adelante, completo. Después los de atrás: así los bordes de adelante quedan limpios.</li>
+    <li>El fondo, al final.</li>
+  </ol>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page">
+  <div class="head"><span>Retratos de familia</span><span>Capítulo 4</span></div>
+  <span class="badge">Capítulo 4</span>
+  <h2>Retratos de personas: simplificar la cara</h2>
+  <p>En aguja mágica una cara no se "dibuja": se arma con zonas de color. Cuanto más simple, más se parece.</p>
+  <ul>
+    <li><b>Lo que identifica a una persona</b> es el peinado, los anteojos, la barba y la forma de la cara, más que los rasgos finos.</li>
+    <li><b>Ojos:</b> dos puntos o dos líneas cortas en un color oscuro. Sin pestañas ni brillos.</li>
+    <li><b>Nariz:</b> apenas una sombra a un costado, o nada.</li>
+    <li><b>Boca:</b> una línea corta en un tono de piel más oscuro, no en rojo.</li>
+  </ul>
+  <div class="box"><p><b>Estilo recomendado para empezar:</b> cara sin rasgos, solo con el peinado y la ropa. Es el estilo que más se ve en retratos de familia bordados y es el que menos se equivoca.</p></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page">
+  <div class="head"><span>Retratos de familia</span><span>Capítulo 5</span></div>
+  <span class="badge">Capítulo 5</span>
+  <h2>Colores de piel y de pelo</h2>
+  <ul>
+    <li><b>Piel:</b> elegí 2 tonos, el base y uno un poco más oscuro para la sombra debajo del pelo y del mentón.</li>
+    <li><b>Pelo:</b> 2 o 3 tonos, igual que el pelaje de la mascota, siguiendo la dirección del peinado.</li>
+    <li><b>Probá la lana al lado de la foto</b>, con luz de día: con luz de lámpara los tonos de piel cambian mucho.</li>
+  </ul>
+  <h3>Que mascotas y personas convivan</h3>
+  <p>Usá la misma altura de rulito para todos los pelajes y los pelos, y un rulito más bajo para la piel. Así el cuadro se ve parejo.</p>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page">
+  <div class="head"><span>Retratos de familia</span><span>Capítulo 6</span></div>
+  <span class="badge">Capítulo 6</span>
+  <h2>Errores comunes en retratos grandes</h2>
+  <table>
+    <tr><th>Qué pasa</th><th>Cómo se arregla</th></tr>
+    <tr><td>La tela se afloja a mitad de camino</td><td>Volvé a tensarla cada vez que termines a un integrante.</td></tr>
+    <tr><td>Un integrante quedó más "lleno" que otro</td><td>Revisá la distancia entre puntos: tiene que ser la misma en todo el cuadro.</td></tr>
+    <tr><td>Las caras se pierden con el fondo</td><td>Hacé un contorno de una fila en un tono más oscuro alrededor del grupo.</td></tr>
+    <tr><td>La persona "no se parece"</td><td>Simplificá: sacá rasgos y agrandá lo que la identifica (peinado, anteojos).</td></tr>
+  </table>
+  <div class="box"><p><b>Para regalar o vender:</b> los retratos de familia son los que más se piden por encargo. Calculá el precio con la fórmula del Bono 4, sumando el tiempo de cada integrante.</p></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+</body></html>
