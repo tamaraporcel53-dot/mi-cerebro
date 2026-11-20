@@ -30,6 +30,14 @@ números inventados o textos que después cuestan una fortuna cambiar.
 - El **índice coincide con las páginas reales.**
 - Productos que se comen o se toman: términos y avisos del mercado de destino (ej. en alemán, "comestible" no es lo mismo que "apto para alimentos"; aditivos con su código; advertencias obligatorias).
 - **Nunca decir cuántas técnicas enseña** ("una sola técnica" suena a poco). Las piezas o diseños sí se cuentan.
+- **El texto que lee el comprador no lleva marcas internas.** "(sin confirmar)", "[a verificar]", "[Valores propuestos…]",
+  "BORRADOR" y notas entre corchetes son para el cerebro, no para el producto. Lo que no está verificado se **verifica, se
+  reescribe en términos generales o se saca**, nunca se publica con la marca. Antes de subir un PDF a la tienda, buscá en el
+  texto: `sin confirmar|sin aprobar|a verificar|BORRADOR|\[` y que dé cero.
+  > Por qué (2026-11-20): los 8 PDF del retrato de mascota llegaron a la tienda con 31 "(sin confirmar)" y un
+  > "[Valores propuestos, sin aprobar…]" a la vista del comprador. Cómo se metió: la regla de `CLAUDE.md` "lo no verificado
+  > va marcado (sin confirmar)" se aplicó también al texto del producto, y la revisión antes de subir solo miró carteles de
+  > borrador, índice y páginas. (Lo escaló Edición.)
 
 ## Relacionado
 
