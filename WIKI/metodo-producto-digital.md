@@ -1,6 +1,6 @@
 ---
 tema: metodo-producto-digital
-actualizado: 2026-10-29
+actualizado: 2026-11-20
 fuentes: Clase 1
 ---
 
@@ -32,6 +32,12 @@ Ajustá precios y reglas a tu mercado a medida que tengas tus propios números.
 - **F3 Tienda:** medición en orden (dominio, mail, píxel). Cada oferta nueva, píxel nuevo.
   Cada tienda nueva con su proyecto de **Microsoft Clarity** desde el día uno (mapas de calor: dónde se traban).
   El día del lanzamiento sin extras en el pago ni ofertas post-compra. Siempre una compra de prueba.
+  **Nada inventado en la landing:** ni testimonios, ni estrellas o "500+ ventas", ni "24 personas viendo", ni "quedan 7 cupos",
+  ni relojes de cuenta regresiva que se reinician. Prueba social solo de compradores reales; urgencia solo si es verdad
+  (una promo que de verdad vence en una fecha). Las plantillas de Impultienda los traen de fábrica: se revisan y se apagan al crear la tienda.
+  > Por qué (2026-11-20): la tienda del retrato de mascota salió con "4.9 (500+ ventas)", "24 personas viendo", "Quedan 7 cupos",
+  > un reloj y 3 testimonios escritos por la IA de la plataforma. Es engañoso para el comprador, y Meta y Mercado Pago pueden
+  > sancionar la cuenta. (Lo escaló Edición.)
 - **F4 Anuncios:** nunca menos de 10. Un ángulo por anuncio. Sin promesas de plata ni plazos (Meta los rechaza).
   Variedad de voces, músicas, formatos y gente (ver [[anuncios-que-venden]]).
 - **F5 Campaña:** 1 campaña, 1 conjunto, 10 anuncios. Presupuesto diario = precio × 3, redondeado a múltiplo de 5.

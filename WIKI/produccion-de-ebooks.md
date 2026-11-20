@@ -1,6 +1,6 @@
 ---
 tema: produccion-de-ebooks
-actualizado: 2026-10-29
+actualizado: 2026-11-20
 fuentes: aprendizajes de ebooks reales (octubre 2026)
 ---
 
