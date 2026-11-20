@@ -1,6 +1,6 @@
 # RETRATO DE TU MASCOTA EN AGUJA MÁGICA — 20%
 
-**Creada:** 2026-11-19 · **Mercado:** español / Argentina primero (cobro en pesos con Mercado Pago, en Impultienda) · **Estado:** en armado. La oferta está propuesta y el precio espera la decisión de Tamy
+**Creada:** 2026-11-19 · **Mercado:** español / Argentina primero (cobro en pesos con Mercado Pago, en Impultienda) · **Estado:** en armado. Oferta aprobada (ARS 19.900 + 4 bonos). El borrador de texto del ebook espera la revisión de Tamy
 **Origen:** orden de Tamy del 2026-11-19, que llegó por el Cerebro: "Vamos con el retrato de mascota". Datos de Investigación en `RAW/cazas.md`, vueltas 6 a 9.
 
 ## Tablero
@@ -9,7 +9,7 @@
 |---|---|---|---|---|
 | 10 | F0 · Cazar | ✅ | 2026-11-19 | Subnicho elegido por Tamy. Es un **hueco**: en AR, 0 ebooks de retrato de mascota; solo servicios que venden el bordado hecho |
 | 20 | F1 · Oferta | ✅ | 2026-11-19 | Precio ARS 19.900 y los 4 bonos aprobados por Tamy (vía Cerebro). El bump y los OTOs siguen sin decidir (no se arman hasta F7) |
-| 35 | F2 · Producto | ⬜ | | |
+| 35 | F2 · Producto | 🟡 | 2026-11-19 | Borrador de **texto** del ebook + 4 bonos en PDF (22 páginas, HTML → PDF con Edge, 0 créditos), en `OUTPUTS/lanzamientos/retrato-mascota-aguja-magica/`. Espera la revisión de Tamy. Faltan: imágenes con Higgsfield (no está conectado en esta sesión), 20 moldes, precios de materiales, retrato real de prueba para confirmar las medidas. **No cargado en Impultienda** |
 | 55 | F3 · Tienda | ⬜ | | |
 | 70 | F4 · Creativos | ⬜ | | |
 | 85 | F5 · Campaña entregando | ⬜ | | |
@@ -20,7 +20,7 @@
 RETRATO DE TU MASCOTA EN AGUJA MÁGICA — 20%
 ✅ F0 Cazar  ✅ F1 Oferta  🟡 F2 Producto  ⬜ F3 Tienda
 ⬜ F4 Creativos  ⬜ F5 Campaña  ⬜ F6 Validar  ⬜ F7 Escalera
-Sigue: F2, la muestra del ebook. Falta de vos: el OK al costo de la muestra y revisar el borrador.
+Sigue: F2. Falta de vos: revisar el borrador del ebook y decidir cómo se hacen las imágenes.
 ```
 
 ## F0 · La oferta original
@@ -106,7 +106,7 @@ Datos de Investigación (2026-11-19), sin volver a verificar acá.
 
 | Activo | Valor |
 |---|---|
-| Carpeta del producto | |
+| Carpeta del producto | `OUTPUTS/lanzamientos/retrato-mascota-aguja-magica/` (ficha_datos.md, plan_paginas.md, borrador.html, borrador-tu-mascota-en-aguja-magica.pdf) |
 | Tienda (ID) y dominio | Todavía no hay tienda (2026-11-19) |
 | URL de la landing | |
 | Pasarela | Mercado Pago en pesos (decidido el 2026-11-19) |

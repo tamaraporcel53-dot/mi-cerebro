@@ -10,7 +10,7 @@
 | Qué | Lo pide |
 |---|---|
 | **Bot Escala IU:** decidir si su regla (×2 con 1 venta y ROAS ≥ 2, cada 15 min) reemplaza a la tabla F6 de imperioproducto (+30% con 3 ventas y ROAS > 1,8, a las 23:30) y si aprobás que mueva presupuesto solo. No se construye hasta tener una campaña vendiendo (2026-11-19) | Sistemas |
-| **Retrato de mascota:** ~~precio~~ (cerca de AR$ 19.900) y ~~4 bonos~~ aprobados por Tamy el 2026-11-19 (método "de tu foto al dibujo", 20 moldes de razas, materiales en AR, "vendé retratos por encargo"). Productos arma el ebook y Tamy lo revisa antes de cargarlo. **Falta decidir el plan para subir lo que gasta cada cliente** (no se arma el día del lanzamiento; va cuando la oferta venda parejo): order bump "50 moldes extra" a ARS 5.900, y 4 OTOs (retratos de familia, alfombras chicas, "vendé por encargo PRO", diseños de temporada). Hay que elegir si la escalera queda en USD 47/27/17/12 o adaptada a pesos (ARS 46.900/26.900/16.900/11.900). Detalle en `OUTPUTS/lanzamientos/retrato-mascota-aguja-magica.md` | Productos |
+| **Retrato de mascota:** ~~precio~~ (cerca de AR$ 19.900) y ~~4 bonos~~ aprobados por Tamy el 2026-11-19 (método "de tu foto al dibujo", 20 moldes de razas, materiales en AR, "vendé retratos por encargo"). **Revisar el borrador del ebook** (22 páginas de texto, con recuadros donde van las imágenes): `OUTPUTS/lanzamientos/retrato-mascota-aguja-magica/borrador-tu-mascota-en-aguja-magica.pdf`, y decidir cómo se hacen las imágenes (Higgsfield no está conectado en la sesión de Productos). **Falta decidir el plan para subir lo que gasta cada cliente** (no se arma el día del lanzamiento; va cuando la oferta venda parejo): order bump "50 moldes extra" a ARS 5.900, y 4 OTOs (retratos de familia, alfombras chicas, "vendé por encargo PRO", diseños de temporada). Hay que elegir si la escalera queda en USD 47/27/17/12 o adaptada a pesos (ARS 46.900/26.900/16.900/11.900). Detalle en `OUTPUTS/lanzamientos/retrato-mascota-aguja-magica.md` | Productos |
 | Crear la **fanpage y el Instagram** de la marca de ebooks (en español) y conectarlos al portfolio comercial. Hoy el portfolio no tiene ninguna página (2026-11-19) | Meta |
 
 ## El negocio hoy
@@ -32,7 +32,7 @@
 
 | Qué | Quién | Estado | Fecha |
 |---|---|---|---|
-| Ebook **retrato de mascota en aguja mágica**: armar la oferta (contenido, método foto → dibujo → tela, bonos, lista de materiales en AR) | Productos | 10%: precio ARS 19.900 decidido; faltan los bonos y el plan de bump y OTOs | 2026-11-19 |
+| Ebook **retrato de mascota en aguja mágica**: armar la oferta (contenido, método foto → dibujo → tela, bonos, lista de materiales en AR) | Productos | 20%: oferta aprobada; el borrador de texto del ebook (22 págs., 0 créditos) espera la revisión de Tamy | 2026-11-19 |
 | Validar punch needle (caza, competencia, precios) | Investigación | **Hecho** (vueltas 6 a 9 en `RAW/cazas.md`) | 2026-11-19 |
 | Ebook de pan dulce relleno | Productos | **Descartado por ahora**: Tamy eligió punch needle (salir de repostería) | 2026-11-19 |
 
