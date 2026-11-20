@@ -1,6 +1,6 @@
 # UTMs — Tu Mascota en Aguja Mágica
 
-> Las pegó Tamy en el chat de Edición el 2026-11-20 (sin confirmar que sean las del panel de Impultienda de esta tienda).
+> Las pegó Tamy en el chat de Edición el 2026-11-20. Según Tamy (2026-11-20), las sacó del panel de Impultienda.
 > Van en el campo "Parámetros de URL" de cada anuncio de Meta.
 
 ```
