@@ -29,3 +29,4 @@
 2026-11-19 · Huella & Alma y Luna Decima venden el SERVICIO de mascota bordada, no un infoproducto · por qué: el subnicho "retrato de tu mascota" está libre de ebooks en AR, y la demanda de pagar por el objeto existe
 2026-11-19 · La competencia resuelve "pasar el dibujo a la tela" con moldes a tamaño real para calcar o imprimir · por qué: para la mascota hace falta un paso foto → contorno; puede ser el bono que justifique el precio (hipótesis)
 2026-11-19 · Cancelada la búsqueda de chupetines por orden de Tamy, vía Cerebro ("ya no lo busquen más") · por qué: el foco es el ebook de retrato de mascota en aguja mágica; quedaban pendientes "chupetines con foto" y "personalizados" con filtro AR, que no se van a buscar
+2026-11-19 · El anuncio más viejo de aguja mágica es de Bordando com Amor (BR, curso por WhatsApp), ~156 días al aire desde ~2026-06-15 · por qué: es la mejor señal de que la técnica vende sostenida, no solo en la ola de Navidad

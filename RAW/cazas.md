@@ -137,3 +137,26 @@ Conclusiones:
 - **Precio de referencia en AR para aguja mágica: AR$ 18.900 a 19.900.** Es lo más cerca de USD 19,90 que se vio en toda la caza: unos 2/3 del precio de Tamy, si USD 19,90 ≈ AR$ 31.000 (dólar sin confirmar).
 - **Cómo pasar la foto a la tela** (el paso difícil del PDF): la competencia usa **moldes a tamaño real para calcar** o imprimir. Para la mascota haría falta un paso de "foto → contorno" (por ejemplo, calco a contraluz en la ventana o una app que pase la foto a líneas). Esto es hipótesis: no vi a nadie haciéndolo en un PDF.
 - HeyHobby: el anuncio de mascota está al aire desde el 2026-11-13. No se vio "N anuncios usan este contenido" ni el total de la página.
+
+## 2026-11-19 (décima vuelta) · los que más venden en aguja mágica: análisis de ESTRUCTURA para Productos (parte 1, solo API y lo ya visto)
+
+> Regla de imperiowhale: esto es para entender **qué funciona** (estructura, promesa, bonos, precio). **No se copian** textos, imágenes, moldes, caras, testimonios ni marcas de nadie.
+
+Consultas nuevas: punch needle pattern (146) · curso agulha mágica (6) · riscos agulha mágica (2).
+
+| # | Producto | Mercado | Señal de venta | Formato | Precio real | Estructura y promesa (lo visto) | Bonos | Paso a paso |
+|---|---|---|---|---|---|---|---|---|
+| 1 | **Bordando com Amor**, curso de agulha mágica | BR (BRL, cierra por WhatsApp) | 🟢 **~156 días al aire** (desde ~2026-06-15). El anuncio más viejo de todo el nicho | sin ver | no visto | sin ver | sin ver | sin ver |
+| 2 | **Aline Martins**, agulha mágica | BR (USD) | 🟡 45 anuncios activos, todos de ~1 día (relanza en olas; antigüedad no verificable) | sin ver (los anuncios no tienen titular) | no visto | sin ver | sin ver | sin ver |
+| 3 | **Pordentro Studio**, "Curso Inicial de Bordado con Aguja Mágica" | AR (ARS) | 🟡 ~28 días (desde 2026-10-22), 12 anuncios | **curso en video** | **$18.900** (tachado $36.000) | 4 pasos: (1) elegir materiales y qué buscar en tu país, (2) pasar el patrón a la tela sin saber dibujar, (3) bordar punto a punto, regular la aguja y arreglar errores, (4) terminar la pieza. **150+ patrones** adaptados. Dice "+800 alumnas" (sin confirmar) | "moldes para imprimir y empezar" | video + patrones para imprimir |
+| 4 | **Un Mundo de Manualidades**, "Puntada Mágica: bordado chino con aguja mágica para principiantes" | AR (Impultienda) | 🟡 ~17 días (desde 2026-11-02), 27 anuncios, 15+ titulares distintos | **guía digital** que llega por mail en 1 minuto | **AR$ 19.900** (tachado 49.900; "valor total" $110.850) | Promesa: "tu primera pieza bordada a mano, esta semana", "piezas con relieve que parecen de artesana", "no dibujás nada". Ángulos de los anuncios: hobby para soltar el celular, regalos hechos a mano, el arbolito de Navidad, "Dejá de regalar tu trabajo" (vender) | 4 o 5 bonos de AR$ 9.990 a 14.990 cada uno (detalle sin ver) | **moldes a tamaño real para calcar** |
+| 5 | **HeyHobby**, kit "custom pet punch needle" | EN, FR, DE, SE (USD) | 🟡 315 anuncios activos; el de mascota está al aire desde el 2026-11-13 | **kit físico** con el dibujo de tu mascota impreso en la tela (no es PDF) | no visto | Promesa: "tu mascota en lana, desde la foto del celular", "vista previa gratis de tu mascota", "el regalo que nadie más va a llevar" | "El tercer kit gratis" | lo resuelve imprimiendo la tela |
+
+Otros vistos: kits físicos de corona navideña de punch needle, repetidos en 10+ páginas (dropshipping) · Miicreative (EUR, kits para principiantes) · Magiconinja (BR, ~17 días) · Ateliê entre fios e linhas (BR, ~22 días).
+
+Patrones (hipótesis):
+- Los dos de AR venden **"desde cero" + moldes listos para calcar o imprimir**. Ninguno vende la **personalización** (tu mascota, tu foto): ese es el hueco.
+- El precio de AR se apoya en un tachado de 2 a 2,5 veces y en bonos con "valor" en pesos.
+- El paso que nadie resuelve en un PDF es **foto → contorno → tela**. HeyHobby lo resuelve imprimiendo la tela.
+
+Falta (parte 2, necesita navegador y el OK de Tamy): ver las landings de Bordando com Amor, Aline Martins y Magiconinja, y leer completas las de Pordentro y Un Mundo (capítulos, bonos y cómo muestran el paso a paso). Son ~8-10 pasos. El contenido interno de cada ebook (páginas y moldes reales) solo se ve **comprándolo**: eso queda afuera, salvo que Tamy lo decida.
