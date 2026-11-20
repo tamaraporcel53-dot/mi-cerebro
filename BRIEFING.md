@@ -10,27 +10,29 @@
 | Qué | Lo pide |
 |---|---|
 | **Bot Escala IU:** decidir si su regla (×2 con 1 venta y ROAS ≥ 2, cada 15 min) reemplaza a la tabla F6 de imperioproducto (+30% con 3 ventas y ROAS > 1,8, a las 23:30) y si aprobás que mueva presupuesto solo. No se construye hasta tener una campaña vendiendo (2026-11-19) | Sistemas |
-| **Precio del ebook de retrato de mascota en aguja mágica** (subnicho elegido por Tamy el 2026-11-19). **Precio real de la competencia de aguja mágica en AR: $18.900** (Pordentro, curso en video) **y AR$ 19.900** (Un Mundo de Manualidades, guía en Impultienda). Es ~2/3 de USD 19,90 (≈ AR$ 31.000, dólar sin confirmar): decidir si mantenés USD 19,90 con bonos o te acercás a AR$ 19.900. Detalle en `RAW/cazas.md`, novena vuelta | Investigación |
+| **Aprobar los bonos del retrato de mascota** (~~precio~~ decidido por Tamy el 2026-11-19: **cerca de AR$ 19.900**, opción B; Productos recomendaba A): los 4 bonos (el método "de tu foto al dibujo", 20 moldes de razas, materiales en AR y "vendé retratos por encargo"). Detalle en `OUTPUTS/lanzamientos/retrato-mascota-aguja-magica.md` | Productos |
 | Crear la **fanpage y el Instagram** de la marca de ebooks (en español) y conectarlos al portfolio comercial. Hoy el portfolio no tiene ninguna página (2026-11-19) | Meta |
 
 ## El negocio hoy
 
-- **Qué vendo:** primer ebook elegido por Tamy el 2026-11-19: **retrato de tu mascota en aguja mágica (punch needle) a partir de una foto**, en PDF. Precio a definir (ver "Esperando por mí")
+- **Qué vendo:** primer ebook elegido por Tamy el 2026-11-19: **retrato de tu mascota en aguja mágica (punch needle) a partir de una foto**, en PDF. **Precio: cerca de AR$ 19.900** (decidido por Tamy el 2026-11-19, al nivel de la competencia de aguja mágica en AR). Neto por venta ≈ USD 11,5 (cálculo de Productos, sin verificar)
+  > Antes (2026-11-19): USD 19,90 como precio de todos los ebooks
   - Por qué: afuera es el ángulo principal de HeyHobby (kit físico con el dibujo impreso; anuncio de mascota al aire desde 2026-11-13). En AR no hay ningún ebook de esto: Huella & Alma y Luna Decima venden el bordado ya hecho (servicio). La aguja mágica genérica sí tiene ~8 competidores en AR, a AR$ 18.900-19.900 (vistos el 2026-11-19)
   - El punto a resolver en el producto: pasar la foto a un dibujo y a la tela. Nadie lo resuelve en un PDF (hipótesis: calco a contraluz o una app)
   > Antes (2026-11-19): punch needle genérico, con "0 infoproductos en AR" (error del Cerebro: se buscó solo en inglés). Antes de eso se salió de repostería: ahí la competencia vende a USD 7-10
   > Antes (2026-11-19): pan dulce relleno y chupetines de chocolate (repostería), en pausa
 - **Dónde vendo:** primero Argentina; después otros países (2026-11-19)
-- **Tienda y cobro:** Impultienda. En Argentina se cobra **en pesos con Mercado Pago**. Falta definir cuánto es el precio en pesos equivalente a USD 19,90
+- **Tienda y cobro:** Impultienda. En Argentina se cobra **en pesos con Mercado Pago**. Precio del primer ebook: cerca de AR$ 19.900
 - **Cuentas publicitarias:** siempre en **USD** (regla en `CLAUDE.md`)
 - **Números de esta semana:** arranque desde cero. Ventas 0, gasto en anuncios 0 (al 2026-11-19)
-- **Cuenta de la meta:** USD 1.000 de ganancia por día ÷ USD 19,90 = **51 ventas por día como mínimo**, aun si no se gastara nada en anuncios. Con anuncios hacen falta más ventas o un ticket más alto (sin confirmar: depende del costo por venta)
+- **Cuenta de la meta:** USD 1.000 de ganancia por día ÷ ≈ USD 11,5 de neto por venta (AR$ 19.900) = **unas 87 ventas por día como mínimo**, aun si no se gastara nada en anuncios. Con anuncios hacen falta más, o subir el ticket con order bumps y ofertas post-compra (sin confirmar: depende del dólar y del costo por venta)
+  > Antes (2026-11-19): 51 ventas por día, calculado con USD 19,90
 
 ## En marcha
 
 | Qué | Quién | Estado | Fecha |
 |---|---|---|---|
-| Ebook **retrato de mascota en aguja mágica**: armar la oferta (contenido, método foto → dibujo → tela, bonos, lista de materiales en AR) | Productos | Arranca; precio pendiente de Tamy | 2026-11-19 |
+| Ebook **retrato de mascota en aguja mágica**: armar la oferta (contenido, método foto → dibujo → tela, bonos, lista de materiales en AR) | Productos | 10%: oferta propuesta en la ficha; espera el precio y la aprobación de Tamy | 2026-11-19 |
 | Validar punch needle (caza, competencia, precios) | Investigación | **Hecho** (vueltas 6 a 9 en `RAW/cazas.md`) | 2026-11-19 |
 | Ebook de pan dulce relleno | Productos | **Descartado por ahora**: Tamy eligió punch needle (salir de repostería) | 2026-11-19 |
 | Ebook de chupetines decorados | Productos | **Descartado por ahora**: Tamy eligió punch needle | 2026-11-19 |
