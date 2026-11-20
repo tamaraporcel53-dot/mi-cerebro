@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Tu Mascota en Aguja Mágica</title>
+<style>
+  @page { size: A4; margin: 0; }
+  :root { --azul:#1A3D6B; --naranja:#FF8C42; --fondo:#F0F7FF; --texto:#1f2a37; --suave:#5b6b80; }
+  * { box-sizing: border-box; }
+  body { counter-reset: pg; margin:0; font-family: "Segoe UI", Arial, sans-serif; color: var(--texto); background:#fff; }
+  .page { counter-increment: pg; width:210mm; height:297mm; padding:20mm 18mm 16mm; position:relative; overflow:hidden;
+          page-break-after: always; break-after: page; background: var(--fondo); }
+  .foot .n::after { content: counter(pg); }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+  .head { font-size:9pt; color: var(--suave); letter-spacing:.08em; text-transform:uppercase; margin-bottom:8mm;
+          display:flex; justify-content:space-between; border-bottom:1px solid #cfdcec; padding-bottom:3mm; }
+  .foot { position:absolute; bottom:9mm; left:18mm; right:18mm; font-size:9pt; color: var(--suave);
+          display:flex; justify-content:space-between; }
+  h1 { font-size:30pt; color: var(--azul); margin:0 0 4mm; line-height:1.1; }
+  h2 { font-size:22pt; color: var(--azul); margin:0 0 5mm; line-height:1.15; }
+  h3 { font-size:13pt; color: var(--azul); margin:6mm 0 2mm; }
+  p, li { font-size:11pt; line-height:1.5; margin:0 0 2.5mm; }
+  ul, ol { padding-left:6mm; margin:0 0 3mm; }
+  .badge { display:inline-block; background: var(--naranja); color:#fff; font-weight:700; font-size:10pt;
+           padding:1.5mm 4mm; border-radius:20mm; margin-bottom:4mm; }
+  .box { background:#fff; border-left:4px solid var(--naranja); border-radius:3mm; padding:4mm 5mm; margin:4mm 0; }
+  .box.azul { border-left-color: var(--azul); }
+  .box p:last-child, .box ul:last-child { margin-bottom:0; }
+  .img { border:2px dashed #9fb4cf; border-radius:3mm; background:#fff; color:#7a8ca5; font-size:10pt;
+         display:flex; align-items:center; justify-content:center; text-align:center; padding:5mm; margin:4mm 0; }
+  .cols { display:grid; grid-template-columns: 1fr 1fr; gap:6mm; }
+  .steps { counter-reset: s; list-style:none; padding:0; }
+  .steps li { counter-increment: s; background:#fff; border-radius:3mm; padding:3mm 4mm 3mm 13mm; position:relative; margin-bottom:2.5mm; }
+  .steps li::before { content: counter(s); position:absolute; left:3.5mm; top:3mm; width:7mm; height:7mm; border-radius:50%;
+           background: var(--azul); color:#fff; font-weight:700; font-size:10pt; display:flex; align-items:center; justify-content:center; }
+  .steps li:nth-child(even)::before { background: var(--naranja); }
+  table { width:100%; border-collapse:collapse; background:#fff; border-radius:3mm; overflow:hidden; font-size:10.5pt; }
+  th { background: var(--azul); color:#fff; text-align:left; padding:2.5mm 3mm; }
+  td { padding:2.2mm 3mm; border-bottom:1px solid #e3ebf5; vertical-align:top; }
+  .toc td:last-child { text-align:right; font-weight:700; color: var(--azul); width:18mm; }
+  .cover { background: var(--azul); color:#fff; display:flex; flex-direction:column; justify-content:center; }
+  .cover h1 { color:#fff; font-size:40pt; }
+  .cover .sub { font-size:15pt; line-height:1.4; color:#dce8f7; max-width:150mm; }
+  .cover .img { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.4); color:#dce8f7; height:95mm; }
+  .sep { background: var(--naranja); color:#fff; display:flex; flex-direction:column; justify-content:center; }
+  .sep h1 { color:#fff; font-size:38pt; }
+  .sep p { font-size:14pt; }
+  .draft { position:absolute; top:6mm; right:8mm; font-size:8pt; background:#fff3cd; color:#7a5b00; padding:1mm 3mm; border-radius:2mm; }
+  .chat { background:#fff; border-radius:3mm; padding:3mm 4mm; margin-bottom:2.5mm; font-size:10.5pt; border:1px solid #e3ebf5; }
+  .chat b { color: var(--azul); }
+</style>
+</head>
+<body>
+<section class="page cover">
+  <span class="draft">VERSIÓN DE TEXTO · 2026-11-20</span>
+  <span class="badge" style="align-self:flex-start">Extra · Pack de moldes</span>
+  <h1>50 moldes extra</h1>
+  <p class="sub">Más razas de perros, más gatos y mascotas chicas, listos para calcar con el mismo método de la guía.</p>
+  <div class="img">[VERSIÓN FINAL: collage de 6 moldes de línea en círculo]</div>
+</section>
+<section class="page">
+  <div class="head"><span>Pack 50 moldes extra</span><span>La lista</span></div>
+  <h2>Los 50 moldes</h2>
+  <div class="cols">
+    <table>
+      <tr><th colspan="2">Perros</th></tr>
+      <tr><td>1</td><td>Mestizo de pelo largo</td></tr><tr><td>2</td><td>Mestizo orejas caídas</td></tr>
+      <tr><td>3</td><td>Rottweiler</td></tr><tr><td>4</td><td>Dóberman</td></tr>
+      <tr><td>5</td><td>Husky siberiano</td></tr><tr><td>6</td><td>Samoyedo</td></tr>
+      <tr><td>7</td><td>Cocker spaniel</td></tr><tr><td>8</td><td>Maltés</td></tr>
+      <tr><td>9</td><td>Bichón frisé</td></tr><tr><td>10</td><td>Pomerania</td></tr>
+      <tr><td>11</td><td>Galgo</td></tr><tr><td>12</td><td>Dálmata</td></tr>
+      <tr><td>13</td><td>Bulldog inglés</td></tr><tr><td>14</td><td>Boston terrier</td></tr>
+      <tr><td>15</td><td>Jack Russell</td></tr><tr><td>16</td><td>Fox terrier</td></tr>
+      <tr><td>17</td><td>Weimaraner</td></tr><tr><td>18</td><td>Cane corso</td></tr>
+      <tr><td>19</td><td>Dogo argentino</td></tr><tr><td>20</td><td>Shiba inu</td></tr>
+      <tr><td>21</td><td>Akita</td></tr><tr><td>22</td><td>Basset hound</td></tr>
+      <tr><td>23</td><td>Pastor australiano</td></tr><tr><td>24</td><td>Corgi</td></tr>
+      <tr><td>25</td><td>Lhasa apso</td></tr>
+    </table>
+    <table>
+      <tr><th colspan="2">Gatos y mascotas chicas</th></tr>
+      <tr><td>26</td><td>Gato blanco</td></tr><tr><td>27</td><td>Gato naranja</td></tr>
+      <tr><td>28</td><td>Gato tricolor (carey)</td></tr><tr><td>29</td><td>Gato gris</td></tr>
+      <tr><td>30</td><td>Gato blanco y negro</td></tr><tr><td>31</td><td>Gato de pelo largo</td></tr>
+      <tr><td>32</td><td>Maine coon</td></tr><tr><td>33</td><td>Sphynx</td></tr>
+      <tr><td>34</td><td>Bengalí</td></tr><tr><td>35</td><td>Ragdoll</td></tr>
+      <tr><td>36</td><td>Gatito bebé</td></tr><tr><td>37</td><td>Cachorro de perro</td></tr>
+      <tr><td>38</td><td>Conejo de orejas caídas</td></tr><tr><td>39</td><td>Conejo enano</td></tr>
+      <tr><td>40</td><td>Hámster</td></tr><tr><td>41</td><td>Cobayo</td></tr>
+      <tr><td>42</td><td>Loro</td></tr><tr><td>43</td><td>Cotorra</td></tr>
+      <tr><td>44</td><td>Canario</td></tr><tr><td>45</td><td>Periquito</td></tr>
+      <tr><td>46</td><td>Tortuga</td></tr><tr><td>47</td><td>Hurón</td></tr>
+      <tr><td>48</td><td>Caballo</td></tr><tr><td>49</td><td>Perro y gato juntos</td></tr>
+      <tr><td>50</td><td>Huellita con nombre</td></tr>
+    </table>
+  </div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page">
+  <div class="head"><span>Pack 50 moldes extra</span><span>Cómo usarlos</span></div>
+  <h2>Cómo usar los moldes</h2>
+  <ol class="steps">
+    <li><b>Elegí el molde</b> que más se parezca a tu mascota: la forma de la cabeza y de las orejas es lo que más importa.</li>
+    <li><b>Imprimilo al tamaño de tu bastidor.</b> Los moldes vienen pensados para un bastidor de 200 mm (sin confirmar); para otro tamaño, ajustá el porcentaje en la impresora.</li>
+    <li><b>Ya vienen espejados.</b> No los des vuelta: se calcan así, del lado del revés de la tela.</li>
+    <li><b>Calcá a contraluz</b> en la ventana o con la pantalla del celular, como en el Bono 1.</li>
+    <li><b>Personalizalo:</b> mirá una foto de tu mascota y cambiá las manchas, el largo de las orejas o el color de los ojos antes de bordar.</li>
+  </ol>
+  <div class="box"><p><b>Mapa de colores:</b> cada molde marca 4 zonas, A (la más oscura), B, C y D (la más clara). Bordá siempre de la A a la D.</p></div>
+  <div class="box azul"><p><b>Para regalar:</b> el molde 50 (huellita con nombre) sirve de fondo o de borde para cualquier retrato.</p></div>
+  <div class="img" style="height:50mm">[VERSIÓN FINAL: 1 página por molde, 50 páginas, dibujadas con Higgsfield. En esta versión va la lista]</div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+</body></html>
