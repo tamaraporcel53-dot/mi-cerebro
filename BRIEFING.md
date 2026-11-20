@@ -10,7 +10,7 @@
 | Qué | Lo pide |
 |---|---|
 | **Bot Escala IU:** decidir si su regla (×2 con 1 venta y ROAS ≥ 2, cada 15 min) reemplaza a la tabla F6 de imperioproducto (+30% con 3 ventas y ROAS > 1,8, a las 23:30) y si aprobás que mueva presupuesto solo. No se construye hasta tener una campaña vendiendo (2026-11-19) | Sistemas |
-| **Aguja mágica:** ~~(A) subnicho o (B) otra idea~~ Tamy eligió **(A) subnicho** el 2026-11-19. **Elegir el subnicho:** (1) retrato de tu mascota desde una foto (recomendado: es el ángulo del whale de afuera y en AR solo hay 2 jugadores sin confirmar), (2) alfombras chicas sin pistola de tufting (0 ebooks en AR, 6+ marcas venden la alfombra hecha), (3) almohadones de diseño. Detalle en `RAW/cazas.md`, octava vuelta. Falta además tu OK para que Investigación use el navegador (unos 10-12 pasos) y vea el precio real de 2 competidores de AR | Investigación |
+| **Aguja mágica:** ~~(A) subnicho o (B) otra idea~~ Tamy eligió **(A) subnicho** el 2026-11-19. **Elegir el subnicho:** (1) retrato de tu mascota desde una foto (recomendado: es el ángulo del whale de afuera y en AR solo hay 2 jugadores sin confirmar), (2) alfombras chicas sin pistola de tufting (0 ebooks en AR, 6+ marcas venden la alfombra hecha), (3) almohadones de diseño. Detalle en `RAW/cazas.md`, octava vuelta. ~~OK al navegador~~ dado por Tamy el 2026-11-19: Investigación está viendo precios de competidores de AR y si el retrato de mascota ya se vende | Investigación |
 | Crear la **fanpage y el Instagram** de la marca de ebooks (en español) y conectarlos al portfolio comercial. Hoy el portfolio no tiene ninguna página (2026-11-19) | Meta |
 
 ## El negocio hoy
