@@ -10,7 +10,7 @@
 | 10 | F0 · Cazar | ✅ | 2026-11-19 | Subnicho elegido por Tamy. Es un **hueco**: en AR, 0 ebooks de retrato de mascota; solo servicios que venden el bordado hecho |
 | 20 | F1 · Oferta | ✅ | 2026-11-19 | Precio ARS 19.900 y los 4 bonos aprobados por Tamy (vía Cerebro). El bump y los OTOs siguen sin decidir (no se arman hasta F7) |
 | 35 | F2 · Producto | 🟡 | 2026-11-19 | Borrador de **texto** del ebook + 4 bonos en PDF (23 páginas: se sumó "Los 6 rellenos"; índice verificado contra el PDF el 2026-11-19 a las 23:18; HTML → PDF con Edge, 0 créditos), en `OUTPUTS/lanzamientos/retrato-mascota-aguja-magica/`. Espera la revisión de Tamy. Faltan: 27 ilustraciones con Higgsfield (≈ 62 créditos, sin confirmar; aprobado hasta ~97; **lo conecta Tamy**, sigue sin conectar el 2026-11-19 23:18), 20 moldes, precios de materiales, retrato real de prueba para confirmar las medidas. **No cargado en Impultienda** |
-| 55 | F3 · Tienda | 🟡 | 2026-11-20 | Tienda creada por conector (orden de Tamy vía Cerebro): https://tumascota-agujamagica.impultienda.ar · ID 0033f199-b863-461b-ab01-5b01fa40bf9e · ARS, es-AR. Precio 19.900 (tachado 49.900). Ebook + 4 bonos cargados (versión de texto). Landing de plantilla corregida. Bump + 2 OTOs con contenido de texto y funnel activo. Diagnóstico de Impultienda: sin advertencias. **Landing limpia (verificado 2026-11-20). Faltan: Clarity, píxel, compra de prueba** |
+| 55 | F3 · Tienda | 🟡 | 2026-11-20 | Tienda creada por conector (orden de Tamy vía Cerebro): https://tumascota-agujamagica.impultienda.ar · ID 0033f199-b863-461b-ab01-5b01fa40bf9e · ARS, es-AR. Precio 19.900 (tachado 49.900). Ebook + 4 bonos cargados (versión de texto). Landing de plantilla corregida. Bump + 2 OTOs con contenido de texto y funnel activo. Diagnóstico de Impultienda: sin advertencias. **Landing limpia y Clarity zgt9pna19p cargado (verificados 2026-11-20). Faltan: píxel, compra de prueba** |
 | 70 | F4 · Creativos | ⬜ | | |
 | 85 | F5 · Campaña entregando | ⬜ | | |
 | 95 | F6 · Validada | ⬜ | | |
@@ -20,7 +20,7 @@
 RETRATO DE TU MASCOTA EN AGUJA MÁGICA — 40%
 ✅ F0 Cazar  ✅ F1 Oferta  🟡 F2 Producto  ⬜ F3 Tienda
 🟡 F3 Tienda (en curso)  ⬜ F4 Creativos  ⬜ F5 Campaña  ⬜ F6 Validar  🟡 F7 Escalera (armada, apagada)
-Sigue: F3. Falta de vos: el ID de Clarity y la compra de prueba. Mercado Pago y landing listos (2026-11-20).
+Sigue: F3. Falta: el píxel (Meta) y la compra de prueba con vos. Mercado Pago, landing y Clarity listos (2026-11-20).
 ```
 
 ## F0 · La oferta original
