@@ -10,7 +10,7 @@
 | Qué | Lo pide |
 |---|---|
 | **Bot Escala IU:** decidir si su regla (×2 con 1 venta y ROAS ≥ 2, cada 15 min) reemplaza a la tabla F6 de imperioproducto (+30% con 3 ventas y ROAS > 1,8, a las 23:30) y si aprobás que mueva presupuesto solo. No se construye hasta tener una campaña vendiendo (2026-11-19) | Sistemas |
-| **Punch needle / aguja mágica** (Investigación, 2026-11-19): **sí tiene competencia en AR**, unos 8 ebooks; el más viejo lleva ~28 días. El dato anterior de "0 competidores" estaba mal. Decidir: (A) seguir con un subnicho de aguja mágica, (B) buscar otra idea. Y si sigue, dar el OK para usar el navegador (unos 10-12 pasos) y ver el precio real de 2 competidores de AR. Detalle en `RAW/cazas.md`, séptima vuelta | Investigación |
+| **Aguja mágica:** ~~(A) subnicho o (B) otra idea~~ Tamy eligió **(A) subnicho** el 2026-11-19. Falta tu OK para que Investigación use el navegador (unos 10-12 pasos) y vea el precio real de 2 competidores de AR | Investigación |
 | Crear la **fanpage y el Instagram** de la marca de ebooks (en español) y conectarlos al portfolio comercial. Hoy el portfolio no tiene ninguna página (2026-11-19) | Meta |
 
 ## El negocio hoy
