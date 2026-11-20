@@ -146,7 +146,7 @@ Datos de Investigación (2026-11-19), sin volver a verificar acá.
 |---|---|---|---|---|
 | Principal | Tu Mascota en Aguja Mágica | bb1dceb7-19d1-460e-8cd2-29687ece5e73 | ARS 19.900 (49.900) | PDF con imágenes, 23 págs., 6,8 MB (Edición; subido y confirmado 2026-11-20, índice verificado) |
 | Bono 1 | De tu foto al dibujo en 10 minutos | 27d767c1-8be2-4de9-9a61-715ffa25e95f | regalo | PDF con imágenes, 3 págs. (2026-11-20) |
-| Bono 2 | 20 moldes de razas listos para calcar | 81d60718-5dd6-4d38-be38-ad2e2f7ba7e2 | regalo | PDF 22 págs.: lista + 20 moldes dibujados (2026-11-20) |
+| Bono 2 | 20 moldes de razas listos para calcar | 81d60718-5dd6-4d38-be38-ad2e2f7ba7e2 | regalo | PDF 23 págs. (portada + lista + 20 moldes dibujados, 2026-11-20) |
 | Bono 3 | Lista de materiales en Argentina | 44f56f9d-79b4-4a0a-ae27-e4325fa7d015 | regalo | PDF con imágenes, 1 pág. ⚠️ precios "[a verificar]" |
 | Bono 4 | Vendé retratos por encargo | d958dd83-6942-4f68-8174-9011a0906cc3 | regalo (valor 7.300) | PDF con imágenes, 2 págs. (2026-11-20) |
 | Order bump | Pack 50 moldes extra | d96cbc83-1838-4428-a52a-ff7c9aa19585 | ARS 5.900 (11.900) | PDF 53 págs., 12 MB: 3 + 50 moldes dibujados (2026-11-20) |
@@ -158,3 +158,4 @@ Datos de Investigación (2026-11-19), sin volver a verificar acá.
 - Escalera en pesos (46.900 / 26.900): la eligió el Cerebro porque todo cobra en pesos; **es cambiable**.
 - Landing: plantilla classic de Impultienda. Se ocultaron los 3 testimonios inventados por la IA y la notificación de venta flotante (0 ventas reales). Garantía 7 → 120 días. Pie "Nombre de la marca" → nombre del producto. FAQ 5 sin el upsell viejo. Títulos de bonos cargados.
 - Archivos subidos: `OUTPUTS/lanzamientos/retrato-mascota-aguja-magica/entregables/`.
+- Portadas (Edición, 2026-11-20): página 1 de los 8 PDF e imagen de los 8 productos en la tienda. Bonos ahora: 4 / 23 / 2 / 3 págs.
