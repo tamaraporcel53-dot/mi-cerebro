@@ -13,3 +13,5 @@ div[data-edit-section="hero_urgency_slots"] + div{display:none!important}
 #countdown-display,#hero-timer,#sticky-timer{display:none!important}
 /* 6. El valor tachado de cada bono (son regalo) */
 #bonuses .line-through,#hero-bonuses .line-through{display:none!important}
+/* 7. "NN personas viendo este producto ahora" (número simulado; selector probado 2026-11-20: toma solo ese contador) */
+#hero .order-2 > div.flex.items-center.justify-center.gap-2.mt-4{display:none!important}
