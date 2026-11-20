@@ -1,4 +1,4 @@
-# RETRATO DE TU MASCOTA EN AGUJA MÁGICA — 10%
+# RETRATO DE TU MASCOTA EN AGUJA MÁGICA — 20%
 
 **Creada:** 2026-11-19 · **Mercado:** español / Argentina primero (cobro en pesos con Mercado Pago, en Impultienda) · **Estado:** en armado. La oferta está propuesta y el precio espera la decisión de Tamy
 **Origen:** orden de Tamy del 2026-11-19, que llegó por el Cerebro: "Vamos con el retrato de mascota". Datos de Investigación en `RAW/cazas.md`, vueltas 6 a 9.
@@ -8,7 +8,7 @@
 | % | Fase | Estado | Fecha | Nota |
 |---|---|---|---|---|
 | 10 | F0 · Cazar | ✅ | 2026-11-19 | Subnicho elegido por Tamy. Es un **hueco**: en AR, 0 ebooks de retrato de mascota; solo servicios que venden el bordado hecho |
-| 20 | F1 · Oferta | 🟡 | 2026-11-19 | Precio decidido por Tamy: ARS 19.900. **Falta que apruebe los bonos, y que diga sí o no al plan de bump y OTOs** |
+| 20 | F1 · Oferta | ✅ | 2026-11-19 | Precio ARS 19.900 y los 4 bonos aprobados por Tamy (vía Cerebro). El bump y los OTOs siguen sin decidir (no se arman hasta F7) |
 | 35 | F2 · Producto | ⬜ | | |
 | 55 | F3 · Tienda | ⬜ | | |
 | 70 | F4 · Creativos | ⬜ | | |
@@ -17,10 +17,10 @@
 | 100 | F7 · Escalera | ⬜ | | |
 
 ```
-RETRATO DE TU MASCOTA EN AGUJA MÁGICA — 10%
-✅ F0 Cazar  🟡 F1 Oferta  ⬜ F2 Producto  ⬜ F3 Tienda
+RETRATO DE TU MASCOTA EN AGUJA MÁGICA — 20%
+✅ F0 Cazar  ✅ F1 Oferta  🟡 F2 Producto  ⬜ F3 Tienda
 ⬜ F4 Creativos  ⬜ F5 Campaña  ⬜ F6 Validar  ⬜ F7 Escalera
-Sigue: cerrar F1. Falta de vos: aprobar los bonos y el plan de bump y OTOs (el precio ya está: ARS 19.900).
+Sigue: F2, la muestra del ebook. Falta de vos: el OK al costo de la muestra y revisar el borrador.
 ```
 
 ## F0 · La oferta original
