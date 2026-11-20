@@ -1,6 +1,6 @@
 # PAN DULCE RELLENO — 10%
 
-**Creada:** 2026-11-19 · **Mercado:** español / Argentina primero (ARS, Mercado Pago, Impultienda) · **Estado:** ⏸️ **EN PAUSA desde el 2026-11-19**. Tamy: si la competencia vende más barato, no conviene lanzarlo a USD 19,90, porque no vamos a tener ventas. Pidió buscar otro nicho de repostería. Se retoma solo si Tamy lo pide
+**Creada:** 2026-11-19 · **Mercado:** español / Argentina primero (ARS, Mercado Pago, Impultienda) · **Estado:** ❌ **DESCARTADO POR AHORA (2026-11-19)**: Tamy eligió punch needle como candidato para el primer ebook (según el Cerebro). Antes estaba en pausa: Tamy: si la competencia vende más barato, no conviene lanzarlo a USD 19,90, porque no vamos a tener ventas. Pidió buscar otro nicho de repostería. Se retoma solo si Tamy lo pide
 **⏰ Fecha límite:** lanzar antes del **2026-12-01**. La demanda cae después del 2026-12-24 (hipótesis de Investigación). Quedan 12 días al 2026-11-19.
 
 ## Tablero
