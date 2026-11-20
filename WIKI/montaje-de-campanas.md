@@ -68,6 +68,13 @@ No es "revisar por arriba": es verificar cada punto y poder mostrar el dato.
 | 11 | **Anunciante y pagador** | conjunto (transparencia de la UE) | Con el **nombre del producto o la marca**, nunca tu nombre y apellido |
 | 12 | **UTM copiada de la tienda** | `url_tags` | Sacada del panel de tracking de ESA tienda, no de una nota vieja ni de otro producto |
 
+> **Dominio (punto 10), verificado en la FAQ de Impultienda el 2026-11-20:** **no hace falta comprar un dominio propio** para
+> vender ni para pautar. La tienda vende en su subdominio (`<tienda>.impultienda.ar`). Para verificarlo en Meta se usa el método de la
+> **metaetiqueta**: el código que da Meta se pega en Configuraciones → «Meta / Tracking» → campo «Verificacion de dominio», y después se
+> toca Verificar en Meta (no se agrega «impultienda.ar» como dominio raíz). Según Impultienda, la verificación es opcional: el píxel y la
+> API de Conversiones funcionan igual sin ella. Los permisos de tráfico del píxel se dan a `impultienda.ar` y alcanzan para los subdominios.
+> El dominio propio sirve recién si se quiere, por ejemplo, para GhostAds (requiere un plan que lo incluya).
+
 ### 🔴 Y después: verificar que esté PUBLICADO, no creado
 
 **Crear ≠ publicar ≠ entregar.** Los tres estados son distintos y el MCP no los

@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Tu Mascota en Aguja Mágica</title>
+<style>
+  @page { size: A4; margin: 0; }
+  :root { --azul:#1A3D6B; --naranja:#FF8C42; --fondo:#F0F7FF; --texto:#1f2a37; --suave:#5b6b80; }
+  * { box-sizing: border-box; }
+  body { counter-reset: pg; margin:0; font-family: "Segoe UI", Arial, sans-serif; color: var(--texto); background:#fff; }
+  .page { counter-increment: pg; width:210mm; height:297mm; padding:20mm 18mm 16mm; position:relative; overflow:hidden;
+          page-break-after: always; break-after: page; background: var(--fondo); }
+  .foot .n::after { content: counter(pg); }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+  .head { font-size:9pt; color: var(--suave); letter-spacing:.08em; text-transform:uppercase; margin-bottom:8mm;
+          display:flex; justify-content:space-between; border-bottom:1px solid #cfdcec; padding-bottom:3mm; }
+  .foot { position:absolute; bottom:9mm; left:18mm; right:18mm; font-size:9pt; color: var(--suave);
+          display:flex; justify-content:space-between; }
+  h1 { font-size:30pt; color: var(--azul); margin:0 0 4mm; line-height:1.1; }
+  h2 { font-size:22pt; color: var(--azul); margin:0 0 5mm; line-height:1.15; }
+  h3 { font-size:13pt; color: var(--azul); margin:6mm 0 2mm; }
+  p, li { font-size:11pt; line-height:1.5; margin:0 0 2.5mm; }
+  ul, ol { padding-left:6mm; margin:0 0 3mm; }
+  .badge { display:inline-block; background: var(--naranja); color:#fff; font-weight:700; font-size:10pt;
+           padding:1.5mm 4mm; border-radius:20mm; margin-bottom:4mm; }
+  .box { background:#fff; border-left:4px solid var(--naranja); border-radius:3mm; padding:4mm 5mm; margin:4mm 0; }
+  .box.azul { border-left-color: var(--azul); }
+  .box p:last-child, .box ul:last-child { margin-bottom:0; }
+  .img { border:2px dashed #9fb4cf; border-radius:3mm; background:#fff; color:#7a8ca5; font-size:10pt;
+         display:flex; align-items:center; justify-content:center; text-align:center; padding:5mm; margin:4mm 0; }
+  .cols { display:grid; grid-template-columns: 1fr 1fr; gap:6mm; }
+  .steps { counter-reset: s; list-style:none; padding:0; }
+  .steps li { counter-increment: s; background:#fff; border-radius:3mm; padding:3mm 4mm 3mm 13mm; position:relative; margin-bottom:2.5mm; }
+  .steps li::before { content: counter(s); position:absolute; left:3.5mm; top:3mm; width:7mm; height:7mm; border-radius:50%;
+           background: var(--azul); color:#fff; font-weight:700; font-size:10pt; display:flex; align-items:center; justify-content:center; }
+  .steps li:nth-child(even)::before { background: var(--naranja); }
+  table { width:100%; border-collapse:collapse; background:#fff; border-radius:3mm; overflow:hidden; font-size:10.5pt; }
+  th { background: var(--azul); color:#fff; text-align:left; padding:2.5mm 3mm; }
+  td { padding:2.2mm 3mm; border-bottom:1px solid #e3ebf5; vertical-align:top; }
+  .toc td:last-child { text-align:right; font-weight:700; color: var(--azul); width:18mm; }
+  .cover { background: var(--azul); color:#fff; display:flex; flex-direction:column; justify-content:center; }
+  .cover h1 { color:#fff; font-size:40pt; }
+  .cover .sub { font-size:15pt; line-height:1.4; color:#dce8f7; max-width:150mm; }
+  .cover .img { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.4); color:#dce8f7; height:95mm; }
+  .sep { background: var(--naranja); color:#fff; display:flex; flex-direction:column; justify-content:center; }
+  .sep h1 { color:#fff; font-size:38pt; }
+  .sep p { font-size:14pt; }
+  .draft { position:absolute; top:6mm; right:8mm; font-size:8pt; background:#fff3cd; color:#7a5b00; padding:1mm 3mm; border-radius:2mm; }
+  .chat { background:#fff; border-radius:3mm; padding:3mm 4mm; margin-bottom:2.5mm; font-size:10.5pt; border:1px solid #e3ebf5; }
+  .chat b { color: var(--azul); }
+
+  .pic { border-radius:3mm; overflow:hidden; margin:4mm 0; background:#fff; box-shadow:0 .6mm 2.5mm rgba(26,61,107,.13); }
+  .pic img { width:100%; height:100%; object-fit:cover; display:block; }
+  .cover .pic { height:95mm; box-shadow:0 1mm 4mm rgba(0,0,0,.25); }
+  .grid-moldes { display:grid; grid-template-columns:repeat(6,1fr); gap:2.5mm; margin:4mm 0; }
+  .grid-moldes img { width:100%; aspect-ratio:1; object-fit:contain; background:#fff; border-radius:2mm; box-shadow:0 .4mm 1.5mm rgba(26,61,107,.12); }
+  .molde-pag { display:flex; flex-direction:column; }
+  .molde-pag .badge { align-self:flex-start; }
+  .molde-img { flex:none; width:150mm; height:150mm; margin:2mm auto 4mm; background:#fff; border-radius:3mm; box-shadow:0 .6mm 2.5mm rgba(26,61,107,.13); }
+  .molde-img img { width:100%; height:100%; object-fit:contain; display:block; }
+  .mapa { display:flex; gap:3mm; }
+  .mapa div { flex:1; background:#fff; border-radius:2mm; padding:2mm; font-size:9.5pt; display:flex; align-items:center; gap:2mm; }
+  .mapa i { width:7mm; height:7mm; border-radius:50%; flex:none; border:1px solid #cfdcec; }
+</style>
+</head>
+<body>
+
+<!-- 18 · BONO 2 LISTA -->
+<section class="page">
+  <div class="head"><span>Tu Mascota en Aguja Mágica</span><span>Bono 2</span></div>
+  <span class="badge">Bono 2 · 1/2</span>
+  <h2>20 moldes de razas</h2>
+  <p>Cada molde viene espejado, al tamaño de un bastidor de 200 mm y con el mapa de colores sugerido.</p>
+  <div class="cols">
+    <table>
+      <tr><th colspan="2">Perros</th></tr>
+      <tr><td>1</td><td>Mestizo de pelo corto</td></tr>
+      <tr><td>2</td><td>Caniche</td></tr>
+      <tr><td>3</td><td>Labrador</td></tr>
+      <tr><td>4</td><td>Golden retriever</td></tr>
+      <tr><td>5</td><td>Ovejero alemán</td></tr>
+      <tr><td>6</td><td>Bulldog francés</td></tr>
+      <tr><td>7</td><td>Pug</td></tr>
+      <tr><td>8</td><td>Yorkshire</td></tr>
+      <tr><td>9</td><td>Chihuahua</td></tr>
+      <tr><td>10</td><td>Beagle</td></tr>
+    </table>
+    <table>
+      <tr><th colspan="2">Perros y gatos</th></tr>
+      <tr><td>11</td><td>Border collie</td></tr>
+      <tr><td>12</td><td>Salchicha</td></tr>
+      <tr><td>13</td><td>Schnauzer</td></tr>
+      <tr><td>14</td><td>Shih tzu</td></tr>
+      <tr><td>15</td><td>Pitbull</td></tr>
+      <tr><td>16</td><td>Boxer</td></tr>
+      <tr><td>17</td><td>Gato común atigrado</td></tr>
+      <tr><td>18</td><td>Gato negro</td></tr>
+      <tr><td>19</td><td>Gato siamés</td></tr>
+      <tr><td>20</td><td>Gato persa</td></tr>
+    </table>
+  </div>
+  <div class="grid-moldes"><img src="../imagenes/web/M01.jpg" alt=""><img src="../imagenes/web/M03.jpg" alt=""><img src="../imagenes/web/M06.jpg" alt=""><img src="../imagenes/web/M11.jpg" alt=""><img src="../imagenes/web/M17.jpg" alt=""><img src="../imagenes/web/M19.jpg" alt=""></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+
+<!-- 19 · BONO 2 USO -->
+<section class="page">
+  <div class="head"><span>Tu Mascota en Aguja Mágica</span><span>Bono 2</span></div>
+  <span class="badge">Bono 2 · 2/2</span>
+  <h2>Cómo usar los moldes</h2>
+  <ol class="steps">
+    <li><b>Elegí la raza</b> que más se parezca a tu mascota. Si es mestiza, elegí la que tenga orejas y hocico parecidos.</li>
+    <li><b>Imprimí la página</b> al 100%, sin "ajustar a la hoja", o abrila en el celular al tamaño del bastidor.</li>
+    <li><b>Calcala</b> en la tela a contraluz (Bono 1, página 16). Ya viene espejada.</li>
+    <li><b>Cambiá los colores</b> por los de tu mascota: las manchas, el color de los ojos y el del pelo.</li>
+    <li><b>Agregá lo propio</b>: una oreja caída, una mancha en el ojo, el collar. Eso lo hace único.</li>
+  </ol>
+  <div class="box azul"><p><b>Para practicar:</b> antes de tu primer retrato, hacé un molde chico de prueba. Es la mejor forma de soltar la mano.</p></div>
+  <div class="pic" data-auto data-id="P2_bono2" style="height:85mm"><img src="../imagenes/web/P2_bono2.jpg" alt=""></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+
+<section class="page molde-pag">
+  <div class="head"><span>Tu Mascota en Aguja Mágica</span><span>Bono 2 · Moldes</span></div>
+  <span class="badge">Molde 1</span>
+  <h2>Mestizo de pelo corto</h2>
+  <div class="molde-img"><img src="../imagenes/web/M01.jpg" alt="Molde: Mestizo de pelo corto"></div>
+  <p><b>Mapa de colores sugerido</b> (de la zona más oscura a la más clara). Ajustalo a los colores de tu mascota:</p>
+  <div class="mapa"><div><i style="background:#7a4a1c"></i><b>A</b>&nbsp;caramelo oscuro</div><div><i style="background:#c58b3e"></i><b>B</b>&nbsp;dorado</div><div><i style="background:#e7c48a"></i><b>C</b>&nbsp;miel</div><div><i style="background:#f7ecd8"></i><b>D</b>&nbsp;crema</div></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page molde-pag">
+  <div class="head"><span>Tu Mascota en Aguja Mágica</span><span>Bono 2 · Moldes</span></div>
+  <span class="badge">Molde 2</span>
+  <h2>Caniche</h2>
+  <div class="molde-img"><img src="../imagenes/web/M02.jpg" alt="Molde: Caniche"></div>
+  <p><b>Mapa de colores sugerido</b> (de la zona más oscura a la más clara). Ajustalo a los colores de tu mascota:</p>
+  <div class="mapa"><div><i style="background:#3a3a3a"></i><b>A</b>&nbsp;gris carbón</div><div><i style="background:#b9b3a8"></i><b>B</b>&nbsp;beige</div><div><i style="background:#e6e0d6"></i><b>C</b>&nbsp;hueso</div><div><i style="background:#ffffff"></i><b>D</b>&nbsp;blanco</div></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page molde-pag">
+  <div class="head"><span>Tu Mascota en Aguja Mágica</span><span>Bono 2 · Moldes</span></div>
+  <span class="badge">Molde 3</span>
+  <h2>Labrador</h2>
+  <div class="molde-img"><img src="../imagenes/web/M03.jpg" alt="Molde: Labrador"></div>
+  <p><b>Mapa de colores sugerido</b> (de la zona más oscura a la más clara). Ajustalo a los colores de tu mascota:</p>
+  <div class="mapa"><div><i style="background:#7a4a1c"></i><b>A</b>&nbsp;caramelo oscuro</div><div><i style="background:#c58b3e"></i><b>B</b>&nbsp;dorado</div><div><i style="background:#e7c48a"></i><b>C</b>&nbsp;miel</div><div><i style="background:#f7ecd8"></i><b>D</b>&nbsp;crema</div></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page molde-pag">
+  <div class="head"><span>Tu Mascota en Aguja Mágica</span><span>Bono 2 · Moldes</span></div>
+  <span class="badge">Molde 4</span>
+  <h2>Golden retriever</h2>
+  <div class="molde-img"><img src="../imagenes/web/M04.jpg" alt="Molde: Golden retriever"></div>
+  <p><b>Mapa de colores sugerido</b> (de la zona más oscura a la más clara). Ajustalo a los colores de tu mascota:</p>
+  <div class="mapa"><div><i style="background:#7a4a1c"></i><b>A</b>&nbsp;caramelo oscuro</div><div><i style="background:#c58b3e"></i><b>B</b>&nbsp;dorado</div><div><i style="background:#e7c48a"></i><b>C</b>&nbsp;miel</div><div><i style="background:#f7ecd8"></i><b>D</b>&nbsp;crema</div></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page molde-pag">
+  <div class="head"><span>Tu Mascota en Aguja Mágica</span><span>Bono 2 · Moldes</span></div>
+  <span class="badge">Molde 5</span>
+  <h2>Ovejero alemán</h2>
+  <div class="molde-img"><img src="../imagenes/web/M05.jpg" alt="Molde: Ovejero alemán"></div>
+  <p><b>Mapa de colores sugerido</b> (de la zona más oscura a la más clara). Ajustalo a los colores de tu mascota:</p>
+  <div class="mapa"><div><i style="background:#1b1b1f"></i><b>A</b>&nbsp;negro</div><div><i style="background:#a0522d"></i><b>B</b>&nbsp;marrón rojizo</div><div><i style="background:#e9a35a"></i><b>C</b>&nbsp;naranja</div><div><i style="background:#f6f1e8"></i><b>D</b>&nbsp;blanco</div></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page molde-pag">
+  <div class="head"><span>Tu Mascota en Aguja Mágica</span><span>Bono 2 · Moldes</span></div>
+  <span class="badge">Molde 6</span>
+  <h2>Bulldog francés</h2>
+  <div class="molde-img"><img src="../imagenes/web/M06.jpg" alt="Molde: Bulldog francés"></div>
+  <p><b>Mapa de colores sugerido</b> (de la zona más oscura a la más clara). Ajustalo a los colores de tu mascota:</p>
+  <div class="mapa"><div><i style="background:#2f3440"></i><b>A</b>&nbsp;gris pizarra</div><div><i style="background:#6c7380"></i><b>B</b>&nbsp;gris</div><div><i style="background:#b7bcc4"></i><b>C</b>&nbsp;gris claro</div><div><i style="background:#f3f3f1"></i><b>D</b>&nbsp;blanco</div></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page molde-pag">
+  <div class="head"><span>Tu Mascota en Aguja Mágica</span><span>Bono 2 · Moldes</span></div>
+  <span class="badge">Molde 7</span>
+  <h2>Pug</h2>
+  <div class="molde-img"><img src="../imagenes/web/M07.jpg" alt="Molde: Pug"></div>
+  <p><b>Mapa de colores sugerido</b> (de la zona más oscura a la más clara). Ajustalo a los colores de tu mascota:</p>
+  <div class="mapa"><div><i style="background:#3b2418"></i><b>A</b>&nbsp;chocolate</div><div><i style="background:#7a4a2c"></i><b>B</b>&nbsp;marrón</div><div><i style="background:#b98a5e"></i><b>C</b>&nbsp;canela</div><div><i style="background:#efe3d0"></i><b>D</b>&nbsp;crema</div></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page molde-pag">
+  <div class="head"><span>Tu Mascota en Aguja Mágica</span><span>Bono 2 · Moldes</span></div>
+  <span class="badge">Molde 8</span>
+  <h2>Yorkshire</h2>
+  <div class="molde-img"><img src="../imagenes/web/M08.jpg" alt="Molde: Yorkshire"></div>
+  <p><b>Mapa de colores sugerido</b> (de la zona más oscura a la más clara). Ajustalo a los colores de tu mascota:</p>
+  <div class="mapa"><div><i style="background:#1b1b1f"></i><b>A</b>&nbsp;negro</div><div><i style="background:#a0522d"></i><b>B</b>&nbsp;marrón rojizo</div><div><i style="background:#e9a35a"></i><b>C</b>&nbsp;naranja</div><div><i style="background:#f6f1e8"></i><b>D</b>&nbsp;blanco</div></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page molde-pag">
+  <div class="head"><span>Tu Mascota en Aguja Mágica</span><span>Bono 2 · Moldes</span></div>
+  <span class="badge">Molde 9</span>
+  <h2>Chihuahua</h2>
+  <div class="molde-img"><img src="../imagenes/web/M09.jpg" alt="Molde: Chihuahua"></div>
+  <p><b>Mapa de colores sugerido</b> (de la zona más oscura a la más clara). Ajustalo a los colores de tu mascota:</p>
+  <div class="mapa"><div><i style="background:#7a4a1c"></i><b>A</b>&nbsp;caramelo oscuro</div><div><i style="background:#c58b3e"></i><b>B</b>&nbsp;dorado</div><div><i style="background:#e7c48a"></i><b>C</b>&nbsp;miel</div><div><i style="background:#f7ecd8"></i><b>D</b>&nbsp;crema</div></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page molde-pag">
+  <div class="head"><span>Tu Mascota en Aguja Mágica</span><span>Bono 2 · Moldes</span></div>
+  <span class="badge">Molde 10</span>
+  <h2>Beagle</h2>
+  <div class="molde-img"><img src="../imagenes/web/M10.jpg" alt="Molde: Beagle"></div>
+  <p><b>Mapa de colores sugerido</b> (de la zona más oscura a la más clara). Ajustalo a los colores de tu mascota:</p>
+  <div class="mapa"><div><i style="background:#1b1b1f"></i><b>A</b>&nbsp;negro</div><div><i style="background:#a0522d"></i><b>B</b>&nbsp;marrón rojizo</div><div><i style="background:#e9a35a"></i><b>C</b>&nbsp;naranja</div><div><i style="background:#f6f1e8"></i><b>D</b>&nbsp;blanco</div></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page molde-pag">
+  <div class="head"><span>Tu Mascota en Aguja Mágica</span><span>Bono 2 · Moldes</span></div>
+  <span class="badge">Molde 11</span>
+  <h2>Border collie</h2>
+  <div class="molde-img"><img src="../imagenes/web/M11.jpg" alt="Molde: Border collie"></div>
+  <p><b>Mapa de colores sugerido</b> (de la zona más oscura a la más clara). Ajustalo a los colores de tu mascota:</p>
+  <div class="mapa"><div><i style="background:#1b1b1f"></i><b>A</b>&nbsp;negro</div><div><i style="background:#4a4a52"></i><b>B</b>&nbsp;gris oscuro</div><div><i style="background:#9a9aa3"></i><b>C</b>&nbsp;gris</div><div><i style="background:#f2efe9"></i><b>D</b>&nbsp;blanco</div></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page molde-pag">
+  <div class="head"><span>Tu Mascota en Aguja Mágica</span><span>Bono 2 · Moldes</span></div>
+  <span class="badge">Molde 12</span>
+  <h2>Salchicha</h2>
+  <div class="molde-img"><img src="../imagenes/web/M12.jpg" alt="Molde: Salchicha"></div>
+  <p><b>Mapa de colores sugerido</b> (de la zona más oscura a la más clara). Ajustalo a los colores de tu mascota:</p>
+  <div class="mapa"><div><i style="background:#3b2418"></i><b>A</b>&nbsp;chocolate</div><div><i style="background:#7a4a2c"></i><b>B</b>&nbsp;marrón</div><div><i style="background:#b98a5e"></i><b>C</b>&nbsp;canela</div><div><i style="background:#efe3d0"></i><b>D</b>&nbsp;crema</div></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page molde-pag">
+  <div class="head"><span>Tu Mascota en Aguja Mágica</span><span>Bono 2 · Moldes</span></div>
+  <span class="badge">Molde 13</span>
+  <h2>Schnauzer</h2>
+  <div class="molde-img"><img src="../imagenes/web/M13.jpg" alt="Molde: Schnauzer"></div>
+  <p><b>Mapa de colores sugerido</b> (de la zona más oscura a la más clara). Ajustalo a los colores de tu mascota:</p>
+  <div class="mapa"><div><i style="background:#2f3440"></i><b>A</b>&nbsp;gris pizarra</div><div><i style="background:#6c7380"></i><b>B</b>&nbsp;gris</div><div><i style="background:#b7bcc4"></i><b>C</b>&nbsp;gris claro</div><div><i style="background:#f3f3f1"></i><b>D</b>&nbsp;blanco</div></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page molde-pag">
+  <div class="head"><span>Tu Mascota en Aguja Mágica</span><span>Bono 2 · Moldes</span></div>
+  <span class="badge">Molde 14</span>
+  <h2>Shih tzu</h2>
+  <div class="molde-img"><img src="../imagenes/web/M14.jpg" alt="Molde: Shih tzu"></div>
+  <p><b>Mapa de colores sugerido</b> (de la zona más oscura a la más clara). Ajustalo a los colores de tu mascota:</p>
+  <div class="mapa"><div><i style="background:#3a3a3a"></i><b>A</b>&nbsp;gris carbón</div><div><i style="background:#b9b3a8"></i><b>B</b>&nbsp;beige</div><div><i style="background:#e6e0d6"></i><b>C</b>&nbsp;hueso</div><div><i style="background:#ffffff"></i><b>D</b>&nbsp;blanco</div></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page molde-pag">
+  <div class="head"><span>Tu Mascota en Aguja Mágica</span><span>Bono 2 · Moldes</span></div>
+  <span class="badge">Molde 15</span>
+  <h2>Pitbull</h2>
+  <div class="molde-img"><img src="../imagenes/web/M15.jpg" alt="Molde: Pitbull"></div>
+  <p><b>Mapa de colores sugerido</b> (de la zona más oscura a la más clara). Ajustalo a los colores de tu mascota:</p>
+  <div class="mapa"><div><i style="background:#2f3440"></i><b>A</b>&nbsp;gris pizarra</div><div><i style="background:#6c7380"></i><b>B</b>&nbsp;gris</div><div><i style="background:#b7bcc4"></i><b>C</b>&nbsp;gris claro</div><div><i style="background:#f3f3f1"></i><b>D</b>&nbsp;blanco</div></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page molde-pag">
+  <div class="head"><span>Tu Mascota en Aguja Mágica</span><span>Bono 2 · Moldes</span></div>
+  <span class="badge">Molde 16</span>
+  <h2>Boxer</h2>
+  <div class="molde-img"><img src="../imagenes/web/M16.jpg" alt="Molde: Boxer"></div>
+  <p><b>Mapa de colores sugerido</b> (de la zona más oscura a la más clara). Ajustalo a los colores de tu mascota:</p>
+  <div class="mapa"><div><i style="background:#7a4a1c"></i><b>A</b>&nbsp;caramelo oscuro</div><div><i style="background:#c58b3e"></i><b>B</b>&nbsp;dorado</div><div><i style="background:#e7c48a"></i><b>C</b>&nbsp;miel</div><div><i style="background:#f7ecd8"></i><b>D</b>&nbsp;crema</div></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page molde-pag">
+  <div class="head"><span>Tu Mascota en Aguja Mágica</span><span>Bono 2 · Moldes</span></div>
+  <span class="badge">Molde 17</span>
+  <h2>Gato común atigrado</h2>
+  <div class="molde-img"><img src="../imagenes/web/M17.jpg" alt="Molde: Gato común atigrado"></div>
+  <p><b>Mapa de colores sugerido</b> (de la zona más oscura a la más clara). Ajustalo a los colores de tu mascota:</p>
+  <div class="mapa"><div><i style="background:#2f3440"></i><b>A</b>&nbsp;gris pizarra</div><div><i style="background:#6c7380"></i><b>B</b>&nbsp;gris</div><div><i style="background:#b7bcc4"></i><b>C</b>&nbsp;gris claro</div><div><i style="background:#f3f3f1"></i><b>D</b>&nbsp;blanco</div></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page molde-pag">
+  <div class="head"><span>Tu Mascota en Aguja Mágica</span><span>Bono 2 · Moldes</span></div>
+  <span class="badge">Molde 18</span>
+  <h2>Gato negro</h2>
+  <div class="molde-img"><img src="../imagenes/web/M18.jpg" alt="Molde: Gato negro"></div>
+  <p><b>Mapa de colores sugerido</b> (de la zona más oscura a la más clara). Ajustalo a los colores de tu mascota:</p>
+  <div class="mapa"><div><i style="background:#1b1b1f"></i><b>A</b>&nbsp;negro</div><div><i style="background:#4a4a52"></i><b>B</b>&nbsp;gris oscuro</div><div><i style="background:#9a9aa3"></i><b>C</b>&nbsp;gris</div><div><i style="background:#f2efe9"></i><b>D</b>&nbsp;blanco</div></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page molde-pag">
+  <div class="head"><span>Tu Mascota en Aguja Mágica</span><span>Bono 2 · Moldes</span></div>
+  <span class="badge">Molde 19</span>
+  <h2>Gato siamés</h2>
+  <div class="molde-img"><img src="../imagenes/web/M19.jpg" alt="Molde: Gato siamés"></div>
+  <p><b>Mapa de colores sugerido</b> (de la zona más oscura a la más clara). Ajustalo a los colores de tu mascota:</p>
+  <div class="mapa"><div><i style="background:#3b2418"></i><b>A</b>&nbsp;chocolate</div><div><i style="background:#7a4a2c"></i><b>B</b>&nbsp;marrón</div><div><i style="background:#b98a5e"></i><b>C</b>&nbsp;canela</div><div><i style="background:#efe3d0"></i><b>D</b>&nbsp;crema</div></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+<section class="page molde-pag">
+  <div class="head"><span>Tu Mascota en Aguja Mágica</span><span>Bono 2 · Moldes</span></div>
+  <span class="badge">Molde 20</span>
+  <h2>Gato persa</h2>
+  <div class="molde-img"><img src="../imagenes/web/M20.jpg" alt="Molde: Gato persa"></div>
+  <p><b>Mapa de colores sugerido</b> (de la zona más oscura a la más clara). Ajustalo a los colores de tu mascota:</p>
+  <div class="mapa"><div><i style="background:#3a3a3a"></i><b>A</b>&nbsp;gris carbón</div><div><i style="background:#b9b3a8"></i><b>B</b>&nbsp;beige</div><div><i style="background:#e6e0d6"></i><b>C</b>&nbsp;hueso</div><div><i style="background:#ffffff"></i><b>D</b>&nbsp;blanco</div></div>
+  <div class="foot"><span>Tu Mascota en Aguja Mágica</span><span class="n"></span></div>
+</section>
+</body>
+</html>
