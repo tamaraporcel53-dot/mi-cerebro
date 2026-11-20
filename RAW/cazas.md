@@ -185,3 +185,12 @@ Descartado: Magiconinja (apareció con "agulha mágica", pero vende un curso de 
 - **Mercado Libre AR y Shein bloquearon el navegador con una verificación anti-robots** (2026-11-19): **no se pudo observar ningún precio**. La API pública de Mercado Libre también da 403.
 - Solo hay datos de resúmenes de búsqueda web, **no observados** (sin confirmar): kits DIY de punch needle en Shein AR a ~ARS 4.954 y ~ARS 9.147 (precio estimado), y en Desertcart AR a AR$ 3.299-12.129 (sin stock). En Mercado Libre AR existen kits "Aguja Mágica + lanas + bastidor + tela" (ERMITA CREA), tela panamá para punch needle (mercedesherenu) y agujas de 3 puntas (CANDY CRAFT), pero sin precio visible.
 - Para cerrar este dato hace falta una persona: abrir esas 3 tiendas de Mercado Libre desde un navegador común (unos 2 minutos).
+
+## 2026-11-20 (duodécima vuelta, A MEDIAS) · 5 ofertas escaladas de manualidades (pedido de Tamy vía Cerebro)
+
+Filtro duro: 50 a 80+ anuncios activos de la MISMA oferta y el anuncio activo más viejo con más de 10 días (antes del 2026-11-10). Competencia en AR, buscada con 2-3 nombres locales.
+Estado: hay 3 buscadores corriendo en paralelo (Brasil · LATAM en español · inglés y Europa), con unas 45 consultas a la biblioteca entre los tres. Después vienen la confirmación con el navegador (~10-15 pasos) y la competencia en AR.
+Candidatos de vueltas anteriores, ninguno pasa el filtro todavía:
+- HeyHobby (EN/EU): 315 activos, **kit físico** de punch needle; el más viejo visto es del 2026-11-13 → antigüedad sin confirmar.
+- Bambolê Moldes Artes (BR): 58 activos, moldes de muñecas de trapo; todos ≤2,3 días → antigüedad no verificable. En AR ya hay 2 competidores.
+- Nova Digital (LATAM): 57 activos pero **multi-oferta** (velas, licores, chupetines, bombas de té) → no pasa "misma oferta".
