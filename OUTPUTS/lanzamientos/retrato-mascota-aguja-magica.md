@@ -9,7 +9,7 @@
 |---|---|---|---|---|
 | 10 | F0 · Cazar | ✅ | 2026-11-19 | Subnicho elegido por Tamy. Es un **hueco**: en AR, 0 ebooks de retrato de mascota; solo servicios que venden el bordado hecho |
 | 20 | F1 · Oferta | ✅ | 2026-11-19 | Precio ARS 19.900 y los 4 bonos aprobados por Tamy (vía Cerebro). El bump y los OTOs siguen sin decidir (no se arman hasta F7) |
-| 35 | F2 · Producto | 🟡 | 2026-11-19 | Borrador de **texto** del ebook + 4 bonos en PDF (22 páginas, HTML → PDF con Edge, 0 créditos), en `OUTPUTS/lanzamientos/retrato-mascota-aguja-magica/`. Espera la revisión de Tamy. Faltan: imágenes con Higgsfield (no está conectado en esta sesión), 20 moldes, precios de materiales, retrato real de prueba para confirmar las medidas. **No cargado en Impultienda** |
+| 35 | F2 · Producto | 🟡 | 2026-11-19 | Borrador de **texto** del ebook + 4 bonos en PDF (23 páginas: se sumó "Los 6 rellenos"; índice verificado contra el PDF el 2026-11-19 a las 23:18; HTML → PDF con Edge, 0 créditos), en `OUTPUTS/lanzamientos/retrato-mascota-aguja-magica/`. Espera la revisión de Tamy. Faltan: 27 ilustraciones con Higgsfield (≈ 62 créditos, sin confirmar; aprobado hasta ~97; **lo conecta Tamy**, sigue sin conectar el 2026-11-19 23:18), 20 moldes, precios de materiales, retrato real de prueba para confirmar las medidas. **No cargado en Impultienda** |
 | 55 | F3 · Tienda | ⬜ | | |
 | 70 | F4 · Creativos | ⬜ | | |
 | 85 | F5 · Campaña entregando | ⬜ | | |
@@ -20,7 +20,7 @@
 RETRATO DE TU MASCOTA EN AGUJA MÁGICA — 20%
 ✅ F0 Cazar  ✅ F1 Oferta  🟡 F2 Producto  ⬜ F3 Tienda
 ⬜ F4 Creativos  ⬜ F5 Campaña  ⬜ F6 Validar  ⬜ F7 Escalera
-Sigue: F2. Falta de vos: revisar el borrador del ebook y decidir cómo se hacen las imágenes.
+Sigue: F2. Falta de vos: conectar Higgsfield y revisar el borrador (23 págs.). Después va la muestra de 3 páginas con imagen.
 ```
 
 ## F0 · La oferta original
