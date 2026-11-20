@@ -1,6 +1,6 @@
 ---
 tema: anuncios-que-venden
-actualizado: 2026-10-29
+actualizado: 2026-11-20
 fuentes: aprendizajes de tandas reales de anuncios (octubre 2026)
 ---
 
@@ -30,14 +30,23 @@ Variá el **formato**, no la identidad: los colores y el estilo de tu marca se m
 - **Sin zoom.** Toma vertical, tal cual. Toma horizontal, entera sobre su misma imagen desenfocada.
   Si hay una marca a la vista, se difumina la marca; no se recorta el plano hasta que no se entiende.
 
-## Material: primero descargar, después generar
+## Material: de dónde sale el video
 
-1. Antes de editar, juntá **~100 videos cortos del nicho** (TikTok, Pinterest) en una carpeta, con un
-   `_links.txt` que diga de dónde salió cada uno.
-2. **Borrales los metadatos:** `ffmpeg -i in.mp4 -map_metadata -1 -map_chapters -1 -c copy out.mp4`.
-3. Usá **solo tramos limpios:** sin logos, sin marcas de agua, sin @usuarios, sin subtítulos quemados,
-   **sin caras de otros creadores**. Revisá el tramo exacto que usás, no solo el primer cuadro.
-4. **Generá con IA solo lo que falte**, en **720p** con la versión estándar del modelo. Antes de lanzar,
+> Antes (2026-10-29): "bajar ~100 videos del nicho de TikTok/Pinterest, borrarles los metadatos y usar tramos limpios".
+> Corregido el 2026-11-20: eso es usar contenido ajeno con derechos de autor. Sacarle los metadatos o la marca de agua
+> no lo vuelve legal, y los términos de TikTok, Instagram y YouTube no permiten bajar videos para reutilizarlos.
+> Cómo se metió el error: se confundió "que no se note de dónde salió" con "que se pueda usar". (Lo escaló Edición.)
+
+1. **Lo orgánico de otros (TikTok, Instagram, Pinterest, YouTube) es solo REFERENCIA:** ganchos, formatos, ritmo,
+   qué proceso se muestra. Se mira en la plataforma y se anota en un `_referencias.txt` con el link. **No se baja
+   ni se usa en un anuncio.**
+2. **El b-roll del anuncio sale de fuentes con permiso:**
+   - clips grabados por vos o por tu equipo del proceso real (lo mejor: propio y creíble);
+   - bancos con licencia comercial gratis (Pexels, Pixabay, Mixkit; revisá la licencia de cada clip);
+   - generado con IA (Kie, Higgsfield).
+3. Aun con material propio o de banco, **solo tramos limpios:** sin logos, sin marcas de agua, sin @usuarios,
+   sin subtítulos quemados, sin caras identificables que no autorizaron. Revisá el tramo exacto que usás, no solo el primer cuadro.
+4. **Generá con IA lo que falte**, en **720p** con la versión estándar del modelo. Antes de lanzar,
    sacá el costo de la tabla oficial y sumá el lote entero. Full HD y versiones Pro queman créditos sin que se note en el celular.
 
 ## Texto en pantalla
