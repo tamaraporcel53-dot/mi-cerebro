@@ -16,3 +16,7 @@
 - 2026-11-21 · La bio de @tumascotaenagujamagica no tiene link y la categoría dice "Blog personal" · los textos dicen "link en la bio": hay que cargarlo (pedido a Tamy).
 - 2026-11-21 · La página de FB muestra al público el teléfono y el mail personal de Tamy · va contra "nunca mi nombre" de cara al cliente (sin confirmar si ella lo quiere así): se lo pregunté.
 - 2026-11-21 · Acordado con Edición: orgánico solo en Reels 9:16, 1 por día a las 20:00, versiones NN-ORG ("El link está en la bio") en anuncios/organico/, y 2 placas de historia con encuesta (0 créditos). Ganchos nuevos recién después de medir la tanda 1 · así se usa lo que ya está hecho y no se gastan créditos sin datos.
+- 2026-11-21 · Perfiles ordenados con Chrome (verificado en pantalla): bio de IG; en FB, presentación, sitio web (tienda), enlace a @tumascotaenagujamagica y botón "Más información" → tienda con utm_campaign=boton_pagina (dejó de figurar como pendiente en la lista de la página).
+- 2026-11-21 · Límites de la web: Instagram web NO deja cargar el link de la bio (dice "solo en dispositivos móviles"), y la categoría tampoco se cambió desde ahí · lo tiene que hacer Tamy desde la app.
+- 2026-11-21 · En FB el teléfono, el mail y la dirección de contacto solo se pueden poner en "Público" (no hay "Solo yo"): para que no se vean hay que borrarlos · no lo borré sin el OK de Tamy.
+- 2026-11-21 · La foto de perfil (FB e IG) es la portada del bono 1 y el círculo corta el texto ("…tu foto al dibujo en 10…utos") · conviene una imagen limpia para el perfil (propuesta a Tamy).
