@@ -1,0 +1,1 @@
+01|L|c20_foto_dibujo:2.2 c02_calco:2.0 c01_tecnica:1.8 c06_ojos:1.6 c11_hero:2.0 c13_pedido:1.8 c03_mapa:2.0 c17_pared_duo:2.0
