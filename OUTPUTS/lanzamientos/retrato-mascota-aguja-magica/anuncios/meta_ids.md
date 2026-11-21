@@ -49,4 +49,4 @@ Creativo 01: 29529257903377589 (IG resuelto: 17841453371327301 = @tumascotaenagu
 | 10 | 120253323080600116 | 1594211835844769 |
 
 ## Checklist (2026-11-21, leída de vuelta de Meta)
-1 píxel 1427485765770027 en los 10 conjuntos ✅ · 2 la cuenta ve el píxel ✅ · 3 link a tumascota-agujamagica.impultienda.ar ✅ · 4 UTM en url_tags = la del panel ✅ · 5 página Tu Mascota (es, AR) ✅ · 6 IG: cuenta respaldada por la página, vista previa de Reels OK ✅ · 7 un video por anuncio, duraciones = archivos ✅ · 8 tracking_specs offsite_conversion + píxel ✅ · 9 sin gasto mínimo ✅ · 10 conversion_domain impultienda.ar ✅ (verificación de dominio: NO hecha, opcional según Impultienda) ⚠️
+1 píxel 1427485765770027 en los 10 conjuntos ✅ · 2 la cuenta ve el píxel ✅ · 3 link a tumascota-agujamagica.impultienda.ar ✅ · 4 UTM en url_tags = la del panel ✅ · 5 página Tu Mascota (es, AR) ✅ · 6 IG: cuenta respaldada por la página, vista previa de Reels OK ✅ · 7 un video por anuncio, duraciones = archivos ✅ · 8 tracking_specs offsite_conversion + píxel ✅ · 9 sin gasto mínimo ✅ · 10 conversion_domain impultienda.ar ✅ · dominio verificado en Meta el 2026-11-21 ✅
