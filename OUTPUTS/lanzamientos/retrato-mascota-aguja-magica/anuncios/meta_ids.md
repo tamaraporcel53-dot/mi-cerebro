@@ -22,3 +22,14 @@
 | 01 | 1155126613527613 | 17,2 s (ready) | ver final/urls.txt |
 
 UTM (del panel de Impultienda, 2026-11-21): `utm_source=facebook&utm_medium=paid&utm_campaign={{campaign.name}}&utm_term={{adset.name}}&utm_content={{ad.name}}&utm_id={{ad.id}}`
+| 02 | 1153835100364240 | 16,6 s | |
+| 03 | 1967835954380837 | 19,2 s | |
+| 04 | 982743017815861 | 13,9 s | |
+| 05 | 2412894126118370 | 16,7 s | |
+| 06 | 1633128518286080 | 16,6 s | |
+| 07 | 1159057430007589 | 16,8 s | |
+| 08 | 1646945563793797 | 13,5 s | |
+| 09 | 1135425669343953 | 17,7 s | |
+| 10 | 1455743052668036 | 15,3 s | |
+
+Creativo 01: 29529257903377589 (IG resuelto: 17841453371327301 = @tumascotaenagujamagica, visto en la vista previa de Reels)
