@@ -1,6 +1,13 @@
 # Orgánico: los 10 videos de la tanda 1 en Facebook e Instagram (2026-11-21)
 
-> Pedido de Tamy (2026-11-21), lo trajo otra sesión. Lo armó el agente Redes. **Hoy (2026-11-21) no hay nada publicado.**
+> Pedido de Tamy (2026-11-21), confirmado por ella en el chat de Redes. Lo armó el agente Redes.
+
+## Publicado
+
+| Fecha | Video | Red | Cómo | Verificado |
+|---|---|---|---|---|
+| 2026-11-21 | 02 | Facebook | API (id 1538061311489587) | Sí, figura en la página |
+| 2026-11-21 | 02 | Instagram | Chrome con la sesión de Tamy, portada 02-thumb, etiqueta de IA | Sí, el perfil muestra 1 publicación |
 > Videos: `OUTPUTS/lanzamientos/retrato-mascota-aguja-magica/anuncios/final/NN-WEB.mp4` (1080x1920, con audio).
 > URL pública de cada video: `anuncios/final/urls.txt` (se probaron la 02 y la 04: responden 200 y pesan igual que el archivo local).
 > La campaña paga de estos videos está prendida desde 2026-11-21 ~17:15: no se toca.

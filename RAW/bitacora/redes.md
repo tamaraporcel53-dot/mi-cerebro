@@ -9,3 +9,9 @@
 - 2026-11-21 · Las 10 voces de la tanda 1 terminan con "Tocá el link" (las impares, "de abajo" + placa de landing) · en Facebook se cumple poniendo el link en el texto; en Instagram no hay link en el posteo: 01/03/05/07/09 esperan la versión orgánica de Edición.
 - 2026-11-21 · El texto del anuncio 04 dice "llega a tu mail apenas comprás"; la landing dice "apenas se aprueba el pago" · en orgánico uso la frase de la landing.
 - 2026-11-21 · En orgánico el link lleva utm_medium=organico&utm_content=NN · sirve para separar en la tienda las ventas orgánicas de las pagas (las UTMs de la campaña son otras).
+- 2026-11-21 · Primer orgánico publicado: video 02 en FB (API, id 1538061311489587) y en IG (Chrome con la sesión de Tamy) · la orden de Tamy vino en mi chat ("que empiecen a publicar en Instagram y en Facebook").
+- 2026-11-21 · Un video publicado por la API de FB tarda en aparecer: el link directo (/reel/<id>) dio "no disponible", pero a los minutos ya figuraba en la página · verificar en la página, no en el link.
+- 2026-11-21 · Instagram web sí publica reels: Crear → Publicación → subir el mp4 con file_upload → recorte "Original" → portada con "Seleccionar de la computadora" (NN-thumb.jpg) → texto → etiqueta de IA activada → Compartir. Son unos 15 pasos. A veces la captura de Chrome se cuelga (timeout): con find/get_page_text se sigue igual.
+- 2026-11-21 · La etiqueta de IA de Instagram es obligatoria para videos realistas hechos con IA, y los de la tanda 1 tienen imágenes de Kie · la activo en todos.
+- 2026-11-21 · La bio de @tumascotaenagujamagica no tiene link y la categoría dice "Blog personal" · los textos dicen "link en la bio": hay que cargarlo (pedido a Tamy).
+- 2026-11-21 · La página de FB muestra al público el teléfono y el mail personal de Tamy · va contra "nunca mi nombre" de cara al cliente (sin confirmar si ella lo quiere así): se lo pregunté.
