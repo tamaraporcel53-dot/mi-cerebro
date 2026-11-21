@@ -9,6 +9,7 @@
 
 | Qué | Lo pide |
 |---|---|
+| **Orgánico de los 10 videos (FB + IG):** el calendario y los textos están en `RAW/redes/organico-tanda1.md` (1 por día desde 2026-11-22, 20:00). Falta (1) tu "sí" para que Redes publique en la página de Facebook y (2) que subas los reels a Instagram desde la app, porque la cuenta está desvinculada y la API no llega (2026-11-21) | Redes |
 | **Campaña del retrato PRENDIDA el 2026-11-21 ~17:15** (10 conjuntos × USD 4/día; los activó el agente con el OK de Tamy). Falta confirmar que entregue y gaste. Pendiente tuyo: volver a vincular @tumascotaenagujamagica a la página cuando Meta la destrabe · Dominio verificado en Meta el 2026-11-21 ✅ | Meta |
 | **Bot Escala IU:** decidir si su regla (×2 con 1 venta y ROAS ≥ 2, cada 15 min) reemplaza a la tabla F6 de imperioproducto (+30% con 3 ventas y ROAS > 1,8, a las 23:30) y si aprobás que mueva presupuesto solo. No se construye hasta tener una campaña vendiendo (2026-11-19) | Sistemas |
 | ~~Reconectar Meta~~ y ~~token CAPI nuevo~~ hechos el 2026-11-21 (Diagnóstico de Impultienda: "listo para anunciar"). **Falta: vincular el Instagram tumascotaenagujamagica a la página Tu Mascota y la verificación de dominio.** Hay un 2.º píxel sin uso (1776631123430726, portfolio Tu Mascota): decidir si se unifica | Meta |
