@@ -1,0 +1,10 @@
+01|L|c20_foto_dibujo:2.2 c02_calco:2.0 c01_tecnica:1.8 c06_ojos:1.6 c11_hero:2.0 c13_pedido:1.8 c03_mapa:2.0 c17_pared_duo:2.0
+02|N|c12_tapa_gato:2.2 c01_tecnica:1.8 c08_gato_boceto:1.8 c14_living:2.2 c13_pedido:1.8 c17_pared_duo:2.0 c04_bienvenida:2.0 c19_almohadon:2.0 c15_pared_perro:2.0
+03|L|c20_foto_dibujo:2.4 c02_calco:2.2 c09_composicion:1.8 c01_tecnica:2.0 c15_pared_perro:1.8 c06_ojos:1.8 c11_hero:2.0 c17_pared_duo:2.0
+04|N|c16_regalo_r:2.6 c07_terminacion:2.0 c17_pared_duo:1.8 c01_tecnica:1.8 c11_hero:1.8 c12_tapa_gato:1.8 c06_ojos:2.0 c16_regalo_r:2.0
+05|L|c06_ojos:2.2 c15_pared_perro:2.0 c04_bienvenida:1.8 c01_tecnica:1.8 c17_pared_duo:2.0 c09_composicion:1.8 c18_marco:2.0 c11_hero:2.0
+06|N|c08_gato_boceto:2.2 c12_tapa_gato:1.8 c01_tecnica:1.8 c13_pedido:1.8 c19_almohadon:1.8 c14_living:2.2 c02_calco:1.8 c12_tapa_gato:2.0 c17_pared_duo:2.0
+07|L|c01_tecnica:2.4 c05_materiales:1.8 c10_lanas:1.8 c03_mapa:1.8 c11_hero:1.8 c06_ojos:1.8 c15_pared_perro:2.0 c17_pared_duo:2.0
+08|N|c12_tapa_gato:1.4 c06_ojos:1.4 c15_pared_perro:1.4 c17_pared_duo:1.4 c11_hero:1.4 c13_pedido:1.4 c14_living:1.6 c07_terminacion:1.6 c19_almohadon:1.6 c20_foto_dibujo:1.6 c01_tecnica:1.8 c12_tapa_gato:2.0
+09|L|c13_pedido:2.2 c09_composicion:1.8 c01_tecnica:1.8 c17_pared_duo:1.8 c18_marco:1.8 c07_terminacion:2.0 c12_tapa_gato:2.0 c15_pared_perro:2.0
+10|N|c04_bienvenida:2.4 c01_tecnica:2.0 c10_lanas:1.8 c03_mapa:1.8 c15_pared_perro:2.0 c11_hero:1.8 c06_ojos:2.0 c17_pared_duo:2.0 c14_living:2.0
