@@ -23,3 +23,4 @@
 - 2026-11-21 · El file_upload de Chrome tiene un tope de 10 MB y los NN-ORG-FINAL pesan 11 a 14 MB · le pedí a Edición versiones NN-ORG-WEB de menos de 10 MB para Instagram.
 - 2026-11-21 · Las historias con encuesta (placas de Edición en anuncios/organico/historia-*.png) no se pueden publicar desde Instagram web: el sticker de encuesta solo está en la app · las sube Tamy.
 - 2026-11-21 · Decisión: en el día 1 publico 2 videos (02 y 01) en vez de 1, para que el perfil no quede casi vacío cuando entre la gente que viene de los anuncios.
+- 2026-11-21 · Falla: el primer intento de subir el 01 a Instagram no se publicó porque cambié de página a los 10 s, mientras seguía "Compartiendo" · hay que esperar el cartel "Se compartió tu reel" (~30 s) antes de salir de la página. El segundo intento salió bien.
