@@ -20,3 +20,6 @@
 - 2026-11-21 · Límites de la web: Instagram web NO deja cargar el link de la bio (dice "solo en dispositivos móviles"), y la categoría tampoco se cambió desde ahí · lo tiene que hacer Tamy desde la app.
 - 2026-11-21 · En FB el teléfono, el mail y la dirección de contacto solo se pueden poner en "Público" (no hay "Solo yo"): para que no se vean hay que borrarlos · no lo borré sin el OK de Tamy.
 - 2026-11-21 · La foto de perfil (FB e IG) es la portada del bono 1 y el círculo corta el texto ("…tu foto al dibujo en 10…utos") · conviene una imagen limpia para el perfil (propuesta a Tamy).
+- 2026-11-21 · El file_upload de Chrome tiene un tope de 10 MB y los NN-ORG-FINAL pesan 11 a 14 MB · le pedí a Edición versiones NN-ORG-WEB de menos de 10 MB para Instagram.
+- 2026-11-21 · Las historias con encuesta (placas de Edición en anuncios/organico/historia-*.png) no se pueden publicar desde Instagram web: el sticker de encuesta solo está en la app · las sube Tamy.
+- 2026-11-21 · Decisión: en el día 1 publico 2 videos (02 y 01) en vez de 1, para que el perfil no quede casi vacío cuando entre la gente que viene de los anuncios.
