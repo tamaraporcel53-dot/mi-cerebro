@@ -1,4 +1,4 @@
-# RETRATO DE TU MASCOTA EN AGUJA MÁGICA — 40%
+# RETRATO DE TU MASCOTA EN AGUJA MÁGICA — 55%
 
 **Creada:** 2026-11-19 · **Mercado:** español / Argentina primero (cobro en pesos con Mercado Pago, en Impultienda) · **Estado:** en armado. Oferta aprobada (ARS 19.900 + 4 bonos). El borrador de texto del ebook espera la revisión de Tamy
 **Origen:** orden de Tamy del 2026-11-19, que llegó por el Cerebro: "Vamos con el retrato de mascota". Datos de Investigación en `RAW/cazas.md`, vueltas 6 a 9.
@@ -17,10 +17,10 @@
 | 100 | F7 · Escalera | ⬜ | | |
 
 ```
-RETRATO DE TU MASCOTA EN AGUJA MÁGICA — 40%
+RETRATO DE TU MASCOTA EN AGUJA MÁGICA — 55%
 ✅ F0 Cazar  ✅ F1 Oferta  🟡 F2 Producto  ⬜ F3 Tienda
-🟡 F3 Tienda (en curso)  ⬜ F4 Creativos  ⬜ F5 Campaña  ⬜ F6 Validar  🟡 F7 Escalera (armada, apagada)
-Sigue: F3. Falta: el píxel (Meta) y la compra de prueba con vos. Mercado Pago, landing y Clarity listos (2026-11-20).
+✅ F3 Tienda  ⬜ F4 Creativos  ⬜ F5 Campaña  ⬜ F6 Validar  🟡 F7 Escalera (armada, apagada)
+Sigue: F4 Creativos (Edición) y F5 Campaña (Meta). Bloquea anunciar: token CAPI rechazado por Meta (2026-11-21).
 ```
 
 ## F0 · La oferta original
@@ -111,7 +111,7 @@ Datos de Investigación (2026-11-19), sin volver a verificar acá.
 | URL de la landing | https://tumascota-agujamagica.impultienda.ar · **HTML propio** desde el 2026-11-21 (fuente: retrato-mascota-aguja-magica/landing/landing.html; 15 imágenes + 2 videos de Edición en Recursos). Sin testimonios ni contadores: no hay ventas reales todavía |
 | Pasarela | Mercado Pago en pesos: **conectado y operativo** (puede_cobrar true, ARS; según el Cerebro, 2026-11-20) |
 | Píxel (ID) | Falta (agente Meta) |
-| Compra de prueba | ⬜ |
+| Compra de prueba | ✅ 2026-11-21: Tamy, 2 ventas aprobadas por Mercado Pago (#3794540 y #3794994, ARS 19.900 c/u), PDF recibidos según Tamy |
 
 ## F4-F5 · Campaña
 
