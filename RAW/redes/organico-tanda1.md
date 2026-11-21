@@ -107,3 +107,7 @@ Los textos salen de `anuncios/textos_tanda1.md`, que ya estaban aprobados. Cambi
 5. Activá **"Compartir también en Facebook"** solo si Redes no lo publicó en la página ese día, para que no salga dos veces.
 6. Para dejarlo programado: **Opciones avanzadas** (o "Más opciones") → **Programar** → 20:00.
 7. Revisá que el link de la bio sea https://tumascota-agujamagica.impultienda.ar
+
+## Listos para publicar (2026-11-21)
+
+- 04-ORG-WEB.mp4 + 04-ORG-thumb.jpg, en `anuncios/organico/`, revisado entero por Edición. Sale el 2026-11-22 a las 20:00: en FB con la versión del anuncio (04-WEB, con el link en el texto) y en IG con el 04-ORG-WEB.
