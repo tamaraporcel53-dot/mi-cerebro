@@ -37,3 +37,5 @@
 2026-11-21 · La ficha de Productos traía 2 ángulos que chocan con las reglas: "Un fin de semana" (es un plazo) y "Antes y después". Los reemplacé en la tanda 1 y avisé a Productos · al recibir ángulos de otro agente, pasarlos por las reglas de Meta antes de escribir.
 2026-11-21 · Kie: Tamy cargó USD 5 (paquete mínimo; el siguiente es USD 50) = 1.000 créditos · saldo verificado por API (GET api.kie.ai/api/v1/chat/credit) = 1.036 · alcanza para la tanda 1 (≈ 940); si falta, otros USD 5
 2026-11-21 · Modelados 5 ángulos de HeyHobby (~320 anuncios, desde 2026-04-15) adaptados a AR en anuncios/angulos-modelados-AR.md · límite: la biblioteca no muestra qué anuncio puntual vende más, así que el orden es hipótesis; "Free Preview" no se puede ofrecer en un PDF y se modeló como mecanismo (calco a contraluz)
+2026-11-21 · Tamy aprobó reemplazar 5 ángulos de la tanda 1 (1, 2, 3, 4 y 8) por los modelados de HeyHobby · plan_tanda1.md actualizado; quedan 5 HOOK-RES y 5 HOOK-PROB
+2026-11-21 · Corrección de la línea anterior: la tanda 1 queda con 6 HOOK-RES y 4 HOOK-PROB (no 5 y 5) · conté antes de verificar el archivo

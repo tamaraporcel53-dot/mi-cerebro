@@ -8,17 +8,19 @@
 
 | # | Ángulo | Gancho | Formato | Voz |
 |---|---|---|---|---|
-| 1 | De la foto de tu celular a un cuadro bordado | HOOK-RES | Proceso sin cara | V1 |
-| 2 | Tu perro, bordado por vos (no se compra hecho) | HOOK-RES | Persona de espaldas colgando el cuadro | V2 |
-| 3 | Sin saber dibujar: el truco para pasar la foto a la tela | HOOK-PROB | Tutorial | V3 |
-| 4 | El regalo más lindo para alguien que ama a su mascota | HOOK-RES | Regalo que se abre | V1 |
+| 1 | **MODELADO A1:** De la foto del celular a la lana | HOOK-RES | Proceso sin cara (golden del video 2) | V1 |
+| 2 | **MODELADO A3:** No lo mandes a hacer: hacelo vos | HOOK-PROB | Persona de lejos o de espaldas bordando un gato | V2 |
+| 3 | **MODELADO A5:** ¿No sabés dibujar? El truco de la ventana | HOOK-PROB | Tutorial: calco a contraluz | V3 |
+| 4 | **MODELADO A4:** El regalo que nadie más va a llevar (Navidad) | HOOK-RES | Regalo que se abre, árbol de fondo | V1 |
 | 5 | Un recuerdo de tu mascota, hecho con tus manos | HOOK-RES | Tipográfico, suave | V2 |
 | 6 | Tu gato en lana | HOOK-RES | Proceso, gato | V3 |
 | 7 | Nunca bordaste: con aguja mágica es más fácil | HOOK-PROB | Primer plano de la aguja | V1 |
-| 8 | **CAMBIADO:** "¿Tu raza está entre los 20 moldes?" | HOOK-PROB | Moldes pasando | V2 |
+| 8 | **MODELADO A2:** ¿Cuál se parece al tuyo? (perro, gato, mestizo) | HOOK-RES | Carrusel de retratos IA | V2 |
 | 9 | Hacé retratos por encargo (sin cifras) | HOOK-RES | Chat de celular | V3 |
 | 10 | **CAMBIADO:** Una manualidad para desconectar del celular | HOOK-PROB | Persona de lejos bordando | V1 |
 
+- **2026-11-21:** los ángulos 1, 2, 3, 4 y 8 se reemplazaron por los 5 modelados de HeyHobby (`angulos-modelados-AR.md`: gancho, guion y textos de Meta), con OK de Tamy.
+  > Antes (2026-11-21): 1 "De la foto de tu celular a un cuadro bordado" · 2 "Tu perro, bordado por vos" · 3 "Sin saber dibujar" · 4 "El regalo más lindo" · 8 "¿Tu raza está entre los 20 moldes?"
 - Antes (ficha de Productos): 8 "Un fin de semana, un cuadro terminado" (es un plazo: Meta lo rechaza) · 10 "Antes y después" (prohibido).
 
 ## Material
