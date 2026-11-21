@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap");
+/* Paleta de "Tu Mascota en Aguja Mágica": azul noche de la tapa + naranja de la marca + crema de la lana */
+:root{
+ --acc:#FF9B54;   --acc-rgb:255,155,84;
+ --acc2:#F7C59F;  --acc2-rgb:247,197,159;
+ --mag:#7FB3E6;   --mag-rgb:127,179,230;
+ --on-acc:#1A0E05;
+ --bg:#08111E;
+ --dark:#0B1626;
+ --dark2:#0D1A2C;
+ --chip:linear-gradient(135deg,#0b1626 0%,#1a2f4d 55%,#08111e 100%);
+ --chip2:linear-gradient(135deg,#0b1626 0%,#203a5c 55%,#08111e 100%);
+ --panel:
+   radial-gradient(circle at top left,rgba(var(--acc-rgb),.20) 0%,transparent 40%),
+   radial-gradient(circle at bottom right,rgba(var(--mag-rgb),.14) 0%,transparent 35%),
+   linear-gradient(135deg,#0B1626 0%,#132640 50%,#08111E 100%);
+ --ink:#FFF6EC;
+ --dim:rgba(255,246,236,.78);
+ --dim2:rgba(255,246,236,.58);
+ --bd:rgba(var(--acc2-rgb),.32);
+ --grad:linear-gradient(135deg,#E8742F 0%,#FFC08A 45%,#FF9B54 100%);
+ --grad-flow:linear-gradient(100deg,#E8742F 0%,#FFC08A 25%,#FF9B54 50%,#FFC08A 75%,#E8742F 100%);
+ --disp:Fredoka,"Arial Rounded MT Bold",Arial,sans-serif;
+ --ui:Inter,Arial,sans-serif;
+}

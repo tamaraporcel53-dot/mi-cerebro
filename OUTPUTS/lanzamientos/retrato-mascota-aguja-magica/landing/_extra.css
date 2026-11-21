@@ -1,0 +1,45 @@
+/* ===== AJUSTES PROPIOS DE ESTA LANDING (bloques nuevos) ===== */
+body{background:var(--bg)}
+.mq{background:#08111E}
+.h2,h1.tit,.gt,.btn{font-weight:600;text-transform:none;letter-spacing:0}
+h1.tit{font-size:clamp(27px,6.4vw,40px);line-height:1.12}
+.h2{font-size:2.05rem}
+.lead{margin:0;text-align:center;color:var(--dim);font-size:1rem;line-height:1.55}
+.lead b{color:var(--ink)}
+.cap{margin:8px 0 0;text-align:center;font-size:11.5px;color:var(--dim2);line-height:1.3;font-family:var(--ui)}
+/* Qué es / qué recibís, en 4 fichas */
+.qg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.q{background:rgba(255,255,255,.045);border:1px solid rgba(var(--acc2-rgb),.24);border-radius:14px;padding:12px}
+.q .qe{font-size:20px;line-height:1}
+.q h4{margin:6px 0 4px;color:var(--acc);font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.q p{margin:0;color:var(--ink);font-size:13.5px;line-height:1.4}
+@media(max-width:380px){.qg{grid-template-columns:1fr}}
+/* Videos */
+.vids{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:18px}
+.vid{margin:0}
+.vbox{border-radius:16px;overflow:hidden;aspect-ratio:4/5;background:var(--dark);border:1px solid var(--bd);box-shadow:0 0 18px rgba(var(--acc2-rgb),.14)}
+.vbox video{width:100%;height:100%;object-fit:cover;display:block}
+.vid figcaption{margin-top:9px;text-align:center;color:var(--dim);font-size:13.5px;font-weight:600}
+/* Cómo funciona */
+.pasos{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:20px}
+.paso{background:linear-gradient(135deg,rgba(255,255,255,.06),rgba(255,255,255,.025));border:1px solid rgba(var(--acc2-rgb),.22);border-radius:16px;overflow:hidden}
+.paso img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.pasob{padding:14px 16px 16px}
+.pnum{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--grad);color:var(--on-acc);font-weight:900;font-size:14px;margin-bottom:8px}
+.paso h3{margin:0 0 6px;color:#fff;font-size:16px;font-weight:800}
+.paso p{margin:0;color:var(--dim);font-size:13.5px;line-height:1.55}
+/* Índice */
+.idx{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:8px 18px;margin:18px auto 0;max-width:820px;padding:0;list-style:none;counter-reset:c}
+.idx li{counter-increment:c;display:flex;gap:10px;align-items:baseline;color:var(--ink);font-size:14.5px;line-height:1.4;padding:9px 12px;border-radius:12px;background:rgba(255,255,255,.035);border:1px solid rgba(var(--acc2-rgb),.14)}
+.idx li::before{content:counter(c);color:var(--acc);font-weight:900;min-width:16px}
+.idx small{display:block;color:var(--dim2);font-size:12.5px}
+/* Para quién es */
+.pq{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:18px}
+.pqc{border-radius:16px;padding:16px;background:rgba(255,255,255,.04);border:1px solid rgba(var(--acc2-rgb),.2)}
+.pqc h3{margin:0 0 10px;font-size:15.5px;color:#fff}
+.pqc ul{margin:0;padding-left:18px;color:var(--dim);font-size:13.5px;line-height:1.6}
+.pqc.no h3{color:var(--acc2)}
+.pqc.si h3{color:var(--acc)}
+/* Pago sin logos */
+.payx{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:0 0 8px}
+.payx span{font-size:12.5px;font-weight:800;color:var(--ink);border:1px solid rgba(var(--acc2-rgb),.3);border-radius:999px;padding:6px 12px;background:rgba(255,255,255,.04)}

@@ -1,0 +1,19 @@
+<script>
+(function(){
+/* Precio: en Custom HTML no existe #main-price, así que se lee de la barra flotante. */
+function pv(){try{var e=document.querySelector(".flonow");if(!e)return 0;var s=e.textContent.replace(/[^0-9.,]/g,"");if(s.indexOf(",")>-1){s=s.replace(/\./g,"").replace(",",".")}else{var p=s.split(".");if(p.length>1&&p[p.length-1].length===3)s=s.replace(/\./g,"")}return parseFloat(s)||0}catch(e){return 0}}
+function cur(){var c=document.getElementById("store-currency");return c&&c.value?c.value:"ARS"}
+function pd(){return{value:pv(),currency:cur(),content_name:"Tu Mascota en Aguja Magica",content_type:"product",content_ids:["bb1dceb7-19d1-460e-8cd2-29687ece5e73"],num_items:1}}
+function dl(n){try{window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:n,item_name:"Tu Mascota en Aguja Magica",value:pv(),currency:cur()})}catch(e){}}
+/* metaTrack puede no existir todavía. NUNCA usar fbq crudo: rompe el dedupe con CAPI. */
+function ready(fn){if(typeof window.metaTrack==="function")return fn();var n=0,t=setInterval(function(){n++;if(typeof window.metaTrack==="function"){clearInterval(t);fn()}else if(n>60){clearInterval(t)}},150)}
+ready(function(){try{window.metaTrack("ViewContent",pd())}catch(e){}});
+dl("ViewContent");
+/* Pausar el anillo 3D fuera de pantalla */
+try{var pr=document.querySelector(".pvr");if(pr&&"IntersectionObserver" in window){new IntersectionObserver(function(en){pr.style.animationPlayState=en[0].isIntersecting?"running":"paused"},{rootMargin:"120px"}).observe(pr)}}catch(e){}
+/* Videos: se reproducen solo cuando se ven (ahorra datos en el celular) */
+try{var vs=document.querySelectorAll(".vbox video");if("IntersectionObserver" in window){var io=new IntersectionObserver(function(en){en.forEach(function(x){var v=x.target;if(x.isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){})}else{v.pause()}})},{threshold:.35});Array.prototype.forEach.call(vs,function(v){io.observe(v)})}}catch(e){}
+/* InitiateCheckout en todos los botones de compra */
+try{var cks=document.querySelectorAll('a[href="/checkout"],[data-checkout]');Array.prototype.forEach.call(cks,function(a){a.addEventListener("click",function(){try{if(typeof window.metaTrackInitiateCheckout==="function"){window.metaTrackInitiateCheckout(pd())}}catch(e){}dl("InitiateCheckout")})})}catch(e){}
+})();
+</script>
