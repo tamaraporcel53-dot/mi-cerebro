@@ -108,7 +108,7 @@ Datos de Investigación (2026-11-19), sin volver a verificar acá.
 |---|---|
 | Carpeta del producto | `OUTPUTS/lanzamientos/retrato-mascota-aguja-magica/` (ficha_datos.md, plan_paginas.md, borrador.html, borrador-tu-mascota-en-aguja-magica.pdf) |
 | Tienda (ID) y dominio | 0033f199-b863-461b-ab01-5b01fa40bf9e · tumascota-agujamagica.impultienda.ar (creada 2026-11-20) |
-| URL de la landing | https://tumascota-agujamagica.impultienda.ar (plantilla "classic" de Impultienda, sin HTML propio: no hay imagen creativa ni créditos para las 10 imágenes de imperiolanding) |
+| URL de la landing | https://tumascota-agujamagica.impultienda.ar · **HTML propio** desde el 2026-11-21 (fuente: retrato-mascota-aguja-magica/landing/landing.html; 15 imágenes + 2 videos de Edición en Recursos). Sin testimonios ni contadores: no hay ventas reales todavía |
 | Pasarela | Mercado Pago en pesos: **conectado y operativo** (puede_cobrar true, ARS; según el Cerebro, 2026-11-20) |
 | Píxel (ID) | Falta (agente Meta) |
 | Compra de prueba | ⬜ |
