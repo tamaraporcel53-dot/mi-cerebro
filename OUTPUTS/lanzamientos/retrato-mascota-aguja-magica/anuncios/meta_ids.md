@@ -33,3 +33,20 @@ UTM (del panel de Impultienda, 2026-11-21): `utm_source=facebook&utm_medium=paid
 | 10 | 1455743052668036 | 15,3 s | |
 
 Creativo 01: 29529257903377589 (IG resuelto: 17841453371327301 = @tumascotaenagujamagica, visto en la vista previa de Reels)
+
+## Anuncios (PAUSED, 2026-11-21 ~17:00) · identidad IG = cuenta respaldada por la página 17841444348997810
+| # | anuncio id | creativo id |
+|---|---|---|
+| 01 | 120253323026060116 | 1476910547920347 (rehecho por el editor al elegir "Usar página de Facebook") |
+| 02 | 120253323078450116 | 1655487282625686 |
+| 03 | 120253323078650116 | 1423010733248743 |
+| 04 | 120253323078780116 | 1092676827135669 |
+| 05 | 120253323079040116 | 2181599159098028 |
+| 06 | 120253323079400116 | 1042977215483183 |
+| 07 | 120253323079630116 | 1716517406755592 |
+| 08 | 120253323080010116 | 1148610898099784 |
+| 09 | 120253323080240116 | 1501490825219867 |
+| 10 | 120253323080600116 | 1594211835844769 |
+
+## Checklist (2026-11-21, leída de vuelta de Meta)
+1 píxel 1427485765770027 en los 10 conjuntos ✅ · 2 la cuenta ve el píxel ✅ · 3 link a tumascota-agujamagica.impultienda.ar ✅ · 4 UTM en url_tags = la del panel ✅ · 5 página Tu Mascota (es, AR) ✅ · 6 IG: cuenta respaldada por la página, vista previa de Reels OK ✅ · 7 un video por anuncio, duraciones = archivos ✅ · 8 tracking_specs offsite_conversion + píxel ✅ · 9 sin gasto mínimo ✅ · 10 conversion_domain impultienda.ar ✅ (verificación de dominio: NO hecha, opcional según Impultienda) ⚠️
