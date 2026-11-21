@@ -98,9 +98,11 @@ Datos de Investigación (2026-11-19), sin volver a verificar acá.
 5. En memoria de tu mascota: un recuerdo hecho con tus manos
 6. Gatos: "Tu gato en lana" (el mismo método)
 7. Nunca bordaste: con aguja mágica es más fácil que a mano
-8. Un fin de semana, un cuadro terminado
+8. ¿Tu raza está entre los 20 moldes?
+   > Antes (2026-11-19): "Un fin de semana, un cuadro terminado". Lo cambió Edición el 2026-11-21: un plazo de resultado que Meta rechaza
 9. Hacé retratos por encargo para otros dueños de mascotas (sin prometer cifras)
-10. Antes y después: la foto al lado del cuadro bordado
+10. Una manualidad para desconectar
+   > Antes (2026-11-19): "Antes y después: la foto al lado del cuadro bordado". Lo cambió Edición el 2026-11-21: el antes y después está prohibido en los anuncios
 
 ## F2-F3 · Activos
 

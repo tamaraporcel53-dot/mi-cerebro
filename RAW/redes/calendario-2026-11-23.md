@@ -34,7 +34,7 @@
 > Esto es lo que te llevás 👇
 > 📘 La guía principal: de tu foto al retrato bordado
 > 🎁 + 4 bonos para acompañarte
-> Es una guía en PDF (no es un kit ni un cuadro terminado). Te llega al mail apenas comprás.
+> Es una guía en PDF (no es un kit ni un cuadro terminado). Te llega al mail apenas se aprueba el pago.
 > 📲 Link en la bio · ARS 19.900
 
 **Mié: reel "La guía por dentro"**
@@ -44,25 +44,26 @@
 
 **Jue: carrusel "Sin saber dibujar"**
 > “Yo no sé dibujar” 🙋‍♀️ No hace falta.
-> 1️⃣ Pasás la foto a la tela con un truco de calco
+> 1️⃣ Pasás la foto a la tela calcándola a contraluz
 > 2️⃣ Seguís la línea con la aguja mágica
 > 3️⃣ Rellenás por colores
 > Todo explicado en la guía 📲 Link en la bio
 
 **Vie: foto "Nunca bordaste"**
 > ¿Cuál te sale hoy: el de la izquierda o el de la derecha? 😅
-> Los rulos sueltos son el error más común al empezar con aguja mágica. En la guía te explicamos por qué pasa y cómo evitarlo.
+> Que los rulitos se salgan es uno de los errores de cuando empezás con aguja mágica. En la guía te explicamos por qué pasa y cómo evitarlo.
 > 📲 Link en la bio
 
 **Sáb: carrusel "Regalo de Navidad"**
 > ¿Tenés a alguien que ama a su mascota? 🎄🐾
 > Un retrato bordado por vos es un regalo que no se compra en ningún lado.
-> Empezá con la guía y llegás a regalarlo para las fiestas.
+> Un retrato de cara de perro o gato se termina en un fin de semana.
 > 📲 Link en la bio
 
-## Pendiente de chequear antes de programar
+## Chequeado contra la guía y la landing (2026-11-21)
 
-- Que el texto del jueves ("truco de calco") coincida con el método de la guía.
-- Que "te llega al mail apenas comprás" sea cierto (según Productos, la compra de prueba entregó los PDF).
-- Que "llegás a regalarlo para las fiestas" sea realista (el reclamo de "un fin de semana" no se usa hasta verificarlo).
-- Los videos son 4:5 y sin audio: en la pestaña Reels se recortan un poco. La música hay que agregarla desde la app del celular.
+- Calco a contraluz: está en `borrador.html` (ventana o pantalla del celular).
+- "Te llega al mail apenas se aprueba el pago": es la frase de la landing (`landing/_body.html`).
+- "Los rulitos se salen": está en `borrador.html`, en la sección de errores.
+- "Se termina en un fin de semana": lo dice la guía (`borrador.html`), sobre el tamaño de una cara de perro o gato.
+- Falta: los videos son 4:5 y sin audio, así que en la pestaña Reels se recortan un poco. La música se agrega desde la app del celular.
