@@ -75,6 +75,14 @@ No es "revisar por arriba": es verificar cada punto y poder mostrar el dato.
 > API de Conversiones funcionan igual sin ella. Los permisos de tráfico del píxel se dan a `impultienda.ar` y alcanzan para los subdominios.
 > El dominio propio sirve recién si se quiere, por ejemplo, para GhostAds (requiere un plan que lo incluya).
 
+> **Píxel (puntos 1 y 2), aprendido el 2026-11-20:** el píxel se crea **en el mismo portfolio que la cuenta publicitaria**
+> (Configuración del negocio → Orígenes de datos → Conjuntos de datos y píxeles → «+ Agregar», con ese portfolio elegido arriba),
+> y después se conecta en la pestaña «Activos conectados» → Cuentas publicitarias. Motivos: (a) un portfolio **nuevo no puede
+> compartir** el píxel con otro portfolio («Asignar socio» queda gris durante varias semanas); (b) si se crea desde el
+> Administrador de eventos sin fijarse el portfolio, puede quedar atado a otra cuenta (pasó con la cuenta vieja en ARS).
+> El token de la API de Conversiones se genera en el píxel → Configuración → «Configurar integración directa» → «Generar token
+> de acceso» (no el botón «Conectar» de arriba), y en Impultienda se guarda con el botón **«Guardar cambios»** (Enter no guarda).
+
 ### 🔴 Y después: verificar que esté PUBLICADO, no creado
 
 **Crear ≠ publicar ≠ entregar.** Los tres estados son distintos y el MCP no los
