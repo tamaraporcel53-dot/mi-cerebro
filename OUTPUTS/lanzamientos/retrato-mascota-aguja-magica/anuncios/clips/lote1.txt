@@ -1,0 +1,19 @@
+c02_calco|C4_foto_tela|A hand slowly traces the pencil outline on the fabric in the embroidery hoop, gentle continuous motion, soft window light, locked-off camera, no zoom, no faces, no text
+c03_mapa|B1c_mapa|Very subtle motion: soft daylight shifts across the hoop and yarn balls, a slight breeze moves the fabric, locked-off camera, no zoom, no people, no text
+c04_bienvenida|C0_bienvenida|Steam rises gently from the cup, soft light flickers, the yarn sits still, calm cozy mood, locked-off camera, no zoom, no people, no text
+c05_materiales|C2_materiales|Slow gentle top-down drift over the craft materials laid on the table, soft light, no zoom, no people, no text
+c06_ojos|C7_ojos|Extreme close-up of an embroidered dog face in yarn, very slow subtle camera push sideways, the yarn texture catches the light, no zoom in, no text
+c07_terminacion|C8_terminacion|The embroidered dog portrait in the hoop sits on a shelf, a ribbon moves softly in a light breeze, warm light, locked-off camera, no zoom, no people, no text
+c08_gato_boceto|I4_cap6|Slow gentle slide across a cat line drawing on fabric, soft light, locked-off framing, no zoom, no people, no text
+c09_composicion|O1a_composicion|Slow drift over the table with pet photos and the hoop with a dog and cat sketch, soft window light, no zoom, no people, no text
+c10_lanas|O1c_colores|Skeins of yarn in natural tones, soft light moves slowly across them, gentle camera slide, no zoom, no people, no text
+c11_hero|L01_hero|Cozy table with embroidery hoop, phone and yarn; soft daylight shifts slowly, steam or dust in the light, locked-off camera, no zoom, no people, no text
+c12_tapa_gato|I1_tapa|Top-down view of an embroidered cat portrait in a hoop with yarn around, very slow gentle rotation of the camera, soft light, no zoom, no people, no text
+c13_pedido|B4b_pedido|An embroidered cat portrait in a hoop on a table next to a phone and a cup, soft light shifts, steam rises from the cup, locked-off camera, no people, no text
+c14_living|I6_cierre|Cozy living room, a black cat walks slowly on the sofa below an embroidered cat portrait hanging on the wall, soft daylight, locked-off camera, no people, no text
+c15_pared_perro|O1b_simplificar|An embroidered dog portrait in a hoop hanging on a light wall, soft shadow of leaves moves slowly across the wall, locked-off camera, no people, no text
+c16_regalo|P4_bono4|Hands slowly open the gift box tissue paper revealing an embroidered pet portrait in a hoop, warm soft light, only hands visible, no faces, no text
+c17_pared_duo|P6_oto1|An embroidered portrait of a dog and a cat in a hoop hangs on the wall, a plant leaf moves softly, warm daylight, locked-off camera, no people, no text
+c18_marco|O2a_marco|A framed embroidered pet portrait on a table with yarn, soft daylight shifts slowly, locked-off camera, no zoom, no people, no text
+c19_almohadon|O2c_posavasos|Cozy sofa with an embroidered cat cushion and coasters, soft daylight moves slowly, locked-off camera, no people, no text
+c20_foto_dibujo|P1_bono1|A pencil slowly finishes a simple line drawing of a dog on paper next to a phone showing the dog photo, gentle motion, only the pencil and hand visible, no faces, no text
