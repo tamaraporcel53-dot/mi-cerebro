@@ -13,3 +13,7 @@ tm-pag-tecnica https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public
 tm-pag-pelaje https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/0033f199-b863-461b-ab01-5b01fa40bf9e/1795230143414_tm-pag-pelaje-d82f9387.webp
 tm-pag-bono1 https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/0033f199-b863-461b-ab01-5b01fa40bf9e/1795230121506_tm-pag-bono1-bf790d9e.webp
 tm-pag-molde https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/0033f199-b863-461b-ab01-5b01fa40bf9e/1795230138360_tm-pag-molde-7d4dffa4.webp
+V:video1 https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/0033f199-b863-461b-ab01-5b01fa40bf9e/1795231056283_video1-recibis-77c02cdd.mp4
+V:video2 https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/0033f199-b863-461b-ab01-5b01fa40bf9e/1795231063575_video2-foto-al-cuadro-3eef8efe.mp4
+V:poster1 https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/0033f199-b863-461b-ab01-5b01fa40bf9e/1795231070392_video1-recibis-26919dfa.webp
+V:poster2 https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/0033f199-b863-461b-ab01-5b01fa40bf9e/1795231077096_video2-foto-al-cuadro-dc2a4aff.webp

@@ -43,3 +43,5 @@ h1.tit{font-size:clamp(27px,6.4vw,40px);line-height:1.12}
 /* Pago sin logos */
 .payx{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:0 0 8px}
 .payx span{font-size:12.5px;font-weight:800;color:var(--ink);border:1px solid rgba(var(--acc2-rgb),.3);border-radius:999px;padding:6px 12px;background:rgba(255,255,255,.04)}
+/* En el celular: primero qué es (título, bajada y fichas) y después la foto */
+@media(max-width:999px){.hero{display:flex;flex-direction:column;gap:12px}.hero>.col{display:contents}.hero>div:first-child{order:3}.offer,h1.tit,.lead{order:1}.qg{order:2}.box{order:4}.btn{order:5}.pv{order:6}.gar{order:7}}
