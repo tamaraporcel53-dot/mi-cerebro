@@ -15,3 +15,4 @@
 - 2026-11-21 · La etiqueta de IA de Instagram es obligatoria para videos realistas hechos con IA, y los de la tanda 1 tienen imágenes de Kie · la activo en todos.
 - 2026-11-21 · La bio de @tumascotaenagujamagica no tiene link y la categoría dice "Blog personal" · los textos dicen "link en la bio": hay que cargarlo (pedido a Tamy).
 - 2026-11-21 · La página de FB muestra al público el teléfono y el mail personal de Tamy · va contra "nunca mi nombre" de cara al cliente (sin confirmar si ella lo quiere así): se lo pregunté.
+- 2026-11-21 · Acordado con Edición: orgánico solo en Reels 9:16, 1 por día a las 20:00, versiones NN-ORG ("El link está en la bio") en anuncios/organico/, y 2 placas de historia con encuesta (0 créditos). Ganchos nuevos recién después de medir la tanda 1 · así se usa lo que ya está hecho y no se gastan créditos sin datos.
