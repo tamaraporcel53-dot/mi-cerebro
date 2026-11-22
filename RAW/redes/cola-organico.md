@@ -40,3 +40,4 @@ COLA | V02 | https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/s
 COLA | V03 | https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/0033f199-b863-461b-ab01-5b01fa40bf9e/1795313029552_v03-web-d92165f5.mp4 | organico3/V03-WEB.mp4 | organico3/V03-thumb.jpg | ☕ Un rato para vos, sin pantallas.⏎Lana, aguja mágica y la foto de tu mascota: punto tras punto aparece su cara en la tela 🧶⏎{LINK}
 PUBLICADO | 06 | 2026-11-22 06:05 | 1582744113618741 | IG ok
 PUBLICADO | 03 | 2026-11-22 08:03 | 1692209595599260 | IG falló: Instagram pide 'Confirma que eres una persona real' (página /accounts/suspended/) para tumascotaenagujamagica
+PUBLICADO | 03 | 2026-11-22 10:02 | (FB ya salió a las 08:03, no se repite) | IG falló: sigue el bloqueo 'Confirma que eres una persona real' (/accounts/suspended/) en tumascotaenagujamagica
