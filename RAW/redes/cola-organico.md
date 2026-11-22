@@ -26,3 +26,9 @@ COLA | 05 | https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/st
 COLA | 09 | https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/0033f199-b863-461b-ab01-5b01fa40bf9e/1795287466340_09-web-b7aa60e3.mp4 | organico/09-ORG-WEB.mp4 | organico/09-ORG-thumb.jpg | 🧶 Un retrato bordado de una mascota es un regalo que cualquiera quiere tener.⏎Hacelo para tu familia, tus amigas o para quien te lo encargue. La guía te enseña desde cero 📩⏎{LINK}
 
 ## Registro (las líneas nuevas van abajo)
+
+## Tanda 2 para tejedoras (Edición, 2026-11-21)
+
+COLA | T01 | https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/0033f199-b863-461b-ab01-5b01fa40bf9e/1795311730997_t01-web-0e8db0d5.mp4 | organico2/T01-WEB.mp4 | organico2/T01-thumb.jpg | 🧶 ¿Tejés al crochet? Esto es otra cosa.⏎Con la aguja mágica no se cuentan puntos: empujás la aguja y la lana forma el rulo sola. Y con eso podés bordar el retrato de tu mascota 🐾⏎{LINK}
+COLA | T02 | https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/0033f199-b863-461b-ab01-5b01fa40bf9e/1795311749979_t02-web-8515f078.mp4 | organico2/T02-WEB.mp4 | organico2/T02-thumb.jpg | 🪡 3 cosas que nadie te dice de la aguja mágica:⏎1️⃣ La tela tiene que estar tensa como un tambor⏎2️⃣ La lana tiene que pasar suelta por la aguja⏎3️⃣ La aguja no se levanta de la tela entre punto y punto⏎¿Cuál no sabías? 👇⏎{LINK}
+COLA | T03 | https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/0033f199-b863-461b-ab01-5b01fa40bf9e/1795311766969_t03-web-85b8677a.mp4 | organico2/T03-WEB.mp4 | organico2/T03-thumb.jpg | 🧺 ¿Qué hacés con las lanas que te sobraron?⏎Con aguja mágica las convertís en el retrato de tu mascota, punto por punto 🐶🐱⏎{LINK}

@@ -44,3 +44,5 @@
 2026-11-21 · El motor Remotion parte algunos subtítulos en 2 renglones ("RELLENÁS CON / AGUJA MÁGICA SIN"), contra la regla de máximo 3 palabras en 1 renglón. Pasa también en los WEB que corren en Meta (sin confirmar si afecta el rendimiento) · revisar el agrupado de palabras en el componente karaoke antes de la tanda 2.
 2026-11-21 · La placa de historia "¿Cuál bordarías?" la había armado con 2 portadas (una era el OTO 1, que solo se ofrece post-compra). Cambiada por fotos de bordados: no se muestra el producto en publicidad (WIKI).
 2026-11-21 · Scribe transcribe "regalate" como "Regálate" (neutro): corregir el voseo en las props antes de renderizar.
+2026-11-21 · Tanda 2 orgánica (gente que teje): T01 crochet, T02 "3 cosas" (datos sacados de la guía) y T03 lanas sobrantes, con los 21 clips de la tanda 1. 0 créditos de Kie y ≈ 750 caracteres de ElevenLabs. Subidos a Recursos con final/subir.sh: el tercer argumento tiene que ser MIME (video/mp4, image/jpeg); con "video" la firma falla en silencio.
+2026-11-21 · Scribe saca el voseo (Tejes, armas, Clavas, haces): organico2_props.mjs lo corrige con un diccionario antes de renderizar.
