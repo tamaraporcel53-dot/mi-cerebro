@@ -9,6 +9,7 @@
 
 | Qué | Lo pide |
 |---|---|
+| **Campaña sin entregar (Redes, 2026-11-22 15:00):** cuenta pagada y todo ACTIVE, pero 0 impresiones. Avisado al agente Meta | Redes |
 | **URGENTE (Redes, 2026-11-22 08:03): Instagram bloqueó @tumascotaenagujamagica** con "Confirma que eres una persona real" (cuenta en /accounts/suspended/). Entrá desde la app o desde Chrome y completá la verificación. Hasta eso, IG no publica (el video 03 salió solo en FB) | Redes |
 | **Orgánico y campaña (Redes), 2026-11-22 11:45:** (1) **La campaña NO entrega hoy** (0 gasto, 0 visitas): la cuenta ...7584 figura con pago pendiente (UNSETTLED, ~USD 4,52, Mastercard *9621). Revisá Administrador de anuncios → Facturación y pagos. (2) Hoy en FB salieron el 06, el 03 y el 08; en IG, solo el 06. La tarea ya no frena FB cuando falla IG. (3) Pendientes: link en la bio de IG, categoría y foto de perfil. | Redes |
 | **Campaña del retrato PRENDIDA el 2026-11-21 ~17:15** (10 conjuntos × USD 4/día). **Por qué no entregó (Meta, 2026-11-22):** el 2026-11-21 a las 22:00 Meta quiso cobrar USD 2,00 a la Mastercard y el cobro no pasó → cuenta "en período de gracia" (22:16) y la entrega se cortó. Pagaste USD 4,52 a las 12:42 del 2026-11-22 → cuenta activa de nuevo, sin errores. **Tuyo:** preguntá al banco si la tarjeta acepta cobros en dólares/del exterior, o sumá una 2.ª tarjeta de respaldo, porque el próximo cobro puede volver a fallar. Pendiente también: volver a vincular @tumascotaenagujamagica cuando Meta la destrabe · Dominio verificado ✅ 2026-11-21 | Meta |
