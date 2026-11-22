@@ -1,0 +1,3 @@
+T01|N|c01_tecnica:4.6 c06_ojos:2.2 c03_mapa:2.0 c15_pared_perro:2.0 c12_tapa_gato:2.0 c11_hero:2.2 c17_pared_duo:2.4
+T02|N|c05_materiales:2.2 c02_calco:2.2 c01_tecnica:4.6 c10_lanas:2.0 c06_ojos:2.0 c07_terminacion:2.0 c14_living:2.0 c19_almohadon:2.2
+T03|N|c10_lanas:2.6 c03_mapa:2.0 c20_foto_dibujo:2.0 c02_calco:2.0 c01_tecnica:4.6 c15_pared_perro:2.2 c17_pared_duo:2.2
