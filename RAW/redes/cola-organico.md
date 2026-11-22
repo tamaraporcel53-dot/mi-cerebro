@@ -41,3 +41,11 @@ COLA | V03 | https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/s
 PUBLICADO | 06 | 2026-11-22 06:05 | 1582744113618741 | IG ok
 PUBLICADO | 03 | 2026-11-22 08:03 | 1692209595599260 | IG falló: Instagram pide 'Confirma que eres una persona real' (página /accounts/suspended/) para tumascotaenagujamagica
 PUBLICADO | 03 | 2026-11-22 10:02 | (FB ya salió a las 08:03, no se repite) | IG falló: sigue el bloqueo 'Confirma que eres una persona real' (/accounts/suspended/) en tumascotaenagujamagica
+
+## Registro desde 2026-11-22 11:40 (formato nuevo: FB e IG por separado)
+
+FB-OK | 06 | 2026-11-22 06:05 | 1582744113618741
+IG-OK | 06 | 2026-11-22 06:05
+FB-OK | 03 | 2026-11-22 08:03 | 1692209595599260
+IG-BLOQUEO | activo | 2026-11-22 08:03 | Instagram pide "Confirma que eres una persona real" (/accounts/suspended/). Lo levanta solo Tamy: cuando lo resuelva, agregar "IG-BLOQUEO | levantado | <fecha>"
+FB-OK | 08 | 2026-11-22 11:45 | 1192266003331422
