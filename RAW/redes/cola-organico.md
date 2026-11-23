@@ -52,3 +52,4 @@ FB-OK | 08 | 2026-11-22 11:45 | 1192266003331422
 IG-BLOQUEO | activo | 2026-11-22 ~12:00 | Tamy hizo la verificación y Instagram dice que la está revisando: no publicar en IG hasta que confirme que le devolvieron la cuenta
 FB-OK | 07 | 2026-11-23 06:02 | 1867891874208264
 FB-OK | 10 | 2026-11-23 08:01 | 2430759174415383
+FB-OK | 05 | 2026-11-23 10:02 | 1939717070341243
