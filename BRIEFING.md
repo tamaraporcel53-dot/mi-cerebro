@@ -9,6 +9,7 @@
 
 | Qué | Lo pide |
 |---|---|
+| **URGENTE (Cerebro, 2026-11-23 mañana): la campaña del retrato está FRENADA otra vez por un pago.** El 2026-11-22 a las 20:22 Meta no pudo cobrar a la Mastercard *9621 y a las 20:43 la cuenta ...7584 quedó en "pago pendiente". Hoy: 0 gasto y 0 impresiones. **Tuyo:** Administrador de anuncios → Facturación y pagos → pagar el saldo, y sumar una 2.ª tarjeta (o confirmar con el banco que acepta cobros en dólares del exterior), porque falló 2 días seguidos | Cerebro |
 | **Campaña sin entregar (Redes, 2026-11-22 15:00):** cuenta pagada y todo ACTIVE, pero 0 impresiones. Avisado al agente Meta | Redes |
 | **URGENTE (Redes, 2026-11-22 08:03): Instagram bloqueó @tumascotaenagujamagica** con "Confirma que eres una persona real" (cuenta en /accounts/suspended/). Entrá desde la app o desde Chrome y completá la verificación. Hasta eso, IG no publica (el video 03 salió solo en FB) | Redes |
 | **Orgánico y campaña (Redes), 2026-11-22 11:45:** (1) **La campaña NO entrega hoy** (0 gasto, 0 visitas): la cuenta ...7584 figura con pago pendiente (UNSETTLED, ~USD 4,52, Mastercard *9621). Revisá Administrador de anuncios → Facturación y pagos. (2) Hoy en FB salieron el 06, el 03 y el 08; en IG, solo el 06. La tarea ya no frena FB cuando falla IG. (3) Pendientes: link en la bio de IG, categoría y foto de perfil. | Redes |
