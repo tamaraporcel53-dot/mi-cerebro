@@ -50,3 +50,4 @@ FB-OK | 03 | 2026-11-22 08:03 | 1692209595599260
 IG-BLOQUEO | activo | 2026-11-22 08:03 | Instagram pide "Confirma que eres una persona real" (/accounts/suspended/). Lo levanta solo Tamy: cuando lo resuelva, agregar "IG-BLOQUEO | levantado | <fecha>"
 FB-OK | 08 | 2026-11-22 11:45 | 1192266003331422
 IG-BLOQUEO | activo | 2026-11-22 ~12:00 | Tamy hizo la verificación y Instagram dice que la está revisando: no publicar en IG hasta que confirme que le devolvieron la cuenta
+FB-OK | 07 | 2026-11-23 06:02 | 1867891874208264
