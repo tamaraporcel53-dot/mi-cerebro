@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><title>Logos Tamy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap">
+<style>
+html,body{margin:0;width:1080px;height:1080px;overflow:hidden}
+.op{width:1080px;height:1080px;display:none;align-items:center;justify-content:center;position:relative}
+body[data-op="1"] #o1,body[data-op="2"] #o2,body[data-op="3"] #o3{display:flex}
+/* 1: blanco, monograma T en círculo fino */
+#o1{background:#FFFFFF;color:#111}
+#o1 .aro{width:720px;height:720px;border:2px solid #111;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative}
+#o1 .aro::before{content:"";position:absolute;inset:22px;border:1px solid #111;border-radius:50%}
+#o1 .t{font:300 360px/0.9 "Cormorant Garamond",serif;margin-top:-30px}
+#o1 .n{font:300 46px "Jost",sans-serif;letter-spacing:.42em;margin-top:18px;padding-left:.42em}
+#o1 .s{font:italic 300 40px "Cormorant Garamond",serif;margin-top:6px;color:#444}
+/* 2: negro, nombre en cursiva fina */
+#o2{background:#0E0E0E;color:#F5F5F5;flex-direction:column}
+#o2 .w{font:italic 300 250px/1 "Cormorant Garamond",serif;letter-spacing:-.01em}
+#o2 .l{width:300px;height:1px;background:#F5F5F5;margin:34px 0 30px;opacity:.7}
+#o2 .s{font:300 40px "Jost",sans-serif;letter-spacing:.5em;padding-left:.5em}
+#o2 .p{position:absolute;width:10px;height:10px;border-radius:50%;background:#F5F5F5;top:300px;right:268px}
+/* 3: blanco, T. grande con tagline */
+#o3{background:#F7F6F4;color:#111;flex-direction:column}
+#o3 .t{font:300 480px/0.8 "Cormorant Garamond",serif}
+#o3 .t i{font-style:normal;color:#111}
+#o3 .s{font:300 40px "Jost",sans-serif;letter-spacing:.46em;margin-top:56px;padding-left:.46em}
+#o3 .s2{font:italic 300 38px "Cormorant Garamond",serif;color:#555;margin-top:10px}
+</style></head>
+<body data-op="1">
+<div class="op" id="o1"><div class="aro"><div class="t">T</div><div class="n">TAMY</div><div class="s">diseño web</div></div></div>
+<div class="op" id="o2"><div class="w">tamy</div><div class="l"></div><div class="s">DISEÑO WEB</div></div>
+<div class="op" id="o3"><div class="t">T<i>.</i></div><div class="s">TAMY STUDIO</div><div class="s2">páginas web</div></div>
+<script>document.body.dataset.op=new URLSearchParams(location.search).get("op")||"1"</script>
+</body></html>
