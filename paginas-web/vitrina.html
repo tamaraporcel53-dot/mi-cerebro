@@ -1,0 +1,115 @@
+<meta charset="utf-8">
+<title>Muestra ÁUREA Beauty Salon</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Jost:wght@400;500;600&display=swap">
+<style>
+/* Layout: vitrina — barra de controles arriba, la página dentro de un marco de dispositivo, y al costado qué incluye */
+:root{
+  --bg:#EDE7DF; --panel:#FBF8F3; --fg:#2E211C; --suave:#6E5E56; --acento:#9A7735; --linea:#D9CCBB; --marco:#1F1714;
+  --display:"Cormorant Garamond", Georgia, serif; --texto:"Jost", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#17110F;--panel:#221A17;--fg:#F1E9DF;--suave:#B7A797;--acento:#D3B576;--linea:#3A2E29;--marco:#000;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#17110F;--panel:#221A17;--fg:#F1E9DF;--suave:#B7A797;--acento:#D3B576;--linea:#3A2E29;--marco:#000;color-scheme:dark}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--fg);font:400 15px/1.55 var(--texto);margin:0}
+.page{max-width:1500px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 40px}
+.barra{display:flex;align-items:center;justify-content:space-between;gap:14px 24px;flex-wrap:wrap;margin-bottom:18px}
+.barra h1{font:500 28px/1.1 var(--display);margin:0}
+.barra h1 small{display:block;font:500 11px var(--texto);letter-spacing:.22em;text-transform:uppercase;color:var(--acento);margin-bottom:4px}
+.ctrl{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.seg{display:inline-flex;background:var(--panel);border:1px solid var(--linea);border-radius:999px;padding:4px}
+.seg button{border:0;background:none;color:var(--suave);font:500 14px var(--texto);padding:8px 16px;border-radius:999px;cursor:pointer;display:flex;align-items:center;gap:8px}
+.seg button svg{width:16px;height:16px}
+.seg button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 20px;border-radius:999px;font:500 14px var(--texto);text-decoration:none;border:1px solid var(--fg);color:var(--fg);background:transparent;cursor:pointer}
+.btn:hover{background:var(--fg);color:var(--bg)}
+.btn-acento{background:var(--acento);border-color:var(--acento);color:#fff}
+.btn-acento:hover{filter:brightness(.92);background:var(--acento);color:#fff}
+:focus-visible{outline:2px solid var(--acento);outline-offset:3px}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:24px;align-items:start}
+.escenario{display:flex;justify-content:center;background:var(--panel);border:1px solid var(--linea);border-radius:20px;padding:20px;min-width:0}
+.marco{width:100%;transition:width .4s ease;background:var(--marco);border-radius:14px;padding:28px 6px 6px;position:relative;box-shadow:0 30px 60px -30px rgba(0,0,0,.45)}
+.marco::before{content:"";position:absolute;top:11px;left:14px;width:8px;height:8px;border-radius:50%;background:#E0675A;box-shadow:14px 0 0 #E5B54A,28px 0 0 #6BB86A}
+.marco iframe{display:block;width:100%;height:min(78vh,860px);border:0;border-radius:9px;background:#FBF8F3}
+.marco.tablet{width:min(100%,800px);border-radius:28px;padding:22px}
+.marco.tablet::before,.marco.celu::before{left:50%;transform:translateX(-50%);top:9px;width:46px;height:5px;border-radius:9px;background:#3a3330;box-shadow:none}
+.marco.tablet iframe{height:min(78vh,1000px);border-radius:12px}
+.marco.celu{width:min(100%,410px);border-radius:46px;padding:22px 10px 12px}
+.marco.celu iframe{height:min(78vh,800px);border-radius:34px}
+aside{background:var(--panel);border:1px solid var(--linea);border-radius:20px;padding:24px;position:sticky;top:16px}
+aside h2{font:500 24px/1.15 var(--display);margin:0 0 6px}
+aside p{color:var(--suave);margin:0 0 16px}
+aside ul{list-style:none;padding:0;margin:0 0 22px;display:grid;gap:11px}
+aside li{display:flex;gap:10px;align-items:flex-start}
+aside li svg{width:18px;height:18px;color:var(--acento);flex:none;margin-top:2px}
+aside .btn{width:100%;justify-content:center}
+.pie{color:var(--suave);font-size:12.5px;margin-top:14px}
+@media (max-width:1000px){.grid{grid-template-columns:1fr}aside{position:static}}
+@media (max-width:640px){
+  .seg button span{display:none}
+  .escenario{padding:10px;border-radius:16px}
+  .marco,.marco.tablet,.marco.celu{width:100%;border-radius:30px;padding:18px 6px 6px}
+  .marco iframe,.marco.tablet iframe,.marco.celu iframe{height:72vh;border-radius:24px}
+  #dispositivos{display:none}
+}
+@media (prefers-reduced-motion:reduce){.marco{transition:none}}
+</style>
+
+<div class="page">
+  <div class="barra">
+    <h1><small>Muestra de página web</small>ÁUREA Beauty Salon</h1>
+    <div class="ctrl">
+      <div class="seg" id="dispositivos" role="group" aria-label="Ver como">
+        <button type="button" id="v-compu" data-v="compu" aria-pressed="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="16" height="11" rx="1.5"/><path d="M7 17h6"/></svg><span>Computadora</span></button>
+        <button type="button" id="v-tablet" data-v="tablet" aria-pressed="false"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="12" height="16" rx="1.5"/></svg><span>Tablet</span></button>
+        <button type="button" id="v-celu" data-v="celu" aria-pressed="false"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="2" width="8" height="16" rx="1.5"/><path d="M9 15h2"/></svg><span>Celular</span></button>
+      </div>
+      <a class="btn" href="aurea/index.html" target="_blank" rel="noopener">Abrir a pantalla completa</a>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="escenario">
+      <div class="marco" id="marco">
+        <iframe id="sitio" src="aurea/index.html" title="Página de muestra de ÁUREA Beauty Salon"></iframe>
+      </div>
+    </div>
+    <aside>
+      <h2>Qué incluye esta página</h2>
+      <p>Probala: tocá los botones, reservá un turno de prueba y mirala en celular.</p>
+      <ul>
+        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m4 10 4 4 8-8"/></svg>Diseño a medida con la identidad del negocio</li>
+        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m4 10 4 4 8-8"/></svg>Reserva de turnos en 3 pasos, con horarios reales del local</li>
+        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m4 10 4 4 8-8"/></svg>El turno llega armado por WhatsApp</li>
+        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m4 10 4 4 8-8"/></svg>Cartel de "abierto ahora" que cambia solo</li>
+        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m4 10 4 4 8-8"/></svg>Servicios con precio, duración y botón de reserva</li>
+        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m4 10 4 4 8-8"/></svg>Preguntas frecuentes, horarios y cómo llegar</li>
+        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m4 10 4 4 8-8"/></svg>Se adapta a celular, tablet y computadora</li>
+      </ul>
+      <a class="btn btn-acento" id="cta" href="#" target="_blank" rel="noopener" hidden>Quiero una página así</a>
+      <p class="pie">ÁUREA es un negocio de muestra: nombre, datos y reservas son ficticios.</p>
+    </aside>
+  </div>
+</div>
+
+<script>
+(function(){
+  // Tu WhatsApp para que los clientes te escriban (código de país, sin + ni espacios). Vacío = el botón no se muestra.
+  var MI_WHATSAPP = "";
+  if (MI_WHATSAPP) {
+    var cta = document.getElementById("cta");
+    cta.href = "https://wa.me/" + MI_WHATSAPP + "?text=" + encodeURIComponent("Hola, vi la muestra de ÁUREA y quiero una página así para mi negocio.");
+    cta.hidden = false;
+  }
+  var marco = document.getElementById("marco");
+  var botones = document.querySelectorAll("#dispositivos button");
+  function ver(v){
+    marco.className = "marco" + (v === "compu" ? "" : " " + v);
+    botones.forEach(function(b){ b.setAttribute("aria-pressed", b.getAttribute("data-v") === v ? "true" : "false"); });
+    try { localStorage.setItem("vitrina-vista", v); } catch(e){}
+  }
+  botones.forEach(function(b){ b.addEventListener("click", function(){ ver(b.getAttribute("data-v")); }); });
+  try { var g = localStorage.getItem("vitrina-vista"); if (g) ver(g); } catch(e){}
+})();
+</script>

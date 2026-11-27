@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "paginas-web",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "5517", "--directory", "paginas-web"],
+      "port": 5517
+    }
+  ]
+}

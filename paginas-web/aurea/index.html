@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ÁUREA Beauty Salon</title>
+<meta name="description" content="ÁUREA Beauty Salon en Recoleta: tratamientos faciales, masajes y peinados. Reservá tu turno online en menos de un minuto.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap">
+<style>
+/* Layout: editorial de salón — titulares serif grandes, fotos en arco, bandas marfil/arena alternadas, un solo acento dorado */
+:root{
+  --marfil:#FBF8F3;
+  --arena:#F1EAE0;
+  --piedra:#E4D8C8;
+  --cafe:#2E211C;
+  --cafe-suave:#6E5E56;
+  --dorado:#9A7735;
+  --dorado-hondo:#7A5C26;
+  --linea:#DED1C0;
+  --blanco:#FFFFFF;
+  --error:#9B2C2C;
+  --display:"Cormorant Garamond", "Times New Roman", Georgia, serif;
+  --texto:"Jost", "Segoe UI", system-ui, sans-serif;
+  --max:1180px;
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--marfil);color:var(--cafe);font:400 17px/1.65 var(--texto);overflow-x:clip;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+[hidden]{display:none!important}
+a{color:inherit}
+button{font:inherit;color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(20px,5vw);padding-right:max(20px,5vw)}
+@media (min-width:1300px){.wrap{padding-left:40px;padding-right:40px}}
+section{padding-block:clamp(72px,9vw,128px)}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.05;text-wrap:balance;letter-spacing:-.01em}
+h2{font-size:clamp(38px,5vw,60px)}
+h2 em,h1 em{font-style:italic;color:var(--dorado)}
+.eyebrow{display:block;font-size:12.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--dorado);margin-bottom:18px}
+.lead{color:var(--cafe-suave);font-size:18px;font-weight:300;max-width:56ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 30px;border-radius:999px;font:500 15px var(--texto);letter-spacing:.06em;text-decoration:none;border:1px solid var(--cafe);cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s}
+.btn svg{width:16px;height:16px;flex:none;transition:transform .25s}
+.btn:hover svg{transform:translateX(3px)}
+.btn-solid{background:var(--cafe);color:var(--marfil)}
+.btn-solid:hover{background:var(--dorado-hondo);border-color:var(--dorado-hondo)}
+.btn-line{background:transparent;color:var(--cafe)}
+.btn-line:hover{background:var(--cafe);color:var(--marfil)}
+.btn-oro{background:var(--dorado);border-color:var(--dorado);color:var(--blanco)}
+.btn-oro:hover{background:var(--dorado-hondo);border-color:var(--dorado-hondo)}
+:focus-visible{outline:2px solid var(--dorado);outline-offset:3px}
+
+/* Header */
+header{position:fixed;inset:0 0 auto;z-index:50;background:rgba(251,248,243,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:box-shadow .3s}
+header.sombra{box-shadow:0 1px 0 var(--linea)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo svg{width:34px;height:34px;flex:none}
+.logo b{display:block;font:500 25px/1 var(--display);letter-spacing:.2em}
+.logo small{display:block;font-size:10.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--cafe-suave);margin-top:3px}
+.menu{display:flex;align-items:center;gap:34px;list-style:none}
+.menu a{text-decoration:none;font-size:15px;position:relative;padding:6px 0}
+.menu a:not(.btn)::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--dorado);transition:right .3s}
+.menu a:not(.btn):hover::after,.menu a.activo::after{right:0}
+.menu .btn{min-height:44px;padding:0 24px}
+.burger{display:none;width:46px;height:46px;border:0;background:none;cursor:pointer}
+.burger span{display:block;width:24px;height:1.5px;background:var(--cafe);margin:6px auto;transition:transform .3s,opacity .3s}
+
+/* Hero */
+.hero{padding-top:clamp(120px,14vw,150px);padding-bottom:clamp(56px,7vw,96px);position:relative}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(36px,6vw,90px);align-items:center}
+.estado{display:inline-flex;align-items:center;gap:10px;font-size:14px;color:var(--cafe-suave);border:1px solid var(--linea);border-radius:999px;padding:7px 16px 7px 12px;margin-bottom:28px;background:var(--blanco)}
+.estado i{width:8px;height:8px;border-radius:50%;background:#B9A88F;flex:none}
+.estado.abierto i{background:#4E8A5B;box-shadow:0 0 0 4px rgba(78,138,91,.15)}
+.hero h1{font-size:clamp(52px,8vw,104px);line-height:.95;margin-bottom:28px}
+.hero h1 span{display:block}
+.hero-text p{font-size:19px;font-weight:300;color:var(--cafe-suave);max-width:40ch;margin-bottom:38px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px}
+.hero-datos{display:flex;flex-wrap:wrap;gap:12px 34px;margin-top:46px;padding-top:26px;border-top:1px solid var(--linea);font-size:14px;color:var(--cafe-suave)}
+.hero-datos b{display:block;font:500 22px/1.2 var(--display);color:var(--cafe)}
+.hero-foto{position:relative}
+.arco{border-radius:999px 999px 24px 24px;overflow:hidden;aspect-ratio:4/5;max-width:100%;background:var(--piedra)}
+.arco img{width:100%;height:100%;object-fit:cover}
+.hero-foto .arco img{object-position:66% center}
+.sello{position:absolute;left:-28px;bottom:42px;width:128px;height:128px;border-radius:50%;background:var(--cafe);color:var(--marfil);display:grid;place-items:center;text-align:center;font:italic 400 19px/1.1 var(--display);padding:18px;box-shadow:0 20px 40px -18px rgba(46,33,28,.6)}
+.sello small{display:block;font:500 10px var(--texto);letter-spacing:.24em;text-transform:uppercase;font-style:normal;color:#D8C29A;margin-top:6px}
+
+/* Cinta */
+.cinta{background:var(--cafe);color:var(--marfil);overflow:hidden;padding-block:18px}
+.cinta-track{display:flex;gap:48px;width:max-content;animation:correr 38s linear infinite;font:italic 400 24px var(--display)}
+.cinta-track span{display:flex;align-items:center;gap:48px;white-space:nowrap}
+.cinta-track span::after{content:"✦";font-style:normal;font-size:13px;color:#C9A961}
+@keyframes correr{to{transform:translateX(-50%)}}
+
+/* Nosotros */
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,7vw,100px);align-items:center}
+.about .arco{aspect-ratio:4/5;max-width:460px}
+.about .arco img{transform:scale(1.45);transform-origin:left bottom;object-position:left bottom}
+.about h2{margin-bottom:26px}
+.about p{color:var(--cafe-suave);font-weight:300;margin-bottom:16px;max-width:54ch}
+.pilares{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:40px;padding-top:30px;border-top:1px solid var(--linea)}
+.pilares svg{width:30px;height:30px;color:var(--dorado);margin-bottom:12px}
+.pilares b{display:block;font:500 22px/1.15 var(--display);margin-bottom:4px}
+.pilares span{font-size:14.5px;color:var(--cafe-suave)}
+
+/* Servicios */
+.servicios{background:var(--arena)}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px 60px;flex-wrap:wrap;margin-bottom:56px}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+.card{background:var(--marfil);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;transition:transform .35s,box-shadow .35s}
+.card:hover{transform:translateY(-6px);box-shadow:0 30px 60px -34px rgba(46,33,28,.45)}
+.card figure{aspect-ratio:4/3;overflow:hidden;position:relative}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.card:hover img{transform:scale(1.05)}
+.card .tag{position:absolute;top:16px;left:16px;background:rgba(251,248,243,.92);border-radius:999px;padding:5px 14px;font-size:12.5px;letter-spacing:.08em}
+.card-body{padding:28px 28px 30px;display:flex;flex-direction:column;flex:1}
+.card h3{font-size:32px;margin-bottom:10px}
+.card p{color:var(--cafe-suave);font-size:15.5px;font-weight:300;margin-bottom:18px}
+.incluye{list-style:none;display:grid;gap:7px;margin-bottom:24px;flex:1}
+.incluye li{font-size:14.5px;display:flex;gap:10px;align-items:baseline}
+.incluye li::before{content:"";width:12px;height:1px;background:var(--dorado);flex:none;transform:translateY(-4px)}
+.meta{display:flex;justify-content:space-between;align-items:baseline;padding:18px 0;border-top:1px solid var(--linea);margin-bottom:20px}
+.meta span{color:var(--cafe-suave);font-size:14.5px;display:flex;align-items:center;gap:8px}
+.meta span svg{width:16px;height:16px}
+.meta strong{font:500 28px var(--display);font-variant-numeric:lining-nums}
+.card .btn{width:100%}
+
+/* Experiencia */
+.pasos-exp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:56px;border-top:1px solid var(--linea)}
+.pasos-exp li{list-style:none;padding:30px 28px 0 0;position:relative}
+.pasos-exp li::before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--dorado)}
+.pasos-exp small{display:block;font:italic 400 18px var(--display);color:var(--dorado);margin-bottom:8px}
+.pasos-exp b{display:block;font:500 25px/1.15 var(--display);margin-bottom:8px}
+.pasos-exp p{font-size:15px;color:var(--cafe-suave);font-weight:300}
+
+/* Salón */
+.salon{padding-top:0}
+.salon-img{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:16/7;max-width:100%}
+.salon-img img{width:100%;height:100%;object-fit:cover}
+.salon-img figcaption{position:absolute;right:clamp(16px,4vw,48px);bottom:clamp(16px,4vw,44px);background:rgba(251,248,243,.93);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:22px 28px;border-radius:18px;max-width:380px}
+.salon-img figcaption b{display:block;font:500 26px var(--display);margin-bottom:4px}
+.salon-img figcaption span{font-size:14.5px;color:var(--cafe-suave)}
+
+/* Reserva */
+.reserva{background:var(--arena)}
+.reserva-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(36px,6vw,84px);align-items:start}
+.reserva h2{margin-bottom:20px}
+.garantias{list-style:none;display:grid;gap:14px;margin-top:32px}
+.garantias li{display:flex;gap:14px;align-items:flex-start;font-size:15.5px}
+.garantias svg{width:22px;height:22px;color:var(--dorado);flex:none;margin-top:2px}
+.aviso{margin-top:30px;padding:14px 18px;border:1px dashed var(--dorado);border-radius:12px;font-size:13.5px;color:var(--cafe-suave);background:rgba(255,255,255,.5)}
+.form{background:var(--blanco);border-radius:26px;padding:clamp(24px,4vw,44px);box-shadow:0 40px 80px -50px rgba(46,33,28,.45)}
+.pasos{display:flex;gap:10px;margin-bottom:32px;list-style:none;counter-reset:p}
+.pasos li{flex:1;font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--cafe-suave);padding-top:12px;border-top:2px solid var(--linea);transition:color .3s,border-color .3s}
+.pasos li.on{color:var(--cafe);border-color:var(--dorado)}
+.pasos li.hecho{border-color:var(--cafe)}
+.paso{display:none}
+.paso.on{display:block;animation:entrar .45s ease}
+@keyframes entrar{from{opacity:.2;transform:translateY(8px)}to{opacity:1;transform:none}}
+.paso h3{font-size:32px;margin-bottom:22px}
+.opciones{display:grid;gap:12px}
+.op{position:relative;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:18px 20px;border:1px solid var(--linea);border-radius:14px;cursor:pointer;transition:border-color .2s,background .2s}
+.op:hover{border-color:var(--dorado)}
+.op input{position:absolute;opacity:0;pointer-events:none}
+.op:has(input:checked){border-color:var(--dorado);background:var(--marfil);box-shadow:inset 0 0 0 1px var(--dorado)}
+.op:has(input:focus-visible){outline:2px solid var(--dorado);outline-offset:2px}
+.op b{font-weight:500;font-size:16.5px}
+.op small{display:block;color:var(--cafe-suave);font-size:13.5px}
+.op em{font:500 22px var(--display);font-style:normal;white-space:nowrap}
+.campo{margin-bottom:20px}
+.campo label,.campo .label{display:block;font-size:14px;font-weight:500;margin-bottom:8px}
+.campo input{width:100%;height:52px;padding:0 16px;border:1px solid var(--linea);border-radius:12px;font:16px var(--texto);color:var(--cafe);background:var(--marfil)}
+.campo input:focus{border-color:var(--dorado);outline:none;box-shadow:0 0 0 3px rgba(154,119,53,.15)}
+.campo input[aria-invalid="true"]{border-color:var(--error)}
+.horas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.horas button{height:46px;border:1px solid var(--linea);border-radius:12px;background:var(--marfil);font:500 15px var(--texto);cursor:pointer;font-variant-numeric:tabular-nums}
+.horas button:hover:not(:disabled){border-color:var(--dorado)}
+.horas button.sel{background:var(--cafe);border-color:var(--cafe);color:var(--marfil)}
+.horas button:disabled{cursor:not-allowed;color:#B8ABA2;text-decoration:line-through;background:transparent}
+.horas .nota{grid-column:1/-1;color:var(--cafe-suave);font-size:14.5px}
+.leyenda{font-size:13px;color:var(--cafe-suave);margin-top:10px}
+.acciones{display:flex;justify-content:space-between;gap:12px;margin-top:28px}
+.error{color:var(--error);font-size:14.5px;min-height:22px;margin-top:12px}
+.ok{text-align:center;padding:6px 0}
+.ok svg{width:68px;height:68px;margin:0 auto 18px;color:var(--dorado)}
+.ok h3{margin-bottom:8px}
+.ok p{color:var(--cafe-suave);margin:0 auto;max-width:42ch;font-size:15.5px}
+.resumen{margin:24px auto 0;max-width:380px;text-align:left;border-top:1px solid var(--linea)}
+.resumen div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--linea);font-size:15px}
+.resumen span{color:var(--cafe-suave)}
+.resumen b{font-weight:500;text-align:right}
+.ok-acciones{display:flex;flex-direction:column;gap:10px;max-width:380px;margin:26px auto 0}
+
+/* FAQ */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(36px,6vw,84px);align-items:start}
+.faq details{border-bottom:1px solid var(--linea)}
+.faq details:first-child{border-top:1px solid var(--linea)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;font:500 23px/1.25 var(--display)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:300 28px var(--texto);color:var(--dorado);transition:transform .3s;flex:none}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{color:var(--cafe-suave);font-weight:300;padding:0 40px 24px 0;max-width:62ch}
+
+/* Contacto */
+.contacto{background:var(--arena)}
+.contacto-grid{display:grid;grid-template-columns:1fr 1fr 1.1fr;gap:24px;margin-top:52px}
+.panel{background:var(--marfil);border-radius:22px;padding:clamp(26px,3vw,36px)}
+.panel h3{font-size:28px;margin-bottom:18px}
+.lista{list-style:none}
+.lista li{display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid var(--linea);font-size:15px}
+.lista li:last-child{border-bottom:0}
+.lista span{color:var(--cafe-suave)}
+.lista b{font-weight:500;text-align:right;overflow-wrap:anywhere}
+.lista li.hoy b,.lista li.hoy span{color:var(--dorado-hondo)}
+.lista li.hoy span::after{content:" · hoy";font-weight:500}
+.mapa{position:relative;border-radius:22px;overflow:hidden;min-height:300px;background:
+  linear-gradient(90deg,transparent 0 46%,rgba(255,255,255,.75) 46% 49%,transparent 49%),
+  linear-gradient(0deg,transparent 0 58%,rgba(255,255,255,.75) 58% 61%,transparent 61%),
+  linear-gradient(30deg,transparent 0 70%,rgba(255,255,255,.55) 70% 72%,transparent 72%),
+  repeating-linear-gradient(90deg,transparent 0 52px,rgba(46,33,28,.06) 52px 54px),
+  repeating-linear-gradient(0deg,transparent 0 52px,rgba(46,33,28,.06) 52px 54px),
+  var(--piedra);display:flex;flex-direction:column;justify-content:flex-end;padding:24px}
+.pin{position:absolute;left:47.5%;top:42%;transform:translate(-50%,-100%);color:var(--cafe)}
+.pin svg{width:44px;height:44px;filter:drop-shadow(0 8px 10px rgba(46,33,28,.35))}
+.mapa-card{position:relative;background:var(--marfil);border-radius:16px;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.mapa-card b{display:block;font:500 21px var(--display)}
+.mapa-card span{font-size:14px;color:var(--cafe-suave)}
+.mapa-card .btn{min-height:44px;padding:0 20px}
+.ficticio{font-size:13px;color:var(--cafe-suave);margin-top:16px}
+
+/* Footer */
+footer{background:var(--cafe);color:#E9DFD2;padding-block:80px 34px}
+.foot-cta{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;padding-bottom:56px;margin-bottom:56px;border-bottom:1px solid rgba(233,223,210,.16)}
+.foot-cta h2{color:var(--marfil);font-size:clamp(36px,5vw,58px)}
+.foot-cta h2 em{color:#D3B576}
+.foot-cta .btn{border-color:#D3B576;background:#D3B576;color:var(--cafe)}
+.foot-cta .btn:hover{background:var(--marfil);border-color:var(--marfil)}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:48px}
+footer .logo b{color:var(--marfil)}
+footer .logo small{color:#BFAF9C}
+footer p{color:#BFAF9C;font-size:15px;margin-top:18px;max-width:34ch;font-weight:300}
+footer h4{font:500 13px var(--texto);letter-spacing:.2em;text-transform:uppercase;color:#D3B576;margin-bottom:18px}
+footer ul{list-style:none}
+footer li{margin-bottom:10px;font-size:15px;color:#BFAF9C}
+footer li a{text-decoration:none}
+footer li a:hover{color:var(--marfil)}
+.redes{display:flex;gap:12px;margin-top:24px}
+.redes a{width:44px;height:44px;border:1px solid rgba(233,223,210,.3);border-radius:50%;display:grid;place-items:center;color:#E9DFD2;transition:background .25s,border-color .25s}
+.redes a:hover{background:var(--dorado);border-color:var(--dorado)}
+.redes svg{width:18px;height:18px}
+.copy{padding-top:26px;border-top:1px solid rgba(233,223,210,.16);font-size:13px;color:#A39282;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+/* WhatsApp flotante */
+.wa{position:fixed;right:22px;bottom:22px;z-index:60;width:60px;height:60px;border-radius:50%;background:#2F7D57;color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(46,33,28,.55);transition:transform .25s}
+.wa:hover{transform:scale(1.07)}
+.wa svg{width:30px;height:30px}
+.wa .tip{position:absolute;right:72px;white-space:nowrap;background:var(--cafe);color:#fff;font-size:13px;padding:8px 12px;border-radius:8px;opacity:0;pointer-events:none;transition:opacity .25s}
+.wa:hover .tip{opacity:1}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+@media (max-width:1000px){
+  .cards{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .cards .card:last-child{grid-column:1/-1;flex-direction:row}
+  .cards .card:last-child figure{flex:1;aspect-ratio:auto}
+  .cards .card:last-child .card-body{flex:1}
+  .contacto-grid{grid-template-columns:1fr 1fr}
+  .mapa{grid-column:1/-1}
+  .pasos-exp{grid-template-columns:1fr 1fr;gap:0 24px;border-top:0}
+  .pasos-exp li{border-top:1px solid var(--linea);margin-top:24px}
+}
+@media (max-width:860px){
+  .burger{display:block}
+  .menu{position:fixed;inset:76px 0 auto;flex-direction:column;align-items:stretch;gap:0;background:var(--marfil);padding:8px max(20px,5vw) 26px;box-shadow:0 24px 30px -20px rgba(46,33,28,.3);transform:translateY(-10px);opacity:0;pointer-events:none;transition:opacity .3s,transform .3s}
+  .menu.open{opacity:1;transform:none;pointer-events:auto}
+  .menu li a:not(.btn){display:block;padding:15px 0;border-bottom:1px solid var(--linea)}
+  .menu li:last-child{margin-top:18px}
+  .menu .btn{width:100%}
+  .burger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+  .hero-grid,.about,.reserva-grid,.faq-grid{grid-template-columns:1fr}
+  .hero-foto{max-width:460px;width:100%;margin:0 auto}
+  .sello{left:auto;right:-6px;bottom:24px;width:112px;height:112px;font-size:17px}
+  .about .arco{max-width:420px}
+  .foot{grid-template-columns:1fr 1fr}
+  .foot>div:first-child{grid-column:1/-1}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .cards{grid-template-columns:1fr}
+  .cards .card:last-child{grid-column:auto;flex-direction:column}
+  .cards .card:last-child figure{aspect-ratio:4/3}
+  .contacto-grid{grid-template-columns:1fr}
+  .pilares{grid-template-columns:1fr;gap:18px}
+  .pasos-exp{grid-template-columns:1fr}
+  .salon-img{aspect-ratio:4/5}
+  .salon-img img{object-position:62% center}
+  .horas{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .foot{grid-template-columns:1fr}
+  .pasos li{font-size:12px}
+  .wa{right:16px;bottom:16px;width:56px;height:56px}
+  .acciones .btn{padding:0 22px}
+}
+</style>
+</head>
+<body>
+
+<header id="header">
+  <nav class="wrap nav" aria-label="Principal">
+    <a href="#inicio" class="logo" aria-label="ÁUREA Beauty Salon, ir al inicio">
+      <svg viewBox="0 0 40 40" fill="none" stroke="#9A7735" stroke-width="1.4" aria-hidden="true"><path d="M8 32C8 18 18 8 32 8c0 14-10 24-24 24Z"/><path d="M8 32 24 16"/><path d="M15 25h7M19 21h6"/></svg>
+      <span><b>ÁUREA</b><small>Beauty Salon</small></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#preguntas">Preguntas</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#reservar" class="btn btn-solid">Reservar turno</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <span class="estado" id="estado"><i></i><span id="estado-txt">Lunes a domingo</span></span>
+        <h1><span>Tu belleza,</span><span><em>nuestro cuidado</em></span></h1>
+        <p>Tratamientos faciales, masajes y peinados en un salón sereno de Recoleta, con atención personalizada en cada visita.</p>
+        <div class="hero-cta">
+          <a href="#reservar" class="btn btn-solid">Reservar mi turno <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
+          <a href="#servicios" class="btn btn-line">Ver servicios</a>
+        </div>
+        <div class="hero-datos">
+          <div><b>7 días</b>a la semana</div>
+          <div><b>Recoleta</b>Av. Alvear 1800</div>
+          <div><b>1 minuto</b>para reservar online</div>
+        </div>
+      </div>
+      <div class="hero-foto">
+        <div class="arco"><img src="img/salon.webp" alt="Salón ÁUREA con sillones blancos, espejos con luz cálida y recepción dorada" fetchpriority="high"></div>
+        <div class="sello" aria-hidden="true"><div>Desde el primer momento<small>Recoleta · CABA</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cinta" aria-hidden="true">
+    <div class="cinta-track">
+      <span>Faciales</span><span>Masajes</span><span>Peinados</span><span>Novias</span><span>Eventos</span><span>Bienestar</span>
+      <span>Faciales</span><span>Masajes</span><span>Peinados</span><span>Novias</span><span>Eventos</span><span>Bienestar</span>
+    </div>
+  </div>
+
+  <section id="nosotros">
+    <div class="wrap about">
+      <div class="arco"><img src="img/salon-interior.webp" alt="Sala de espera con sillón blanco, mesa dorada y estantes iluminados" loading="lazy"></div>
+      <div>
+        <span class="eyebrow">Nosotros</span>
+        <h2>Un espacio para <em>dedicarte</em> un momento</h2>
+        <p>En ÁUREA creemos que cada persona merece un tiempo para sí misma. Por eso creamos un lugar donde la belleza, el cuidado y la relajación se encuentran.</p>
+        <p>Cada tratamiento empieza con una consulta para conocerte y adaptarlo a lo que necesitás. Nuestro propósito es que cada visita se sienta especial.</p>
+        <div class="pilares">
+          <div>
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="16" cy="11" r="5"/><path d="M6 27c1.5-5.5 5.5-8 10-8s8.5 2.5 10 8"/></svg>
+            <b>Atención personalizada</b><span>Una consulta previa en cada servicio.</span>
+          </div>
+          <div>
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M12 4h8v5l3 4v14a1 1 0 0 1-1 1H10a1 1 0 0 1-1-1V13l3-4Z"/><path d="M9 17h14"/></svg>
+            <b>Productos de alta gama</b><span>Elegidos según tu tipo de piel y cabello.</span>
+          </div>
+          <div>
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="5" y="7" width="22" height="20" rx="2"/><path d="M5 13h22M11 4v6M21 4v6"/></svg>
+            <b>Abierto 7 días</b><span>También sábados y domingos.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="servicios" id="servicios">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="eyebrow">Servicios</span>
+          <h2>Elegí tu <em>tratamiento</em></h2>
+        </div>
+        <p class="lead">Cada servicio incluye una consulta previa para adaptarlo a lo que necesitás. Reservás online y te confirmamos por WhatsApp.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <figure><img src="img/facial.jpg" alt="Tratamiento facial con toalla blanca" loading="lazy"><span class="tag">Rostro</span></figure>
+          <div class="card-body">
+            <h3>Facial de Lujo</h3>
+            <p>Una piel luminosa e hidratada, con productos de alta gama.</p>
+            <ul class="incluye"><li>Limpieza profunda</li><li>Exfoliación suave</li><li>Máscara hidratante</li><li>Masaje facial relajante</li></ul>
+            <div class="meta"><span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="8" cy="8" r="6.5"/><path d="M8 4v4l2.5 2"/></svg>1 h 30 min</span><strong>$ 45.000</strong></div>
+            <a href="#reservar" class="btn btn-solid" data-servicio="facial">Reservar facial</a>
+          </div>
+        </article>
+        <article class="card">
+          <figure><img src="img/masaje.jpg" alt="Masaje terapéutico en camilla" loading="lazy"><span class="tag">Cuerpo</span></figure>
+          <div class="card-body">
+            <h3>Masaje Terapéutico</h3>
+            <p>Alivia tensiones y te devuelve la sensación de calma.</p>
+            <ul class="incluye"><li>Descontracturante</li><li>Aceites esenciales</li><li>Cuello, hombros y espalda</li><li>Presión a tu medida</li></ul>
+            <div class="meta"><span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="8" cy="8" r="6.5"/><path d="M8 4v4l2.5 2"/></svg>1 h</span><strong>$ 38.000</strong></div>
+            <a href="#reservar" class="btn btn-solid" data-servicio="masaje">Reservar masaje</a>
+          </div>
+        </article>
+        <article class="card">
+          <figure><img src="img/peinado.jpg" alt="Estilista realizando un peinado recogido" loading="lazy"><span class="tag">Eventos y novias</span></figure>
+          <div class="card-body">
+            <h3>Peinado Especial</h3>
+            <p>Para casamientos, fiestas y ocasiones especiales, según tu estilo.</p>
+            <ul class="incluye"><li>Asesoramiento de estilo</li><li>Recogidos y ondas</li><li>Fijación de larga duración</li><li>Ideal para novias</li></ul>
+            <div class="meta"><span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="8" cy="8" r="6.5"/><path d="M8 4v4l2.5 2"/></svg>2 h</span><strong>$ 52.000</strong></div>
+            <a href="#reservar" class="btn btn-solid" data-servicio="peinado">Reservar peinado</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="experiencia">
+    <div class="wrap">
+      <span class="eyebrow">Cómo es tu visita</span>
+      <h2>De la reserva al <em>cuidado en casa</em></h2>
+      <ol class="pasos-exp">
+        <li><small>Paso uno</small><b>Reservás online</b><p>Elegís servicio, día y horario desde el celular, en menos de un minuto.</p></li>
+        <li><small>Paso dos</small><b>Consulta previa</b><p>Al llegar, charlamos sobre tu piel, tu cabello o lo que te gustaría lograr.</p></li>
+        <li><small>Paso tres</small><b>Tu tratamiento</b><p>Te relajás en un ambiente cálido, con productos elegidos para vos.</p></li>
+        <li><small>Paso cuatro</small><b>Cuidado en casa</b><p>Te llevás recomendaciones simples para mantener el resultado.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="salon" aria-label="Nuestro salón">
+    <div class="wrap">
+      <figure class="salon-img">
+        <img src="img/salon.webp" alt="Interior del salón ÁUREA con sillones blancos y detalles dorados" loading="lazy">
+        <figcaption><b>Nuestro salón</b><span>Un ambiente luminoso y sereno, pensado para que te desconectes desde que entrás.</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="reserva" id="reservar">
+    <div class="wrap reserva-grid">
+      <div>
+        <span class="eyebrow">Reservas online</span>
+        <h2>Reservá tu <em>momento</em></h2>
+        <p class="lead">Elegí el servicio, el día y el horario que te quede mejor. Solo se muestran los horarios en los que el tratamiento termina antes del cierre.</p>
+        <ul class="garantias">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Sin pagar nada por adelantado</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Confirmación por WhatsApp</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Podés reprogramar con 24 h de aviso</li>
+        </ul>
+        <p class="aviso">Página de muestra: los datos del salón son ficticios, no se guarda ni se envía ninguna reserva.</p>
+      </div>
+
+      <form class="form" id="form" novalidate>
+        <ol class="pasos" id="pasos" aria-label="Pasos de la reserva">
+          <li class="on">1. Servicio</li><li>2. Día y hora</li><li>3. Tus datos</li>
+        </ol>
+
+        <div class="paso on" data-paso="1">
+          <h3>¿Qué te gustaría hacerte?</h3>
+          <div class="opciones" role="radiogroup" aria-label="Servicio">
+            <label class="op"><input type="radio" name="servicio" id="s-facial" value="facial"><span><b>Facial de Lujo</b><small>1 h 30 min</small></span><em>$ 45.000</em></label>
+            <label class="op"><input type="radio" name="servicio" id="s-masaje" value="masaje"><span><b>Masaje Terapéutico</b><small>1 h</small></span><em>$ 38.000</em></label>
+            <label class="op"><input type="radio" name="servicio" id="s-peinado" value="peinado"><span><b>Peinado Especial</b><small>2 h</small></span><em>$ 52.000</em></label>
+          </div>
+        </div>
+
+        <div class="paso" data-paso="2">
+          <h3>Elegí día y horario</h3>
+          <div class="campo">
+            <label for="fecha">Fecha</label>
+            <input type="date" id="fecha" required>
+          </div>
+          <div class="campo">
+            <span class="label" id="lbl-hora">Horario</span>
+            <div class="horas" id="horas" role="group" aria-labelledby="lbl-hora"><span class="nota">Primero elegí una fecha.</span></div>
+            <p class="leyenda" id="leyenda" hidden>Los horarios tachados ya están ocupados.</p>
+          </div>
+        </div>
+
+        <div class="paso" data-paso="3">
+          <h3>Completá tus datos</h3>
+          <div class="campo"><label for="nombre">Nombre y apellido</label><input id="nombre" autocomplete="name" required></div>
+          <div class="campo"><label for="tel">Celular (WhatsApp)</label><input id="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="11 2345 6789" required></div>
+          <div class="campo"><label for="mail">Correo electrónico</label><input id="mail" type="email" autocomplete="email" placeholder="nombre@correo.com" required></div>
+        </div>
+
+        <div class="paso" data-paso="4">
+          <div class="ok">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="32" cy="32" r="29"/><path d="m20 33 8 8 16-17"/></svg>
+            <h3>¡Ya casi está!</h3>
+            <p>Revisá tu turno y envialo por WhatsApp para que el salón lo confirme.</p>
+            <div class="resumen" id="resumen"></div>
+            <div class="ok-acciones">
+              <a class="btn btn-oro" id="enviar-wa" href="#" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+              <button type="button" class="btn btn-line" id="otro">Reservar otro turno</button>
+            </div>
+          </div>
+        </div>
+
+        <p class="error" id="error" role="alert"></p>
+        <div class="acciones" id="acciones">
+          <button type="button" class="btn btn-line" id="atras" hidden>Atrás</button>
+          <button type="button" class="btn btn-solid" id="siguiente" style="margin-left:auto">Siguiente</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="preguntas">
+    <div class="wrap faq-grid">
+      <div>
+        <span class="eyebrow">Preguntas frecuentes</span>
+        <h2>Antes de <em>tu visita</em></h2>
+        <p class="lead" style="margin-top:20px">¿Tenés otra duda? Escribinos por WhatsApp y te respondemos.</p>
+      </div>
+      <div class="faq">
+        <details><summary>¿Tengo que pagar para reservar?</summary><p>No. Reservás sin pagar nada y abonás en el salón el día del turno.</p></details>
+        <details><summary>¿Qué medios de pago aceptan?</summary><p>Efectivo, transferencia y tarjetas de débito y crédito.</p></details>
+        <details><summary>¿Puedo cambiar o cancelar mi turno?</summary><p>Sí. Avisanos por WhatsApp con al menos 24 horas y lo reprogramamos sin costo.</p></details>
+        <details><summary>¿Hacen peinados para novias?</summary><p>Sí. Para novias recomendamos reservar con anticipación y coordinar una prueba previa.</p></details>
+        <details><summary>¿Con cuánta anticipación conviene llegar?</summary><p>Con 10 minutos alcanza para la consulta previa y para que empieces relajada o relajado.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <div class="wrap">
+      <span class="eyebrow">Contacto</span>
+      <h2>Visitanos en <em>Recoleta</em></h2>
+      <div class="contacto-grid">
+        <div class="panel">
+          <h3>Información</h3>
+          <ul class="lista">
+            <li><span>Dirección</span><b>Av. Alvear 1800, CABA</b></li>
+            <li><span>Teléfono</span><b>+54 11 4000-0000</b></li>
+            <li><span>Correo</span><b>hola@aureabeauty.com.ar</b></li>
+            <li><span>Instagram</span><b>@aurea.beautysalon</b></li>
+          </ul>
+          <p class="ficticio">Datos ficticios de muestra.</p>
+        </div>
+        <div class="panel">
+          <h3>Horarios</h3>
+          <ul class="lista" id="horarios">
+            <li data-dias="1,2,3,4,5"><span>Lunes a viernes</span><b>9:00 – 17:00</b></li>
+            <li data-dias="6"><span>Sábados</span><b>9:00 – 14:00</b></li>
+            <li data-dias="0"><span>Domingos</span><b>10:00 – 15:00</b></li>
+          </ul>
+          <a href="#reservar" class="btn btn-solid" style="margin-top:22px;width:100%">Reservar turno</a>
+        </div>
+        <div class="mapa">
+          <span class="pin" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg></span>
+          <div class="mapa-card">
+            <div><b>Av. Alvear 1800</b><span>Recoleta, Buenos Aires</span></div>
+            <a class="btn btn-solid" href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Alvear%201800%2C%20CABA" target="_blank" rel="noopener">Cómo llegar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-cta">
+      <h2>Tu próximo momento <em>te espera</em></h2>
+      <a href="#reservar" class="btn">Reservar turno <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
+    </div>
+    <div class="foot">
+      <div>
+        <a href="#inicio" class="logo">
+          <svg viewBox="0 0 40 40" fill="none" stroke="#D3B576" stroke-width="1.4" aria-hidden="true"><path d="M8 32C8 18 18 8 32 8c0 14-10 24-24 24Z"/><path d="M8 32 24 16"/><path d="M15 25h7M19 21h6"/></svg>
+          <span><b>ÁUREA</b><small>Beauty Salon</small></span>
+        </a>
+        <p>Tu belleza, nuestro cuidado. Un espacio para dedicarte un momento a vos.</p>
+        <div class="redes">
+          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
+          <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v7h4v-7h3l1-4h-4V8Z"/></svg></a>
+          <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.4 2.3 1.8 3.7 4 4v3.2c-1.5 0-2.9-.4-4-1.2v6.5A5.5 5.5 0 1 1 10.5 10v3.3a2.3 2.3 0 1 0 2.3 2.3V3H16Z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <ul><li><a href="#nosotros">Nosotros</a></li><li><a href="#servicios">Servicios</a></li><li><a href="#reservar">Reservar turno</a></li><li><a href="#preguntas">Preguntas frecuentes</a></li><li><a href="#contacto">Contacto</a></li></ul>
+      </div>
+      <div>
+        <h4>Horarios</h4>
+        <ul><li>Lunes a viernes · 9 a 17 h</li><li>Sábados · 9 a 14 h</li><li>Domingos · 10 a 15 h</li></ul>
+      </div>
+    </div>
+    <div class="copy"><span>© 2026 ÁUREA Beauty Salon</span><span>Página de muestra · datos ficticios</span></div>
+  </div>
+</footer>
+
+<a class="wa" id="wa" href="#" target="_blank" rel="noopener" aria-label="Consultar por WhatsApp">
+  <span class="tip">Consultar por WhatsApp</span>
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+</a>
+
+<script>
+(function(){
+  /* ===== Datos del negocio: cambiar acá para cada cliente ===== */
+  var WHATSAPP = "5491100000000"; // número del salón, con código de país, sin + ni espacios
+  var SERVICIOS = {
+    facial:  {nombre:"Facial de Lujo",     minutos:90,  precio:45000},
+    masaje:  {nombre:"Masaje Terapéutico", minutos:60,  precio:38000},
+    peinado: {nombre:"Peinado Especial",   minutos:120, precio:52000}
+  };
+  // 0 = domingo ... 6 = sábado → [abre, cierra] en horas
+  var HORARIO = {0:[10,15],1:[9,17],2:[9,17],3:[9,17],4:[9,17],5:[9,17],6:[9,14]};
+  var DIAS = ["domingo","lunes","martes","miércoles","jueves","viernes","sábado"];
+
+  var $ = function(s,c){return (c||document).querySelector(s)};
+  var $$ = function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+  var waLink = function(txt){return "https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(txt)};
+  var precio = function(n){return "$ "+n.toLocaleString("es-AR")};
+  var hhmm = function(m){return Math.floor(m/60)+":"+String(m%60).padStart(2,"0")};
+
+  $("#wa").href = waLink("Hola ÁUREA, quiero consultar por un turno.");
+
+  /* Menú */
+  var burger=$("#burger"), menu=$("#menu");
+  function cerrarMenu(){menu.classList.remove("open");burger.classList.remove("open");burger.setAttribute("aria-expanded","false");burger.setAttribute("aria-label","Abrir menú")}
+  burger.addEventListener("click",function(){
+    var abierto=menu.classList.toggle("open");
+    burger.classList.toggle("open",abierto);
+    burger.setAttribute("aria-expanded",abierto);
+    burger.setAttribute("aria-label",abierto?"Cerrar menú":"Abrir menú");
+  });
+  $$("#menu a").forEach(function(a){a.addEventListener("click",cerrarMenu)});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape")cerrarMenu()});
+
+  var header=$("#header");
+  function onScroll(){header.classList.toggle("sombra",window.scrollY>10)}
+  window.addEventListener("scroll",onScroll,{passive:true});onScroll();
+
+  /* Resaltar sección activa */
+  if("IntersectionObserver" in window){
+    var links=$$('#menu a:not(.btn)');
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          links.forEach(function(l){l.classList.toggle("activo",l.getAttribute("href")==="#"+en.target.id)});
+        }
+      });
+    },{rootMargin:"-45% 0px -50% 0px"});
+    $$("main section[id]").forEach(function(s){io.observe(s)});
+  }
+
+  /* Abierto / cerrado según la hora de Buenos Aires */
+  try{
+    var p=new Intl.DateTimeFormat("en-US",{timeZone:"America/Argentina/Buenos_Aires",weekday:"short",hour:"numeric",minute:"numeric",hourCycle:"h23"}).formatToParts(new Date());
+    var get=function(t){return (p.find(function(x){return x.type===t})||{}).value};
+    var dia=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(get("weekday"));
+    var ahora=(parseInt(get("hour"),10)%24)*60+parseInt(get("minute"),10);
+    var h=HORARIO[dia], txt, abierto=false;
+    if(ahora>=h[0]*60 && ahora<h[1]*60){abierto=true;txt="Abierto ahora · hasta las "+h[1]+":00"}
+    else if(ahora<h[0]*60){txt="Cerrado · hoy abrimos a las "+h[0]+":00"}
+    else{txt="Cerrado · mañana abrimos a las "+HORARIO[(dia+1)%7][0]+":00"}
+    $("#estado-txt").textContent=txt;
+    $("#estado").classList.toggle("abierto",abierto);
+    $$("#horarios li").forEach(function(li){
+      if(li.getAttribute("data-dias").split(",").indexOf(String(dia))>-1)li.classList.add("hoy");
+    });
+  }catch(e){}
+
+  /* ===== Reserva en 3 pasos ===== */
+  var paso=1, horaElegida=null;
+  var form=$("#form"), btnSig=$("#siguiente"), btnAtras=$("#atras"), err=$("#error");
+  var fecha=$("#fecha"), horas=$("#horas");
+
+  function hoyISO(){var d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+  fecha.min=hoyISO();
+  var max=new Date();max.setDate(max.getDate()+60);
+  fecha.max=max.getFullYear()+"-"+String(max.getMonth()+1).padStart(2,"0")+"-"+String(max.getDate()).padStart(2,"0");
+
+  function servicio(){var r=$('input[name="servicio"]:checked');return r?r.value:null}
+  function fechaObj(){if(!fecha.value)return null;var a=fecha.value.split("-");return new Date(+a[0],a[1]-1,+a[2])}
+  function ocupado(clave){var h=0;for(var i=0;i<clave.length;i++){h=(h*31+clave.charCodeAt(i))>>>0}return h%5===0}
+
+  function armarHoras(){
+    horaElegida=null;
+    var d=fechaObj(), s=servicio();
+    $("#leyenda").hidden=true;
+    if(!d||!s){horas.innerHTML='<span class="nota">Primero elegí una fecha.</span>';return}
+    var h=HORARIO[d.getDay()], dur=SERVICIOS[s].minutos, html="", hay=0;
+    var esHoy=fecha.value===hoyISO(), ahora=new Date(), minAhora=ahora.getHours()*60+ahora.getMinutes()+60;
+    for(var t=h[0]*60;t+dur<=h[1]*60;t+=30){
+      if(esHoy && t<minAhora)continue;
+      var oc=ocupado(fecha.value+t);
+      if(!oc)hay++;
+      html+='<button type="button" data-min="'+t+'"'+(oc?' disabled aria-label="'+hhmm(t)+', ocupado"':'')+'>'+hhmm(t)+'</button>';
+    }
+    if(!hay){horas.innerHTML='<span class="nota">No quedan horarios libres ese día. Probá con otra fecha.</span>';return}
+    horas.innerHTML=html;
+    $("#leyenda").hidden=false;
+  }
+  fecha.addEventListener("change",function(){err.textContent="";armarHoras()});
+  horas.addEventListener("click",function(e){
+    var b=e.target.closest("button");if(!b||b.disabled)return;
+    $$("button",horas).forEach(function(x){x.classList.remove("sel");x.removeAttribute("aria-pressed")});
+    b.classList.add("sel");b.setAttribute("aria-pressed","true");
+    horaElegida=+b.getAttribute("data-min");err.textContent="";
+  });
+  $$('input[name="servicio"]').forEach(function(r){r.addEventListener("change",function(){err.textContent="";if(fecha.value)armarHoras()})});
+
+  function mostrar(n){
+    paso=n;
+    $$(".paso").forEach(function(el){el.classList.toggle("on",+el.getAttribute("data-paso")===n)});
+    $$("#pasos li").forEach(function(li,i){li.classList.toggle("on",i===n-1);li.classList.toggle("hecho",i<n-1)});
+    btnAtras.hidden=(n===1);
+    $("#acciones").hidden=(n===4);
+    btnSig.textContent=(n===3)?"Ver mi turno":"Siguiente";
+    err.textContent="";
+  }
+
+  function marcar(el,mal){el.setAttribute("aria-invalid",mal?"true":"false")}
+  function validar(){
+    if(paso===1 && !servicio())return "Elegí un servicio para seguir.";
+    if(paso===2){
+      if(!fecha.value)return "Elegí una fecha.";
+      if(fecha.value<fecha.min)return "Esa fecha ya pasó. Elegí una desde hoy en adelante.";
+      if(horaElegida===null)return "Elegí un horario disponible.";
+    }
+    if(paso===3){
+      var n=$("#nombre"),t=$("#tel"),m=$("#mail");
+      var nOk=n.value.trim().length>=3, tOk=t.value.replace(/\D/g,"").length>=8, mOk=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(m.value.trim());
+      marcar(n,!nOk);marcar(t,!tOk);marcar(m,!mOk);
+      if(!nOk){n.focus();return "Escribí tu nombre y apellido."}
+      if(!tOk){t.focus();return "Revisá el celular: tiene que tener al menos 8 números."}
+      if(!mOk){m.focus();return "Revisá el correo: falta algo, por ejemplo la @."}
+    }
+    return "";
+  }
+
+  function resumen(){
+    var s=SERVICIOS[servicio()], d=fechaObj();
+    var fechaTxt=DIAS[d.getDay()]+" "+d.getDate()+"/"+(d.getMonth()+1);
+    var filas=[["Servicio",s.nombre],["Día",fechaTxt.charAt(0).toUpperCase()+fechaTxt.slice(1)],["Horario",hhmm(horaElegida)+" a "+hhmm(horaElegida+s.minutos)+" h"],["Nombre",$("#nombre").value.trim()],["Valor",precio(s.precio)]];
+    $("#resumen").innerHTML=filas.map(function(f){return "<div><span>"+f[0]+"</span><b></b></div>"}).join("");
+    $$("#resumen b").forEach(function(b,i){b.textContent=filas[i][1]});
+    $("#enviar-wa").href=waLink("Hola ÁUREA, quiero reservar:\n• "+s.nombre+"\n• "+fechaTxt+" a las "+hhmm(horaElegida)+" h\n• A nombre de "+$("#nombre").value.trim()+"\n• Celular: "+$("#tel").value.trim());
+  }
+
+  btnSig.addEventListener("click",function(){
+    var e=validar();
+    if(e){err.textContent=e;return}
+    if(paso===3)resumen();
+    mostrar(paso+1);
+    form.scrollIntoView({behavior:"smooth",block:"start"});
+  });
+  btnAtras.addEventListener("click",function(){if(paso>1)mostrar(paso-1)});
+  form.addEventListener("submit",function(e){e.preventDefault();btnSig.click()});
+  $("#otro").addEventListener("click",function(){
+    form.reset();horaElegida=null;armarHoras();
+    $$("#form input").forEach(function(i){i.removeAttribute("aria-invalid")});
+    mostrar(1);
+  });
+
+  /* Los botones de cada servicio lo dejan elegido en la reserva */
+  $$("[data-servicio]").forEach(function(a){
+    a.addEventListener("click",function(){
+      var r=$("#s-"+a.getAttribute("data-servicio"));
+      if(r){r.checked=true;if(fecha.value)armarHoras();mostrar(2)}
+    });
+  });
+})();
+</script>
+</body>
+</html>
