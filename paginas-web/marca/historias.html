@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><title>Historias tamy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Jost:wght@300;400&display=swap">
+<style>
+/* Historias 9:16. Se deja libre la franja de arriba y la de abajo, donde Instagram pone sus botones. */
+:root{--negro:#0E0E0E;--blanco:#F7F6F4;--serif:"Cormorant Garamond",Georgia,serif;--caps:"Jost","Segoe UI",sans-serif}
+html,body{margin:0;width:1080px;height:1920px;overflow:hidden}
+*{box-sizing:border-box}
+.h{width:1080px;height:1920px;display:none;flex-direction:column;justify-content:center;padding:260px 100px;position:relative}
+body[data-n="1"] #h1,body[data-n="2"] #h2,body[data-n="3"] #h3{display:flex}
+.negro{background:var(--negro);color:var(--blanco)}
+.blanco{background:var(--blanco);color:var(--negro)}
+.eyebrow{font:400 30px var(--caps);letter-spacing:.42em;text-transform:uppercase;opacity:.7;margin-bottom:44px}
+h1{font:300 150px/1 var(--serif);margin:0;letter-spacing:-.01em}
+h1 em{font-style:italic}
+.linea{width:140px;height:1px;background:currentColor;opacity:.5;margin:60px 0}
+.texto{font:300 44px/1.5 var(--caps);opacity:.85}
+.firma{position:absolute;left:100px;right:100px;bottom:300px;display:flex;justify-content:space-between;align-items:baseline;font:400 26px var(--caps);letter-spacing:.32em;text-transform:uppercase;opacity:.7}
+.firma i{font:italic 300 52px var(--serif);letter-spacing:0;text-transform:none}
+/* Espacio vacío para poner el sticker de Instagram encima */
+.hueco{margin-top:70px;height:300px;font-size:0}
+#h1 .grande{font:italic 300 340px/0.85 var(--serif);margin-bottom:30px}
+</style></head>
+<body data-n="1">
+<section class="h negro" id="h1">
+  <div class="eyebrow">Nueva etapa</div>
+  <div class="grande">tamy</div>
+  <h1>Ahora diseño <em>páginas web</em></h1>
+  <div class="linea"></div>
+  <div class="texto">Para salones de belleza, centros de estética y estudios de uñas 💅</div>
+  <div class="firma"><span>La Plata</span><i>diseño web</i></div>
+</section>
+<section class="h blanco" id="h2">
+  <div class="eyebrow">Pregunta rápida</div>
+  <h1>¿Tu salón tiene <em>página web?</em></h1>
+  <div class="hueco">Acá va la encuesta de Instagram</div>
+  <div class="firma"><span>Contame</span><i>tamy</i></div>
+</section>
+<section class="h negro" id="h3">
+  <div class="eyebrow">¿Tenés un salón?</div>
+  <h1>Te muestro cómo quedaría <em>tu página</em></h1>
+  <div class="linea"></div>
+  <div class="texto">Con tu estilo, tus servicios y tus promos, antes de que decidas.</div>
+  <div class="hueco">Acá va el sticker de "Mensaje" o "Link"</div>
+  <div class="firma"><span>Escribime</span><i>tamy</i></div>
+</section>
+<script>document.body.dataset.n=new URLSearchParams(location.search).get("n")||"1"</script>
+</body></html>
