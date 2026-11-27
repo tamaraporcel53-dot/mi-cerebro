@@ -24,6 +24,11 @@ Para ellos, la idea a vender es una página con su propia marca, en vez de figur
 - Nails & Lashes: kapping, semis, soft gel, polygel, extensión de pestañas (clásicas, volumen, hawaianas, volumen ruso), cursos presenciales. Sin web. Zona y teléfono: no figuran en Instagram.
 - 2026-11-27: propuesta armada con sus fotos reales de Instagram (`Malena-propuesta.html`). **Mensaje, capturas y archivo enviados por Tamy el 2026-11-27.** Esperando respuesta.
 
+## Beauty Store (@beauty.storelp) — Juli & Ro, conocidas de Tamy
+
+- Tienda (no salón): capilar, belleza, perfumes. Calle 149 n.º 1426 e/ 61 y 62, Los Hornos. Lun a sáb 9–14 y 16–20. Pedidos por Mercado Pago / WhatsApp. Venta mayorista. Sin web. 2.590 seguidores (2026-11-27).
+- 2026-11-27: propuesta armada con sus fotos (`BeautyStore-propuesta.html`): armá tu pedido → WhatsApp, test "¿qué ampolla necesitás?", sección mayorista, abierto ahora con horario cortado. Productos sin precio (no figuran). Sin enviar todavía.
+
 ## Beauty Co. — qué le falta a su web (revisado el 2026-11-27)
 
 - En celular se ven varios segundos de pantalla rosa antes del contenido (a los 3 s seguía vacía; a los 7 s ya se veía).

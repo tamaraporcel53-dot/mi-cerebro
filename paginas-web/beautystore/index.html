@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beauty Store · Juli &amp; Ro · Propuesta de diseño</title>
+<meta name="description" content="Beauty Store, Juli & Ro. Productos capilares, belleza y perfumes en Los Hornos, La Plata. Ampollas, tinturas, tratamientos y venta mayorista. Armá tu pedido por WhatsApp.">
+<meta name="theme-color" content="#0D0D0D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500;600&display=swap">
+<style>
+/* Layout: boutique negra con detalles dorados, como su logo — bandas negras y blancas alternadas, el pedido siempre a mano abajo */
+:root{
+  --negro:#0D0D0D;
+  --grafito:#1A1A1A;
+  --blanco:#FFFFFF;
+  --hueso:#F6F3EE;
+  --oro:#C9A45C;
+  --oro-claro:#E6CC8F;
+  --gris:#6E6A64;
+  --linea:#E7E1D7;
+  --linea-osc:#2C2C2C;
+  --error:#B3261E;
+  --script:"Kaushan Script", "Brush Script MT", cursive;
+  --serif:"Playfair Display", Georgia, serif;
+  --texto:"Jost", "Segoe UI", system-ui, sans-serif;
+  --oro-grad:linear-gradient(135deg,#B8904A,#E6CC8F 45%,#B8904A 75%,#D9B870);
+  --max:1180px;
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{background:var(--blanco);color:var(--negro);font:300 17px/1.65 var(--texto);overflow-x:clip;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+[hidden]{display:none!important}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--oro);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(20px,5vw);padding-right:max(20px,5vw)}
+@media (min-width:1300px){.wrap{padding-left:40px;padding-right:40px}}
+section{padding-block:clamp(70px,9vw,120px)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08;text-wrap:balance}
+h2{font-size:clamp(36px,4.8vw,56px)}
+h2 em,h1 em{font-style:italic;color:var(--oro)}
+.eyebrow{display:block;font:500 12.5px var(--texto);letter-spacing:.32em;text-transform:uppercase;color:var(--oro);margin-bottom:14px}
+.lead{color:var(--gris);font-size:18px;max-width:54ch}
+.oscuro{background:var(--negro);color:var(--blanco)}
+.oscuro .lead{color:#B9B3A9}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:999px;font:500 13.5px var(--texto);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border:1.5px solid currentColor;cursor:pointer;transition:background .25s,color .25s,border-color .25s,filter .25s;background:transparent}
+.btn-oro{background:var(--oro-grad);border-color:transparent;color:var(--negro)}
+.btn-oro:hover{filter:brightness(1.06)}
+.btn-negro{background:var(--negro);border-color:var(--negro);color:var(--blanco)}
+.btn-negro:hover{background:#333;border-color:#333}
+.btn-linea:hover{background:var(--negro);color:var(--blanco);border-color:var(--negro)}
+.oscuro .btn-linea:hover{background:var(--blanco);color:var(--negro);border-color:var(--blanco)}
+.btn-sm{min-height:42px;padding:0 18px;font-size:12px}
+
+.propuesta{background:var(--oro-grad);color:var(--negro);font-size:13px;text-align:center;padding:8px 16px;font-weight:400}
+.propuesta b{font-weight:600}
+
+header{position:sticky;top:0;z-index:50;background:rgba(13,13,13,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--blanco)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:80px;gap:20px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo img{width:52px;height:52px;border-radius:50%;object-fit:cover;background:#fff;box-shadow:0 0 0 2px var(--oro)}
+.logo b{display:block;font:400 30px/1 var(--script)}
+.logo small{display:block;font:500 10px var(--texto);letter-spacing:.34em;text-transform:uppercase;color:var(--oro);margin-top:4px}
+.menu{display:flex;align-items:center;gap:28px;list-style:none}
+.menu a{text-decoration:none;font:400 13.5px var(--texto);letter-spacing:.16em;text-transform:uppercase;position:relative;padding:6px 0}
+.menu a:not(.btn)::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1.5px;background:var(--oro);transition:right .3s}
+.menu a:not(.btn):hover::after,.menu a.activo::after{right:0}
+.burger{display:none;width:46px;height:46px;border:0;background:none;cursor:pointer}
+.burger span{display:block;width:24px;height:1.5px;background:var(--blanco);margin:6px auto;transition:transform .3s,opacity .3s}
+
+/* Hero */
+.hero{background:var(--negro);color:var(--blanco);padding-block:clamp(50px,6vw,90px);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;width:520px;height:520px;right:-120px;top:-160px;border-radius:50%;background:radial-gradient(circle,rgba(201,164,92,.28),transparent 65%)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,70px);align-items:center;position:relative}
+.estado{display:inline-flex;align-items:center;gap:10px;font-size:14px;color:#D9D3C8;border:1px solid var(--linea-osc);border-radius:999px;padding:7px 16px 7px 12px;margin-bottom:24px}
+.estado i{width:8px;height:8px;border-radius:50%;background:#777;flex:none}
+.estado.abierto i{background:#5BBF7A;box-shadow:0 0 0 4px rgba(91,191,122,.18)}
+.hero .script{display:block;font:400 clamp(48px,6vw,74px)/1 var(--script);background:var(--oro-grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:8px}
+.hero h1{font-size:clamp(40px,5.6vw,70px);margin-bottom:22px}
+.hero p{font-size:18.5px;color:#C9C2B6;max-width:42ch;margin-bottom:30px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+.ventajas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:40px;padding-top:26px;border-top:1px solid var(--linea-osc)}
+.ventajas b{display:block;font:400 22px var(--serif);color:var(--oro-claro)}
+.ventajas span{font-size:13.5px;color:#A9A398}
+.fotos{position:relative;aspect-ratio:1/1.05;max-width:540px;width:100%;margin:0 auto}
+.fotos .f{position:absolute;overflow:hidden;border-radius:24px;box-shadow:0 30px 60px -20px rgba(0,0,0,.7)}
+.fotos .f img{width:100%;height:100%;object-fit:cover}
+.fotos .f1{width:70%;height:74%;right:0;top:0;border:1px solid rgba(201,164,92,.5)}
+.fotos .f2{width:48%;height:46%;left:0;bottom:0;border:4px solid var(--negro)}
+.fotos .f2 img{object-position:center 25%}
+.sello{position:absolute;right:6%;bottom:6%;width:120px;height:120px;border-radius:50%;background:var(--oro-grad);color:var(--negro);display:grid;place-items:center;text-align:center;font:400 24px/1 var(--script);box-shadow:0 18px 30px -12px rgba(0,0,0,.6)}
+.sello small{display:block;font:600 9.5px var(--texto);letter-spacing:.22em;text-transform:uppercase;margin-top:6px}
+
+/* Categorías */
+.cats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.cat{position:relative;border-radius:26px;overflow:hidden;aspect-ratio:4/5;max-width:100%;background:var(--negro);color:var(--blanco);text-decoration:none;display:flex;align-items:flex-end}
+.cat img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.78;transition:transform .7s,opacity .4s}
+.cat:hover img{transform:scale(1.05);opacity:.9}
+.cat::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.85))}
+.cat div{position:relative;z-index:1;padding:26px}
+.cat b{display:block;font:400 32px var(--serif)}
+.cat span{font-size:14.5px;color:#D9D3C8}
+.cat.texto{background:var(--grafito);align-items:center;justify-content:center;text-align:center}
+.cat.texto::after{display:none}
+.cat.texto .script{font:400 64px/1 var(--script);background:var(--oro-grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:block;margin-bottom:10px}
+
+/* Productos */
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px 60px;flex-wrap:wrap;margin-bottom:44px}
+.filtros{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px}
+.filtros button{border:1.5px solid var(--linea);background:var(--blanco);border-radius:999px;padding:9px 18px;cursor:pointer;font-size:14px;letter-spacing:.04em}
+.filtros button[aria-pressed="true"]{background:var(--negro);color:var(--blanco);border-color:var(--negro)}
+.prods{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.prod{border:1px solid var(--linea);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;background:var(--blanco);transition:box-shadow .3s,transform .3s}
+.prod:hover{transform:translateY(-4px);box-shadow:0 26px 40px -30px rgba(0,0,0,.5)}
+.prod figure{aspect-ratio:1/1;overflow:hidden;background:var(--hueso)}
+.prod figure img{width:100%;height:100%;object-fit:cover}
+.prod .info{padding:18px 18px 20px;display:flex;flex-direction:column;flex:1}
+.prod small{font:500 11px var(--texto);letter-spacing:.22em;text-transform:uppercase;color:var(--oro)}
+.prod h3{font-size:21px;margin:6px 0 6px}
+.prod p{font-size:14.5px;color:var(--gris);margin-bottom:16px;flex:1}
+.prod .btn{width:100%}
+.prod .btn.agregado{background:var(--oro-grad);border-color:transparent;color:var(--negro)}
+
+/* Test de ampollas */
+.test-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(30px,5vw,70px);align-items:center}
+.test{background:var(--grafito);border:1px solid var(--linea-osc);border-radius:30px;padding:clamp(24px,4vw,40px)}
+.test h3{font-size:26px;margin-bottom:18px}
+.opc{display:grid;gap:10px}
+.opc button{display:flex;align-items:center;gap:14px;text-align:left;background:transparent;border:1.5px solid var(--linea-osc);border-radius:16px;padding:15px 18px;color:var(--blanco);cursor:pointer;font-size:16px;transition:border-color .2s,background .2s}
+.opc button:hover{border-color:var(--oro)}
+.opc button[aria-pressed="true"]{border-color:var(--oro);background:rgba(201,164,92,.12)}
+.opc button i{font-style:normal;font-size:22px;width:30px;text-align:center}
+.resultado{margin-top:22px;border-radius:20px;background:var(--blanco);color:var(--negro);padding:22px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.resultado .gota{width:62px;height:76px;border-radius:50% 50% 46% 46%/60% 60% 40% 40%;flex:none;box-shadow:inset -6px -8px 0 rgba(0,0,0,.08)}
+.resultado b{display:block;font:400 24px var(--serif)}
+.resultado p{font-size:14.5px;color:var(--gris)}
+.resultado .txt{flex:1;min-width:180px}
+.test-img{border-radius:26px;overflow:hidden;border:1px solid rgba(201,164,92,.4)}
+
+/* Juli & Ro */
+.nosotras{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,70px);align-items:center}
+.nosotras .foto{border-radius:28px;overflow:hidden;aspect-ratio:4/5;max-width:100%}
+.nosotras .foto img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.nosotras .script{font:400 60px/1 var(--script);color:var(--oro);display:block;margin:6px 0 14px}
+.nosotras p{color:var(--gris);margin-bottom:14px;max-width:52ch}
+.sellos{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;list-style:none}
+.sellos li{border:1px solid var(--linea);border-radius:999px;padding:8px 16px;font-size:14px}
+
+/* Mayorista */
+.mayor{background:var(--hueso)}
+.mayor-box{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,5vw,70px);align-items:center}
+.pasos-m{list-style:none;display:grid;gap:16px;margin:26px 0 30px}
+.pasos-m li{display:flex;gap:16px;align-items:flex-start}
+.pasos-m b{flex:none;width:38px;height:38px;border-radius:50%;background:var(--negro);color:var(--oro-claro);display:grid;place-items:center;font:400 18px var(--serif)}
+.mayor .foto{border-radius:28px;overflow:hidden;aspect-ratio:1/1;max-width:100%}
+.mayor .foto img{width:100%;height:100%;object-fit:cover;object-position:center 70%}
+
+/* Visitanos */
+.visita-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:44px}
+.panel{background:var(--grafito);border:1px solid var(--linea-osc);border-radius:24px;padding:28px}
+.panel h3{font-size:24px;margin-bottom:14px}
+.lista{list-style:none}
+.lista li{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--linea-osc);font-size:15px}
+.lista li:last-child{border-bottom:0}
+.lista span{color:#A9A398}
+.lista b{font-weight:400;text-align:right}
+.lista li.hoy span,.lista li.hoy b{color:var(--oro-claro)}
+.local{border-radius:24px;overflow:hidden;position:relative;min-height:280px}
+.local img{width:100%;height:100%;object-fit:cover;object-position:center 20%;position:absolute;inset:0}
+.local a{position:absolute;left:16px;right:16px;bottom:16px}
+
+footer{background:var(--negro);color:#A9A398;padding-block:50px 110px;border-top:1px solid var(--linea-osc);text-align:center}
+footer .logo{justify-content:center;color:var(--blanco);margin-bottom:16px}
+footer p{font-size:14px}
+
+/* Barra del pedido */
+.barra{position:fixed;left:50%;bottom:18px;transform:translateX(-50%) translateY(140%);z-index:70;background:var(--negro);color:var(--blanco);border:1px solid var(--oro);border-radius:999px;padding:8px 8px 8px 22px;display:flex;align-items:center;gap:16px;box-shadow:0 20px 40px -14px rgba(0,0,0,.6);transition:transform .35s;width:min(560px,calc(100% - 32px))}
+.barra.on{transform:translateX(-50%) translateY(0)}
+.barra span{flex:1;font-size:15px}
+.barra b{color:var(--oro-claro);font-weight:500}
+.panel-pedido{position:fixed;inset:0;z-index:80;background:rgba(0,0,0,.55);display:flex;justify-content:flex-end}
+.caja{background:var(--blanco);width:min(440px,100%);height:100%;padding:28px;display:flex;flex-direction:column;overflow:auto}
+.caja h3{font-size:30px;margin-bottom:6px}
+.caja .cerrar{align-self:flex-end;border:0;background:none;font-size:28px;cursor:pointer;line-height:1}
+.items{list-style:none;margin:18px 0;border-top:1px solid var(--linea)}
+.items li{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--linea);font-size:15px}
+.items li span{flex:1}
+.cant{display:flex;align-items:center;gap:8px}
+.cant button{width:30px;height:30px;border-radius:50%;border:1px solid var(--linea);background:var(--blanco);cursor:pointer}
+.campo{margin-bottom:16px}
+.campo label{display:block;font-size:14px;font-weight:500;margin-bottom:6px}
+.campo input,.campo textarea{width:100%;height:48px;padding:0 14px;border:1.5px solid var(--linea);border-radius:12px;font:16px var(--texto);color:var(--negro)}
+.campo textarea{height:76px;padding:10px 14px;resize:vertical}
+.entrega{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.entrega button{height:46px;border:1.5px solid var(--linea);border-radius:12px;background:var(--blanco);cursor:pointer;font-size:15px}
+.entrega button[aria-pressed="true"]{background:var(--negro);color:var(--blanco);border-color:var(--negro)}
+.error{color:var(--error);font-size:14px;min-height:20px;margin:6px 0 10px}
+.nota-p{font-size:13px;color:var(--gris);margin-top:12px}
+
+.wa{position:fixed;right:20px;bottom:90px;z-index:60;width:56px;height:56px;border-radius:50%;background:#2F7D57;color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(0,0,0,.55)}
+.wa svg{width:28px;height:28px}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+@media (max-width:1040px){.prods{grid-template-columns:repeat(3,minmax(0,1fr))}.visita-grid{grid-template-columns:1fr 1fr}.local{grid-column:1/-1}}
+@media (max-width:880px){
+  .burger{display:block}
+  .menu{position:absolute;top:80px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--negro);padding:8px max(20px,5vw) 24px;transform:translateY(-10px);opacity:0;pointer-events:none;transition:opacity .3s,transform .3s}
+  .menu.open{opacity:1;transform:none;pointer-events:auto}
+  .menu li a:not(.btn){display:block;padding:15px 0;border-bottom:1px solid var(--linea-osc)}
+  .menu li:last-child{margin-top:18px}
+  .menu .btn{width:100%}
+  .burger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+  .hero-grid,.test-grid,.nosotras,.mayor-box{grid-template-columns:1fr}
+  .cats{grid-template-columns:1fr 1fr}
+  .cats .cat.texto{grid-column:1/-1;aspect-ratio:auto;padding:30px 0}
+}
+@media (max-width:620px){
+  body{font-size:16px}
+  .prods{grid-template-columns:1fr 1fr;gap:12px}
+  .prod .info{padding:14px}
+  .prod h3{font-size:18px}
+  .prod p{display:none}
+  .visita-grid{grid-template-columns:1fr}
+  .ventajas{grid-template-columns:1fr 1fr 1fr;gap:10px}
+  .ventajas b{font-size:18px}
+  .logo b{font-size:26px}
+  .sello{width:96px;height:96px;font-size:20px}
+}
+</style>
+</head>
+<body>
+
+<div class="propuesta"><b>Propuesta de diseño</b> para Beauty Store · Con fotos de su Instagram · Precios y WhatsApp se completan con ustedes</div>
+
+<header id="header">
+  <nav class="wrap nav" aria-label="Principal">
+    <a href="#inicio" class="logo" aria-label="Beauty Store, ir al inicio"><img src="img/perfil.jpg" alt=""><span><b>Beauty Store</b><small>Juli &amp; Ro</small></span></a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#test">Tu ampolla</a></li>
+      <li><a href="#mayorista">Mayorista</a></li>
+      <li><a href="#visitanos">Visitanos</a></li>
+      <li><a href="#productos" class="btn btn-oro btn-sm">Armá tu pedido</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="estado" id="estado"><i></i><span id="estado-txt">Lunes a sábado</span></span>
+        <span class="script">Beauty Store</span>
+        <h1>Tu pelo y tu piel, <em>en las mejores manos</em></h1>
+        <p>Productos capilares, belleza y perfumes elegidos por Juli y Ro. Armá tu pedido acá y te llega listo a nuestro WhatsApp.</p>
+        <div class="hero-cta">
+          <a href="#productos" class="btn btn-oro">Armá tu pedido</a>
+          <a href="#test" class="btn btn-linea">¿Qué ampolla necesito?</a>
+        </div>
+        <div class="ventajas">
+          <div><b>Retiro</b><span>en el local de Los Hornos</span></div>
+          <div><b>Envíos</b><span>consultá tu zona</span></div>
+          <div><b>Mayorista</b><span>para revendedoras</span></div>
+        </div>
+      </div>
+      <div class="fotos">
+        <div class="f f1"><img src="img/p11.jpg" alt="Juli y Ro con los pedidos listos para enviar"></div>
+        <div class="f f2"><img src="img/v07.jpg" alt="Juli y Ro en la puerta del local"></div>
+        <div class="sello" aria-hidden="true"><div>Juli &amp; Ro<small>Los Hornos</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="categorias">
+    <div class="wrap">
+      <div class="head">
+        <div><span class="eyebrow">Categorías</span><h2>Todo para tu <em>rutina</em></h2></div>
+        <p class="lead">Desde el tratamiento que tu pelo necesita hasta tu perfume favorito.</p>
+      </div>
+      <div class="cats">
+        <a class="cat" href="#productos" data-filtro="capilar"><img src="img/p14.jpg" alt="Ampollas capilares" loading="lazy"><div><b>Capilar</b><span>Ampollas, tratamientos, tinturas y shampoo</span></div></a>
+        <a class="cat" href="#productos" data-filtro="accesorios"><img src="img/p16.jpg" alt="Rulos sin calor de satén" loading="lazy"><div><b>Accesorios</b><span>Rulos sin calor y más</span></div></a>
+        <a class="cat texto" href="#productos" data-filtro="todos"><div><span class="script">Belleza &amp; perfumes</span><span>Consultanos por las novedades de la semana</span></div></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="productos" style="padding-top:0">
+    <div class="wrap">
+      <div class="head">
+        <div><span class="eyebrow">Armá tu pedido</span><h2>Elegí tus <em>productos</em></h2></div>
+        <p class="lead">Tocá "Agregar" en lo que quieras. Cuando termines, mandás el pedido por WhatsApp y te confirmamos precio y entrega.</p>
+      </div>
+      <div class="filtros" id="filtros" role="group" aria-label="Filtrar productos">
+        <button type="button" data-f="todos" aria-pressed="true">Todos</button>
+        <button type="button" data-f="capilar" aria-pressed="false">Capilar</button>
+        <button type="button" data-f="ampollas" aria-pressed="false">Ampollas</button>
+        <button type="button" data-f="accesorios" aria-pressed="false">Accesorios</button>
+      </div>
+      <div class="prods" id="prods">
+        <article class="prod" data-cat="capilar"><figure><img src="img/p15.jpg" alt="Tratamiento Primont Signature" loading="lazy"></figure><div class="info"><small>Primont</small><h3>Tratamiento Signature</h3><p>Tratamiento capilar de la línea Signature.</p><button type="button" class="btn btn-linea btn-sm" data-add="Tratamiento Primont Signature">Agregar</button></div></article>
+        <article class="prod" data-cat="capilar"><figure><img src="img/p13.jpg" alt="Tinturas 222 Cherry" loading="lazy"></figure><div class="info"><small>Coloración</small><h3>Tintura 222 Cherry</h3><p>Consultá por más tonos disponibles.</p><button type="button" class="btn btn-linea btn-sm" data-add="Tintura 222 Cherry">Agregar</button></div></article>
+        <article class="prod" data-cat="capilar"><figure><img src="img/v18.jpg" alt="Shampoo Beauty Color con keratina" loading="lazy"></figure><div class="info"><small>Beauty Color</small><h3>Shampoo con keratina</h3><p>Reconstrucción y anti frizz.</p><button type="button" class="btn btn-linea btn-sm" data-add="Shampoo Beauty Color con keratina">Agregar</button></div></article>
+        <article class="prod" data-cat="accesorios"><figure><img src="img/p16.jpg" alt="Rulos sin calor de satén en varios colores" loading="lazy"></figure><div class="info"><small>Accesorios</small><h3>Rulos sin calor</h3><p>De satén, en varios colores.</p><button type="button" class="btn btn-linea btn-sm" data-add="Rulos sin calor de satén">Agregar</button></div></article>
+        <article class="prod" data-cat="capilar ampollas"><figure><img src="img/p14.jpg" alt="Ampolla de caviar" loading="lazy" style="object-position:0% 60%"></figure><div class="info"><small>Ampolla</small><h3>Caviar</h3><p>Hidronutrición, suavidad y vitalidad.</p><button type="button" class="btn btn-linea btn-sm" data-add="Ampolla de Caviar">Agregar</button></div></article>
+        <article class="prod" data-cat="capilar ampollas"><figure><img src="img/p14.jpg" alt="Ampolla de argán" loading="lazy" style="object-position:25% 60%"></figure><div class="info"><small>Ampolla</small><h3>Argán</h3><p>Hidratación profunda, nutrición y brillo.</p><button type="button" class="btn btn-linea btn-sm" data-add="Ampolla de Argán">Agregar</button></div></article>
+        <article class="prod" data-cat="capilar ampollas"><figure><img src="img/p14.jpg" alt="Ampolla de lino" loading="lazy" style="object-position:50% 60%"></figure><div class="info"><small>Ampolla</small><h3>Lino</h3><p>Reestructura, fortalece y ayuda a cerrar la cutícula.</p><button type="button" class="btn btn-linea btn-sm" data-add="Ampolla de Lino">Agregar</button></div></article>
+        <article class="prod" data-cat="capilar ampollas"><figure><img src="img/p14.jpg" alt="Ampolla de keratina" loading="lazy" style="object-position:100% 60%"></figure><div class="info"><small>Ampolla</small><h3>Keratina</h3><p>Ayuda a recuperar la keratina natural del cabello.</p><button type="button" class="btn btn-linea btn-sm" data-add="Ampolla de Keratina">Agregar</button></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="oscuro" id="test">
+    <div class="wrap test-grid">
+      <div>
+        <span class="eyebrow">Test express</span>
+        <h2>¿Qué ampolla necesita <em>tu pelo?</em></h2>
+        <p class="lead" style="margin-bottom:24px">Contanos qué le pasa a tu pelo y te recomendamos la ampolla ideal. Si tenés dudas, te asesoramos por WhatsApp.</p>
+        <div class="test-img"><img src="img/p14.jpg" alt="Cuadro de ampollas capilares: caviar, argán, lino, complejo nutritivo y keratina" loading="lazy"></div>
+      </div>
+      <div class="test">
+        <h3>Mi pelo está…</h3>
+        <div class="opc" id="opc" role="group" aria-label="¿Cómo está tu pelo?">
+          <button type="button" data-r="argan"><i>🏜️</i>Seco y opaco, sin brillo</button>
+          <button type="button" data-r="caviar"><i>🍂</i>Áspero y sin vida</button>
+          <button type="button" data-r="lino"><i>🌪️</i>Con frizz y puntas abiertas</button>
+          <button type="button" data-r="complejo"><i>🔥</i>Castigado por tintura, plancha o decoloración</button>
+          <button type="button" data-r="keratina"><i>✂️</i>Quebradizo, se corta fácil</button>
+        </div>
+        <div class="resultado" id="resultado" hidden>
+          <span class="gota" id="r-gota"></span>
+          <div class="txt"><small style="font:500 11px var(--texto);letter-spacing:.2em;text-transform:uppercase;color:var(--oro)">Te recomendamos</small><b id="r-nombre"></b><p id="r-desc"></p></div>
+          <button type="button" class="btn btn-negro btn-sm" id="r-add">Agregar al pedido</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="nosotras">
+    <div class="wrap nosotras">
+      <div class="foto"><img src="img/v09.jpg" alt="Juli y Ro en el local con productos" loading="lazy"></div>
+      <div>
+        <span class="eyebrow">Quiénes somos</span>
+        <span class="script">Juli &amp; Ro</span>
+        <h2>Dos amigas, <em>un sueño</em> cumplido</h2>
+        <p>Beauty Store nació de las ganas de acercarte productos de calidad para tu pelo, tu piel y tu rutina de belleza, con atención personalizada.</p>
+        <p>Hoy te esperamos en nuestro local de Los Hornos, y también armamos tu pedido para que lo retires o te lo enviemos.</p>
+        <ul class="sellos"><li>Atención personalizada</li><li>Asesoramiento capilar</li><li>Pagos con Mercado Pago</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="mayor" id="mayorista">
+    <div class="wrap mayor-box">
+      <div>
+        <span class="eyebrow">Venta mayorista</span>
+        <h2>¿Revendés? <em>Sumate</em></h2>
+        <p class="lead">Precios especiales para revendedoras, peluquerías y centros de estética.</p>
+        <ol class="pasos-m">
+          <li><b>1</b><span>Escribinos y contanos qué querés revender.</span></li>
+          <li><b>2</b><span>Te pasamos la lista mayorista y las condiciones.</span></li>
+          <li><b>3</b><span>Armamos tu pedido y lo retirás o te lo enviamos.</span></li>
+        </ol>
+        <a class="btn btn-negro" href="#" data-consulta="la venta mayorista">Quiero la lista mayorista</a>
+      </div>
+      <div class="foto"><img src="img/p11.jpg" alt="Pedidos embolsados listos para enviar" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section class="oscuro" id="visitanos">
+    <div class="wrap">
+      <span class="eyebrow">Visitanos</span>
+      <h2>Te esperamos en <em>Los Hornos</em></h2>
+      <div class="visita-grid">
+        <div class="panel">
+          <h3>Dónde estamos</h3>
+          <ul class="lista">
+            <li><span>Dirección</span><b>Calle 149 n.º 1426</b></li>
+            <li><span>Entre</span><b>61 y 62, Los Hornos</b></li>
+            <li><span>Pagos</span><b>Mercado Pago</b></li>
+            <li><span>Instagram</span><b>@beauty.storelp</b></li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Horarios</h3>
+          <ul class="lista" id="horarios">
+            <li data-dias="1,2,3,4,5,6"><span>Lunes a sábado</span><b>9 a 14 · 16 a 20 h</b></li>
+            <li data-dias="0"><span>Domingos</span><b>Cerrado</b></li>
+          </ul>
+          <a class="btn btn-oro btn-sm" style="margin-top:18px;width:100%" href="#productos">Armá tu pedido</a>
+        </div>
+        <div class="local">
+          <img src="img/v17.jpg" alt="Frente del local de Beauty Store" loading="lazy">
+          <a class="btn btn-oro" href="https://www.google.com/maps/search/?api=1&amp;query=Calle%20149%201426%2C%20Los%20Hornos%2C%20La%20Plata" target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <a href="#inicio" class="logo"><img src="img/perfil.jpg" alt=""><span><b>Beauty Store</b><small>Juli &amp; Ro</small></span></a>
+  <p>Capilar · Belleza · Perfumes · Calle 149 n.º 1426, e/ 61 y 62, Los Hornos</p>
+  <p style="margin-top:8px">Propuesta de diseño</p>
+</footer>
+
+<a class="wa" href="#" data-consulta="un producto" aria-label="Escribinos por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg></a>
+
+<div class="barra" id="barra" aria-live="polite"><span>Tu pedido: <b id="barra-n">0 productos</b></span><button type="button" class="btn btn-oro btn-sm" id="ver-pedido">Ver pedido</button></div>
+
+<div class="panel-pedido" id="panel" hidden>
+  <div class="caja" role="dialog" aria-modal="true" aria-labelledby="t-pedido">
+    <button type="button" class="cerrar" id="cerrar" aria-label="Cerrar">×</button>
+    <h3 id="t-pedido">Tu pedido</h3>
+    <p style="color:var(--gris);font-size:14.5px">Revisalo y mandalo por WhatsApp. Te confirmamos precio, stock y entrega.</p>
+    <ul class="items" id="items"></ul>
+    <div class="campo"><label for="p-nombre">Tu nombre</label><input id="p-nombre" autocomplete="name"></div>
+    <div class="campo"><span style="display:block;font-size:14px;font-weight:500;margin-bottom:6px">¿Cómo lo recibís?</span>
+      <div class="entrega" id="entrega" role="group" aria-label="Forma de entrega"><button type="button" data-e="Retiro en el local" aria-pressed="true">Retiro en el local</button><button type="button" data-e="Envío" aria-pressed="false">Envío</button></div>
+    </div>
+    <div class="campo" id="campo-dir" hidden><label for="p-dir">Dirección de envío</label><input id="p-dir" autocomplete="street-address"></div>
+    <div class="campo"><label for="p-nota">Comentario (opcional)</label><textarea id="p-nota" placeholder="Por ejemplo: la tintura en otro tono"></textarea></div>
+    <p class="error" id="p-error" role="alert"></p>
+    <a class="btn btn-negro" id="enviar" href="#" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a>
+    <p class="nota-p">Página de muestra: el pedido todavía no está conectado al número del local.</p>
+  </div>
+</div>
+
+<script>
+(function(){
+  // WhatsApp del local (549 + característica + número, sin espacios). Vacío = WhatsApp deja elegir el chat.
+  var WHATSAPP="";
+  var HORARIO={0:null,1:[[9,14],[16,20]],2:[[9,14],[16,20]],3:[[9,14],[16,20]],4:[[9,14],[16,20]],5:[[9,14],[16,20]],6:[[9,14],[16,20]]};
+  var DIAS=["domingo","lunes","martes","miércoles","jueves","viernes","sábado"];
+  var AMPOLLAS={
+    argan:{n:"Ampolla de Argán",d:"Hidratación profunda, nutrición y brillo.",c:"#F2A21A"},
+    caviar:{n:"Ampolla de Caviar",d:"Hidronutrición, suavidad y vitalidad.",c:"#B9A3D9"},
+    lino:{n:"Ampolla de Lino",d:"Reestructura, fortalece y ayuda a cerrar la cutícula.",c:"#3FA3E0"},
+    complejo:{n:"Complejo Nutritivo",d:"Restaura al instante la fibra capilar.",c:"#F3E6C8"},
+    keratina:{n:"Ampolla de Keratina",d:"Ayuda a recuperar la keratina natural del cabello.",c:"#F0B23C"}
+  };
+  var $=function(s,c){return (c||document).querySelector(s)};
+  var $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+  var waLink=function(t){return "https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(t)};
+  $$("[data-consulta]").forEach(function(a){a.href=waLink("Hola Beauty Store! Quiero consultar por "+a.getAttribute("data-consulta")+".");a.target="_blank";a.rel="noopener"});
+
+  /* Menú */
+  var burger=$("#burger"),menu=$("#menu");
+  function cerrarMenu(){menu.classList.remove("open");burger.classList.remove("open");burger.setAttribute("aria-expanded","false")}
+  burger.addEventListener("click",function(){var ab=menu.classList.toggle("open");burger.classList.toggle("open",ab);burger.setAttribute("aria-expanded",ab)});
+  $$("#menu a").forEach(function(a){a.addEventListener("click",cerrarMenu)});
+
+  /* Abierto ahora (hora de Argentina, con horario cortado) */
+  try{
+    var p=new Intl.DateTimeFormat("en-US",{timeZone:"America/Argentina/Buenos_Aires",weekday:"short",hour:"numeric",minute:"numeric",hourCycle:"h23"}).formatToParts(new Date());
+    var g=function(t){return (p.find(function(x){return x.type===t})||{}).value};
+    var dia=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(g("weekday"));
+    var m=(parseInt(g("hour"),10)%24)*60+parseInt(g("minute"),10), h=HORARIO[dia], txt=null, ab=false;
+    if(h){for(var i=0;i<h.length;i++){if(m>=h[i][0]*60&&m<h[i][1]*60){ab=true;txt="Abierto ahora · hasta las "+h[i][1]+":00"}else if(!txt&&m<h[i][0]*60){txt="Cerrado · abrimos a las "+h[i][0]+":00"}}}
+    if(!txt){var d=(dia+1)%7;while(!HORARIO[d])d=(d+1)%7;txt="Cerrado · abrimos el "+DIAS[d]+" a las "+HORARIO[d][0][0]+":00";if(d===(dia+1)%7)txt="Cerrado · mañana abrimos a las "+HORARIO[d][0][0]+":00"}
+    $("#estado-txt").textContent=txt;$("#estado").classList.toggle("abierto",ab);
+    $$("#horarios li").forEach(function(li){if(li.getAttribute("data-dias").split(",").indexOf(String(dia))>-1)li.classList.add("hoy")});
+  }catch(e){}
+
+  /* Filtros */
+  function filtrar(f){
+    $$("#filtros button").forEach(function(b){b.setAttribute("aria-pressed",b.getAttribute("data-f")===f?"true":"false")});
+    $$("#prods .prod").forEach(function(pr){pr.hidden=!(f==="todos"||pr.getAttribute("data-cat").split(" ").indexOf(f)>-1)});
+  }
+  $("#filtros").addEventListener("click",function(e){var b=e.target.closest("button");if(b)filtrar(b.getAttribute("data-f"))});
+  $$("[data-filtro]").forEach(function(a){a.addEventListener("click",function(){filtrar(a.getAttribute("data-filtro"))})});
+
+  /* Pedido */
+  var pedido={};
+  function total(){return Object.keys(pedido).reduce(function(a,k){return a+pedido[k]},0)}
+  function pintar(){
+    var n=total();
+    $("#barra-n").textContent=n+(n===1?" producto":" productos");
+    $("#barra").classList.toggle("on",n>0);
+    $$("[data-add]").forEach(function(b){var en=!!pedido[b.getAttribute("data-add")];b.classList.toggle("agregado",en);b.textContent=en?"✓ En tu pedido":"Agregar"});
+    var ul=$("#items");ul.innerHTML="";
+    Object.keys(pedido).forEach(function(k){
+      var li=document.createElement("li");
+      var s=document.createElement("span");s.textContent=k;
+      var c=document.createElement("div");c.className="cant";
+      c.innerHTML='<button type="button" aria-label="Quitar uno">−</button><b></b><button type="button" aria-label="Sumar uno">+</button>';
+      c.querySelector("b").textContent=pedido[k];
+      c.children[0].addEventListener("click",function(){pedido[k]--;if(pedido[k]<=0)delete pedido[k];pintar()});
+      c.children[2].addEventListener("click",function(){pedido[k]++;pintar()});
+      li.appendChild(s);li.appendChild(c);ul.appendChild(li);
+    });
+    if(!n)ul.innerHTML='<li><span style="color:var(--gris)">Todavía no agregaste productos.</span></li>';
+  }
+  function agregar(nombre){pedido[nombre]=(pedido[nombre]||0)+1;pintar()}
+  $$("[data-add]").forEach(function(b){b.addEventListener("click",function(){var k=b.getAttribute("data-add");if(pedido[k]){delete pedido[k];pintar()}else agregar(k)})});
+  var panel=$("#panel");
+  function abrir(){panel.hidden=false;$("#cerrar").focus()}
+  function cerrar(){panel.hidden=true}
+  $("#ver-pedido").addEventListener("click",abrir);
+  $("#cerrar").addEventListener("click",cerrar);
+  panel.addEventListener("click",function(e){if(e.target===panel)cerrar()});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"){cerrar();cerrarMenu()}});
+  var entrega="Retiro en el local";
+  $("#entrega").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;entrega=b.getAttribute("data-e");$$("#entrega button").forEach(function(x){x.setAttribute("aria-pressed",x===b?"true":"false")});$("#campo-dir").hidden=entrega!=="Envío"});
+  $("#enviar").addEventListener("click",function(e){
+    var err=$("#p-error"),nom=$("#p-nombre").value.trim(),dir=$("#p-dir").value.trim(),nota=$("#p-nota").value.trim();
+    if(!total()){e.preventDefault();err.textContent="Agregá al menos un producto.";return}
+    if(nom.length<2){e.preventDefault();err.textContent="Escribí tu nombre.";$("#p-nombre").focus();return}
+    if(entrega==="Envío"&&dir.length<5){e.preventDefault();err.textContent="Escribí la dirección para el envío.";$("#p-dir").focus();return}
+    err.textContent="";
+    var lineas=Object.keys(pedido).map(function(k){return "• "+pedido[k]+" × "+k}).join("\n");
+    this.href=waLink("Hola Beauty Store! Soy "+nom+" y quiero hacer este pedido:\n"+lineas+"\n\nEntrega: "+entrega+(entrega==="Envío"?" a "+dir:"")+(nota?"\nComentario: "+nota:""));
+  });
+  pintar();
+
+  /* Test de ampollas */
+  var actual=null;
+  $("#opc").addEventListener("click",function(e){
+    var b=e.target.closest("button");if(!b)return;
+    $$("#opc button").forEach(function(x){x.setAttribute("aria-pressed",x===b?"true":"false")});
+    actual=AMPOLLAS[b.getAttribute("data-r")];
+    $("#r-nombre").textContent=actual.n;$("#r-desc").textContent=actual.d;$("#r-gota").style.background=actual.c;
+    $("#resultado").hidden=false;$("#r-add").textContent="Agregar al pedido";
+  });
+  $("#r-add").addEventListener("click",function(){if(actual){agregar(actual.n);this.textContent="✓ Agregada"}});
+})();
+</script>
+</body>
+</html>
