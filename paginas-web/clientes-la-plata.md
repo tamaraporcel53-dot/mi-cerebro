@@ -5,7 +5,7 @@ Criterio: salones que **no tienen página web propia** (solo Instagram, Facebook
 
 | # | Negocio | Rubro | Dirección | Teléfono / WhatsApp | Dónde aparece | Estado |
 |---|---|---|---|---|---|---|
-| 1 | Beauty Co. | Manos, pies, cejas, pestañas, depilación, masajes | Calle 15 n° 1196 (15 y 57) | 221 364-6694 (WhatsApp, sin confirmar) | Facebook, Instagram @beautycobelleza, Fresha | Sin escribir |
+| 1 | Beauty Co. | Manos, pies, cejas, pestañas, depilación, masajes, peluquería | Calle 15 n° 1196 (15 y 57) | 221 364-6694 (WhatsApp, sale del link de su web) | **YA TIENE WEB: beautyco.com.ar** (reserva online, gift card, club de puntos). Instagram @beautycobelleza, 20,3 mil seguidores (2026-11-27) | Propuesta de rediseño armada: Beauty-Co-propuesta.html (2026-11-27). Sin escribir |
 | 2 | Lovey Estudio | Maquillaje y cursos | Calle 14 n° 781 | 221 356-7136 (sin confirmar si es WhatsApp) | Instagram @makeupalelovey | Sin escribir |
 | 3 | Éclat Estética | Faciales, corporales, depilación definitiva | (sin confirmar) | 221 428-3739 (parece fijo: puede no tener WhatsApp) | Facebook, Instagram @eclat.estetica | Sin escribir |
 | 4 | Pino Peluquería | Peluquería | Calle 9 n° 665 | 221 501-1178 (sin confirmar si es WhatsApp) | Directorio misturnos.ai | Sin escribir |

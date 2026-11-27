@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beauty Co. · Propuesta de diseño</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Playfair+Display:ital,wght@1,500&family=Nunito+Sans:wght@400;600;700&display=swap">
+<style>
+/* Layout: el círculo rosa del logo como motivo — fotos y sellos redondos, bandas rosa claro y blanco, tinta ciruela para el texto */
+:root{
+  --rosa:#F4A9C9;
+  --rosa-claro:#FDEBF2;
+  --rosa-medio:#F9D3E3;
+  --fucsia:#C2457A;
+  --fucsia-hondo:#A2335F;
+  --tinta:#2B1D27;
+  --suave:#6F5A66;
+  --blanco:#FFFFFF;
+  --linea:#F0D5E1;
+  --error:#A3243B;
+  --caps:"Josefin Sans", "Century Gothic", "Segoe UI", sans-serif;
+  --acento:"Playfair Display", Georgia, serif;
+  --texto:"Nunito Sans", "Segoe UI", system-ui, sans-serif;
+  --max:1180px;
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{background:var(--blanco);color:var(--tinta);font:400 16.5px/1.65 var(--texto);overflow-x:clip;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+[hidden]{display:none!important}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--fucsia);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(20px,5vw);padding-right:max(20px,5vw)}
+@media (min-width:1300px){.wrap{padding-left:40px;padding-right:40px}}
+section{padding-block:clamp(70px,9vw,120px)}
+h1,h2,h3{font-family:var(--caps);font-weight:300;line-height:1.08;text-wrap:balance;letter-spacing:.02em}
+h2{font-size:clamp(34px,4.6vw,54px);text-transform:uppercase}
+h1 em,h2 em{font-family:var(--acento);font-style:italic;font-weight:500;text-transform:none;color:var(--fucsia);letter-spacing:0}
+.eyebrow{display:inline-block;font:600 12.5px var(--caps);letter-spacing:.28em;text-transform:uppercase;color:var(--fucsia);margin-bottom:16px}
+.lead{color:var(--suave);font-size:17.5px;max-width:56ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 30px;border-radius:999px;font:600 14px var(--caps);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border:1.5px solid var(--tinta);cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s;padding-top:3px}
+.btn-fucsia{background:var(--fucsia);border-color:var(--fucsia);color:var(--blanco)}
+.btn-fucsia:hover{background:var(--fucsia-hondo);border-color:var(--fucsia-hondo)}
+.btn-linea{background:transparent}
+.btn-linea:hover{background:var(--tinta);color:var(--blanco)}
+.btn-blanco{background:var(--blanco);border-color:var(--blanco);color:var(--tinta)}
+.btn-blanco:hover{background:var(--rosa-claro)}
+
+/* Aviso de propuesta */
+.propuesta{background:var(--tinta);color:#F6E3EC;font-size:13px;text-align:center;padding:9px 16px;position:relative;z-index:51}
+.propuesta b{color:var(--rosa)}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:box-shadow .3s}
+header.sombra{box-shadow:0 1px 0 var(--linea)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-circulo{width:56px;height:56px;border-radius:50%;background:var(--rosa);color:var(--blanco);display:grid;place-items:center;text-align:center;flex:none;line-height:1}
+.logo-circulo b{display:block;font:400 11.5px var(--caps);letter-spacing:.04em;margin-top:3px}
+.logo-circulo small{display:block;font:400 4.6px var(--caps);letter-spacing:.14em;margin-top:2px}
+.logo-txt b{display:block;font:400 19px/1 var(--caps);letter-spacing:.16em}
+.logo-txt small{display:block;font:400 10.5px var(--caps);letter-spacing:.3em;color:var(--suave);margin-top:5px;text-transform:uppercase}
+.menu{display:flex;align-items:center;gap:30px;list-style:none}
+.menu a{text-decoration:none;font:400 14px var(--caps);letter-spacing:.14em;text-transform:uppercase;position:relative;padding:6px 0}
+.menu a:not(.btn)::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1.5px;background:var(--rosa);transition:right .3s}
+.menu a:not(.btn):hover::after,.menu a.activo::after{right:0}
+.menu .btn{min-height:44px;padding:3px 22px 0;font-size:12.5px}
+.burger{display:none;width:46px;height:46px;border:0;background:none;cursor:pointer}
+.burger span{display:block;width:24px;height:1.5px;background:var(--tinta);margin:6px auto;transition:transform .3s,opacity .3s}
+
+/* Hero */
+.hero{background:var(--rosa-claro);padding-block:clamp(56px,7vw,96px);overflow:hidden;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(36px,6vw,80px);align-items:center}
+.estado{display:inline-flex;align-items:center;gap:10px;font-size:14px;color:var(--suave);background:var(--blanco);border-radius:999px;padding:7px 16px 7px 12px;margin-bottom:26px}
+.estado i{width:8px;height:8px;border-radius:50%;background:#C4AEB9;flex:none}
+.estado.abierto i{background:#3F8A5A;box-shadow:0 0 0 4px rgba(63,138,90,.15)}
+.hero h1{font-size:clamp(46px,7.4vw,94px);text-transform:uppercase;line-height:.98;margin-bottom:26px}
+.hero h1 em{display:block;font-size:.82em;margin-top:6px}
+.hero p{font-size:18.5px;color:var(--suave);max-width:42ch;margin-bottom:34px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero-datos{display:flex;flex-wrap:wrap;gap:14px 36px;margin-top:42px;font-size:14px;color:var(--suave)}
+.hero-datos b{display:block;font:400 26px/1.15 var(--caps);color:var(--tinta);letter-spacing:.04em}
+.burbujas{position:relative;aspect-ratio:1/1;max-width:540px;width:100%;margin:0 auto}
+.burbujas .b{position:absolute;border-radius:50%;overflow:hidden;background:var(--rosa)}
+.burbujas .b img{width:100%;height:100%;object-fit:cover}
+.b1{width:68%;height:68%;top:4%;right:2%;box-shadow:0 30px 60px -30px rgba(162,51,95,.5)}
+.b2{width:42%;height:42%;bottom:2%;left:4%;border:8px solid var(--rosa-claro)}
+.b3{width:30%;height:30%;bottom:10%;right:6%;display:grid!important;place-items:center;text-align:center;color:var(--blanco);font:400 15px/1.15 var(--caps);letter-spacing:.12em;text-transform:uppercase;border:8px solid var(--rosa-claro)}
+.b3 strong{display:block;font:500 italic 30px var(--acento);letter-spacing:0;text-transform:none}
+.punto{position:absolute;border-radius:50%;background:var(--rosa-medio)}
+
+/* Cinta */
+.cinta{background:var(--rosa);color:var(--blanco);overflow:hidden;padding-block:16px}
+.cinta-track{display:flex;gap:44px;width:max-content;animation:correr 40s linear infinite;font:400 18px var(--caps);letter-spacing:.24em;text-transform:uppercase}
+.cinta-track span{display:flex;align-items:center;gap:44px;white-space:nowrap}
+.cinta-track span::after{content:"●";font-size:8px}
+@keyframes correr{to{transform:translateX(-50%)}}
+
+/* Servicios */
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px 60px;flex-wrap:wrap;margin-bottom:50px}
+.servicios-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.serv{border:1px solid var(--linea);border-radius:26px;padding:28px;display:flex;flex-direction:column;background:var(--blanco);transition:transform .3s,box-shadow .3s,border-color .3s}
+.serv:hover{transform:translateY(-5px);box-shadow:0 28px 50px -34px rgba(162,51,95,.45);border-color:var(--rosa)}
+.serv-top{display:flex;align-items:center;gap:18px;margin-bottom:18px}
+.serv-ico{width:84px;height:84px;border-radius:50%;flex:none;overflow:hidden;background:var(--rosa-claro);display:grid;place-items:center;color:var(--fucsia)}
+.serv-ico img{width:100%;height:100%;object-fit:cover}
+.serv-ico svg{width:38px;height:38px}
+.serv h3{font-size:22px;font-weight:400;text-transform:uppercase;letter-spacing:.08em;line-height:1.2}
+.serv p{color:var(--suave);font-size:15.5px;margin-bottom:16px}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:22px;flex:1;align-content:flex-start;list-style:none}
+.chips li{font-size:13px;background:var(--rosa-claro);border-radius:999px;padding:5px 12px}
+.serv-acc{display:flex;gap:10px;flex-wrap:wrap}
+.serv-acc .btn{flex:1;min-height:46px;padding:3px 16px 0;font-size:12px}
+.precios-link{margin-top:34px;display:flex;justify-content:center}
+
+/* Gift card y club */
+.dos{background:var(--rosa-claro)}
+.dos-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.bloque{background:var(--blanco);border-radius:30px;padding:clamp(28px,4vw,46px);display:flex;flex-direction:column}
+.bloque h2{font-size:clamp(28px,3.4vw,40px);margin-bottom:14px}
+.bloque > p{color:var(--suave);margin-bottom:26px;max-width:46ch}
+.gift{aspect-ratio:1.6/1;max-width:100%;border-radius:22px;background:radial-gradient(circle at 85% 20%,var(--blanco) 0 10%,transparent 10.5%),linear-gradient(135deg,var(--rosa) 0%,#EE8DB6 100%);color:var(--blanco);padding:26px 28px;display:flex;flex-direction:column;justify-content:space-between;margin-bottom:22px;box-shadow:0 24px 40px -26px rgba(162,51,95,.6)}
+.gift small{font:400 12px var(--caps);letter-spacing:.28em;text-transform:uppercase}
+.gift b{font:300 clamp(26px,3.4vw,38px) var(--caps);letter-spacing:.12em}
+.gift strong{font:500 italic 22px var(--acento)}
+.montos{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.montos button{border:1.5px solid var(--linea);background:var(--blanco);border-radius:999px;padding:9px 16px;cursor:pointer;font-weight:600;font-size:14.5px}
+.montos button.sel{background:var(--tinta);border-color:var(--tinta);color:var(--blanco)}
+.sellos{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-bottom:18px}
+.sellos span{aspect-ratio:1;border-radius:50%;border:1.5px dashed var(--rosa);display:grid;place-items:center;color:var(--fucsia);font:600 13px var(--caps)}
+.sellos span.on{background:var(--rosa);border-style:solid;color:var(--blanco)}
+.nota-ej{font-size:13px;color:var(--suave);margin-bottom:22px}
+.bloque .btn{margin-top:auto;align-self:flex-start}
+
+/* Reserva */
+.reserva-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(36px,6vw,84px);align-items:start}
+.reserva h2{margin-bottom:18px}
+.garantias{list-style:none;display:grid;gap:14px;margin-top:30px}
+.garantias li{display:flex;gap:14px;align-items:flex-start}
+.garantias svg{width:22px;height:22px;color:var(--fucsia);flex:none;margin-top:2px}
+.form{background:var(--blanco);border:1px solid var(--linea);border-radius:30px;padding:clamp(24px,4vw,44px);box-shadow:0 40px 80px -50px rgba(162,51,95,.45)}
+.pasos{display:flex;gap:10px;margin-bottom:30px;list-style:none}
+.pasos li{flex:1;font:600 12px var(--caps);letter-spacing:.12em;text-transform:uppercase;color:var(--suave);padding-top:12px;border-top:3px solid var(--linea);transition:color .3s,border-color .3s}
+.pasos li.on{color:var(--tinta);border-color:var(--fucsia)}
+.pasos li.hecho{border-color:var(--rosa)}
+.paso{display:none}
+.paso.on{display:block;animation:entrar .45s ease}
+@keyframes entrar{from{opacity:.2;transform:translateY(8px)}to{opacity:1;transform:none}}
+.paso h3{font-size:26px;text-transform:uppercase;margin-bottom:22px;font-weight:400}
+.opciones{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.op{position:relative;display:flex;align-items:center;gap:12px;padding:15px 16px;border:1.5px solid var(--linea);border-radius:16px;cursor:pointer;transition:border-color .2s,background .2s;font-weight:600;font-size:15px}
+.op:hover{border-color:var(--rosa)}
+.op input{position:absolute;opacity:0;pointer-events:none}
+.op i{width:18px;height:18px;border-radius:50%;border:1.5px solid var(--rosa);flex:none}
+.op:has(input:checked){border-color:var(--fucsia);background:var(--rosa-claro)}
+.op:has(input:checked) i{background:var(--fucsia);border-color:var(--fucsia);box-shadow:inset 0 0 0 3px var(--rosa-claro)}
+.op:has(input:focus-visible){outline:2px solid var(--fucsia);outline-offset:2px}
+.campo{margin-bottom:20px}
+.campo label,.campo .label{display:block;font-size:14px;font-weight:700;margin-bottom:8px}
+.campo input,.campo textarea{width:100%;height:52px;padding:0 16px;border:1.5px solid var(--linea);border-radius:14px;font:16px var(--texto);color:var(--tinta);background:var(--blanco)}
+.campo textarea{height:90px;padding:12px 16px;resize:vertical}
+.campo input:focus,.campo textarea:focus{border-color:var(--fucsia);outline:none;box-shadow:0 0 0 3px rgba(194,69,122,.15)}
+.campo input[aria-invalid="true"]{border-color:var(--error)}
+.horas{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.horas button{height:44px;border:1.5px solid var(--linea);border-radius:12px;background:var(--blanco);font-weight:600;font-size:14.5px;cursor:pointer;font-variant-numeric:tabular-nums}
+.horas button:hover{border-color:var(--rosa)}
+.horas button.sel{background:var(--fucsia);border-color:var(--fucsia);color:var(--blanco)}
+.horas .nota{grid-column:1/-1;color:var(--suave);font-size:14.5px}
+.acciones{display:flex;justify-content:space-between;gap:12px;margin-top:26px}
+.error{color:var(--error);font-size:14.5px;min-height:22px;margin-top:12px}
+.ok{text-align:center}
+.ok-circ{width:76px;height:76px;border-radius:50%;background:var(--rosa);color:var(--blanco);display:grid;place-items:center;margin:0 auto 18px}
+.ok-circ svg{width:36px;height:36px}
+.ok p{color:var(--suave);max-width:42ch;margin:0 auto;font-size:15.5px}
+.resumen{margin:22px auto 0;max-width:380px;text-align:left;border-top:1px solid var(--linea)}
+.resumen div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--linea);font-size:15px}
+.resumen span{color:var(--suave)}
+.resumen b{text-align:right}
+.ok-acciones{display:flex;flex-direction:column;gap:10px;max-width:380px;margin:24px auto 0}
+
+/* Instagram */
+.insta{background:var(--tinta);color:var(--blanco);text-align:center}
+.insta .eyebrow{color:var(--rosa)}
+.insta h2 em{color:var(--rosa)}
+.insta .num{font:300 clamp(64px,11vw,140px)/1 var(--caps);letter-spacing:.02em;color:var(--rosa);margin:6px 0 10px}
+.insta p{color:#D9C6D0;max-width:52ch;margin:0 auto 28px}
+.destacadas{display:flex;flex-wrap:wrap;justify-content:center;gap:16px 22px;margin:0 auto 38px;list-style:none;max-width:820px}
+.destacadas li{display:flex;flex-direction:column;align-items:center;gap:8px;font-size:13px;color:#E9DCE3}
+.destacadas li span{width:66px;height:66px;border-radius:50%;border:2px solid var(--rosa);display:grid;place-items:center;background:rgba(244,169,201,.12);font:400 13px var(--caps);letter-spacing:.06em;color:var(--rosa)}
+
+/* Contacto */
+.contacto{background:var(--rosa-claro)}
+.contacto-grid{display:grid;grid-template-columns:1fr 1fr 1.1fr;gap:22px;margin-top:48px}
+.panel{background:var(--blanco);border-radius:26px;padding:clamp(26px,3vw,34px)}
+.panel h3{font-size:22px;text-transform:uppercase;letter-spacing:.1em;font-weight:400;margin-bottom:16px}
+.lista{list-style:none}
+.lista li{display:flex;justify-content:space-between;gap:18px;padding:12px 0;border-bottom:1px solid var(--linea);font-size:15px}
+.lista li:last-child{border-bottom:0}
+.lista span{color:var(--suave)}
+.lista b{text-align:right;overflow-wrap:anywhere;font-weight:700}
+.lista li.hoy span,.lista li.hoy b{color:var(--fucsia)}
+.lista li.hoy span::after{content:" · hoy";font-weight:700}
+.mapa{position:relative;border-radius:26px;overflow:hidden;min-height:290px;background:
+  linear-gradient(90deg,transparent 0 47%,rgba(255,255,255,.85) 47% 51%,transparent 51%),
+  linear-gradient(0deg,transparent 0 55%,rgba(255,255,255,.85) 55% 59%,transparent 59%),
+  repeating-linear-gradient(90deg,transparent 0 50px,rgba(162,51,95,.07) 50px 52px),
+  repeating-linear-gradient(0deg,transparent 0 50px,rgba(162,51,95,.07) 50px 52px),
+  var(--rosa-medio);display:flex;flex-direction:column;justify-content:flex-end;padding:22px}
+.mapa .calle{position:absolute;font:600 11px var(--caps);letter-spacing:.2em;color:var(--fucsia-hondo);text-transform:uppercase}
+.c15{left:52%;top:12px;writing-mode:vertical-rl}
+.c57{left:14px;top:calc(41% - 18px)}
+.pin{position:absolute;left:49%;top:43%;transform:translate(-50%,-100%);width:46px;height:46px;border-radius:50%;background:var(--fucsia);border:4px solid var(--blanco);box-shadow:0 8px 16px rgba(162,51,95,.4)}
+.mapa-card{position:relative;background:var(--blanco);border-radius:18px;padding:16px 18px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.mapa-card b{display:block;font:400 18px var(--caps);letter-spacing:.06em}
+.mapa-card span{font-size:14px;color:var(--suave)}
+.mapa-card .btn{min-height:44px;padding:3px 18px 0;font-size:12px}
+
+footer{background:var(--blanco);padding-block:56px 30px;border-top:1px solid var(--linea)}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.foot p{color:var(--suave);font-size:14.5px}
+.redes{display:flex;gap:10px}
+.redes a{width:44px;height:44px;border-radius:50%;background:var(--rosa-claro);display:grid;place-items:center;color:var(--fucsia);transition:background .25s,color .25s}
+.redes a:hover{background:var(--fucsia);color:var(--blanco)}
+.redes svg{width:18px;height:18px}
+.copy{margin-top:28px;padding-top:20px;border-top:1px solid var(--linea);font-size:13px;color:var(--suave);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+.wa{position:fixed;right:22px;bottom:22px;z-index:60;width:60px;height:60px;border-radius:50%;background:#2F7D57;color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(43,29,39,.55);transition:transform .25s}
+.wa:hover{transform:scale(1.07)}
+.wa svg{width:30px;height:30px}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+@media (max-width:1000px){
+  .servicios-grid{grid-template-columns:1fr 1fr}
+  .contacto-grid{grid-template-columns:1fr 1fr}
+  .mapa{grid-column:1/-1}
+}
+@media (max-width:880px){
+  .burger{display:block}
+  .menu{position:absolute;top:78px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--blanco);padding:8px max(20px,5vw) 24px;box-shadow:0 24px 30px -20px rgba(43,29,39,.25);transform:translateY(-10px);opacity:0;pointer-events:none;transition:opacity .3s,transform .3s}
+  .menu.open{opacity:1;transform:none;pointer-events:auto}
+  .menu li a:not(.btn){display:block;padding:15px 0;border-bottom:1px solid var(--linea)}
+  .menu li:last-child{margin-top:18px}
+  .menu .btn{width:100%}
+  .burger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+  .hero-grid,.reserva-grid,.dos-grid{grid-template-columns:1fr}
+  .burbujas{max-width:420px}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .servicios-grid,.contacto-grid{grid-template-columns:1fr}
+  .opciones{grid-template-columns:1fr}
+  .horas{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .logo-txt{display:none}
+  .wa{right:16px;bottom:16px;width:56px;height:56px}
+  .acciones .btn{padding:3px 20px 0}
+}
+</style>
+</head>
+<body>
+
+<div class="propuesta"><b>Propuesta de diseño</b> preparada para Beauty Co. · Fotos, textos y horarios de ejemplo: se ajustan con ustedes.</div>
+
+<header id="header">
+  <nav class="wrap nav" aria-label="Principal">
+    <a href="#inicio" class="logo" aria-label="Beauty Co., ir al inicio">
+      <span class="logo-circulo" aria-hidden="true"><span><b>BEAUTY CO.</b><small>CENTRO DE BELLEZA</small></span></span>
+      <span class="logo-txt"><b>BEAUTY CO.</b><small>15 y 57 · La Plata</small></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#regalos">Gift Card</a></li>
+      <li><a href="#club">Beauty Club</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#reservar" class="btn btn-fucsia">Reservar turno</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <span class="punto" style="width:180px;height:180px;left:-60px;bottom:-70px" aria-hidden="true"></span>
+    <div class="wrap hero-grid">
+      <div>
+        <span class="estado" id="estado"><i></i><span id="estado-txt">Lunes a sábado</span></span>
+        <h1>Todo en un <em>solo lugar</em></h1>
+        <p>Manos y pies, peluquería, masajes, depilación, cejas y pestañas y tratamientos. Tu centro de belleza en 15 y 57.</p>
+        <div class="hero-cta">
+          <a href="#reservar" class="btn btn-fucsia">Reservar turno</a>
+          <a href="#servicios" class="btn btn-linea">Ver servicios</a>
+        </div>
+        <div class="hero-datos">
+          <div><b>6</b>áreas de servicio</div>
+          <div><b>+20 mil</b>nos siguen en Instagram</div>
+          <div><b>15 y 57</b>La Plata</div>
+        </div>
+      </div>
+      <div class="burbujas" aria-hidden="true">
+        <span class="punto" style="width:16%;height:16%;top:0;left:12%"></span>
+        <div class="b b1"><img src="img/facial.jpg" alt=""></div>
+        <div class="b b2"><img src="img/masaje.jpg" alt=""></div>
+        <div class="b b3"><div><strong>Día de</strong>Spa</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cinta" aria-hidden="true">
+    <div class="cinta-track">
+      <span>Manos y pies</span><span>Peluquería</span><span>Masajes</span><span>Depilación</span><span>Cejas y pestañas</span><span>Tratamientos</span>
+      <span>Manos y pies</span><span>Peluquería</span><span>Masajes</span><span>Depilación</span><span>Cejas y pestañas</span><span>Tratamientos</span>
+    </div>
+  </div>
+
+  <section id="servicios">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="eyebrow">Servicios</span>
+          <h2>Elegí tu <em>momento</em></h2>
+        </div>
+        <p class="lead">Seis áreas en un mismo lugar. Reservá directo o consultanos por WhatsApp y te contamos precios y disponibilidad.</p>
+      </div>
+      <div class="servicios-grid">
+        <article class="serv">
+          <div class="serv-top"><span class="serv-ico"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M14 36V18a3 3 0 0 1 6 0v-6a3 3 0 0 1 6 0v12"/><path d="M26 16a3 3 0 0 1 6 0v12c0 5-3 8-8 8h-4c-4 0-6-2-8-6l-4-7a2.5 2.5 0 0 1 4-3l2 3"/><path d="M21 7.5a2.5 2.5 0 0 1 4 0"/></svg></span><h3>Manos y pies</h3></div>
+          <p>Manos prolijas y pies cuidados, con diseños para cada ocasión.</p>
+          <ul class="chips"><li>Esmaltado semipermanente</li><li>Kapping</li><li>Esculpidas</li><li>Nail art</li><li>Pedicuría</li></ul>
+          <div class="serv-acc"><a href="#reservar" class="btn btn-fucsia" data-servicio="Manos y pies">Reservar</a><a href="#" class="btn btn-linea" data-consulta="Manos y pies">Consultar</a></div>
+        </article>
+        <article class="serv">
+          <div class="serv-top"><span class="serv-ico"><img src="img/peinado.jpg" alt="Estilista realizando un peinado"></span><h3>Peluquería</h3></div>
+          <p>Corte, color y peinados, para el día a día o para un evento.</p>
+          <ul class="chips"><li>Corte</li><li>Color</li><li>Mechas</li><li>Brushing</li><li>Peinados</li></ul>
+          <div class="serv-acc"><a href="#reservar" class="btn btn-fucsia" data-servicio="Peluquería">Reservar</a><a href="#" class="btn btn-linea" data-consulta="Peluquería">Consultar</a></div>
+        </article>
+        <article class="serv">
+          <div class="serv-top"><span class="serv-ico"><img src="img/masaje.jpg" alt="Masaje en camilla"></span><h3>Masajes</h3></div>
+          <p>Desde relajantes hasta descontracturantes, para que salgas renovada.</p>
+          <ul class="chips"><li>Relajante</li><li>Descontracturante</li><li>Express localizado</li><li>Día de Spa</li></ul>
+          <div class="serv-acc"><a href="#reservar" class="btn btn-fucsia" data-servicio="Masajes">Reservar</a><a href="#" class="btn btn-linea" data-consulta="Masajes">Consultar</a></div>
+        </article>
+        <article class="serv">
+          <div class="serv-top"><span class="serv-ico"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M20 5c5 7 9 12 9 18a9 9 0 0 1-18 0c0-6 4-11 9-18Z"/><path d="M16 25a4 4 0 0 0 4 4"/></svg></span><h3>Depilación</h3></div>
+          <p>Piel suave por más tiempo, en un ambiente cómodo y cuidado.</p>
+          <ul class="chips"><li>Cera</li><li>Zonas chicas</li><li>Piernas</li><li>Rostro</li></ul>
+          <div class="serv-acc"><a href="#reservar" class="btn btn-fucsia" data-servicio="Depilación">Reservar</a><a href="#" class="btn btn-linea" data-consulta="Depilación">Consultar</a></div>
+        </article>
+        <article class="serv">
+          <div class="serv-top"><span class="serv-ico"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 22c4-6 9-9 15-9s11 3 15 9c-4 6-9 9-15 9s-11-3-15-9Z"/><circle cx="20" cy="22" r="4.5"/><path d="M8 13l-2-3M14 10l-1-4M20 9V5M26 10l1-4M32 13l2-3"/></svg></span><h3>Cejas y pestañas</h3></div>
+          <p>Una mirada definida y natural, pensada para tu rostro.</p>
+          <ul class="chips"><li>Perfilado y diseño</li><li>Laminado</li><li>Lifting + tinte</li></ul>
+          <div class="serv-acc"><a href="#reservar" class="btn btn-fucsia" data-servicio="Cejas y pestañas">Reservar</a><a href="#" class="btn btn-linea" data-consulta="Cejas y pestañas">Consultar</a></div>
+        </article>
+        <article class="serv">
+          <div class="serv-top"><span class="serv-ico"><img src="img/facial.jpg" alt="Tratamiento facial"></span><h3>Tratamientos</h3></div>
+          <p>Faciales y corporales para cuidar tu piel y sentirte bien.</p>
+          <ul class="chips"><li>Limpieza de cutis</li><li>Hidratación</li><li>Corporales</li></ul>
+          <div class="serv-acc"><a href="#reservar" class="btn btn-fucsia" data-servicio="Tratamientos">Reservar</a><a href="#" class="btn btn-linea" data-consulta="Tratamientos">Consultar</a></div>
+        </article>
+      </div>
+      <div class="precios-link"><a class="btn btn-linea" href="https://beautyco.com.ar/precios" target="_blank" rel="noopener">Ver lista de precios</a></div>
+    </div>
+  </section>
+
+  <section class="dos" id="regalos">
+    <div class="wrap dos-grid">
+      <div class="bloque">
+        <span class="eyebrow">Gift Card</span>
+        <h2>Regalá un <em>momento</em></h2>
+        <p>Una experiencia de belleza para esa persona que se lo merece. Elegí el monto y la armamos.</p>
+        <div class="gift" aria-hidden="true">
+          <small>Gift Card · Beauty Co.</small>
+          <div><strong>Para vos</strong><br><b id="gift-monto">$ 20.000</b></div>
+        </div>
+        <div class="montos" id="montos" role="group" aria-label="Monto de la gift card">
+          <button type="button" data-m="10000">$ 10.000</button>
+          <button type="button" data-m="20000" class="sel" aria-pressed="true">$ 20.000</button>
+          <button type="button" data-m="40000">$ 40.000</button>
+          <button type="button" data-m="0">Día de Spa</button>
+        </div>
+        <a class="btn btn-fucsia" id="gift-wa" href="#" target="_blank" rel="noopener">Pedir mi Gift Card</a>
+      </div>
+      <div class="bloque" id="club">
+        <span class="eyebrow">Beauty Club</span>
+        <h2>Visitarnos tiene <em>recompensa</em></h2>
+        <p>Cada visita suma puntos que después canjeás por descuentos y servicios.</p>
+        <div class="sellos" aria-hidden="true">
+          <span class="on">1</span><span class="on">2</span><span class="on">3</span><span class="on">4</span><span>5</span>
+          <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+        </div>
+        <p class="nota-ej">Ejemplo de cómo se vería tu tarjeta de puntos.</p>
+        <a class="btn btn-linea" href="#" data-consulta="Beauty Club">Quiero sumar puntos</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="reserva" id="reservar">
+    <div class="wrap reserva-grid">
+      <div>
+        <span class="eyebrow">Reservas</span>
+        <h2>Reservá tu <em>turno</em></h2>
+        <p class="lead">Elegí qué te querés hacer, el día y el horario. El pedido te llega armado a nuestro WhatsApp y te confirmamos.</p>
+        <ul class="garantias">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Menos de un minuto, desde el celular</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Te confirmamos por WhatsApp</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Podés sumar un comentario o una idea de diseño</li>
+        </ul>
+      </div>
+
+      <form class="form" id="form" novalidate>
+        <ol class="pasos" id="pasos" aria-label="Pasos de la reserva">
+          <li class="on">1. Servicio</li><li>2. Día y hora</li><li>3. Tus datos</li>
+        </ol>
+
+        <div class="paso on" data-paso="1">
+          <h3>¿Qué te querés hacer?</h3>
+          <div class="opciones" role="radiogroup" aria-label="Servicio">
+            <label class="op"><input type="radio" name="servicio" id="s1" value="Manos y pies"><i></i>Manos y pies</label>
+            <label class="op"><input type="radio" name="servicio" id="s2" value="Peluquería"><i></i>Peluquería</label>
+            <label class="op"><input type="radio" name="servicio" id="s3" value="Masajes"><i></i>Masajes</label>
+            <label class="op"><input type="radio" name="servicio" id="s4" value="Depilación"><i></i>Depilación</label>
+            <label class="op"><input type="radio" name="servicio" id="s5" value="Cejas y pestañas"><i></i>Cejas y pestañas</label>
+            <label class="op"><input type="radio" name="servicio" id="s6" value="Tratamientos"><i></i>Tratamientos</label>
+          </div>
+        </div>
+
+        <div class="paso" data-paso="2">
+          <h3>Elegí día y horario</h3>
+          <div class="campo"><label for="fecha">Fecha</label><input type="date" id="fecha" required></div>
+          <div class="campo">
+            <span class="label" id="lbl-hora">Horario</span>
+            <div class="horas" id="horas" role="group" aria-labelledby="lbl-hora"><span class="nota">Primero elegí una fecha.</span></div>
+          </div>
+        </div>
+
+        <div class="paso" data-paso="3">
+          <h3>Tus datos</h3>
+          <div class="campo"><label for="nombre">Nombre y apellido</label><input id="nombre" autocomplete="name" required></div>
+          <div class="campo"><label for="tel">Celular</label><input id="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="221 123 4567" required></div>
+          <div class="campo"><label for="coment">Comentario (opcional)</label><textarea id="coment" placeholder="Por ejemplo: quiero un diseño con brillos"></textarea></div>
+        </div>
+
+        <div class="paso" data-paso="4">
+          <div class="ok">
+            <div class="ok-circ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></div>
+            <h3>¡Ya casi está!</h3>
+            <p>Revisá tu pedido y envialo por WhatsApp para que te confirmemos el turno.</p>
+            <div class="resumen" id="resumen"></div>
+            <div class="ok-acciones">
+              <a class="btn btn-fucsia" id="enviar-wa" href="#" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+              <button type="button" class="btn btn-linea" id="otro">Pedir otro turno</button>
+            </div>
+          </div>
+        </div>
+
+        <p class="error" id="error" role="alert"></p>
+        <div class="acciones" id="acciones">
+          <button type="button" class="btn btn-linea" id="atras" hidden>Atrás</button>
+          <button type="button" class="btn btn-fucsia" id="siguiente" style="margin-left:auto">Siguiente</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="insta">
+    <div class="wrap">
+      <span class="eyebrow">Instagram</span>
+      <h2>Nuestra <em>comunidad</em></h2>
+      <div class="num">+20 mil</div>
+      <p>personas siguen nuestro día a día: ideas de diseño, promos, el local y la academia.</p>
+      <ul class="destacadas">
+        <li><span>💅</span>Ideas</li><li><span>✨</span>Promos</li><li><span>🏡</span>Local</li><li><span>💇</span>Peluquería</li><li><span>💆</span>Día de Spa</li><li><span>🎓</span>Academia</li>
+      </ul>
+      <a class="btn btn-blanco" href="https://www.instagram.com/beautycobelleza/" target="_blank" rel="noopener">Seguinos en @beautycobelleza</a>
+    </div>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <div class="wrap">
+      <span class="eyebrow">Contacto</span>
+      <h2>Te esperamos en <em>15 y 57</em></h2>
+      <div class="contacto-grid">
+        <div class="panel">
+          <h3>Información</h3>
+          <ul class="lista">
+            <li><span>Dirección</span><b>Calle 15 n° 1196, esq. 57</b></li>
+            <li><span>WhatsApp</span><b>221 364-6694</b></li>
+            <li><span>Correo</span><b>hola@beautyco.com.ar</b></li>
+            <li><span>Instagram</span><b>@beautycobelleza</b></li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Horarios</h3>
+          <ul class="lista" id="horarios">
+            <li data-dias="1,2,3,4,5,6"><span>Lunes a sábado</span><b>9:00 – 20:00</b></li>
+            <li data-dias="0"><span>Domingos</span><b>Cerrado</b></li>
+          </ul>
+          <a href="#reservar" class="btn btn-fucsia" style="margin-top:20px;width:100%">Reservar turno</a>
+        </div>
+        <div class="mapa">
+          <span class="calle c15" aria-hidden="true">Calle 15</span>
+          <span class="calle c57" aria-hidden="true">Calle 57</span>
+          <span class="pin" aria-hidden="true"></span>
+          <div class="mapa-card">
+            <div><b>15 y 57</b><span>La Plata, Buenos Aires</span></div>
+            <a class="btn btn-fucsia" href="https://www.google.com/maps/search/?api=1&amp;query=Calle%2015%201196%2C%20La%20Plata" target="_blank" rel="noopener">Cómo llegar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a href="#inicio" class="logo"><span class="logo-circulo" aria-hidden="true"><span><b>BEAUTY CO.</b><small>CENTRO DE BELLEZA</small></span></span><span class="logo-txt"><b>BEAUTY CO.</b><small>Todo en un solo lugar</small></span></a>
+      <div class="redes">
+        <a href="https://www.instagram.com/beautycobelleza/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
+        <a href="https://www.facebook.com/beautycobelleza/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v7h4v-7h3l1-4h-4V8Z"/></svg></a>
+      </div>
+    </div>
+    <div class="copy"><span>Beauty Co. · Centro de Belleza y Peluquería · La Plata</span><span>Propuesta de diseño</span></div>
+  </div>
+</footer>
+
+<a class="wa" id="wa" href="#" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+</a>
+
+<script>
+(function(){
+  var WHATSAPP="5492213646694";
+  // 0 = domingo ... 6 = sábado → [abre, cierra] en horas; null = cerrado
+  var HORARIO={0:null,1:[9,20],2:[9,20],3:[9,20],4:[9,20],5:[9,20],6:[9,20]};
+  var DIAS=["domingo","lunes","martes","miércoles","jueves","viernes","sábado"];
+  var $=function(s,c){return (c||document).querySelector(s)};
+  var $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+  var waLink=function(t){return "https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(t)};
+  var hhmm=function(m){return Math.floor(m/60)+":"+String(m%60).padStart(2,"0")};
+
+  $("#wa").href=waLink("Hola Beauty Co., quiero hacer una consulta.");
+  $$("[data-consulta]").forEach(function(a){
+    a.href=waLink("Hola Beauty Co., quiero consultar por "+a.getAttribute("data-consulta")+".");
+    a.target="_blank";a.rel="noopener";
+  });
+
+  /* Menú */
+  var burger=$("#burger"),menu=$("#menu");
+  function cerrar(){menu.classList.remove("open");burger.classList.remove("open");burger.setAttribute("aria-expanded","false");burger.setAttribute("aria-label","Abrir menú")}
+  burger.addEventListener("click",function(){var ab=menu.classList.toggle("open");burger.classList.toggle("open",ab);burger.setAttribute("aria-expanded",ab);burger.setAttribute("aria-label",ab?"Cerrar menú":"Abrir menú")});
+  $$("#menu a").forEach(function(a){a.addEventListener("click",cerrar)});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape")cerrar()});
+  var header=$("#header");
+  function onScroll(){header.classList.toggle("sombra",window.scrollY>40)}
+  window.addEventListener("scroll",onScroll,{passive:true});onScroll();
+  if("IntersectionObserver" in window){
+    var links=$$('#menu a:not(.btn)');
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting)links.forEach(function(l){l.classList.toggle("activo",l.getAttribute("href")==="#"+e.target.id)})})},{rootMargin:"-45% 0px -50% 0px"});
+    $$("main section[id], main [id='club']").forEach(function(s){io.observe(s)});
+  }
+
+  /* Abierto / cerrado (hora de Buenos Aires) */
+  try{
+    var p=new Intl.DateTimeFormat("en-US",{timeZone:"America/Argentina/Buenos_Aires",weekday:"short",hour:"numeric",minute:"numeric",hourCycle:"h23"}).formatToParts(new Date());
+    var g=function(t){return (p.find(function(x){return x.type===t})||{}).value};
+    var dia=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(g("weekday"));
+    var ahora=(parseInt(g("hour"),10)%24)*60+parseInt(g("minute"),10);
+    var h=HORARIO[dia],txt,ab=false;
+    if(h&&ahora>=h[0]*60&&ahora<h[1]*60){ab=true;txt="Abierto ahora · hasta las "+h[1]+":00"}
+    else if(h&&ahora<h[0]*60){txt="Cerrado · hoy abrimos a las "+h[0]+":00"}
+    else{var d=(dia+1)%7;while(!HORARIO[d])d=(d+1)%7;txt="Cerrado · abrimos el "+DIAS[d]+" a las "+HORARIO[d][0]+":00";if(d===(dia+1)%7)txt="Cerrado · mañana abrimos a las "+HORARIO[d][0]+":00"}
+    $("#estado-txt").textContent=txt;$("#estado").classList.toggle("abierto",ab);
+    $$("#horarios li").forEach(function(li){if(li.getAttribute("data-dias").split(",").indexOf(String(dia))>-1)li.classList.add("hoy")});
+  }catch(e){}
+
+  /* Gift card */
+  var giftTxt="$ 20.000";
+  function giftLink(){$("#gift-wa").href=waLink("Hola Beauty Co., quiero una Gift Card de "+giftTxt+".")}
+  $("#montos").addEventListener("click",function(e){
+    var b=e.target.closest("button");if(!b)return;
+    $$("#montos button").forEach(function(x){x.classList.remove("sel");x.removeAttribute("aria-pressed")});
+    b.classList.add("sel");b.setAttribute("aria-pressed","true");
+    giftTxt=b.textContent;$("#gift-monto").textContent=giftTxt;giftLink();
+  });
+  giftLink();
+
+  /* Reserva */
+  var paso=1,hora=null,form=$("#form"),sig=$("#siguiente"),atras=$("#atras"),err=$("#error"),fecha=$("#fecha"),horas=$("#horas");
+  function iso(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+  fecha.min=iso(new Date());var mx=new Date();mx.setDate(mx.getDate()+60);fecha.max=iso(mx);
+  function serv(){var r=$('input[name="servicio"]:checked');return r?r.value:null}
+  function fobj(){if(!fecha.value)return null;var a=fecha.value.split("-");return new Date(+a[0],a[1]-1,+a[2])}
+  function armar(){
+    hora=null;var d=fobj();
+    if(!d){horas.innerHTML='<span class="nota">Primero elegí una fecha.</span>';return}
+    var h=HORARIO[d.getDay()];
+    if(!h){horas.innerHTML='<span class="nota">Los domingos estamos cerrados. Elegí otro día.</span>';return}
+    var hoy=fecha.value===iso(new Date()),n=new Date(),min=n.getHours()*60+n.getMinutes()+60,html="";
+    for(var t=h[0]*60;t+60<=h[1]*60;t+=30){if(hoy&&t<min)continue;html+='<button type="button" data-min="'+t+'">'+hhmm(t)+'</button>'}
+    horas.innerHTML=html||'<span class="nota">No quedan horarios hoy. Elegí otro día.</span>';
+  }
+  fecha.addEventListener("change",function(){err.textContent="";armar()});
+  horas.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;$$("button",horas).forEach(function(x){x.classList.remove("sel");x.removeAttribute("aria-pressed")});b.classList.add("sel");b.setAttribute("aria-pressed","true");hora=+b.getAttribute("data-min");err.textContent=""});
+  $$('input[name="servicio"]').forEach(function(r){r.addEventListener("change",function(){err.textContent=""})});
+  function mostrar(n){
+    paso=n;
+    $$(".paso").forEach(function(el){el.classList.toggle("on",+el.getAttribute("data-paso")===n)});
+    $$("#pasos li").forEach(function(li,i){li.classList.toggle("on",i===n-1);li.classList.toggle("hecho",i<n-1)});
+    atras.hidden=n===1;$("#acciones").hidden=n===4;sig.textContent=n===3?"Ver mi pedido":"Siguiente";err.textContent="";
+  }
+  function validar(){
+    if(paso===1&&!serv())return "Elegí qué te querés hacer.";
+    if(paso===2){if(!fecha.value)return "Elegí una fecha.";if(fecha.value<fecha.min)return "Esa fecha ya pasó.";if(!HORARIO[fobj().getDay()])return "Los domingos estamos cerrados. Elegí otro día.";if(hora===null)return "Elegí un horario."}
+    if(paso===3){
+      var n=$("#nombre"),t=$("#tel"),nOk=n.value.trim().length>=3,tOk=t.value.replace(/\D/g,"").length>=8;
+      n.setAttribute("aria-invalid",!nOk);t.setAttribute("aria-invalid",!tOk);
+      if(!nOk){n.focus();return "Escribí tu nombre y apellido."}
+      if(!tOk){t.focus();return "Revisá el celular: tiene que tener al menos 8 números."}
+    }
+    return "";
+  }
+  function resumen(){
+    var d=fobj(),ft=DIAS[d.getDay()]+" "+d.getDate()+"/"+(d.getMonth()+1),c=$("#coment").value.trim();
+    var f=[["Servicio",serv()],["Día",ft.charAt(0).toUpperCase()+ft.slice(1)],["Horario",hhmm(hora)+" h"],["Nombre",$("#nombre").value.trim()]];
+    if(c)f.push(["Comentario",c]);
+    $("#resumen").innerHTML=f.map(function(){return "<div><span></span><b></b></div>"}).join("");
+    $$("#resumen div").forEach(function(div,i){div.children[0].textContent=f[i][0];div.children[1].textContent=f[i][1]});
+    $("#enviar-wa").href=waLink("Hola Beauty Co., quiero pedir un turno:\n• "+serv()+"\n• "+ft+" a las "+hhmm(hora)+" h\n• A nombre de "+$("#nombre").value.trim()+"\n• Celular: "+$("#tel").value.trim()+(c?"\n• Comentario: "+c:""));
+  }
+  sig.addEventListener("click",function(){var e=validar();if(e){err.textContent=e;return}if(paso===3)resumen();mostrar(paso+1);form.scrollIntoView({behavior:"smooth",block:"start"})});
+  atras.addEventListener("click",function(){if(paso>1)mostrar(paso-1)});
+  form.addEventListener("submit",function(e){e.preventDefault();sig.click()});
+  $("#otro").addEventListener("click",function(){form.reset();armar();$$("#form input").forEach(function(i){i.removeAttribute("aria-invalid")});mostrar(1)});
+  $$("[data-servicio]").forEach(function(a){a.addEventListener("click",function(){
+    var v=a.getAttribute("data-servicio");$$('input[name="servicio"]').forEach(function(r){r.checked=(r.value===v)});mostrar(2);
+  })});
+})();
+</script>
+</body>
+</html>
