@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><title>Precios tamy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap">
+<style>
+/* Lista de precios en formato 4:5, con la marca: negro y blanco */
+:root{--negro:#0E0E0E;--blanco:#F7F6F4;--gris:#8A8784;--serif:"Cormorant Garamond",Georgia,serif;--caps:"Jost","Segoe UI",sans-serif}
+html,body{margin:0;width:1080px;height:1350px;overflow:hidden;background:var(--negro);color:var(--blanco)}
+*{box-sizing:border-box}
+.p{padding:80px 80px 70px;height:100%;display:flex;flex-direction:column}
+.eyebrow{font:400 22px var(--caps);letter-spacing:.42em;text-transform:uppercase;opacity:.7}
+h1{font:300 92px/1 var(--serif);margin:20px 0 44px}
+h1 em{font-style:italic}
+.planes{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.plan{border:1px solid rgba(247,246,244,.28);border-radius:28px;padding:34px 32px;display:flex;flex-direction:column}
+.plan.dest{background:var(--blanco);color:var(--negro);border-color:var(--blanco)}
+.plan small{font:400 18px var(--caps);letter-spacing:.3em;text-transform:uppercase;opacity:.7}
+.plan h2{font:italic 300 52px/1 var(--serif);margin:10px 0 18px}
+.precio{font:300 64px/1 var(--serif);margin-bottom:6px}
+.precio span{font:400 20px var(--caps);letter-spacing:.1em;opacity:.7;margin-left:6px}
+.sub{font:300 19px var(--caps);opacity:.7;margin-bottom:22px}
+.plan ul{list-style:none;margin:0;padding:0;display:grid;gap:11px;font:300 21px/1.35 var(--caps)}
+.plan li{display:flex;gap:12px}
+.plan li::before{content:"—";opacity:.5}
+.extra{margin-top:24px;border:1px solid rgba(247,246,244,.28);border-radius:24px;padding:24px 32px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.extra b{font:italic 300 38px var(--serif)}
+.extra p{margin:4px 0 0;font:300 19px var(--caps);opacity:.75}
+.extra .precio{font-size:46px;margin:0;white-space:nowrap}
+.pie{margin-top:auto;display:flex;justify-content:space-between;align-items:baseline;font:400 18px var(--caps);letter-spacing:.24em;text-transform:uppercase;opacity:.75}
+.pie i{font:italic 300 40px var(--serif);letter-spacing:0;text-transform:none}
+.nota{font:300 18px var(--caps);opacity:.6;margin-top:18px;letter-spacing:.02em}
+</style></head>
+<body>
+<div class="p">
+  <div class="eyebrow">Páginas web para salones</div>
+  <h1>Elegí tu <em>página</em></h1>
+  <div class="planes">
+    <div class="plan">
+      <small>Plan</small>
+      <h2>Simple</h2>
+      <div class="precio">$ 150.000</div>
+      <div class="sub">Pago único · link gratis incluido</div>
+      <ul>
+        <li>Diseño con tu estilo, logo y fotos</li>
+        <li>Servicios, precios y promos</li>
+        <li>Turnos que llegan a tu WhatsApp</li>
+        <li>Horarios, ubicación e Instagram</li>
+        <li>Pensada para el celular</li>
+        <li>2 rondas de cambios</li>
+        <li>Online con link gratis<br>(tunombre.netlify.app)</li>
+      </ul>
+    </div>
+    <div class="plan dest">
+      <small>Plan</small>
+      <h2>Con dominio</h2>
+      <div class="precio">$ 190.000</div>
+      <div class="sub">Pago único · 1.º año de dominio incluido</div>
+      <ul>
+        <li>Todo lo del plan Simple</li>
+        <li>Tu propio nombre:<br>tunombre.com.ar</li>
+        <li>Registro a tu nombre</li>
+        <li>Más fácil de recordar y de compartir</li>
+        <li>Renovación desde el 2.º año: $ 15.000 por año</li>
+      </ul>
+    </div>
+  </div>
+  <div class="extra">
+    <div><b>Mantenimiento mensual</b><p>Opcional. Te cambio precios, promos y fotos cuando lo necesites.</p></div>
+    <div class="precio">$ 15.000<span>/mes</span></div>
+  </div>
+  <div class="extra" style="display:block"><b>¿Qué es el dominio?</b><p>Es el nombre de tu página en internet, como la dirección de tu salón. En vez de un link largo, tus clientas escriben <u>tunombre.com.ar</u> y te encuentran. Se renueva una vez por año.</p></div>
+  <div class="nota">50% al empezar y 50% al entregar · Antes de decidir, te muestro cómo quedaría tu página.</div>
+  <div class="pie"><span>Escribime</span><i>tamy</i></div>
+</div>
+</body></html>
