@@ -19,6 +19,11 @@ Criterio: salones que **no tienen página web propia** (solo Instagram, Facebook
 Del 6 al 10 (agregados el 2026-11-27): toman turnos por Fresha o AgendaPro, pero no tienen web propia.
 Para ellos, la idea a vender es una página con su propia marca, en vez de figurar entre muchos negocios en una plataforma.
 
+## Instagram (buscado el 2026-11-27)
+
+- Encontrados (sin confirmar): Beauty Co. → instagram.com/beautycobelleza · Lovey Estudio → instagram.com/makeupalelovey · Éclat Estética → instagram.com/eclat.estetica
+- No aparecen en internet: Pino Peluquería, Estética La Plata, Skala, Studio Nails Artist, Estetica Gemini, New Look, Flama Hair Studio. Hay que buscarlos a mano en Instagram o en Google Maps.
+
 Descartados por tener ya página web: MB Salón Unisex, El Palacio del Peinador, Gala La Plata, Gimena Morgado.
 
 ## Mensaje para mandar
