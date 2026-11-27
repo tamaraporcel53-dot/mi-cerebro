@@ -12,7 +12,7 @@ body{display:flex;align-items:center;justify-content:center}
 <script>
 var q=new URLSearchParams(location.search), modo=q.get("modo")||"tel", sec=q.get("sec");
 var caja=document.createElement("div");caja.className=modo;
-var f=document.createElement("iframe");f.src="beautyco/index.html";caja.appendChild(f);document.body.appendChild(caja);
+var f=document.createElement("iframe");f.src=(q.get("pag")||"beautyco")+"/index.html";caja.appendChild(f);document.body.appendChild(caja);
 f.addEventListener("load",function(){
   var d=f.contentDocument;d.documentElement.style.scrollBehavior="auto";
   if(sec){var el=d.getElementById(sec);f.contentWindow.scrollTo({top:el.getBoundingClientRect().top+f.contentWindow.scrollY-(modo=="tel"?110:140),behavior:"instant"})}

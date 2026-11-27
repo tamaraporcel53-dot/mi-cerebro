@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Malena Zans · Nails & Lashes · Propuesta de diseño</title>
+<meta name="description" content="Malena Zans, Nails & Lashes. Kapping, semipermanente, soft gel, polygel y extensiones de pestañas clásicas, volumen, hawaianas y volumen ruso. Cursos presenciales. Turnos por WhatsApp.">
+<meta name="theme-color" content="#F2C4CE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap">
+<style>
+/* Layout: tocador rosa — fondo rubor, detalles en oro rosado, el logo en letra cursiva como en su perfil; las uñas y pestañas dibujadas son el motivo visual */
+:root{
+  --rubor:#FBEAEC;
+  --rosa:#F2C4CE;
+  --rosa-medio:#E8A5B4;
+  --oro:#B76E79;
+  --oro-hondo:#8E4C58;
+  --ciruela:#3B2329;
+  --suave:#7A5F65;
+  --blanco:#FFFFFF;
+  --linea:#F0D3D9;
+  --error:#A3243B;
+  --script:"Pinyon Script", "Brush Script MT", cursive;
+  --serif:"Cormorant Garamond", Georgia, serif;
+  --texto:"Jost", "Segoe UI", system-ui, sans-serif;
+  --oro-grad:linear-gradient(135deg,#C98A93 0%,#E9B7BE 35%,#B76E79 60%,#E2A9B1 100%);
+  --max:1160px;
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{background:var(--blanco);color:var(--ciruela);font:300 17px/1.65 var(--texto);overflow-x:clip;-webkit-font-smoothing:antialiased}
+[hidden]{display:none!important}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--oro);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(20px,5vw);padding-right:max(20px,5vw)}
+@media (min-width:1280px){.wrap{padding-left:40px;padding-right:40px}}
+section{padding-block:clamp(70px,9vw,120px)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.05;text-wrap:balance}
+h2{font-size:clamp(38px,5vw,58px)}
+h2 em,h1 em{font-style:italic;color:var(--oro)}
+.eyebrow{display:block;font:500 12.5px var(--texto);letter-spacing:.3em;text-transform:uppercase;color:var(--oro);margin-bottom:14px}
+.lead{color:var(--suave);font-size:18px;max-width:54ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 30px;border-radius:999px;font:500 14px var(--texto);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border:1.5px solid var(--ciruela);cursor:pointer;transition:background .25s,color .25s,border-color .25s,filter .25s}
+.btn-oro{background:var(--oro-grad);border-color:transparent;color:var(--blanco);text-shadow:0 1px 1px rgba(142,76,88,.35)}
+.btn-oro:hover{filter:brightness(.94)}
+.btn-linea{background:transparent}
+.btn-linea:hover{background:var(--ciruela);color:var(--blanco)}
+
+.propuesta{background:var(--ciruela);color:#F6E1E5;font-size:13px;text-align:center;padding:9px 16px}
+.propuesta b{color:var(--rosa);font-weight:600}
+
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:box-shadow .3s}
+header.sombra{box-shadow:0 1px 0 var(--linea)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:82px;gap:20px}
+.logo{display:flex;flex-direction:column;align-items:center;text-decoration:none;line-height:1}
+.logo b{font:400 40px/0.9 var(--script);background:var(--oro-grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 6px}
+.logo small{font:500 9.5px var(--texto);letter-spacing:.42em;text-transform:uppercase;color:var(--oro-hondo);margin-top:4px;padding-left:.42em}
+.menu{display:flex;align-items:center;gap:30px;list-style:none}
+.menu a{text-decoration:none;font:400 13.5px var(--texto);letter-spacing:.16em;text-transform:uppercase;position:relative;padding:6px 0}
+.menu a:not(.btn)::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1.5px;background:var(--oro-grad);transition:right .3s}
+.menu a:not(.btn):hover::after,.menu a.activo::after{right:0}
+.menu .btn{min-height:44px;padding:0 22px;font-size:12.5px}
+.burger{display:none;width:46px;height:46px;border:0;background:none;cursor:pointer}
+.burger span{display:block;width:24px;height:1.5px;background:var(--ciruela);margin:6px auto;transition:transform .3s,opacity .3s}
+
+/* Hero */
+.hero{background:radial-gradient(circle at 80% 30%,var(--rosa) 0,transparent 45%),var(--rubor);padding-block:clamp(56px,7vw,100px);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,5vw,70px);align-items:center}
+.hero .firma-script{font:400 clamp(54px,7vw,84px)/1 var(--script);background:var(--oro-grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:block;margin-bottom:6px}
+.hero h1{font-size:clamp(44px,6.4vw,82px);margin-bottom:24px}
+.hero p{font-size:19px;color:var(--suave);max-width:40ch;margin-bottom:32px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin-top:34px}
+.chips li{font:400 13.5px var(--texto);letter-spacing:.06em;background:var(--blanco);border-radius:999px;padding:7px 15px;color:var(--oro-hondo)}
+.ilustra{position:relative;aspect-ratio:1/1;max-width:520px;width:100%;margin:0 auto}
+.ilustra .disco{position:absolute;inset:6%;border-radius:50%;background:var(--blanco);box-shadow:0 40px 80px -40px rgba(142,76,88,.45)}
+.ilustra .aro{position:absolute;inset:2%;border-radius:50%;border:1.5px solid transparent;background:var(--oro-grad) border-box;-webkit-mask:linear-gradient(#000 0 0) padding-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+.ilustra svg{position:absolute;inset:0;width:100%;height:100%}
+.dato{position:absolute;background:var(--blanco);border-radius:18px;padding:12px 16px;box-shadow:0 18px 30px -20px rgba(142,76,88,.5);font-size:13px;color:var(--suave);line-height:1.3}
+.dato b{display:block;font:500 24px var(--serif);color:var(--ciruela)}
+.d1{left:-2%;bottom:14%}
+.d2{right:0;top:10%}
+
+/* Servicios uñas */
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px 60px;flex-wrap:wrap;margin-bottom:48px}
+.unas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.una{background:var(--blanco);border:1px solid var(--linea);border-radius:28px;padding:26px 24px;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s,border-color .3s}
+.una:hover{transform:translateY(-5px);border-color:var(--rosa-medio);box-shadow:0 28px 50px -34px rgba(142,76,88,.5)}
+.una svg{width:64px;height:84px;margin-bottom:16px}
+.una h3{font-size:28px;margin-bottom:8px}
+.una p{color:var(--suave);font-size:15px;margin-bottom:18px;flex:1}
+.una ul{list-style:none;display:grid;gap:6px;margin-bottom:20px;font-size:14px}
+.una li{display:flex;gap:8px;align-items:center}
+.una li::before{content:"♡";color:var(--oro);font-size:12px}
+.una .btn{min-height:44px;padding:0 16px;font-size:12px}
+
+/* Carta de colores */
+.carta{background:var(--rubor)}
+.carta-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,5vw,70px);align-items:center}
+.muestra{display:flex;align-items:center;gap:26px;margin-top:30px}
+.muestra-una{width:86px;height:118px;flex:none}
+.muestra b{display:block;font:italic 500 32px var(--serif)}
+.muestra span{font-size:14px;color:var(--suave)}
+.paleta{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.tono{aspect-ratio:1;border-radius:50%;border:3px solid var(--blanco);box-shadow:0 10px 20px -12px rgba(59,35,41,.5);cursor:pointer;transition:transform .2s}
+.tono:hover{transform:scale(1.08)}
+.tono[aria-pressed="true"]{outline:2px solid var(--oro);outline-offset:3px}
+.nota{font-size:13px;color:var(--suave);margin-top:18px}
+
+/* Pestañas */
+.pestanas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.pest{border-radius:28px;padding:28px 24px;background:var(--blanco);border:1px solid var(--linea);text-align:center;display:flex;flex-direction:column;align-items:center}
+.pest svg{width:150px;height:76px;margin-bottom:14px}
+.pest h3{font-size:27px;margin-bottom:6px}
+.pest small{font:500 11.5px var(--texto);letter-spacing:.2em;text-transform:uppercase;color:var(--oro);margin-bottom:10px}
+.pest p{font-size:15px;color:var(--suave);margin-bottom:18px;flex:1}
+.pest .btn{min-height:44px;padding:0 16px;font-size:12px;width:100%}
+.combo{margin-top:30px;border-radius:30px;padding:clamp(26px,4vw,40px);background:var(--ciruela);color:var(--blanco);display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.combo b{font:400 clamp(30px,3.6vw,44px)/1.1 var(--serif)}
+.combo b em{font-style:italic;color:var(--rosa)}
+.combo p{color:#E8D2D7;font-size:16px;margin-top:6px}
+
+/* Cursos */
+.cursos{background:linear-gradient(180deg,var(--blanco),var(--rubor))}
+.cursos-box{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,70px);align-items:center}
+.cursos-lista{list-style:none;display:grid;gap:14px;margin:26px 0 30px}
+.cursos-lista li{display:flex;gap:14px;align-items:flex-start;font-size:16.5px}
+.cursos-lista li span{flex:none;width:30px;height:30px;border-radius:50%;background:var(--oro-grad);color:var(--blanco);display:grid;place-items:center;font:500 13px var(--texto)}
+.diploma{aspect-ratio:4/3;max-width:100%;border-radius:26px;background:var(--blanco);border:1px solid var(--linea);padding:34px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 40px 70px -50px rgba(142,76,88,.6);position:relative}
+.diploma::before{content:"";position:absolute;inset:14px;border:1px solid var(--rosa);border-radius:18px}
+.diploma small{font:500 11.5px var(--texto);letter-spacing:.3em;text-transform:uppercase;color:var(--oro)}
+.diploma b{font:400 clamp(42px,5vw,60px)/1 var(--script);background:var(--oro-grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin:12px 0}
+.diploma span{font:italic 400 22px var(--serif);color:var(--suave)}
+
+/* Galería */
+.galeria{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:40px}
+.foto{aspect-ratio:1;border-radius:20px;background:var(--rubor);display:grid;place-items:center;position:relative;overflow:hidden}
+.foto svg{width:46%;height:46%}
+.foto:nth-child(even){background:var(--rosa)}
+.galeria-nota{text-align:center;margin-top:22px;font-size:14px;color:var(--suave)}
+
+/* Reserva */
+.reserva{background:var(--rubor)}
+.reserva-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(36px,6vw,80px);align-items:start}
+.reserva h2{margin-bottom:18px}
+.form{background:var(--blanco);border-radius:30px;padding:clamp(24px,4vw,42px);box-shadow:0 40px 80px -50px rgba(142,76,88,.5)}
+.pasos{display:flex;gap:10px;margin-bottom:28px;list-style:none}
+.pasos li{flex:1;font:500 12px var(--texto);letter-spacing:.14em;text-transform:uppercase;color:var(--suave);padding-top:12px;border-top:3px solid var(--linea)}
+.pasos li.on{color:var(--ciruela);border-color:var(--oro)}
+.pasos li.hecho{border-color:var(--rosa-medio)}
+.paso{display:none}
+.paso.on{display:block;animation:entrar .45s ease}
+@keyframes entrar{from{opacity:.2;transform:translateY(8px)}to{opacity:1;transform:none}}
+.paso h3{font-size:30px;margin-bottom:20px}
+.opciones{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.op{position:relative;display:flex;align-items:center;gap:12px;padding:15px 16px;border:1.5px solid var(--linea);border-radius:16px;cursor:pointer;font-weight:400;font-size:15.5px;transition:border-color .2s,background .2s}
+.op:hover{border-color:var(--rosa-medio)}
+.op input{position:absolute;opacity:0;pointer-events:none}
+.op i{width:18px;height:18px;border-radius:50%;border:1.5px solid var(--rosa-medio);flex:none}
+.op:has(input:checked){border-color:var(--oro);background:var(--rubor)}
+.op:has(input:checked) i{background:var(--oro);border-color:var(--oro);box-shadow:inset 0 0 0 3px var(--rubor)}
+.op:has(input:focus-visible){outline:2px solid var(--oro);outline-offset:2px}
+.op small{display:block;font-size:12.5px;color:var(--suave)}
+.campo{margin-bottom:18px}
+.campo label,.campo .label{display:block;font-size:14px;font-weight:500;margin-bottom:8px}
+.campo input,.campo textarea{width:100%;height:52px;padding:0 16px;border:1.5px solid var(--linea);border-radius:14px;font:16px var(--texto);color:var(--ciruela);background:var(--blanco)}
+.campo textarea{height:86px;padding:12px 16px;resize:vertical}
+.campo input:focus,.campo textarea:focus{border-color:var(--oro);outline:none;box-shadow:0 0 0 3px rgba(183,110,121,.15)}
+.campo input[aria-invalid="true"]{border-color:var(--error)}
+.franjas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.franjas button{height:48px;border:1.5px solid var(--linea);border-radius:12px;background:var(--blanco);font-weight:400;cursor:pointer}
+.franjas button.sel{background:var(--oro);border-color:var(--oro);color:var(--blanco)}
+.acciones{display:flex;justify-content:space-between;gap:12px;margin-top:24px}
+.error{color:var(--error);font-size:14.5px;min-height:22px;margin-top:12px}
+.ok{text-align:center}
+.ok-circ{width:76px;height:76px;border-radius:50%;background:var(--oro-grad);color:var(--blanco);display:grid;place-items:center;margin:0 auto 16px}
+.ok-circ svg{width:34px;height:34px}
+.ok p{color:var(--suave);max-width:40ch;margin:0 auto;font-size:15.5px}
+.resumen{margin:20px auto 0;max-width:380px;text-align:left;border-top:1px solid var(--linea)}
+.resumen div{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--linea);font-size:15px}
+.resumen span{color:var(--suave)}
+.resumen b{font-weight:500;text-align:right}
+.ok-acciones{display:flex;flex-direction:column;gap:10px;max-width:380px;margin:22px auto 0}
+
+footer{background:var(--ciruela);color:#EAD7DB;padding-block:70px 30px;text-align:center}
+footer .logo b{font-size:64px}
+footer .logo small{color:var(--rosa)}
+footer p{color:#CDB3B9;margin:18px auto 26px;max-width:40ch}
+.redes{display:flex;justify-content:center;gap:12px}
+.redes a{width:46px;height:46px;border-radius:50%;border:1px solid rgba(242,196,206,.4);display:grid;place-items:center;color:var(--rosa);transition:background .25s}
+.redes a:hover{background:var(--oro)}
+.redes svg{width:19px;height:19px}
+.copy{margin-top:40px;padding-top:20px;border-top:1px solid rgba(242,196,206,.18);font-size:13px;color:#B497A0}
+
+.wa{position:fixed;right:22px;bottom:22px;z-index:60;width:60px;height:60px;border-radius:50%;background:#2F7D57;color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(59,35,41,.55);transition:transform .25s}
+.wa:hover{transform:scale(1.07)}
+.wa svg{width:30px;height:30px}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+@media (max-width:1040px){.unas,.pestanas{grid-template-columns:1fr 1fr}}
+@media (max-width:880px){
+  .burger{display:block}
+  .menu{position:absolute;top:82px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--blanco);padding:8px max(20px,5vw) 24px;box-shadow:0 24px 30px -20px rgba(59,35,41,.25);transform:translateY(-10px);opacity:0;pointer-events:none;transition:opacity .3s,transform .3s}
+  .menu.open{opacity:1;transform:none;pointer-events:auto}
+  .menu li a:not(.btn){display:block;padding:15px 0;border-bottom:1px solid var(--linea)}
+  .menu li:last-child{margin-top:18px}
+  .menu .btn{width:100%}
+  .burger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+  .hero-grid,.carta-grid,.cursos-box,.reserva-grid{grid-template-columns:1fr}
+  .ilustra{max-width:400px}
+}
+@media (max-width:620px){
+  body{font-size:16px}
+  .unas,.pestanas{grid-template-columns:1fr}
+  .opciones{grid-template-columns:1fr}
+  .paleta{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .galeria{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .galeria .foto:nth-child(n+5){display:none}
+  .wa{right:16px;bottom:16px;width:56px;height:56px}
+  .acciones .btn{padding:0 22px}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="g-oro" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C98A93"/><stop offset=".4" stop-color="#EDC0C6"/><stop offset=".7" stop-color="#B76E79"/><stop offset="1" stop-color="#E2A9B1"/></linearGradient>
+    <symbol id="una" viewBox="0 0 64 84"><path d="M8 84V34C8 15 19 4 32 4s24 11 24 30v50Z" fill="currentColor"/><path d="M18 30c0-10 6-17 13-18" stroke="#fff" stroke-opacity=".55" stroke-width="4" stroke-linecap="round" fill="none"/></symbol>
+  </defs>
+</svg>
+
+<div class="propuesta"><b>Propuesta de diseño</b> para Malena Zans · Fotos, zona, precios y WhatsApp se completan con vos</div>
+
+<header id="header">
+  <nav class="wrap nav" aria-label="Principal">
+    <a href="#inicio" class="logo" aria-label="Malena Zans, Nails and Lashes, ir al inicio"><b>Malena Zans</b><small>Nails &amp; Lashes</small></a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#unas">Uñas</a></li>
+      <li><a href="#pestanas">Pestañas</a></li>
+      <li><a href="#cursos">Cursos</a></li>
+      <li><a href="#trabajos">Trabajos</a></li>
+      <li><a href="#turnos" class="btn btn-oro">Pedir turno</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="firma-script">Nails &amp; Lashes</span>
+        <h1>Uñas y pestañas que <em>hablan por vos</em></h1>
+        <p>Kapping, semipermanente, soft gel, polygel y extensiones de pestañas, con dedicación en cada detalle.</p>
+        <div class="hero-cta">
+          <a href="#turnos" class="btn btn-oro">Pedir mi turno</a>
+          <a href="#unas" class="btn btn-linea">Ver servicios</a>
+        </div>
+        <ul class="chips"><li>Kapping</li><li>Semis</li><li>Soft gel</li><li>Polygel</li><li>Pestañas</li><li>Cursos</li></ul>
+      </div>
+      <div class="ilustra" aria-hidden="true">
+        <span class="aro"></span><span class="disco"></span>
+        <svg viewBox="0 0 520 520">
+          <g transform="translate(260 300)">
+            <g transform="rotate(-48) translate(0 -150)"><use href="#una" x="-24" y="-60" width="48" height="64" style="color:#E8A5B4"/></g>
+            <g transform="rotate(-24) translate(0 -165)"><use href="#una" x="-27" y="-70" width="54" height="72" style="color:#B76E79"/></g>
+            <g transform="translate(0 -172)"><use href="#una" x="-29" y="-76" width="58" height="78" style="color:#F2C4CE"/></g>
+            <g transform="rotate(24) translate(0 -165)"><use href="#una" x="-27" y="-70" width="54" height="72" style="color:#8E4C58"/></g>
+            <g transform="rotate(48) translate(0 -150)"><use href="#una" x="-24" y="-60" width="48" height="64" style="color:#F7DCE1"/></g>
+          </g>
+          <path d="M150 352c40 34 180 34 220 0" stroke="url(#g-oro)" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <g stroke="url(#g-oro)" stroke-width="3" stroke-linecap="round">
+            <path d="M168 362l-14 24M190 372l-10 28M214 378l-6 30M238 381l-2 31M262 382v31M286 381l2 31M310 378l6 30M334 372l10 28M356 362l14 24"/>
+          </g>
+        </svg>
+        <div class="dato d1"><b>+1.200</b>publicaciones en Instagram</div>
+        <div class="dato d2"><b>Nails</b>&amp; lashes en un turno</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="unas">
+    <div class="wrap">
+      <div class="head">
+        <div><span class="eyebrow">Uñas</span><h2>Manos <em>impecables</em></h2></div>
+        <p class="lead">Elegí la técnica que mejor va con tus uñas y tu estilo. Te asesoro en cada turno.</p>
+      </div>
+      <div class="unas">
+        <article class="una">
+          <svg viewBox="0 0 64 84" aria-hidden="true"><use href="#una" style="color:#F2C4CE"/></svg>
+          <h3>Kapping</h3>
+          <p>Una capa protectora sobre tu uña natural para que crezca fuerte y no se quiebre.</p>
+          <ul><li>Refuerza la uña natural</li><li>Con semi o gel encima</li></ul>
+          <a href="#turnos" class="btn btn-linea" data-servicio="Kapping">Quiero este</a>
+        </article>
+        <article class="una">
+          <svg viewBox="0 0 64 84" aria-hidden="true"><use href="#una" style="color:#B76E79"/></svg>
+          <h3>Semipermanente</h3>
+          <p>Color con brillo que dura semanas, sin descascararse.</p>
+          <ul><li>Secado inmediato</li><li>Todos los colores</li></ul>
+          <a href="#turnos" class="btn btn-linea" data-servicio="Semipermanente">Quiero este</a>
+        </article>
+        <article class="una">
+          <svg viewBox="0 0 64 84" aria-hidden="true"><use href="#una" style="color:#E8A5B4"/></svg>
+          <h3>Soft gel</h3>
+          <p>Extensión con tips de gel flexible: largo y forma al instante, livianas y naturales.</p>
+          <ul><li>Largo a elección</li><li>Formas a medida</li></ul>
+          <a href="#turnos" class="btn btn-linea" data-servicio="Soft gel">Quiero este</a>
+        </article>
+        <article class="una">
+          <svg viewBox="0 0 64 84" aria-hidden="true"><use href="#una" style="color:#8E4C58"/></svg>
+          <h3>Polygel</h3>
+          <p>Uñas esculpidas resistentes y livianas, ideales para diseños largos.</p>
+          <ul><li>Muy resistentes</li><li>Para nail art</li></ul>
+          <a href="#turnos" class="btn btn-linea" data-servicio="Polygel">Quiero este</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="carta" id="colores">
+    <div class="wrap carta-grid">
+      <div>
+        <span class="eyebrow">Carta de colores</span>
+        <h2>Probá tu <em>tono</em></h2>
+        <p class="lead">Tocá un color y mirá cómo queda. En el turno elegimos juntas el tuyo.</p>
+        <div class="muestra">
+          <svg class="muestra-una" viewBox="0 0 64 84" aria-hidden="true"><use href="#una" id="una-color" style="color:#F2C4CE"/></svg>
+          <div><b id="tono-nombre">Rosa nude</b><span>Ideal para todos los días</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="paleta" id="paleta" role="group" aria-label="Colores de esmalte">
+          <button type="button" class="tono" style="background:#F2C4CE" data-n="Rosa nude" data-d="Ideal para todos los días" aria-pressed="true" aria-label="Rosa nude"></button>
+          <button type="button" class="tono" style="background:#F7DCE1" data-n="Blanco lechoso" data-d="El clásico que va con todo" aria-label="Blanco lechoso"></button>
+          <button type="button" class="tono" style="background:#E8A5B4" data-n="Rosa chicle" data-d="Divertido y femenino" aria-label="Rosa chicle"></button>
+          <button type="button" class="tono" style="background:#B76E79" data-n="Oro rosado" data-d="Elegante para eventos" aria-label="Oro rosado"></button>
+          <button type="button" class="tono" style="background:#8E4C58" data-n="Malva" data-d="Sofisticado y otoñal" aria-label="Malva"></button>
+          <button type="button" class="tono" style="background:#6B1E2E" data-n="Bordó" data-d="Un clásico que nunca falla" aria-label="Bordó"></button>
+          <button type="button" class="tono" style="background:#D9B99B" data-n="Café con leche" data-d="Nude cálido" aria-label="Café con leche"></button>
+          <button type="button" class="tono" style="background:#C8102E" data-n="Rojo pasión" data-d="Para no pasar desapercibida" aria-label="Rojo pasión"></button>
+          <button type="button" class="tono" style="background:#A7C7E7" data-n="Celeste" data-d="Fresco para el verano" aria-label="Celeste"></button>
+          <button type="button" class="tono" style="background:#B9A6D6" data-n="Lavanda" data-d="Suave y moderno" aria-label="Lavanda"></button>
+          <button type="button" class="tono" style="background:#1F1A1C" data-n="Negro" data-d="Audaz y elegante" aria-label="Negro"></button>
+          <button type="button" class="tono" style="background:linear-gradient(135deg,#F7DCE1,#C98A93,#F7DCE1)" data-n="Glitter rosé" data-d="Brillo para ocasiones especiales" aria-label="Glitter rosé"></button>
+        </div>
+        <p class="nota">Colores de ejemplo: se reemplazan por los esmaltes que trabaja Malena.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pestanas">
+    <div class="wrap">
+      <div class="head">
+        <div><span class="eyebrow">Extensión de pestañas</span><h2>Una mirada <em>a tu medida</em></h2></div>
+        <p class="lead">Desde un efecto natural hasta máximo volumen. Elegí el estilo que más te guste.</p>
+      </div>
+      <div class="pestanas">
+        <article class="pest">
+          <svg viewBox="0 0 150 76" aria-hidden="true"><path d="M10 26c34 30 96 30 130 0" stroke="#3B2329" stroke-width="3" fill="none" stroke-linecap="round"/><g stroke="#3B2329" stroke-width="2" stroke-linecap="round"><path d="M28 40l-8 22M48 47l-4 24M75 50v25M102 47l4 24M122 40l8 22"/></g></svg>
+          <small>Natural</small><h3>Clásicas</h3>
+          <p>Una extensión por cada pestaña natural. Más largo y definición, sin perder naturalidad.</p>
+          <a href="#turnos" class="btn btn-linea" data-servicio="Pestañas clásicas">Quiero estas</a>
+        </article>
+        <article class="pest">
+          <svg viewBox="0 0 150 76" aria-hidden="true"><path d="M10 26c34 30 96 30 130 0" stroke="#3B2329" stroke-width="3" fill="none" stroke-linecap="round"/><g stroke="#3B2329" stroke-width="1.6" stroke-linecap="round"><path d="M24 38l-10 20M28 40l-6 22M32 42l-2 22M50 46l-8 22M54 47l-4 24M58 48v24M72 50l-3 25M76 50v25M80 50l3 25M96 48v24M100 47l4 24M104 46l8 22M118 42l2 22M122 40l6 22M126 38l10 20"/></g></svg>
+          <small>Más densidad</small><h3>Volumen</h3>
+          <p>Abanicos de varias extensiones finas por pestaña para una mirada más tupida.</p>
+          <a href="#turnos" class="btn btn-linea" data-servicio="Pestañas volumen">Quiero estas</a>
+        </article>
+        <article class="pest">
+          <svg viewBox="0 0 150 76" aria-hidden="true"><path d="M10 26c34 30 96 30 130 0" stroke="#3B2329" stroke-width="3" fill="none" stroke-linecap="round"/><g stroke="#3B2329" stroke-width="2" stroke-linecap="round"><path d="M22 37l-8 18M34 43l-4 18M48 46l-10 28M62 49l-2 20M75 50v26M88 49l2 20M102 46l10 28M116 43l4 18M128 37l8 18"/></g></svg>
+          <small>Con puntas</small><h3>Hawaianas</h3>
+          <p>Efecto con puntas marcadas que le dan textura y personalidad a la mirada.</p>
+          <a href="#turnos" class="btn btn-linea" data-servicio="Pestañas hawaianas">Quiero estas</a>
+        </article>
+        <article class="pest">
+          <svg viewBox="0 0 150 76" aria-hidden="true"><path d="M10 26c34 30 96 30 130 0" stroke="#3B2329" stroke-width="3.5" fill="none" stroke-linecap="round"/><g stroke="#3B2329" stroke-width="1.2" stroke-linecap="round"><path d="M18 34l-10 18M22 37l-8 21M26 39l-6 22M30 41l-4 22M34 43l-2 23M44 45l-6 24M48 46l-4 25M52 47l-2 25M56 48v25M66 49l-2 26M70 50l-1 26M75 50v26M80 50l1 26M84 49l2 26M94 48v25M98 47l2 25M102 46l4 25M106 45l6 24M116 43l2 23M120 41l4 22M124 39l6 22M128 37l8 21M132 34l10 18"/></g></svg>
+          <small>Máximo volumen</small><h3>Volumen ruso</h3>
+          <p>Abanicos ultrafinos hechos a mano para el efecto más tupido y dramático.</p>
+          <a href="#turnos" class="btn btn-linea" data-servicio="Pestañas volumen ruso">Quiero estas</a>
+        </article>
+      </div>
+      <div class="combo">
+        <div><b>Lashes <em>&amp;</em> mani</b><p>Uñas y pestañas en el mismo turno. Salís lista para todo.</p></div>
+        <a href="#turnos" class="btn btn-oro" data-servicio="Combo lashes y mani">Quiero el combo</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cursos" id="cursos">
+    <div class="wrap cursos-box">
+      <div>
+        <span class="eyebrow">Cursos presenciales</span>
+        <h2>Aprendé <em>conmigo</em></h2>
+        <p class="lead">Cursos presenciales para que empieces a trabajar con técnica y confianza.</p>
+        <ul class="cursos-lista">
+          <li><span>1</span>Grupos reducidos y práctica real</li>
+          <li><span>2</span>Te acompaño en cada paso de la técnica</li>
+          <li><span>3</span>Consultá fechas, temario y cupos por WhatsApp</li>
+        </ul>
+        <a href="#" class="btn btn-oro" data-consulta="los cursos presenciales">Consultar próximos cursos</a>
+      </div>
+      <div class="diploma" aria-hidden="true"><small>Curso presencial</small><b>Malena Zans</b><span>Nails &amp; Lashes</span></div>
+    </div>
+  </section>
+
+  <section id="trabajos">
+    <div class="wrap">
+      <div class="head">
+        <div><span class="eyebrow">Trabajos</span><h2>Mis <em>diseños</em></h2></div>
+        <p class="lead">Más de 1.200 publicaciones en Instagram. Acá va una selección de los trabajos que más te gustan.</p>
+      </div>
+      <div class="galeria" aria-hidden="true">
+        <div class="foto"><svg viewBox="0 0 64 84"><use href="#una" style="color:#B76E79"/></svg></div>
+        <div class="foto"><svg viewBox="0 0 64 84"><use href="#una" style="color:#FFFFFF"/></svg></div>
+        <div class="foto"><svg viewBox="0 0 64 84"><use href="#una" style="color:#8E4C58"/></svg></div>
+        <div class="foto"><svg viewBox="0 0 64 84"><use href="#una" style="color:#FFFFFF"/></svg></div>
+        <div class="foto"><svg viewBox="0 0 64 84"><use href="#una" style="color:#E8A5B4"/></svg></div>
+        <div class="foto"><svg viewBox="0 0 64 84"><use href="#una" style="color:#FFFFFF"/></svg></div>
+      </div>
+      <p class="galeria-nota">En la página final, acá van tus fotos de Instagram.</p>
+      <div style="display:flex;justify-content:center;margin-top:22px"><a class="btn btn-linea" href="https://www.instagram.com/malena_nailss_/" target="_blank" rel="noopener">Ver más en @malena_nailss_</a></div>
+    </div>
+  </section>
+
+  <section class="reserva" id="turnos">
+    <div class="wrap reserva-grid">
+      <div>
+        <span class="eyebrow">Turnos</span>
+        <h2>Pedí tu <em>turno</em></h2>
+        <p class="lead">Elegí el servicio, el día y si preferís mañana o tarde. El pedido llega armado por WhatsApp y te confirmo el horario.</p>
+      </div>
+      <form class="form" id="form" novalidate>
+        <ol class="pasos" id="pasos" aria-label="Pasos para pedir turno"><li class="on">1. Servicio</li><li>2. Día</li><li>3. Tus datos</li></ol>
+
+        <div class="paso on" data-paso="1">
+          <h3>¿Qué te querés hacer?</h3>
+          <div class="opciones" role="radiogroup" aria-label="Servicio">
+            <label class="op"><input type="radio" name="servicio" id="s1" value="Kapping"><i></i><span>Kapping</span></label>
+            <label class="op"><input type="radio" name="servicio" id="s2" value="Semipermanente"><i></i><span>Semipermanente</span></label>
+            <label class="op"><input type="radio" name="servicio" id="s3" value="Soft gel"><i></i><span>Soft gel</span></label>
+            <label class="op"><input type="radio" name="servicio" id="s4" value="Polygel"><i></i><span>Polygel</span></label>
+            <label class="op"><input type="radio" name="servicio" id="s5" value="Pestañas clásicas"><i></i><span>Pestañas<small>Clásicas</small></span></label>
+            <label class="op"><input type="radio" name="servicio" id="s6" value="Pestañas volumen"><i></i><span>Pestañas<small>Volumen</small></span></label>
+            <label class="op"><input type="radio" name="servicio" id="s7" value="Pestañas hawaianas"><i></i><span>Pestañas<small>Hawaianas</small></span></label>
+            <label class="op"><input type="radio" name="servicio" id="s8" value="Pestañas volumen ruso"><i></i><span>Pestañas<small>Volumen ruso</small></span></label>
+            <label class="op"><input type="radio" name="servicio" id="s9" value="Combo lashes y mani"><i></i><span>Combo<small>Lashes &amp; mani</small></span></label>
+            <label class="op"><input type="radio" name="servicio" id="s10" value="Service / mantenimiento"><i></i><span>Service<small>Mantenimiento</small></span></label>
+          </div>
+        </div>
+
+        <div class="paso" data-paso="2">
+          <h3>¿Qué día te queda bien?</h3>
+          <div class="campo"><label for="fecha">Fecha</label><input type="date" id="fecha" required></div>
+          <div class="campo">
+            <span class="label" id="lbl-franja">Horario preferido</span>
+            <div class="franjas" id="franjas" role="group" aria-labelledby="lbl-franja">
+              <button type="button" data-f="Mañana">Mañana</button>
+              <button type="button" data-f="Mediodía">Mediodía</button>
+              <button type="button" data-f="Tarde">Tarde</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="paso" data-paso="3">
+          <h3>Tus datos</h3>
+          <div class="campo"><label for="nombre">Nombre</label><input id="nombre" autocomplete="name" required></div>
+          <div class="campo"><label for="coment">¿Querés contarme algo? (opcional)</label><textarea id="coment" placeholder="Por ejemplo: quiero un diseño francesita con brillos"></textarea></div>
+        </div>
+
+        <div class="paso" data-paso="4">
+          <div class="ok">
+            <div class="ok-circ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></div>
+            <h3>¡Ya casi está!</h3>
+            <p>Revisá tu pedido y mandalo por WhatsApp. Te respondo con el horario exacto.</p>
+            <div class="resumen" id="resumen"></div>
+            <div class="ok-acciones">
+              <a class="btn btn-oro" id="enviar-wa" href="#" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+              <button type="button" class="btn btn-linea" id="otro">Pedir otro turno</button>
+            </div>
+          </div>
+        </div>
+
+        <p class="error" id="error" role="alert"></p>
+        <div class="acciones" id="acciones">
+          <button type="button" class="btn btn-linea" id="atras" hidden>Atrás</button>
+          <button type="button" class="btn btn-oro" id="siguiente" style="margin-left:auto">Siguiente</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="#inicio" class="logo"><b>Malena Zans</b><small>Nails &amp; Lashes</small></a>
+    <p>Uñas, pestañas y cursos presenciales. Turnos con cita previa por WhatsApp.</p>
+    <div class="redes">
+      <a href="https://www.instagram.com/malena_nailss_/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
+      <a href="#" data-consulta="un turno" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg></a>
+    </div>
+    <div class="copy">Malena Zans · Nails &amp; Lashes · Propuesta de diseño</div>
+  </div>
+</footer>
+
+<a class="wa" href="#" data-consulta="un turno" aria-label="Escribime por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+</a>
+
+<script>
+(function(){
+  // Número de WhatsApp de Malena (con 549 y código de área, sin espacios). Vacío = WhatsApp deja elegir a quién mandarlo.
+  var WHATSAPP="";
+  var DIAS=["domingo","lunes","martes","miércoles","jueves","viernes","sábado"];
+  var $=function(s,c){return (c||document).querySelector(s)};
+  var $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+  var waLink=function(t){return "https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(t)};
+
+  $$("[data-consulta]").forEach(function(a){a.href=waLink("Hola Malena, quiero consultar por "+a.getAttribute("data-consulta")+" ♡");a.target="_blank";a.rel="noopener"});
+
+  var burger=$("#burger"),menu=$("#menu");
+  function cerrar(){menu.classList.remove("open");burger.classList.remove("open");burger.setAttribute("aria-expanded","false");burger.setAttribute("aria-label","Abrir menú")}
+  burger.addEventListener("click",function(){var ab=menu.classList.toggle("open");burger.classList.toggle("open",ab);burger.setAttribute("aria-expanded",ab);burger.setAttribute("aria-label",ab?"Cerrar menú":"Abrir menú")});
+  $$("#menu a").forEach(function(a){a.addEventListener("click",cerrar)});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape")cerrar()});
+  var header=$("#header");function onScroll(){header.classList.toggle("sombra",window.scrollY>40)}
+  window.addEventListener("scroll",onScroll,{passive:true});onScroll();
+  if("IntersectionObserver" in window){
+    var links=$$('#menu a:not(.btn)');
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting)links.forEach(function(l){l.classList.toggle("activo",l.getAttribute("href")==="#"+e.target.id)})})},{rootMargin:"-45% 0px -50% 0px"});
+    $$("main section[id]").forEach(function(s){io.observe(s)});
+  }
+
+  /* Carta de colores */
+  $("#paleta").addEventListener("click",function(e){
+    var b=e.target.closest(".tono");if(!b)return;
+    $$("#paleta .tono").forEach(function(x){x.setAttribute("aria-pressed","false")});
+    b.setAttribute("aria-pressed","true");
+    var bg=b.style.background;
+    $("#una-color").style.color=bg.indexOf("gradient")>-1?"#D9A3AC":bg;
+    $("#tono-nombre").textContent=b.getAttribute("data-n");
+    $("#tono-nombre").nextElementSibling.textContent=b.getAttribute("data-d");
+  });
+
+  /* Pedido de turno */
+  var paso=1,franja=null,form=$("#form"),sig=$("#siguiente"),atras=$("#atras"),err=$("#error"),fecha=$("#fecha");
+  function iso(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+  fecha.min=iso(new Date());var mx=new Date();mx.setDate(mx.getDate()+60);fecha.max=iso(mx);
+  function serv(){var r=$('input[name="servicio"]:checked');return r?r.value:null}
+  function fobj(){var a=fecha.value.split("-");return new Date(+a[0],a[1]-1,+a[2])}
+  $("#franjas").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;$$("#franjas button").forEach(function(x){x.classList.remove("sel");x.removeAttribute("aria-pressed")});b.classList.add("sel");b.setAttribute("aria-pressed","true");franja=b.getAttribute("data-f");err.textContent=""});
+  function mostrar(n){
+    paso=n;
+    $$(".paso").forEach(function(el){el.classList.toggle("on",+el.getAttribute("data-paso")===n)});
+    $$("#pasos li").forEach(function(li,i){li.classList.toggle("on",i===n-1);li.classList.toggle("hecho",i<n-1)});
+    atras.hidden=n===1;$("#acciones").hidden=n===4;sig.textContent=n===3?"Ver mi pedido":"Siguiente";err.textContent="";
+  }
+  function validar(){
+    if(paso===1&&!serv())return "Elegí qué te querés hacer.";
+    if(paso===2){if(!fecha.value)return "Elegí una fecha.";if(fecha.value<fecha.min)return "Esa fecha ya pasó.";if(!franja)return "Elegí si preferís mañana, mediodía o tarde."}
+    if(paso===3){var n=$("#nombre");var ok=n.value.trim().length>=2;n.setAttribute("aria-invalid",!ok);if(!ok){n.focus();return "Escribí tu nombre."}}
+    return "";
+  }
+  function resumen(){
+    var d=fobj(),ft=DIAS[d.getDay()]+" "+d.getDate()+"/"+(d.getMonth()+1),c=$("#coment").value.trim();
+    var f=[["Servicio",serv()],["Día",ft.charAt(0).toUpperCase()+ft.slice(1)],["Horario",franja],["Nombre",$("#nombre").value.trim()]];
+    if(c)f.push(["Comentario",c]);
+    $("#resumen").innerHTML=f.map(function(){return "<div><span></span><b></b></div>"}).join("");
+    $$("#resumen div").forEach(function(div,i){div.children[0].textContent=f[i][0];div.children[1].textContent=f[i][1]});
+    $("#enviar-wa").href=waLink("Hola Malena ♡ Quiero pedir un turno:\n• "+serv()+"\n• "+ft+", a la "+franja.toLowerCase()+"\n• Soy "+$("#nombre").value.trim()+(c?"\n• "+c:""));
+  }
+  sig.addEventListener("click",function(){var e=validar();if(e){err.textContent=e;return}if(paso===3)resumen();mostrar(paso+1);form.scrollIntoView({behavior:"smooth",block:"start"})});
+  atras.addEventListener("click",function(){if(paso>1)mostrar(paso-1)});
+  form.addEventListener("submit",function(e){e.preventDefault();sig.click()});
+  $("#otro").addEventListener("click",function(){form.reset();franja=null;$$("#franjas button").forEach(function(x){x.classList.remove("sel")});mostrar(1)});
+  $$("[data-servicio]").forEach(function(a){a.addEventListener("click",function(){var v=a.getAttribute("data-servicio");$$('input[name="servicio"]').forEach(function(r){r.checked=(r.value===v)});mostrar(2)})});
+})();
+</script>
+</body>
+</html>
