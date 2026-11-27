@@ -19,6 +19,17 @@ Criterio: salones que **no tienen página web propia** (solo Instagram, Facebook
 Del 6 al 10 (agregados el 2026-11-27): toman turnos por Fresha o AgendaPro, pero no tienen web propia.
 Para ellos, la idea a vender es una página con su propia marca, en vez de figurar entre muchos negocios en una plataforma.
 
+## Beauty Co. — qué le falta a su web (revisado el 2026-11-27)
+
+- En celular se ven varios segundos de pantalla rosa antes del contenido (a los 3 s seguía vacía; a los 7 s ya se veía).
+- Precios: solo en un PDF de 18 páginas en Google Drive (hay que salir de la web).
+- Sus promos por día (lunes a viernes, 15–20% off) y el 10% off en efectivo/QR solo están dentro del PDF.
+- No hay horarios, ni reseñas, ni "quiénes somos", ni detalle de cada servicio.
+- Para Google: el título principal se lee "Todoenunsololugar" (pegado) y las 27 imágenes no tienen descripción (alt).
+- En celular el nombre se corta: "Beauty Co. Centro de Be…".
+- Lo bueno, que hay que mantener: reserva online por profesional, Mis turnos, Gift Cards, Beauty Club.
+- Lista de precios usada: vigente desde el 16/11/2026. Los "desde" que puse (manos $16.000, masajes $24.000, depilación $6.000, cejas $14.500, en efectivo) salen del texto del PDF (sin confirmar con el salón).
+
 ## Instagram (buscado el 2026-11-27)
 
 - Encontrados (sin confirmar): Beauty Co. → instagram.com/beautycobelleza · Lovey Estudio → instagram.com/makeupalelovey · Éclat Estética → instagram.com/eclat.estetica
