@@ -19,6 +19,11 @@ Criterio: salones que **no tienen página web propia** (solo Instagram, Facebook
 Del 6 al 10 (agregados el 2026-11-27): toman turnos por Fresha o AgendaPro, pero no tienen web propia.
 Para ellos, la idea a vender es una página con su propia marca, en vez de figurar entre muchos negocios en una plataforma.
 
+## Malena Zans (@malena_nailss_) — familiar de Tamy
+
+- Nails & Lashes: kapping, semis, soft gel, polygel, extensión de pestañas (clásicas, volumen, hawaianas, volumen ruso), cursos presenciales. Sin web. Zona y teléfono: no figuran en Instagram.
+- 2026-11-27: propuesta armada con sus fotos reales de Instagram (`Malena-propuesta.html`). **Mensaje, capturas y archivo enviados por Tamy el 2026-11-27.** Esperando respuesta.
+
 ## Beauty Co. — qué le falta a su web (revisado el 2026-11-27)
 
 - En celular se ven varios segundos de pantalla rosa antes del contenido (a los 3 s seguía vacía; a los 7 s ya se veía).
