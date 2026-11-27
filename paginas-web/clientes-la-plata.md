@@ -10,6 +10,14 @@ Criterio: salones que **no tienen página web propia** (solo Instagram, Facebook
 | 3 | Éclat Estética | Faciales, corporales, depilación definitiva | (sin confirmar) | 221 428-3739 (parece fijo: puede no tener WhatsApp) | Facebook, Instagram @eclat.estetica | Sin escribir |
 | 4 | Pino Peluquería | Peluquería | Calle 9 n° 665 | 221 501-1178 (sin confirmar si es WhatsApp) | Directorio misturnos.ai | Sin escribir |
 | 5 | Estética La Plata | Estética, distribución y capacitación | Calle 5 n° 1572 (e/ 64 y 65) | 221 634-0100 (WhatsApp, sin confirmar) | Facebook, NoSecretSalon | Sin escribir |
+| 6 | Skala Bienestar y Estética Personal | Centro de estética | Diagonal 73 n° 1479 | No encontrado en internet: buscar en Instagram o Google Maps | AgendaPro (4,9 con 21 reseñas) | Sin escribir |
+| 7 | Studio Nails Artist | Uñas, pestañas, cejas | Calle 49 n° 771 | No encontrado: buscar en Instagram o Google Maps | AgendaPro | Sin escribir |
+| 8 | Estetica Gemini | Estética y pestañas | Calle 61 n° 1240 | No encontrado: buscar en Instagram o Google Maps | Fresha (5,0 con 16 reseñas) | Sin escribir |
+| 9 | New Look | Peluquería, cejas y pestañas | Calle 60 e/ 22 y 23 n° 1357 | No encontrado: buscar en Instagram o Google Maps | Fresha | Sin escribir |
+| 10 | Flama Hair Studio | Peluquería y barbería de hombres | Diagonal 78 n° 472 | No encontrado: buscar en Instagram o Google Maps | Fresha (5,0) | Sin escribir |
+
+Del 6 al 10 (agregados el 2026-11-27): toman turnos por Fresha o AgendaPro, pero no tienen web propia.
+Para ellos, la idea a vender es una página con su propia marca, en vez de figurar entre muchos negocios en una plataforma.
 
 Descartados por tener ya página web: MB Salón Unisex, El Palacio del Peinador, Gala La Plata, Gimena Morgado.
 
