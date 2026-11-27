@@ -1,4 +1,4 @@
-# Lista de precios — propuesta (armada el 2026-11-27, falta que Tamy la confirme)
+# Lista de precios — CONFIRMADA por Tamy el 2026-11-27
 
 | Plan | Precio | Incluye |
 |---|---|---|
